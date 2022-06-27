@@ -49,11 +49,6 @@ const config = {
           'ebnf'
         ],
       },
-      docs: {
-        sidebar: {
-          hideableSidebar: true,
-        }
-      },
       algolia: {
         appId: "9DKG8FPSZZ",
         apiKey: "2b748f4d7a02bd9a65c96f481b9a6766",

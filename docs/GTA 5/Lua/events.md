@@ -134,6 +134,20 @@ Callbacks for specific events
 
 * `OnChatMsg(ply, text)`
 
+## `OnChatMsg`
+`Called on SMS receive.`
+
+| Argument   | Type   | Description                    |
+| ---------- | ------ | ------------------------------ |
+| ply        | int    | Player index of message sender |
+| text       | string | Message text                   |
+| rid        | int    | Player Rockstar ID             |
+| is\_script | bool   | Is SMS sent via script         |
+
+### Methods:
+
+* `OnChatMsg(ply, text)`
+
 ## `OnNetworkEvent`
 `Called when a Network Event is received.`
 
@@ -431,3 +445,14 @@ modder_flags =
 ### Methods:
 
 * `OnSyncBlocked(player, reason, ban_time)`
+
+## `OnSessionHostChanged`
+`Called after session host change.`
+
+| Argument | Type | Description  |
+| -------- | ---- | ------------ |
+| ply      | int  | Player index |
+
+### Methods:
+
+* `OnSessionHostChanged(player)`

@@ -22,7 +22,6 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: "https://github.com/Karlend/midnight-docs/tree/main/docs",
           breadcrumbs: true,
-          hideableSidebar: true,
         },
         blog: false,
         theme: {

@@ -50,33 +50,6 @@ html[data-theme='dark'] {
     }
   }
 
-  .header-site-link {
-    &:hover {
-      opacity: 0.6;
-    }
-    &::before {
-      background: url('/icons/computer.svg') no-repeat;
-    }
-  }
-
-  .header-telegram-link {
-    &:hover {
-      opacity: 0.6;
-    }
-    &::before {
-      background: url('/icons/telegram.svg') no-repeat;
-    }
-  }
-
-  .header-discord-link {
-    &:hover {
-      opacity: 0.6;
-    }
-    &::before {
-      background: url('/icons/discord.svg') no-repeat;
-    }
-  }
-
   .no-shadow {
     background-color: var(--color-gray-0);
   }

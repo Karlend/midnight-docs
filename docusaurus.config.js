@@ -36,7 +36,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      autoCollapseSidebarCategories: true,
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
@@ -49,6 +48,12 @@ const config = {
           'lua',
           'ebnf'
         ],
+      },
+      docs: {
+        sidebar: {
+          autoCollapseSidebarCategories: true,
+          hideableSidebar: true,
+        }
       },
       algolia: {
         appId: "9DKG8FPSZZ",

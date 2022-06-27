@@ -1,4 +1,5 @@
-const theme = require("./core/PrismTheme");
+const themeLight = require('prism-react-renderer/themes/vsLight');
+const themeDark = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -65,7 +66,8 @@ const config = {
         ],
       },
       prism: {
-        theme: theme,
+        theme: themeLight,
+        darkTheme: themeDark,
         additionalLanguages: [
           'lua',
           'ebnf'

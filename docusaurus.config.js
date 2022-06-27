@@ -65,12 +65,20 @@ const config = {
           {
             href: "https://midnight.im/",
             position: "left",
-            label: "🖥️",
+            className: 'header-site-link',
+            'aria-label': 'Site',
           },
           {
-            href: "https://midnight.im/usercp/",
+            href: "https://t.me/MIDNIGHTPublic",
             position: "left",
-            label: "🔑",
+            className: 'header-telegram-link',
+            'aria-label': 'Telegram',
+          },
+          {
+            href: "https://discord.gg/FMv8sHssSy",
+            position: "left",
+            className: 'header-discord-link',
+            'aria-label': 'Discord',
           },
           {
             type: 'search',

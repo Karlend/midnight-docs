@@ -1,11 +1,11 @@
 ---
 slug: /gta/lua/net
-title: Network events
+title: net
 ---
 
 # net
 
-```
+```ebnf
 Methods related to networking
 ```
 

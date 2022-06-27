@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/menu
-title: Menu
+title: menu
 ---
 
 # menu

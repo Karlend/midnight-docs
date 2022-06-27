@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/script_event
-title: Script events
+title: script event
 ---
 
 # script

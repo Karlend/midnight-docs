@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/lobby
-title: Lobby
+title: lobby
 ---
 
 # lobby

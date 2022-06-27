@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/array
-title: Array
+title: array
 ---
 
 # array

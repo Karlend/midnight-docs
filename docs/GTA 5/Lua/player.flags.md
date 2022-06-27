@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/player.flags
-title: Player flags
+title: player.flags
 ---
 
 # player.flags

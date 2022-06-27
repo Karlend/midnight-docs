@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/http
-title: HTTP requests
+title: http
 ---
 
 # http

@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/memory
-title: Memory
+title: memory
 ---
 
 # memory

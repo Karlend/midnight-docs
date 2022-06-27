@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/string
-title: String
+title: string
 ---
 
 # string

@@ -1,3 +1,8 @@
+---
+slug: /gta/lua/utils
+title: utils
+---
+
 # utils
 
 ```ebnf

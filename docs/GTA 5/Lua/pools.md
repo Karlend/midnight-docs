@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/pools
-title: Entity pools
+title: pools
 ---
 
 # pools

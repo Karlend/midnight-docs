@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/console
-title: Console
+title: console
 ---
 
 # console

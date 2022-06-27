@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/events
-title: Events
+title: events
 ---
 
 # Events

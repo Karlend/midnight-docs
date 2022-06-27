@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/system
-title: System
+title: system
 ---
 
 # system

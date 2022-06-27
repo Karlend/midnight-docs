@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/player
-title: Player
+title: player
 ---
 
 # player

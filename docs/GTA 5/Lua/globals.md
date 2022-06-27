@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/globals
-title: Globals
+title: globals
 ---
 
 # globals

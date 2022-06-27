@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/draw
-title: Draw
+title: draw
 ---
 
 # draw

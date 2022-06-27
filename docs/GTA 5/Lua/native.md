@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/native
-title: Native
+title: native
 ---
 
 # native

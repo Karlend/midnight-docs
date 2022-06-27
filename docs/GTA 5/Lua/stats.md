@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/stats
-title: Stats
+title: stats
 ---
 
 # stats

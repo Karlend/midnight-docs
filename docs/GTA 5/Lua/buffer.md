@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/buffer
-title: Buffer
+title: buffer
 ---
 
 # buffer

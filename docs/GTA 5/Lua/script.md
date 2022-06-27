@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/script
-title: Script
+title: script
 ---
 
 # script

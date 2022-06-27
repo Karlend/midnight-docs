@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/entity
-title: Entity
+title: entity
 ---
 
 # entity

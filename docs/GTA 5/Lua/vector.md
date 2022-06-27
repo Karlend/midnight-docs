@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/vector
-title: Vector
+title: vector
 ---
 
 # Objects

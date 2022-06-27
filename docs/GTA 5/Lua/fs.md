@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/fs
-title: File system
+title: fs
 ---
 
 # fs

@@ -1,6 +1,6 @@
 ---
 slug: /gta/lua/social
-title: Social club
+title: social
 ---
 
 # social

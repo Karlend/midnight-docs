@@ -640,3 +640,21 @@ div[class*="codeBlockTitle_"] {
   color: #fff;
   opacity: 0.75;
 }
+
+[class*=iconExternalLink] {
+  display: none;
+}
+
+table {
+  text-indent: initial;
+  border-spacing: 2px;
+  display: inline-table;
+  width: -webkit-fill-available;
+}
+
+table th {
+  text-transform: uppercase;
+  font-size: .7rem;
+  padding: 6px 10px;
+  text-align: left;
+}

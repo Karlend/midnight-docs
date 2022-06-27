@@ -1,103 +1,84 @@
-module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-  themeConfig: {
-    navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
-      links: [
-        {
-          to: 'docs/doc1',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
-        },
-        {to: 'blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Style Guide',
-              to: 'docs/doc1',
-            },
-            {
-              label: 'Second Doc',
-              to: 'docs/doc2',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-    },
-  },
+const theme = require("./core/PrismTheme");
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: "Midnight",
+  tagline: "Midnight wiki",
+  url: "https://midnight-docs.vercel.app",
+  baseUrl: "/",
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "karlend", // Usually your GitHub org/user name.
+  projectName: "midnight-docs", // Usually your repo name.
   presets: [
     [
-      '@docusaurus/preset-classic',
-      {
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
+          routeBasePath: "/",
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            "https://github.com/Karlend/midnight-docs/tree/main/docs",
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-        },
+        blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+            require.resolve("./src/css/custom.css"),
+          ],
+          additionalLanguages: [
+            'lua',
+            'ebnf'
+          ],
         },
-      },
+      }),
     ],
   ],
+
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      colorMode: {
+        respectPrefersColorScheme: true,
+        disableSwitch: false,
+      },
+      navbar: {
+        title: "Midnight",
+        logo: {
+          alt: "Midnight.im",
+          src: "img/logo.svg",
+        },
+        items: [
+          {
+            href: "https://midnight.im/",
+            position: "left",
+            label: "🖥️",
+          },
+          {
+            href: "https://midnight.im/usercp/",
+            position: "left",
+            label: "🔑",
+          },
+          {
+            href: "https://github.com/Karlend/midnight-docs",
+            position: "right",
+            label: "🤖",
+          },
+        ],
+      },
+      prism: {
+        theme: theme,
+      },
+      algolia: {
+        // Application ID provided by Algolia
+        appId: "9DKG8FPSZZ",
+        // Public API key
+        apiKey: "2b748f4d7a02bd9a65c96f481b9a6766",
+        indexName: "midnight-docs",
+      },
+    }),
 };
+
+module.exports = config;

@@ -73,9 +73,14 @@ const config = {
             label: "🔑",
           },
           {
+            type: 'search',
+            position: 'right',
+          },
+          {
             href: "https://github.com/Karlend/midnight-docs",
             position: "right",
-            label: "🤖",
+            className: 'header-github-link',
+            'aria-label': 'GitHub',
           },
         ],
       },

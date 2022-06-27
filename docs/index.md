@@ -1,3 +1,8 @@
+---
+slug: /
+title: Index
+---
+
 # Useful information
 
 ## Found a mistake in documentation?

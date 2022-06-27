@@ -18,28 +18,43 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/Karlend/midnight-docs/tree/main/docs",
+          sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: "https://github.com/Karlend/midnight-docs/tree/main/docs",
+          breadcrumbs: true,
         },
         blog: false,
         theme: {
           customCss: [
-            require.resolve("./src/css/custom.css"),
+            require.resolve("./src/css/custom.scss"),
           ],
         },
       }),
-    ],
+    ]
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      hideableSidebar: true,
+      autoCollapseSidebarCategories: true,
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'light',
         disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
+      prism: {
+        theme: themeLight,
+        darkTheme: themeDark,
+        additionalLanguages: [
+          'lua',
+          'ebnf'
+        ],
+      },
+      algolia: {
+        appId: "9DKG8FPSZZ",
+        apiKey: "2b748f4d7a02bd9a65c96f481b9a6766",
+        indexName: "midnight-docs",
       },
       navbar: {
         title: "Midnight",
@@ -64,21 +79,6 @@ const config = {
             label: "🤖",
           },
         ],
-      },
-      prism: {
-        theme: themeLight,
-        darkTheme: themeDark,
-        additionalLanguages: [
-          'lua',
-          'ebnf'
-        ],
-      },
-      algolia: {
-        // Application ID provided by Algolia
-        appId: "9DKG8FPSZZ",
-        // Public API key
-        apiKey: "2b748f4d7a02bd9a65c96f481b9a6766",
-        indexName: "midnight-docs",
       },
     }),
 };

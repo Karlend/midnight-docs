@@ -41,15 +41,6 @@ html[data-theme='dark'] {
     --ifm-card-background-color:var(--color-gray-78) !important;
   }
 
-  .header-github-link {
-    &:hover {
-      opacity: 0.6;
-    }
-    &::before {
-      background: url('/icons/github-dark.svg') no-repeat;
-    }
-  }
-
   .no-shadow {
     background-color: var(--color-gray-0);
   }

@@ -3,12 +3,11 @@ slug: /gta/lua/array
 title: Array
 ---
 
-
 # array
 
-{% hint style="info" %}
+```ebnf
 Methods to work with C arrays
-{% endhint %}
+```
 
 ## Functions
 

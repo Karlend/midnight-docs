@@ -28,10 +28,6 @@ const config = {
           customCss: [
             require.resolve("./src/css/custom.css"),
           ],
-          additionalLanguages: [
-            'lua',
-            'ebnf'
-          ],
         },
       }),
     ],
@@ -70,6 +66,10 @@ const config = {
       },
       prism: {
         theme: theme,
+        additionalLanguages: [
+          'lua',
+          'ebnf'
+        ],
       },
       algolia: {
         // Application ID provided by Algolia

@@ -1488,3 +1488,17 @@ Workspace to work with players
 ### Methods:
 
 * `player.outfit_load(name)`
+
+## `player.get_ceo_info`
+
+### Parameters
+
+| Name          | Type | Description  |
+| ------------- | ---- | ------------ |
+| player\_index | int  | Target index |
+
+### Return value
+
+| Type  | Description    |
+| ----- | -------------- |
+| table | CEO info table |

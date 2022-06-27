@@ -10,54 +10,53 @@ Callbacks for specific events
 ```
 
 ## `OnInit`
-
-### Description
-
-Called when the Lua script is loaded.
+`Called when the Lua script is loaded.`
 
 ### Methods:
 
 * `OnInit()`
 
 ## `OnDone`
-
-### Description
-
-Called when the Lua script is unloaded.
+`Called when the Lua script is unloaded.`
 
 ### Methods:
 
 * `OnDone()`
 
 ## `OnFrame`
-
-### Description
-
-Called every frame.
+`Called every frame.`
 
 ### Methods:
 
 * `OnFrame()`
 
 ## `OnPlayerJoin`
+`Called when a player joins the lobby.`
 
-### Description
-
-Called when a player joins the lobby.
-
-| Argument | Type | Description             |
-| -------- | ---- | ----------------------- |
-| ply      | int  | Connecting player index |
+| Argument | Type   | Description               |
+| -------- | ------ | ------------------------- |
+| ply      | int    | Connecting player index   |
+| name     | string | Player name               |
+| ip       | string | Player IP. Can be spoofed |
+| host_key | number | Player host key           |
 
 ### Methods:
 
 * `OnPlayerJoin(ply)`
 
+## `OnPlayerActive`
+`Called when a player joined lobby.`
+
+| Argument | Type | Description            |
+| -------- | ---- | ---------------------- |
+| ply      | int  | Connected player index |
+
+### Methods:
+
+* `OnPlayerActive(ply)`
+
 ## `OnPlayerLeft`
-
-### Description
-
-Called when a player leaves the lobby.
+`Called when a player leaves the lobby.`
 
 | Argument | Type | Description                |
 | -------- | ---- | -------------------------- |
@@ -68,10 +67,7 @@ Called when a player leaves the lobby.
 * `OnPlayerLeft(ply)`
 
 ## `OnWeaponReceived`
-
-### Description
-
-Called when a pedestrian or local player receives a weapon.
+`Called when a pedestrian or local player receives a weapon.`
 
 | Argument | Type | Description            |
 | -------- | ---- | ---------------------- |
@@ -84,10 +80,7 @@ Called when a pedestrian or local player receives a weapon.
 * `OnWeaponReceived(ped, weapon, ammo)`
 
 ## `OnPlayerJoinByRid`
-
-### Description
-
-Called when a connection to the local player has been made using the RID Joiner or Join Button.
+`Called when a connection to the local player has been made using the RID Joiner or Join Button.`
 
 | Argument | Type | Description                                |
 | -------- | ---- | ------------------------------------------ |
@@ -98,10 +91,7 @@ Called when a connection to the local player has been made using the RID Joiner 
 * `OnPlayerJoinByRid(rid)`
 
 ## `OnScriptEvent`
-
-### Description
-
-Called when a Script Event hash is received.
+`Called when a Script Event hash is received.`
 
 | Argument | Type  | Description            |
 | -------- | ----- | ---------------------- |
@@ -120,10 +110,7 @@ Called when a Script Event hash is received.
 * `OnScriptEvent(ply, event, args)`
 
 ## `OnScriptSend`
-
-### Description
-
-Called when a Script Event hash is sent by local player.
+`Called when a Script Event hash is sent by local player.`
 
 | Argument  | Type  | Description                   |
 | --------- | ----- | ----------------------------- |
@@ -136,10 +123,7 @@ Called when a Script Event hash is sent by local player.
 * `OnScriptSend(ply_bits, event, args)`
 
 ## `OnChatMsg`
-
-### Description
-
-Called when a message appears in the game chat.
+`Called when a message appears in the game chat.`
 
 | Argument | Type   | Description                    |
 | -------- | ------ | ------------------------------ |
@@ -151,10 +135,7 @@ Called when a message appears in the game chat.
 * `OnChatMsg(ply, text)`
 
 ## `OnNetworkEvent`
-
-### Description
-
-Called when a Network Event is received.
+`Called when a Network Event is received.`
 
 | Argument | Type           | Description                                                  |
 | -------- | -------------- | ------------------------------------------------------------ |
@@ -173,10 +154,7 @@ Called when a Network Event is received.
 * `OnNetworkEvent(ply, event, buf)`
 
 ## `OnSpectating`
-
-### Description
-
-Called when a player in a session is spectating another player.
+`Called when a player in a session is spectating another player.`
 
 | Argument  | Type           | Description                      |
 | --------- | -------------- | -------------------------------- |
@@ -189,10 +167,7 @@ Called when a player in a session is spectating another player.
 * `OnSpectating(spectator, target, is_you)`
 
 ## `OnStopSpectating`
-
-### Description
-
-Called when some player in the session has stopped spectating another player.
+`Called when some player in the session has stopped spectating another player.`
 
 | Argument  | Type           | Description                      |
 | --------- | -------------- | -------------------------------- |
@@ -205,40 +180,28 @@ Called when some player in the session has stopped spectating another player.
 * `OnStopSpectating(spectator, target, is_you)`
 
 ## `OnFeatureStart`
-
-### Description
-
-Called when Feature is activated.
+`Called when Feature is activated.`
 
 ### Methods:
 
 * `OnFeatureStart()`
 
 ## `OnFeatureStop`
-
-### Description
-
-Called when Feature stops.
+`Called when Feature stops.`
 
 ### Methods:
 
 * `OnFeatureStop()`
 
 ## `OnFeatureTick`
-
-### Description
-
-Called every script tick.
+`Called every script tick.`
 
 ### Methods:
 
 * `OnFeatureTick()`
 
 ## `OnScriptStopped`
-
-### Description
-
-Called when the game script terminates.
+`Called when the game script terminates.`
 
 | Argument | Type   | Description        |
 | -------- | ------ | ------------------ |
@@ -260,10 +223,7 @@ local reasons = { -- can give nil in case of unknown
 * `OnScriptStopped(name, reason)`
 
 ## `OnScriptStarted`
-
-### Description
-
-Called when the game script starts.
+`Called when the game script starts.`
 
 | Argument    | Type     | Description      |
 | ----------- | -------- | ---------------- |
@@ -276,10 +236,7 @@ Called when the game script starts.
 * `OnScriptStarted(name, args, stack_size)`
 
 ## `OnGameState`
-
-### Description
-
-Called every time the GameState value changes.
+`Called every time the GameState value changes.`
 
 | Argument   | Type | Description              |
 | ---------- | ---- | ------------------------ |
@@ -291,10 +248,7 @@ Called every time the GameState value changes.
 * `OnGameState(state_old, state_new)`
 
 ## void OnKeyPressed(key, down)
-
-### Description
-
-Called every time a key or mouse button is pressed.
+`Called every time a key or mouse button is pressed.`
 
 | Argument | Type | Description                          |
 | -------- | ---- | ------------------------------------ |
@@ -306,10 +260,7 @@ Called every time a key or mouse button is pressed.
 * `OnKeyPressed(key, down)`
 
 ## `OnPrepareTreeNode`
-
-### Description
-
-Called before sending the sync tree to the session.
+`Called before sending the sync tree to the session.`
 
 | Argument | Type   | Description                     |
 | -------- | ------ | ------------------------------- |
@@ -326,30 +277,21 @@ Called before sending the sync tree to the session.
 * `OnPrepareTreeNode(node, name, hash)`
 
 ## `OnDirectXResizeBuffers`
-
-### Description
-
-Called when the IDXGISwapChain::ResizeBuffers method is called.
+`Called when the IDXGISwapChain::ResizeBuffers method is called.`
 
 ### Methods:
 
 * `OnDirectXResizeBuffers()`
 
 ## `OnDirectXPresent`
-
-### Description
-
-Called when the IDXGISwapChain::Present method is called.
+`Called when the IDXGISwapChain::Present method is called.`
 
 ### Methods:
 
 * `OnDirectXPresent()`
 
 ## `OnWindowProc`
-
-### Description
-
-Called when the WindowProc callback is called.
+`Called when the WindowProc callback is called.`
 
 | Argument | Type | Description                    |
 | -------- | ---- | ------------------------------ |
@@ -363,10 +305,7 @@ Called when the WindowProc callback is called.
 * `OnWindowProc(hwnd, msg, wparam, lparam)`
 
 ## `OnTransitionEnd`
-
-### Description
-
-Called when the cutscene ends (single player) and at the moment the camera lands from the sky (online).
+`Called when the cutscene ends (single player) and at the moment the camera lands from the sky (online).`
 
 | Argument        | Type | Description                                                                   |
 | --------------- | ---- | ----------------------------------------------------------------------------- |
@@ -377,20 +316,14 @@ Called when the cutscene ends (single player) and at the moment the camera lands
 * `OnTransitionEnd(is_multiplayer)`
 
 ## `OnFirstSingleplayerJoin`
-
-### Description
-
-Called upon first entering a single player game.
+`Called upon first entering a single player game.`
 
 ### Methods:
 
 * `OnFirstSingleplayerJoin()`
 
 ## `OnModderDetected`
-
-### Description
-
-Called when a modder is detected in the session.
+`Called when a modder is detected in the session.`
 
 | Argument | Type          | Description  |
 | -------- | ------------- | ------------ |
@@ -419,10 +352,7 @@ modder_flags =
 * `OnModderDetected(ply, reason)`
 
 ## `OnVehicleEnter`
-
-### Description
-
-Called when the local player has entered the vehicle.
+`Called when the local player has entered the vehicle.`
 
 | Argument | Type | Description            |
 | -------- | ---- | ---------------------- |
@@ -433,10 +363,7 @@ Called when the local player has entered the vehicle.
 * `OnVehicleEnter(veh)`
 
 ## `OnVehicleLeave`
-
-### Description
-
-Called when the local player has leaved the vehicle.
+`Called when the local player has leaved the vehicle.`
 
 | Argument | Type | Description           |
 | -------- | ---- | --------------------- |
@@ -447,30 +374,21 @@ Called when the local player has leaved the vehicle.
 * `OnVehicleLeave(veh)`
 
 ## `OnSessionJoin`
-
-### Description
-
-Called when the local player has joined session.
+`Called when the local player has joined session.`
 
 ### Methods:
 
 * `OnSessionJoin()`
 
 ## `OnSessionLeft`
-
-### Description
-
-Called when the local player has left session.
+`Called when the local player has left session.`
 
 ### Methods:
 
 * `OnSessionLeft()`
 
 ## `OnSpawn`
-
-### Description
-
-Called when the local player has spawned.
+`Called when the local player has spawned.`
 
 | Argument  | Type | Description                                          |
 | --------- | ---- | ---------------------------------------------------- |
@@ -481,10 +399,7 @@ Called when the local player has spawned.
 * `OnSpawn(is_online)`
 
 ## `OnWarningScreen`
-
-### Description
-
-Called before showing warning screen.
+`Called before showing warning screen.`
 
 | Argument         | Type   | Description            |
 | ---------------- | ------ | ---------------------- |
@@ -505,10 +420,7 @@ Called before showing warning screen.
 * `OnWarningScreen(script_thread, entryHeader, entryLine1, entryLine2, instructionalKey)`
 
 ## `OnSyncBlocked`
-
-### Description
-
-Called after protection blocked sync.
+`Called after protection blocked sync.`
 
 | Argument | Type   | Description             |
 | -------- | ------ | ----------------------- |

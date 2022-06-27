@@ -1,5 +1,5 @@
 ---
-slug: /gta/lua
+slug: /gta/lua/
 title: Lua
 ---
 ## You are probably looking for:

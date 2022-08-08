@@ -122,6 +122,20 @@ Callbacks for specific events
 
 * `OnScriptSend(ply_bits, event, args)`
 
+## `OnScriptMigrate`
+`Called on script host migration`
+
+| Argument    | Type   | Description                   |
+| ----------- | ------ | ----------------------------- |
+| is_freemode | bool   | Is freemode                   |
+| is_you      | bool   | Is new host equal localplayer |
+| script_name | string | Script name                   |
+| ply         | int    | Player index                  |
+
+### Methods:
+
+* `OnScriptMigrate(is_freemode, is_you, script_name, ply)`
+
 ## `OnChatMsg`
 `Called when a message appears in the game chat.`
 
@@ -134,7 +148,7 @@ Callbacks for specific events
 
 * `OnChatMsg(ply, text)`
 
-## `OnChatMsg`
+## `OnSMS`
 `Called on SMS receive.`
 
 | Argument   | Type   | Description                    |
@@ -146,7 +160,7 @@ Callbacks for specific events
 
 ### Methods:
 
-* `OnChatMsg(ply, text)`
+* `OnSMS(ply, text, rid, is_script)`
 
 ## `OnNetworkEvent`
 `Called when a Network Event is received.`

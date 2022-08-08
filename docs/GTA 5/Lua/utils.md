@@ -164,7 +164,6 @@ Some utils to make life a bit easier
 | -------- | ------ | ------------------------ |
 | text     | string | Message text             |
 | is\_team | bool   | Should send in team chat |
-| sender   | number | Spoofed sender           |
 
 ### Return value:
 
@@ -174,7 +173,6 @@ Some utils to make life a bit easier
 
 ### Methods:
 
-* `utils.send_chat(text, is_team, sender)`
 * `utils.send_chat(text, is_team)`
 
 ## `utils.notify`

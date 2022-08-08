@@ -55,7 +55,7 @@ Workspace to get info about account
 
 ## `social.get_rid`
 
-`Получить свой RockstarID.`
+`Get local player RockstarID.`
 
 ### Return value:
 
@@ -76,11 +76,13 @@ Workspace to get info about account
 | Name        | Type     | Description        |
 | ----------- | -------- | ------------------ |
 | rid         | int      | Player Rockstar ID |
-| on_response | function | Player Rockstar ID |
+| name        | string   | Player name        |
+| on_response | function | Callback           |
 
 ### Methods:
 
-* `social.is_player_online(name)`
+* `social.is_player_online(name, on_response)`
+* `social.is_player_online(rid, on_response)`
 
 ### Callbacks:
 

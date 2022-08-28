@@ -184,11 +184,11 @@ Callbacks for specific events
 ## `OnSpectating`
 `Called when a player in a session is spectating another player.`
 
-| Argument  | Type           | Description                      |
-| --------- | -------------- | -------------------------------- |
-| spectator | int            | Player index of spectator        |
-| target    | event\_info\_t | Player index of observer         |
-| is\_you   | bool           | true if target is a local player |
+| Argument  | Type | Description                      |
+| --------- | ---- | -------------------------------- |
+| spectator | int  | Player index of spectator        |
+| target    | int  | Player index of observer         |
+| is\_you   | bool | true if target is a local player |
 
 ### Methods:
 
@@ -197,11 +197,11 @@ Callbacks for specific events
 ## `OnStopSpectating`
 `Called when some player in the session has stopped spectating another player.`
 
-| Argument  | Type           | Description                      |
-| --------- | -------------- | -------------------------------- |
-| spectator | int            | Player index of spectator        |
-| target    | event\_info\_t | Player index of observer         |
-| is\_you   | bool           | true if target is a local player |
+| Argument  | Type | Description                      |
+| --------- | ---- | -------------------------------- |
+| spectator | int  | Player index of spectator        |
+| target    | int  | Player index of observer         |
+| is\_you   | bool | true if target is a local player |
 
 ### Methods:
 

@@ -31,7 +31,7 @@ Callbacks for specific events
 * `OnFrame()`
 
 ## `OnPlayerJoin`
-`Called when a player joins the lobby.`
+`Called when a player joins the lobby. Player is still invalid on this moment. For interaction use OnPlayerActive instead`
 
 | Argument | Type   | Description               |
 | -------- | ------ | ------------------------- |
@@ -42,7 +42,7 @@ Callbacks for specific events
 
 ### Methods:
 
-* `OnPlayerJoin(ply)`
+* `OnPlayerJoin(ply, name, ip, host_key)`
 
 ## `OnPlayerActive`
 `Called when a player joined lobby.`

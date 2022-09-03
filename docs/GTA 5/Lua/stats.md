@@ -138,7 +138,7 @@ StatType_e =
 
 ### Methods:
 
-* `stats.set_u64(hash, value)`
+* `stats.set_u32(hash, value)`
 
 ## `stats.set_u64`
 
@@ -196,18 +196,6 @@ StatType_e =
 | Name  | Type | Description |
 | ----- | ---- | ----------- |
 | value | bool | Stat value  |
-
-## `stats.get_bool`
-
-### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
-
-### Methods:
-
-* `stats.get_bool(hash)`
 
 ### Return value:
 
@@ -365,6 +353,10 @@ StatType_e =
 
 ## `stats.set_masked_int`
 
+### Methods:
+
+* `stats.set_masked_int(value)`
+
 ### Parameters
 
 | Name   | Type | Description    |
@@ -401,6 +393,10 @@ StatType_e =
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | mask | int  | Packed mask |
+
+### Methods:
+
+* `stats.get_packed_mask(hash)`
 
 ## `stats.get_packed_stat_int`
 
@@ -453,7 +449,7 @@ StatType_e =
 
 ### Methods:
 
-* `stats.set_packed_stat_int(hash, slot)`
+* `stats.set_packed_stat_int(hash, value, slot)`
 
 ## `stats.set_packed_stat_bool`
 
@@ -467,7 +463,7 @@ StatType_e =
 
 ### Methods:
 
-* `stats.set_packed_stat_bool(hash, slot)`
+* `stats.set_packed_stat_bool(hash, value, slot)`
 
 ## `stats.set_packed_int_stat_key`
 

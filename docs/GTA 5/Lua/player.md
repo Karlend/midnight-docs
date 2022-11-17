@@ -1412,54 +1412,6 @@ Workspace to work with players
 
 * `player.crash_himiko_stop(ply)`
 
-## `player.crash_izuku_active`
-
-`Check if izuku crash is active.`
-
-### Parameters:
-
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
-
-### Return value
-
-| Type | Description     |
-| ---- | --------------- |
-| bool | Is crash active |
-
-### Methods:
-
-* `player.crash_izuku_active(ply)`
-
-## `player.crash_izuku_start`
-
-`Start izuku crash on player.`
-
-### Parameters:
-
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
-
-### Methods:
-
-* `player.crash_izuku_start(ply)`
-
-## `player.crash_izuku_stop`
-
-`Stop izuku crash on player.`
-
-### Parameters:
-
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
-
-### Methods:
-
-* `player.crash_izuku_stop(ply)`
-
 ## `player.outfit_save`
 
 `Save player's outfit.`
@@ -1493,12 +1445,52 @@ Workspace to work with players
 
 ### Parameters
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+| Name | Type | Description  |
+| ---- | ---- | ------------ |
+| ply  | int  | Target index |
 
 ### Return value
 
 | Type  | Description    |
 | ----- | -------------- |
 | table | CEO info table |
+
+### Methods:
+
+* `player.get_ceo_info(ply)`
+
+## `player.is_visible`
+
+### Parameters
+
+| Name | Type | Description  |
+| ---- | ---- | ------------ |
+| ply  | int  | Target index |
+
+### Return value
+
+| Type | Description       |
+| ---- | ----------------- |
+| bool | Is player visible |
+
+### Methods:
+
+* `player.is_visible(ply)`
+
+## `player.is_shooting`
+
+### Parameters
+
+| Name | Type | Description  |
+| ---- | ---- | ------------ |
+| ply  | int  | Target index |
+
+### Return value
+
+| Type | Description        |
+| ---- | ------------------ |
+| bool | Is player shooting |
+
+### Methods:
+
+* `player.is_shooting(ply)`

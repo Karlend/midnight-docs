@@ -458,7 +458,7 @@ modder_flags =
 
 ### Methods:
 
-* `OnSyncBlocked(player, reason, ban_time)`
+* `OnSyncBlocked(ply, reason, ban_time)`
 
 ## `OnSessionHostChanged`
 `Called after session host change.`
@@ -469,4 +469,16 @@ modder_flags =
 
 ### Methods:
 
-* `OnSessionHostChanged(player)`
+* `OnSessionHostChanged(ply)`
+
+## `OnPlayerShot`
+`Called on player shoot.`
+
+| Argument | Type | Description  |
+| -------- | ---- | ------------ |
+| ply      | int  | Player index |
+| hash     | int  | Weapon hash  |
+
+### Methods:
+
+* `OnPlayerShot(ply, hash)`

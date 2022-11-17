@@ -5,4 +5,4 @@ title: Lua
 ## You are probably looking for:
 
 * [Events / Callbacks](events.md)
-* [Natives](https://docs.fivem.net/natives/)
+* [Natives](https://nativedb.dotindustries.dev/natives)

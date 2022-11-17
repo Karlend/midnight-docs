@@ -11,6 +11,191 @@ Methods to work with menu
 
 ## Functions
 
+## `menu.add_page`
+
+### Parameters
+
+| Name | Type   | Description    |
+| ---- | ------ | -------------- |
+| name | string | Page name      |
+| icon | int    | Page icon enum |
+
+### Return value
+
+| Type | Description |
+| ---- | ----------- |
+| page | Page object |
+
+### Methods:
+
+* `menu.add_page(name, icon)`
+
+## `menu.add_mono_block`
+
+### Parameters
+
+| Name     | Type   | Description         |
+| -------- | ------ | ------------------- |
+| page     | page   | Page object         |
+| name     | string | Block name          |
+| position | int    | Block position enum |
+
+### Return value
+
+| Type  | Description  |
+| ----- | ------------ |
+| block | Block object |
+
+### Methods:
+
+* `menu.add_mono_block(page, name, position)`
+
+## `menu.add_checkbox`
+
+### Parameters
+
+| Name     | Type     | Description      |
+| -------- | -------- | ---------------- |
+| block    | block    | Block object     |
+| name     | string   | Element name     |
+| callback | function | Element callback |
+
+### Return value
+
+| Type     | Description      |
+| -------- | ---------------- |
+| checkbox | Checkbox element |
+
+### Methods:
+
+* `menu.add_checkbox(block, name, callback)`
+* `menu.add_checkbox(block, name)`
+
+## `menu.add_combo`
+
+### Parameters
+
+| Name     | Type     | Description      |
+| -------- | -------- | ---------------- |
+| block    | block    | Block object     |
+| name     | string   | Element name     |
+| list     | table    | Combo list       |
+| callback | function | Element callback |
+
+### Return value
+
+| Type  | Description   |
+| ----- | ------------- |
+| combo | Combo element |
+
+### Methods:
+
+* `menu.add_combo(block, name, list, callback)`
+* `menu.add_combo(block, name, list)`
+
+## `menu.add_combo_ex`
+
+### Parameters
+
+| Name          | Type     | Description                                          |
+| ------------- | -------- | ---------------------------------------------------- |
+| block         | block    | Block object                                         |
+| name          | string   | Element name                                         |
+| name_getter   | function | Function with returned name of list element by index |
+| amount_getter | function | Function with returned amount of list                |
+| callback      | function | Element callback                                     |
+
+### Return value
+
+| Type  | Description   |
+| ----- | ------------- |
+| combo | Combo element |
+
+### Methods:
+
+* `menu.add_combo_ex(block, name, name_getter, amount_getter, callback)`
+* `menu.add_combo_ex(block, name, name_getter, amount_getter)`
+
+## `menu.add_button`
+
+### Parameters
+
+| Name     | Type     | Description      |
+| -------- | -------- | ---------------- |
+| block    | block    | Block object     |
+| name     | string   | Element name     |
+| callback | function | Element callback |
+
+### Return value
+
+| Type   | Description    |
+| ------ | -------------- |
+| button | Button element |
+
+### Methods:
+
+* `menu.add_button(block, name, callback)`
+
+## `menu.add_input_text`
+
+### Parameters
+
+| Name     | Type     | Description      |
+| -------- | -------- | ---------------- |
+| block    | block    | Block object     |
+| name     | string   | Element name     |
+| length   | int      | Max text length  |
+| callback | function | Element callback |
+
+### Return value
+
+| Type  | Description   |
+| ----- | ------------- |
+| input | Input element |
+
+### Methods:
+
+* `menu.add_input_text(block, name, length, callback)`
+* `menu.add_input_text(block, name, length)`
+
+## `menu.add_text`
+
+### Parameters
+
+| Name  | Type   | Description  |
+| ----- | ------ | ------------ |
+| block | block  | Block object |
+| text  | string | Element text |
+
+### Return value
+
+| Type | Description  |
+| ---- | ------------ |
+| text | Text element |
+
+### Methods:
+
+* `menu.add_text(block, text)`
+
+## `menu.add_dynamic_text`
+
+### Parameters
+
+| Name        | Type     | Description                   |
+| ----------- | -------- | ----------------------------- |
+| block       | block    | Block object                  |
+| text_getter | function | Function with returned string |
+
+### Return value
+
+| Type | Description  |
+| ---- | ------------ |
+| text | Text element |
+
+### Methods:
+
+* `menu.add_dynamic_text(block, text_getter)`
+
 ## Data types
 
 ```lua
@@ -1294,3 +1479,44 @@ local menu_widget_color =
 ### Methods:
 
 * `menu.get_main_menu_pos_y()`
+
+## Examples
+
+### Simple page
+
+```lua
+local page = menu.add_page("My page", 5)
+local my_block = menu.add_mono_block(page, "My block", 0)
+menu.add_dynamic_text(my_block, function(self)
+	local index = player.index()
+	return "Local player name: " .. player.get_name(index)
+end)
+```
+
+### Player selection
+
+```lua
+local page = menu.add_page("My page", 5)
+local left = menu.add_mono_block(page, "Player selection", 0)
+local right = menu.add_mono_block(page, "Interaction", 0)
+local dyn_combo	= menu.add_combo_ex(left, "Player",
+	function(self, index)
+		local player_index = index - 1
+		return player_index	.. ". "	.. player.get_name(player_index)
+	end, function()
+		return 32
+	end, function(self, index)
+		local player_index = index - 1
+		print("Changed selection to " .. index .. " | Player index: " .. player_index .. " | Name: " .. player.get_name(player_index))
+	end
+)
+menu.add_button(right, "Kick", function()
+	local player_index = dyn_combo:get_long() - 1
+	if not player.is_valid(player_index) then
+		print("Invalid player index")
+		return
+	end
+	print("Kicking player " .. player_index .. " | Name: " .. player.get_name(player_index))
+	player.kick(player_index)
+end)
+```

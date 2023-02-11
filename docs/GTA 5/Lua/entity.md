@@ -71,10 +71,10 @@ Methods related to entities
 
 ### Methods:
 
-* `entity.spawn_veh_cloud(name, position, on_spawned)`
-* `entity.spawn_veh_cloud(name, position)`
-* `entity.spawn_veh_cloud(name, on_spawned)`
-* `entity.spawn_veh_cloud(name)`
+* `entity.spawn_cloud_veh(name, position, on_spawned)`
+* `entity.spawn_cloud_veh(name, position)`
+* `entity.spawn_cloud_veh(name, on_spawned)`
+* `entity.spawn_cloud_veh(name)`
 
 ### Callbacks:
 

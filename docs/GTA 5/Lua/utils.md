@@ -55,11 +55,11 @@ Some utils to make life a bit easier
 
 ### Parameters:
 
-| Name   | Type    | Description                 |
-| ------ | ------- | --------------------------- |
-| v\_pos | Vector2 | Vector position          |
-| pos\_x | number  | X positiom |
-| pos\_y | number  | Y position |
+| Name   | Type    | Description     |
+| ------ | ------- | --------------- |
+| v\_pos | Vector2 | Vector position |
+| pos\_x | number  | X positiom      |
+| pos\_y | number  | Y position      |
 
 ### Return value:
 
@@ -78,8 +78,8 @@ Some utils to make life a bit easier
 
 ### Parameters:
 
-| Name   | Type    | Description                    |
-| ------ | ------- | ------------------------------ |
+| Name   | Type    | Description        |
+| ------ | ------- | ------------------ |
 | v\_pos | Vector2 | Vector to override |
 
 ### Return value:
@@ -98,9 +98,9 @@ Some utils to make life a bit easier
 
 ### Parameters:
 
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| text | string | Clipboard text       |
+| Name | Type   | Description    |
+| ---- | ------ | -------------- |
+| text | string | Clipboard text |
 
 ### Return value:
 
@@ -118,9 +118,9 @@ Some utils to make life a bit easier
 
 ### Parameters:
 
-| Name    | Type    | Description                                 |
-| ------- | ------- | ------------------------------------------- |
-| forward | Vector3 | Vector to override   |
+| Name    | Type    | Description        |
+| ------- | ------- | ------------------ |
+| forward | Vector3 | Vector to override |
 | angles  | Vector3 | Vector to override |
 
 ### Return value:
@@ -139,9 +139,9 @@ Some utils to make life a bit easier
 
 ### Parameters:
 
-| Name   | Type    | Description                           |
-| ------ | ------- | ------------------------------------- |
-| world  | Vector3 | Input vector                         |
+| Name   | Type    | Description        |
+| ------ | ------- | ------------------ |
+| world  | Vector3 | Input vector       |
 | screen | Vector2 | Vector to override |
 
 ### Return value:
@@ -254,3 +254,89 @@ notify_type =
 ### Methods:
 
 * `utils.change_ped_model(hash)`
+## `utils.get_key_state`
+
+`Is key down.`
+### Parameters:
+
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| key  | number | Key code    |
+### Return value:
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| down | bool | Is key down |
+
+### Methods:
+
+* `utils.get_key_state(key)`
+## `utils.get_key_name`
+
+`Get key name by code.`
+### Parameters:
+
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| key  | number | Key code    |
+### Return value:
+
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| name | string | Key name    |
+
+### Methods:
+
+* `utils.get_key_name(key)`
+
+## `utils.stop_script`
+
+`Stop current script.`
+### Return value:
+
+| Name    | Type | Description |
+| ------- | ---- | ----------- |
+| success | bool | Is success  |
+
+### Methods:
+
+* `utils.stop_script()`
+
+## `utils.reload_script`
+
+`Reload current script.`
+### Return value:
+
+| Name    | Type | Description |
+| ------- | ---- | ----------- |
+| success | bool | Is success  |
+
+### Methods:
+
+* `utils.reload_script()`
+
+## `utils.get_fps`
+
+`Get current FPS.`
+### Return value:
+
+| Name | Type   | Description       |
+| ---- | ------ | ----------------- |
+| fps  | number | Frames per second |
+
+### Methods:
+
+* `utils.get_fps()`
+
+## `utils.get_frame_rate`
+
+`Get current frame rate.`
+### Return value:
+
+| Name | Type   | Description       |
+| ---- | ------ | ----------------- |
+| fps  | number | Frame rate |
+
+### Methods:
+
+* `utils.get_frame_rate()`

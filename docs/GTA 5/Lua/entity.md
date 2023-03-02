@@ -168,3 +168,22 @@ Methods related to entities
 
 * `function on_obtain(entity, tag)`
 * `function on_obtain(entity)`
+
+## `entity.get_owner`
+
+`Get entity's owner.`
+
+### Parameters:
+
+| Name   | Type | Description   |
+| ------ | ---- | ------------- |
+| entity | int  | Object handle |
+
+### Return value:
+
+| Name  | Type   | Description              |
+| ----- | ------ | ------------------------ |
+| owner | number | Owner's ( player ) index |
+### Methods:
+
+* `entity.get_owner(entity)`

@@ -1480,6 +1480,20 @@ local menu_widget_color =
 
 * `menu.get_main_menu_pos_y()`
 
+## `menu.is_input_active`
+
+`Is menu input active.`
+
+### Return value:
+
+| Name   | Type | Description           |
+| ------ | ---- | --------------------- |
+| active | bool | Is menu input active. |
+
+### Methods:
+
+* `menu.is_input_active()`
+
 ## Examples
 
 ### Simple page

@@ -81,6 +81,19 @@ Midnight Lua provides the ability to call script natives. To define the natives,
 
 ### Methods:
 - `native.invoke(return_type, hash, ...)`
+## `native.is_invoker_ready`
+
+`Is native invoker ready.`
+
+### Return value:
+
+| Name  | Type | Description |
+| ----- | ---- | ----------- |
+| ready | bool | Is ready.   |
+
+### Methods:
+
+* `native.is_invoker_ready()`
 
 ## Examples
 

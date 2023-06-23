@@ -15,14 +15,14 @@ Midnight Lua provides the ability to send script hash to players in a session. T
 
 
 ### Parameters
-| Name   | Type | Description            | Optional |
-| ------ | ---- | ---------------------- | -------- |
-| player | int  | Player index           |          |
-| hash   | int  | Script event hash      |          |
-| ...    | any  | Script event arguments | +        |
+| Name   | Type  | Description            | Optional |
+| ------ | ----- | ---------------------- | -------- |
+| player | int   | Player index           |          |
+| hash   | int   | Script event hash      |          |
+| args   | table | Script event arguments |          |
 
 ### Methods:
-- `script.send(player, hash, ...)`
+- `script.send(player, hash, args)`
 
 ## Examples
 
@@ -30,6 +30,6 @@ Midnight Lua provides the ability to send script hash to players in a session. T
 
 ```lua
 function OnChatMsg(ply, text)
-  script.send(ply, -1479371259, 0, 1, 0)
+  script.send(ply, -1479371259, {0, 1, 0})
 end
 ```

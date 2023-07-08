@@ -23,7 +23,7 @@ Methods to work with game memory
 
 ## Functions
 
-## `*memory.alloc`
+## `memory.alloc`
 
 ### Parameters
 
@@ -39,7 +39,7 @@ Methods to work with game memory
 
 ### Methods:
 
-* `*memory.alloc(size)`
+* `memory.alloc(size)`
 
 ## `memory.free`
 
@@ -78,7 +78,7 @@ Methods to work with game memory
 
 * `memory.is_valid_addr(addr, size)`
 
-## `*memory.search`
+## `memory.search`
 
 ### Parameters
 
@@ -95,9 +95,33 @@ Methods to work with game memory
 
 ### Methods:
 
-* `*memory.search(module_name, pattern)`
+* `memory.search(module_name, pattern)`
 
-## `*memory.absolute`
+## `memory.scan`
+`Function that scans memory in a specific DLL for a particular signature`
+
+### Parameters
+
+| Name         | Type    | Description                                                          |
+| ------------ | ------- | -------------------------------------------------------------------- |
+| module\_name | string  | The name of the DLL in which to perform the scan                     |
+| signature    | string  | The signature to search for                                          |
+| offset       | number  | The offset to add to the found signatures                            |
+| only\_one    | boolean | Whether to stop searching after finding the first matching signature |
+
+### Return value
+
+| Type  | Description         |
+| ----- | ------------------- |
+| table | Table of signatures |
+
+### Methods:
+
+* `memory.scan(module_name, signature, offset, only_one)`
+* `memory.scan(module_name, signature, offset)`
+* `memory.scan(module_name, signature)`
+
+## `memory.absolute`
 
 ### Parameters
 
@@ -113,9 +137,9 @@ Methods to work with game memory
 
 ### Methods:
 
-* `*memory.absolute(addr)`
+* `memory.absolute(addr)`
 
-## `*memory.relative`
+## `memory.relative`
 
 ### Parameters
 
@@ -131,28 +155,9 @@ Methods to work with game memory
 
 ### Methods:
 
-* `*memory.relative(addr)`
+* `memory.relative(addr)`
 
-## `*memory.add`
-
-### Parameters
-
-| Name  | Type   | Description |
-| ----- | ------ | ----------- |
-| addr  | void\* | None given  |
-| value | int    | None given  |
-
-### Return value
-
-| Type   | Description |
-| ------ | ----------- |
-| void\* | None given  |
-
-### Methods:
-
-* `*memory.add(addr, value)`
-
-## `*memory.sub`
+## `memory.add`
 
 ### Parameters
 
@@ -169,9 +174,28 @@ Methods to work with game memory
 
 ### Methods:
 
-* `*memory.sub(addr, value)`
+* `memory.add(addr, value)`
 
-## `*memory.distribute`
+## `memory.sub`
+
+### Parameters
+
+| Name  | Type   | Description |
+| ----- | ------ | ----------- |
+| addr  | void\* | None given  |
+| value | int    | None given  |
+
+### Return value
+
+| Type   | Description |
+| ------ | ----------- |
+| void\* | None given  |
+
+### Methods:
+
+* `memory.sub(addr, value)`
+
+## `memory.distribute`
 
 ### Parameters
 
@@ -187,7 +211,7 @@ Methods to work with game memory
 
 ### Methods:
 
-* `*memory.distribute(addr)`
+* `memory.distribute(addr)`
 
 ## `memory.read_byte`
 
@@ -415,18 +439,18 @@ local GameState = {}
 
 function OnInit()
   local addr = memory.search("GTA5.exe", "48 85 C9 74 4B 83 3D")
-  
+
   if not memory.is_valid_addr(addr) then
     print("[Lua] Failed to find GameState address.")
     return
   end
-  
+
   addr = memory.add(addr, 7)
   addr = memory.relative(addr)
   addr = memory.add(addr, 1)
-  
+
   GameState = addr
-  
+
   print("GameState addr is " .. memory.distribute(GameState).name)
 end
 ```

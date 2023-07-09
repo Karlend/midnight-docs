@@ -19,7 +19,7 @@ Namespace to work with stats
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.exists(hash)`
 
@@ -37,7 +37,7 @@ Namespace to work with stats
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_stat_type(hash)`
 
@@ -55,7 +55,7 @@ Namespace to work with stats
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_stat_type_name(hash)`
 
@@ -97,7 +97,7 @@ StatType_e =
 | hash  | int  | Stat hash      |
 | value | bool | New stat value |
 
-### Methods:
+### Methods
 
 * `stats.set_bool(hash, value)`
 
@@ -110,7 +110,7 @@ StatType_e =
 | hash  | int  | Stat hash      |
 | value | int  | New stat value |
 
-### Methods:
+### Methods
 
 * `stats.set_u8(hash, value)`
 
@@ -123,7 +123,7 @@ StatType_e =
 | hash  | int  | Stat hash      |
 | value | int  | New stat value |
 
-### Methods:
+### Methods
 
 * `stats.set_u16(hash, value)`
 
@@ -136,7 +136,7 @@ StatType_e =
 | hash  | int  | Stat hash      |
 | value | int  | New stat value |
 
-### Methods:
+### Methods
 
 * `stats.set_u32(hash, value)`
 
@@ -149,7 +149,7 @@ StatType_e =
 | hash  | int  | Stat hash      |
 | value | int  | New stat value |
 
-### Methods:
+### Methods
 
 * `stats.set_u64(hash, value)`
 
@@ -162,7 +162,7 @@ StatType_e =
 | hash  | int   | Stat hash      |
 | value | float | New stat value |
 
-### Methods:
+### Methods
 
 * `stats.set_float(hash, value)`
 
@@ -175,7 +175,7 @@ StatType_e =
 | hash  | int    | Stat hash      |
 | value | string | New stat value |
 
-### Methods:
+### Methods
 
 * `stats.set_string(hash, value)`
 
@@ -187,7 +187,7 @@ StatType_e =
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_bool(hash)`
 
@@ -211,7 +211,7 @@ StatType_e =
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_u8(hash)`
 
@@ -229,7 +229,7 @@ StatType_e =
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_u16(hash)`
 
@@ -247,7 +247,7 @@ StatType_e =
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_u32(hash)`
 
@@ -265,7 +265,7 @@ StatType_e =
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_u64(hash)`
 
@@ -283,7 +283,7 @@ StatType_e =
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_float(hash)`
 
@@ -301,7 +301,7 @@ StatType_e =
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_string(hash)`
 
@@ -321,7 +321,7 @@ StatType_e =
 | offset | int  | Stat offset |
 | mask   | int  | Stat mask   |
 
-### Methods:
+### Methods
 
 * `stats.is_masked_valid(hash, offset, mask)`
 
@@ -341,7 +341,7 @@ StatType_e =
 | offset | int  | Stat offset |
 | mask   | int  | Stat mask   |
 
-### Methods:
+### Methods
 
 * `stats.get_masked_int(hash, offset, mask)`
 
@@ -353,7 +353,7 @@ StatType_e =
 
 ## `stats.set_masked_int`
 
-### Methods:
+### Methods
 
 * `stats.set_masked_int(value)`
 
@@ -366,7 +366,7 @@ StatType_e =
 | offset | int  | Stat offset    |
 | mask   | int  | Stat mask      |
 
-### Methods:
+### Methods
 
 * `stats.set_masked_int(hash, value, offset, mask)`
 
@@ -384,7 +384,7 @@ StatType_e =
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_packed_mask(hash)`
 
@@ -394,7 +394,7 @@ StatType_e =
 | ---- | ---- | ----------- |
 | mask | int  | Packed mask |
 
-### Methods:
+### Methods
 
 * `stats.get_packed_mask(hash)`
 
@@ -407,7 +407,7 @@ StatType_e =
 | hash | int  | Stat hash      |
 | slot | int  | Character slot |
 
-### Methods:
+### Methods
 
 * `stats.get_packed_stat_int(hash, slot)`
 
@@ -426,7 +426,7 @@ StatType_e =
 | hash | int  | Stat hash      |
 | slot | int  | Character slot |
 
-### Methods:
+### Methods
 
 * `stats.get_packed_stat_bool(hash, slot)`
 
@@ -447,7 +447,7 @@ StatType_e =
 | value | int  | New stat value |
 | slot  | int  | Character slot |
 
-### Methods:
+### Methods
 
 * `stats.set_packed_stat_int(hash, value, slot)`
 
@@ -461,7 +461,7 @@ StatType_e =
 | value | bool | New stat value |
 | slot  | int  | Character slot |
 
-### Methods:
+### Methods
 
 * `stats.set_packed_stat_bool(hash, value, slot)`
 
@@ -476,7 +476,7 @@ StatType_e =
 | char_stat | bool | Is character stat    |
 | slot      | int  | Character slot       |
 
-### Methods:
+### Methods
 
 * `stats.set_packed_int_stat_key(index, sp_stat, char_stat, slot)`
 
@@ -494,7 +494,7 @@ StatType_e =
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_date(hash)`
 
@@ -512,7 +512,7 @@ StatType_e =
 | ---- | ---- | ----------- |
 | hash | int  | Stat hash   |
 
-### Methods:
+### Methods
 
 * `stats.get_date(hash)`
 
@@ -537,7 +537,7 @@ StatType_e =
 | second      | int  | New date - second      |
 | millisecond | int  | New date - millisecond |
 
-### Methods:
+### Methods
 
 * `stats.set_date(hash, year = 0, month = 0, day = 0, hour = 0, minute = 0, second = 0, millisecond = 0)`
 

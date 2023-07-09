@@ -23,7 +23,7 @@ Provides an API for ASCII strings.
 | ---- | -------------------- |
 | int  | Hash of given string |
 
-### Methods:
+### Methods
 - `string.joaat(str)`
 
 ## `string.smart_joaat`
@@ -46,5 +46,5 @@ In general, this is just the function that performs joaat hashing of the incomin
 | ---- | -------------------- |
 | int  | Hash of given string |
 
-### Methods:
+### Methods
 - `string.smart_joaat(str)`

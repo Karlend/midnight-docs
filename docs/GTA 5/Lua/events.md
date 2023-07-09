@@ -12,21 +12,21 @@ Callbacks for specific events
 ## `OnInit`
 `Called when the Lua script is loaded.`
 
-### Methods:
+### Methods
 
 * `OnInit()`
 
 ## `OnDone`
 `Called when the Lua script is unloaded.`
 
-### Methods:
+### Methods
 
 * `OnDone()`
 
 ## `OnFrame`
 `Called every frame.`
 
-### Methods:
+### Methods
 
 * `OnFrame()`
 
@@ -40,7 +40,7 @@ Callbacks for specific events
 | ip       | string | Player IP. Can be spoofed |
 | host_key | number | Player host key           |
 
-### Methods:
+### Methods
 
 * `OnPlayerJoin(ply, name, ip, host_key)`
 
@@ -51,7 +51,7 @@ Callbacks for specific events
 | -------- | ---- | ---------------------- |
 | ply      | int  | Connected player index |
 
-### Methods:
+### Methods
 
 * `OnPlayerActive(ply)`
 
@@ -62,7 +62,7 @@ Callbacks for specific events
 | -------- | ---- | -------------------------- |
 | ply      | int  | Disconnecting player index |
 
-### Methods:
+### Methods
 
 * `OnPlayerLeft(ply)`
 
@@ -75,7 +75,7 @@ Callbacks for specific events
 | weapon   | int  | Received weapon handle |
 | ammo     | int  | Weapon ammo count      |
 
-### Methods:
+### Methods
 
 * `OnWeaponReceived(ped, weapon, ammo)`
 
@@ -86,7 +86,7 @@ Callbacks for specific events
 | -------- | ---- | ------------------------------------------ |
 | rid      | int  | Connecting player's R\*ID (may be spoofed) |
 
-### Methods:
+### Methods
 
 * `OnPlayerJoinByRid(rid)`
 
@@ -105,7 +105,7 @@ Callbacks for specific events
 | ---- | ----------------------------------------------------- |
 | bool | true if script event can be executed, false otherwise |
 
-### Methods:
+### Methods
 
 * `OnScriptEvent(ply, event, args)`
 
@@ -118,7 +118,7 @@ Callbacks for specific events
 | event     | int   | Script event hash             |
 | args      | table | Script event arguments        |
 
-### Methods:
+### Methods
 
 * `OnScriptSend(ply_bits, event, args)`
 
@@ -132,7 +132,7 @@ Callbacks for specific events
 | script_name | string | Script name                   |
 | ply         | int    | Player index                  |
 
-### Methods:
+### Methods
 
 * `OnScriptMigrate(is_freemode, is_you, script_name, ply)`
 
@@ -144,7 +144,7 @@ Callbacks for specific events
 | ply      | int    | Player index of message sender |
 | text     | string | Message text                   |
 
-### Methods:
+### Methods
 
 * `OnChatMsg(ply, text)`
 
@@ -158,7 +158,7 @@ Callbacks for specific events
 | rid        | int    | Player Rockstar ID             |
 | is\_script | bool   | Is SMS sent via script         |
 
-### Methods:
+### Methods
 
 * `OnSMS(ply, text, rid, is_script)`
 
@@ -177,7 +177,7 @@ Callbacks for specific events
 | ---- | ------------------------------------------------------ |
 | bool | true if network event can be executed, false otherwise |
 
-### Methods:
+### Methods
 
 * `OnNetworkEvent(ply, event, buf)`
 
@@ -190,7 +190,7 @@ Callbacks for specific events
 | target    | int  | Player index of observer         |
 | is\_you   | bool | true if target is a local player |
 
-### Methods:
+### Methods
 
 * `OnSpectating(spectator, target, is_you)`
 
@@ -203,28 +203,28 @@ Callbacks for specific events
 | target    | int  | Player index of observer         |
 | is\_you   | bool | true if target is a local player |
 
-### Methods:
+### Methods
 
 * `OnStopSpectating(spectator, target, is_you)`
 
 ## `OnFeatureStart`
 `Called when Feature is activated.`
 
-### Methods:
+### Methods
 
 * `OnFeatureStart()`
 
 ## `OnFeatureStop`
 `Called when Feature stops.`
 
-### Methods:
+### Methods
 
 * `OnFeatureStop()`
 
 ## `OnFeatureTick`
 `Called every script tick.`
 
-### Methods:
+### Methods
 
 * `OnFeatureTick()`
 
@@ -246,7 +246,7 @@ local reasons = { -- can give nil in case of unknown
 }
 ```
 
-### Methods:
+### Methods
 
 * `OnScriptStopped(name, reason)`
 
@@ -259,7 +259,7 @@ local reasons = { -- can give nil in case of unknown
 | args        | LuaArray | Script arguments |
 | stack\_size | int      | Stack size       |
 
-### Methods:
+### Methods
 
 * `OnScriptStarted(name, args, stack_size)`
 
@@ -271,7 +271,7 @@ local reasons = { -- can give nil in case of unknown
 | state\_old | int  | Previous GameState value |
 | state\_new | int  | New GameState value      |
 
-### Methods:
+### Methods
 
 * `OnGameState(state_old, state_new)`
 
@@ -283,7 +283,7 @@ local reasons = { -- can give nil in case of unknown
 | key      | int  | Virtual key index                    |
 | down     | bool | true if key pressed, false otherwise |
 
-### Methods:
+### Methods
 
 * `OnKeyPressed(key, down)`
 
@@ -300,21 +300,21 @@ local reasons = { -- can give nil in case of unknown
 | ---- | -------------------------------------------------- |
 | bool | true if node pointer was modifier, false otherwise |
 
-### Methods:
+### Methods
 
 * `OnPrepareTreeNode(node, name, hash)`
 
 ## `OnDirectXResizeBuffers`
 `Called when the IDXGISwapChain::ResizeBuffers method is called.`
 
-### Methods:
+### Methods
 
 * `OnDirectXResizeBuffers()`
 
 ## `OnDirectXPresent`
 `Called when the IDXGISwapChain::Present method is called.`
 
-### Methods:
+### Methods
 
 * `OnDirectXPresent()`
 
@@ -328,7 +328,7 @@ local reasons = { -- can give nil in case of unknown
 | wparam   | int  | Additional message information |
 | lparam   | int  | Additional message information |
 
-### Methods:
+### Methods
 
 * `OnWindowProc(hwnd, msg, wparam, lparam)`
 
@@ -339,14 +339,14 @@ local reasons = { -- can give nil in case of unknown
 | --------------- | ---- | ----------------------------------------------------------------------------- |
 | is\_multiplayer | bool | If true, then the event was triggered online, false - in a single player game |
 
-### Methods:
+### Methods
 
 * `OnTransitionEnd(is_multiplayer)`
 
 ## `OnFirstSingleplayerJoin`
 `Called upon first entering a single player game.`
 
-### Methods:
+### Methods
 
 * `OnFirstSingleplayerJoin()`
 
@@ -375,7 +375,7 @@ modder_flags =
 }
 ```
 
-### Methods:
+### Methods
 
 * `OnModderDetected(ply, reason)`
 
@@ -386,7 +386,7 @@ modder_flags =
 | -------- | ---- | ---------------------- |
 | veh      | int  | Entered vehicle handle |
 
-### Methods:
+### Methods
 
 * `OnVehicleEnter(veh)`
 
@@ -397,21 +397,21 @@ modder_flags =
 | -------- | ---- | --------------------- |
 | veh      | int  | Leaved vehicle handle |
 
-### Methods:
+### Methods
 
 * `OnVehicleLeave(veh)`
 
 ## `OnSessionJoin`
 `Called when the local player has joined session.`
 
-### Methods:
+### Methods
 
 * `OnSessionJoin()`
 
 ## `OnSessionLeft`
 `Called when the local player has left session.`
 
-### Methods:
+### Methods
 
 * `OnSessionLeft()`
 
@@ -422,7 +422,7 @@ modder_flags =
 | --------- | ---- | ---------------------------------------------------- |
 | is_online | bool | Whether spawned in online session or in singleplayer |
 
-### Methods:
+### Methods
 
 * `OnSpawn(is_online)`
 
@@ -443,7 +443,7 @@ modder_flags =
 | ---- | ----------------------------- |
 | bool | false to prevent from showing |
 
-### Methods:
+### Methods
 
 * `OnWarningScreen(script_thread, entryHeader, entryLine1, entryLine2, instructionalKey)`
 
@@ -456,7 +456,7 @@ modder_flags =
 | reason   | string | Reason of blocking sync |
 | ban_time | int    | Ban time in seconds     |
 
-### Methods:
+### Methods
 
 * `OnSyncBlocked(ply, reason, ban_time)`
 
@@ -467,7 +467,7 @@ modder_flags =
 | -------- | ---- | ------------ |
 | ply      | int  | Player index |
 
-### Methods:
+### Methods
 
 * `OnSessionHostChanged(ply)`
 
@@ -479,6 +479,6 @@ modder_flags =
 | ply      | int  | Player index |
 | hash     | int  | Weapon hash  |
 
-### Methods:
+### Methods
 
 * `OnPlayerShot(ply, hash)`

@@ -27,7 +27,7 @@ _G functions to make life easier
 | ---- | ------------------------ |
 | any  | Returned value from file |
 
-### Methods:
+### Methods
 
 * `require(path)`
 
@@ -47,7 +47,7 @@ _G functions to make life easier
 | ----- | ------------------------ |
 | float | Value converted to float |
 
-### Methods:
+### Methods
 
 * `i2f(num)`
 
@@ -67,7 +67,7 @@ _G functions to make life easier
 | ---- | ----------------------- |
 | int  | String converted to int |
 
-### Methods:
+### Methods
 
 * `s2i(text)`
 
@@ -87,6 +87,6 @@ _G functions to make life easier
 | ----- | ------------------------- |
 | float | String converted to float |
 
-### Methods:
+### Methods
 
 * `s2f(text)`

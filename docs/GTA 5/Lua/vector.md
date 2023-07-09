@@ -28,7 +28,7 @@ Vectors
 | ------- |
 | Vector2 |
 
-### Methods:
+### Methods
 
 * `Vector2(x, y)`
 
@@ -53,7 +53,7 @@ Vectors
 | ------- |
 | Vector3 |
 
-### Methods:
+### Methods
 
 * `Vector3(x, y, z)`
 * `Vector3(r, g, b)`
@@ -77,6 +77,6 @@ Vectors
 | ------- |
 | Vector3 |
 
-### Methods:
+### Methods
 
 * `Vector4(r, g, b, a)`

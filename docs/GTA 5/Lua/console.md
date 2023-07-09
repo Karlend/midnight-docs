@@ -38,12 +38,12 @@ con_color =
 	LightCyan = 11,
 	LightRed = 12,
 	LightPurple = 13,
-	Yellow = 14	
+	Yellow = 14
 	White = 15,
 };
 ```
 
-### Methods:
+### Methods
 
 * `console.log(color, text)`
 * `console.log(text)`

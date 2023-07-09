@@ -25,7 +25,7 @@ Workspace to work with players
 | ----- | ----------------------- |
 | pairs | Array of player indexes |
 
-### Methods:
+### Methods
 
 * `player.bits_to_players(bits)`
 
@@ -37,7 +37,7 @@ Workspace to work with players
 | ---- | ----------------------------- |
 | int  | Entity handle of local player |
 
-### Methods:
+### Methods
 
 * `player.id()`
 
@@ -49,7 +49,7 @@ Workspace to work with players
 | ---- | ---------------------------- |
 | int  | Player index of local player |
 
-### Methods:
+### Methods
 
 * `player.index()`
 
@@ -63,7 +63,7 @@ Workspace to work with players
 | time          | int    | Ban time     |
 | reason        | string | Ban reason   |
 
-### Methods:
+### Methods
 
 * `player.ban(player_index, time, reason)`
 
@@ -81,7 +81,7 @@ Workspace to work with players
 | ---- | ---------------- |
 | bool | Is player banned |
 
-### Methods:
+### Methods
 
 * `player.is_banned(player_index)`
 
@@ -93,7 +93,7 @@ Workspace to work with players
 | ------------- | ---- | ------------ |
 | player\_index | int  | Target index |
 
-### Methods:
+### Methods
 
 * `player.unban(player_index)`
 
@@ -111,7 +111,7 @@ Workspace to work with players
 | ---- | ------------- |
 | int  | Player ped id |
 
-### Methods:
+### Methods
 
 * `player.get_entity_handle(player_index)`
 
@@ -129,7 +129,7 @@ Workspace to work with players
 | ----- | -------------- |
 | table | Network handle |
 
-### Methods:
+### Methods
 
 * `player.get_network_handle(player_index)`
 
@@ -147,7 +147,7 @@ Workspace to work with players
 | ---- | ------------ |
 | int  | Intrerior id |
 
-### Methods:
+### Methods
 
 * `player.get_interior_handle(player_index)`
 
@@ -165,7 +165,7 @@ Workspace to work with players
 | ---- | ----------- |
 | int  | Vehicle id  |
 
-### Methods:
+### Methods
 
 * `player.get_vehicle_handle(player_index)`
 
@@ -183,7 +183,7 @@ Workspace to work with players
 | ---- | ----------- |
 | int  | Network id  |
 
-### Methods:
+### Methods
 
 * `player.get_net_id(player_index)`
 
@@ -201,7 +201,7 @@ Workspace to work with players
 | ---- | --------------------- |
 | int  | Network id of vehicle |
 
-### Methods:
+### Methods
 
 * `player.get_vehicle_net_id(player_index)`
 
@@ -221,7 +221,7 @@ Workspace to work with players
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `player.get_dimentions(player_index, mins, maxs)`
 
@@ -240,7 +240,7 @@ Workspace to work with players
 | ---- | ---------------------- |
 | bool | Successfully wrote var |
 
-### Methods:
+### Methods
 
 * `player.get_coordinates(player_index, position)`
 
@@ -259,7 +259,7 @@ Workspace to work with players
 | ---- | ---------------------- |
 | bool | Successfully wrote var |
 
-### Methods:
+### Methods
 
 * `player.get_angles(player_index, angles)`
 
@@ -277,7 +277,7 @@ Workspace to work with players
 | ---- | ---------------- |
 | int  | Amount of health |
 
-### Methods:
+### Methods
 
 * `player.get_health(player_index)`
 
@@ -295,7 +295,7 @@ Workspace to work with players
 | ---- | -------------------- |
 | int  | Amount of max health |
 
-### Methods:
+### Methods
 
 * `player.get_max_health(player_index)`
 
@@ -313,7 +313,7 @@ Workspace to work with players
 | ---- | --------------- |
 | int  | Amount of armor |
 
-### Methods:
+### Methods
 
 * `player.get_armor(int player_index)`
 
@@ -331,7 +331,7 @@ Workspace to work with players
 | ---- | ------------------- |
 | int  | Amount of max armor |
 
-### Methods:
+### Methods
 
 * `player.get_max_armor(player_index)`
 
@@ -349,7 +349,7 @@ Workspace to work with players
 | ---- | ----------- |
 | int  | Model hash  |
 
-### Methods:
+### Methods
 
 * `player.get_model(player_index)`
 
@@ -367,7 +367,7 @@ Workspace to work with players
 | ---- | ----------- |
 | int  | Weapon hash |
 
-### Methods:
+### Methods
 
 * `player.get_weapon(player_index)`
 
@@ -385,7 +385,7 @@ Workspace to work with players
 | ---- | ----------------------- |
 | bool | Whether player is valid |
 
-### Methods:
+### Methods
 
 * `player.is_valid(player_index)`
 
@@ -403,7 +403,7 @@ Workspace to work with players
 | ---- | ------------------------ |
 | bool | Whether player is animal |
 
-### Methods:
+### Methods
 
 * `player.is_animal(player_index)`
 
@@ -421,7 +421,7 @@ Workspace to work with players
 | ---- | ----------------------- |
 | bool | Whether player is alive |
 
-### Methods:
+### Methods
 
 * `player.is_alive(player_index)`
 
@@ -439,7 +439,7 @@ Workspace to work with players
 | ---- | ------------------------ |
 | bool | Whether player is friend |
 
-### Methods:
+### Methods
 
 * `player.is_friend(player_index)`
 
@@ -457,7 +457,7 @@ Workspace to work with players
 | ---- | ------------------------ |
 | bool | Whether player is modder |
 
-### Methods:
+### Methods
 
 * `player.is_modder(player_index)`
 
@@ -475,7 +475,7 @@ Workspace to work with players
 | ---- | --------------------------- |
 | bool | Whether player is connected |
 
-### Methods:
+### Methods
 
 * `player.is_connected(player_index)`
 
@@ -493,7 +493,7 @@ Workspace to work with players
 | ---- | ---------------------------------------- |
 | bool | true if player is drawn, false otherwise |
 
-### Methods:
+### Methods
 
 * `player.is_on_screen(player_index)`
 
@@ -511,7 +511,7 @@ Workspace to work with players
 | ---- | ----------------------------- |
 | bool | Whether player is in cutscene |
 
-### Methods:
+### Methods
 
 * `player.is_in_cutscene(player_index)`
 
@@ -529,7 +529,7 @@ Workspace to work with players
 | ---- | ---------------------------------- |
 | bool | Whether player is cheater (R* tag) |
 
-### Methods:
+### Methods
 
 * `player.is_cheater(player_index)`
 
@@ -547,7 +547,7 @@ Workspace to work with players
 | ---- | ------------------------------ |
 | bool | Whether player is rockstar dev |
 
-### Methods:
+### Methods
 
 * `player.is_rockstar_dev(player_index)`
 
@@ -565,7 +565,7 @@ Workspace to work with players
 | ----- | -------------- |
 | float | Player heading |
 
-### Methods:
+### Methods
 
 * `player.get_heading(player_index)`
 
@@ -583,7 +583,7 @@ Workspace to work with players
 | ----- | ------------------ |
 | float | Distance to player |
 
-### Methods:
+### Methods
 
 * `player.get_distance(player_index)`
 
@@ -601,7 +601,7 @@ Workspace to work with players
 | ---- | ------------ |
 | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.get_index(player_index)`
 
@@ -619,7 +619,7 @@ Workspace to work with players
 | ---- | ----------- |
 | int  | Bit index   |
 
-### Methods:
+### Methods
 
 * `player.get_bit_index(player_index)`
 
@@ -637,7 +637,7 @@ Workspace to work with players
 | ---- | ----------- |
 | int  | Join time   |
 
-### Methods:
+### Methods
 
 * `player.get_join_time(player_index)`
 
@@ -655,7 +655,7 @@ Workspace to work with players
 | ---- | ----------- |
 | int  | Moder flags |
 
-### Methods:
+### Methods
 
 * `player.get_modder_flags(player_index)`
 
@@ -673,7 +673,7 @@ Workspace to work with players
 | ---- | ------------------------------- |
 | bool | true if local, false otherwise. |
 
-### Methods:
+### Methods
 
 * `player.is_local(player_index)`
 
@@ -691,7 +691,7 @@ Workspace to work with players
 | ------ | ------------------------- |
 | string | `?` if name isn't avaible |
 
-### Methods:
+### Methods
 
 * `player.get_name(player_index)`
 
@@ -705,7 +705,7 @@ Workspace to work with players
 | ------------- | ---- | -------------------------- |
 | player\_index | int  | Index of script host or -1 |
 
-### Methods:
+### Methods
 
 * `player.get_script_host()`
 
@@ -719,7 +719,7 @@ Workspace to work with players
 | ------------- | ---- | ------------------- |
 | player\_index | int  | Index of host or -1 |
 
-### Methods:
+### Methods
 
 * `player.get_session_host()`
 
@@ -734,7 +734,7 @@ Workspace to work with players
 | ply  | int  | Player index   |
 | flag | int  | Modder flag ID |
 
-### Methods:
+### Methods
 
 * `player.set_modder_flag(ply, flag)`
 
@@ -749,7 +749,7 @@ Workspace to work with players
 | ply  | int  | Player index   |
 | flag | int  | Modder flag ID |
 
-### Methods:
+### Methods
 
 * `player.remove_modder_flag(ply, flag)`
 
@@ -769,7 +769,7 @@ Workspace to work with players
 | ------------ | ---- | ------------------------------------------ |
 | rockstar\_id | int  | RockstarID of player, 0 if couldn't get it |
 
-### Methods:
+### Methods
 
 * `player.get_rid(ply)`
 
@@ -790,7 +790,7 @@ Workspace to work with players
 | ------- | ---- | ----------------------------------------------------------- |
 | success | bool | true if the message was successfully sent, false otherwise. |
 
-### Methods:
+### Methods
 
 * `player.send_sms(ply, text)`
 
@@ -810,7 +810,7 @@ Workspace to work with players
 | ------- | ---- | ---------------------------------------------------------- |
 | success | bool | true if the player is spectating someone, false otherwise. |
 
-### Methods:
+### Methods
 
 * `player.is_spectating(ply)`
 
@@ -830,7 +830,7 @@ Workspace to work with players
 | ------------- | ---- | ----------------------------------------------------- |
 | player\_index | int  | The index of the player being spectate, -1 otherwise. |
 
-### Methods:
+### Methods
 
 * `player.get_spectating(ply)`
 
@@ -850,7 +850,7 @@ Workspace to work with players
 | ------- | ---- | -------------------------------------------------------- |
 | success | bool | true if the player has godmode enabled, false otherwise. |
 
-### Methods:
+### Methods
 
 * `player.is_god(ply)`
 
@@ -870,7 +870,7 @@ Workspace to work with players
 | ------- | ---- | ----------------------------------------------------- |
 | success | bool | true if the player is a script host, false otherwise. |
 
-### Methods:
+### Methods
 
 * `player.is_script_host(ply)`
 
@@ -890,7 +890,7 @@ Workspace to work with players
 | ------- | ---- | ------------------------------------------------------ |
 | success | bool | true if the player is a session host, false otherwise. |
 
-### Methods:
+### Methods
 
 * `player.is_session_host(ply)`
 
@@ -910,7 +910,7 @@ Workspace to work with players
 | -------- | ---- | ---------------- |
 | host_key | int  | Player host key. |
 
-### Methods:
+### Methods
 
 * `player.get_host_key(ply)`
 
@@ -930,7 +930,7 @@ Workspace to work with players
 | ------------ | ---- | -------------------- |
 | is_next_host | bool | Is player next host. |
 
-### Methods:
+### Methods
 
 * `player.is_next_host(ply)`
 
@@ -950,7 +950,7 @@ Workspace to work with players
 | -------- | ---- | --------------------- |
 | host_key | int  | Player host priority. |
 
-### Methods:
+### Methods
 
 * `player.get_host_priority(ply)`
 
@@ -964,7 +964,7 @@ Workspace to work with players
 | ---------- | ----- | ---------------------------------- |
 | host queue | table | Sorted table by players' host key. |
 
-### Methods:
+### Methods
 
 * `player.get_hosts_queue()`
 
@@ -984,7 +984,7 @@ Workspace to work with players
 | ------- | ---- | ------------------------------------------------------- |
 | success | bool | true if the player is in the interior, false otherwise. |
 
-### Methods:
+### Methods
 
 * `player.is_in_interior(ply)`
 
@@ -1004,7 +1004,7 @@ Workspace to work with players
 | ------- | ---- | ------------------------------------------------- |
 | success | bool | true if the player is in the TC, false otherwise. |
 
-### Methods:
+### Methods
 
 * `player.is_in_vehicle(ply)`
 
@@ -1024,7 +1024,7 @@ Workspace to work with players
 | ------ | ------ | --------------------------------- |
 | client | string | Client player launched game from. |
 
-### Methods:
+### Methods
 
 * `player.get_client(ply)`
 
@@ -1044,7 +1044,7 @@ Workspace to work with players
 | ---- | ----- | ------------------------------------- |
 | ip   | table | Player ip address ( can be spoofed ). |
 
-### Methods:
+### Methods
 
 * `player.get_ip(ply)`
 
@@ -1064,7 +1064,7 @@ Workspace to work with players
 | ---- | ------ | ------------------------------------- |
 | ip   | string | Player ip address ( can be spoofed ). |
 
-### Methods:
+### Methods
 
 * `player.get_ip_string(ply)`
 
@@ -1084,7 +1084,7 @@ Workspace to work with players
 | ---- | ----- | ------------------------------------------------------- |
 | ip   | table | Player ip address. Zeroes if ip isn't spoofed/resolved. |
 
-### Methods:
+### Methods
 
 * `player.get_resolved_ip(ply)`
 
@@ -1104,7 +1104,7 @@ Workspace to work with players
 | ---- | ------ | -------------------------------------------------------- |
 | ip   | string | Player ip address. 0.0.0.0 if ip isn't spoofed/resolved. |
 
-### Methods:
+### Methods
 
 * `player.get_resolved_ip_string(ply)`
 
@@ -1119,7 +1119,7 @@ Workspace to work with players
 | ply       | int  | Player index                             |
 | is_invite | bool | Should send invite instead of force send |
 
-### Methods:
+### Methods
 
 * `player.teleport_to_island(ply, is_invite)`
 
@@ -1134,7 +1134,7 @@ Workspace to work with players
 | ply         | int  | Player index |
 | interior_id | int  | Interior id  |
 
-### Methods:
+### Methods
 
 * `player.teleport_to_interior(ply, interior_id)`
 
@@ -1148,7 +1148,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.teleport_to_mission(ply)`
 
@@ -1162,7 +1162,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.teleport_to_cutscene(ply)`
 
@@ -1176,7 +1176,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.ceo_kick(ply)`
 
@@ -1190,7 +1190,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.ceo_ban(ply)`
 
@@ -1204,7 +1204,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.vehicle_destroy(ply)`
 
@@ -1218,7 +1218,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.vehicle_kick(ply)`
 
@@ -1232,7 +1232,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.vehicle_disown(ply)`
 
@@ -1246,7 +1246,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.vehicle_emp(ply)`
 
@@ -1260,7 +1260,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.clear_wanted_level(ply)`
 
@@ -1274,7 +1274,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.cops_blind_eye(ply)`
 
@@ -1288,7 +1288,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.off_the_radar(ply)`
 
@@ -1304,7 +1304,7 @@ Workspace to work with players
 | bounty  | int  | Price        |
 | is_anon | bool | Anonymously  |
 
-### Methods:
+### Methods
 
 * `player.set_bounty(ply, bounty, is_anon)`
 
@@ -1318,7 +1318,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.force_cam(ply)`
 
@@ -1332,7 +1332,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.kick(ply)`
 
@@ -1346,7 +1346,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.kick_brute(ply)`
 
@@ -1360,7 +1360,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.kick_idm(ply)`
 
@@ -1380,7 +1380,7 @@ Workspace to work with players
 | ---- | --------------- |
 | bool | Is crash active |
 
-### Methods:
+### Methods
 
 * `player.crash_himiko_active(ply)`
 
@@ -1394,7 +1394,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.crash_himiko_start(ply)`
 
@@ -1408,7 +1408,7 @@ Workspace to work with players
 | ---- | ---- | ------------ |
 | ply  | int  | Player index |
 
-### Methods:
+### Methods
 
 * `player.crash_himiko_stop(ply)`
 
@@ -1423,7 +1423,7 @@ Workspace to work with players
 | ply  | int    | Player index |
 | name | string | Outfit name  |
 
-### Methods:
+### Methods
 
 * `player.outfit_save(ply, name)`
 
@@ -1437,7 +1437,7 @@ Workspace to work with players
 | ---- | ------ | ----------- |
 | name | string | Outfit name |
 
-### Methods:
+### Methods
 
 * `player.outfit_load(name)`
 
@@ -1455,7 +1455,7 @@ Workspace to work with players
 | ----- | -------------- |
 | table | CEO info table |
 
-### Methods:
+### Methods
 
 * `player.get_ceo_info(ply)`
 
@@ -1473,7 +1473,7 @@ Workspace to work with players
 | ---- | ----------------- |
 | bool | Is player visible |
 
-### Methods:
+### Methods
 
 * `player.is_visible(ply)`
 
@@ -1491,6 +1491,6 @@ Workspace to work with players
 | ---- | ------------------ |
 | bool | Is player shooting |
 
-### Methods:
+### Methods
 
 * `player.is_shooting(ply)`

@@ -25,7 +25,7 @@ Methods related to networking
 | ---- | --------------- |
 | int  | Event name hash |
 
-### Methods:
+### Methods
 
 * `net.get_hash(event)`
 
@@ -43,6 +43,6 @@ Methods related to networking
 | ------ | --------------- |
 | string | Event name hash |
 
-### Methods:
+### Methods
 
 * `net.get_name(event)`

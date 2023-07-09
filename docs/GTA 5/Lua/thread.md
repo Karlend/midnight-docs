@@ -19,7 +19,7 @@ Threads are used to run code in script ticks
 | -------- | -------- | ----------------- |
 | callback | function | Callback function |
 
-### Methods:
+### Methods
 
 * `thread.create(callback)`
 
@@ -31,7 +31,7 @@ Threads are used to run code in script ticks
 | -------- | -------- | ----------------- |
 | ms | int | Time to wait |
 
-### Methods:
+### Methods
 
 * `wait(ms)`
 

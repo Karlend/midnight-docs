@@ -21,7 +21,7 @@ Draws function must be used in OnFrame event
 | ----- | ------ | ------------------------------- |
 | Width | number | Width of game window in pixels. |
 
-### Methods:
+### Methods
 
 * `draw.get_window_width()`
 
@@ -35,7 +35,7 @@ Draws function must be used in OnFrame event
 | ------ | ------ | -------------------------------- |
 | Height | number | Height of game window in pixels. |
 
-### Methods:
+### Methods
 
 * `draw.get_window_height()`
 
@@ -49,7 +49,7 @@ Draws function must be used in OnFrame event
 | ----- | ------ | -------------------------- |
 | Width | number | Width of screen in pixels. |
 
-### Methods:
+### Methods
 
 * `draw.get_screen_width()`
 
@@ -63,7 +63,7 @@ Draws function must be used in OnFrame event
 | ------ | ------ | --------------------------- |
 | Height | number | Height of screen in pixels. |
 
-### Methods:
+### Methods
 
 * `draw.get_screen_height()`
 
@@ -83,7 +83,7 @@ Draws function must be used in OnFrame event
 | ------ | -------- | ------------------------------------- |
 | Object | userdata | Texture handle, 0 if failed to create |
 
-### Methods:
+### Methods
 
 * `draw.create_texture_from_file(string file_name)`
 
@@ -104,7 +104,7 @@ Draws function must be used in OnFrame event
 | ------ | -------- | ------------------------------------- |
 | Object | userdata | Texture handle, 0 if failed to create |
 
-### Methods:
+### Methods
 
 * `draw.create_texture_from_memory(ptr, size)`
 
@@ -124,7 +124,7 @@ Draws function must be used in OnFrame event
 | ------- | ---- | ------------------------------------------------- |
 | success | bool | true if the texture was released, false otherwise |
 
-### Methods:
+### Methods
 
 * `draw.release_texture(handle)`
 
@@ -154,7 +154,7 @@ enum EDrawContextColor_
 | v         | number | Brightness.    |
 | a         | number | Alpha.         |
 
-### Methods:
+### Methods
 
 * `draw.set_hsv(int ctx_color, number h, number s, number v, number a)`
 * `draw.set_hsv(int ctx_color, number h, number s, number v)`
@@ -174,7 +174,7 @@ enum EDrawContextColor_
 | b         | int  | Blue.          |
 | a         | int  | Alpha.         |
 
-### Methods:
+### Methods
 
 * `draw.set_color(int ctx_color, int rgba)`
 * `draw.set_color(int ctx_color, int r, int g, int b, int a)`
@@ -196,7 +196,7 @@ enum EDrawContextColor_
 | ----- | ----- | ---------------------- |
 | color | int32 | Current color to draw. |
 
-### Methods:
+### Methods
 
 * `draw.get_color(int ctx_color)`
 
@@ -210,7 +210,7 @@ enum EDrawContextColor_
 | --------- | ------ | --------------------------- |
 | thickness | number | Thickness of Draws element. |
 
-### Methods:
+### Methods
 
 * `draw.set_thickness(number thickness)`
 
@@ -224,7 +224,7 @@ enum EDrawContextColor_
 | --------- | ------ | --------------------------- |
 | thickness | number | Thickness of Draws element. |
 
-### Methods:
+### Methods
 
 * `draw.get_thickness()`
 
@@ -238,7 +238,7 @@ enum EDrawContextColor_
 | -------- | ------ | -------------------------- |
 | rounding | number | Rounding of Draws element. |
 
-### Methods:
+### Methods
 
 * `draw.set_rounding(number rounding)`
 
@@ -252,7 +252,7 @@ enum EDrawContextColor_
 | -------- | ------ | -------------------------- |
 | rounding | number | Rounding of Draws element. |
 
-### Methods:
+### Methods
 
 * `draw.get_rounding()`
 
@@ -266,7 +266,7 @@ enum EDrawContextColor_
 | ------ | ------ | ------------------------ |
 | radius | number | Radius of Draws element. |
 
-### Methods:
+### Methods
 
 * `draw.set_radius(number radius)`
 
@@ -280,7 +280,7 @@ enum EDrawContextColor_
 | ------ | ------ | ------------------------ |
 | radius | number | Radius of Draws element. |
 
-### Methods:
+### Methods
 
 * `draw.get_radius()`
 
@@ -294,7 +294,7 @@ enum EDrawContextColor_
 | ------------ | ---- | --------------------------------- |
 | num_segments | int  | Amount of Draws element segments. |
 
-### Methods:
+### Methods
 
 * `draw.set_num_segments(int num_segments)`
 
@@ -308,7 +308,7 @@ enum EDrawContextColor_
 | ------------ | ---- | --------------------------------- |
 | num_segments | int  | Amount of Draws element segments. |
 
-### Methods:
+### Methods
 
 * `draw.get_num_segments()`
 
@@ -322,7 +322,7 @@ enum EDrawContextColor_
 | ----- | ---- | ----------------------- |
 | flags | int  | Flags of Draws element. |
 
-### Methods:
+### Methods
 
 * `draw.set_flags(int flags)`
 
@@ -336,7 +336,7 @@ enum EDrawContextColor_
 | ----- | ---- | ----------------------- |
 | flags | int  | Flags of Draws element. |
 
-### Methods:
+### Methods
 
 * `draw.get_flags()`
 
@@ -350,7 +350,7 @@ enum EDrawContextColor_
 | ------ | ------ | --------------------------- |
 | min_uv | number | Minimal uv of draw element. |
 
-### Methods:
+### Methods
 
 * `draw.set_min_uv(number min_uv)`
 
@@ -364,7 +364,7 @@ enum EDrawContextColor_
 | ------ | ------ | --------------------------- |
 | min_uv | number | Minimal uv of draw element. |
 
-### Methods:
+### Methods
 
 * `draw.get_min_uv()`
 
@@ -378,7 +378,7 @@ enum EDrawContextColor_
 | ------ | ------ | --------------------------- |
 | max_uv | number | Maximal uv of draw element. |
 
-### Methods:
+### Methods
 
 * `draw.set_max_uv(number max_uv)`
 
@@ -392,7 +392,7 @@ enum EDrawContextColor_
 | ------ | ------ | --------------------------- |
 | max_uv | number | Maximal uv of draw element. |
 
-### Methods:
+### Methods
 
 * `draw.get_max_uv()`
 
@@ -409,7 +409,7 @@ enum EDrawContextColor_
 | x2   | number | Ending point position along the X axis   |
 | y2   | number | Ending point position along the Y axis   |
 
-### Methods:
+### Methods
 
 * `draw.line(number x1, number y1, number x2, number y2)`
 
@@ -424,7 +424,7 @@ enum EDrawContextColor_
 | font_name | string | Name of font ( filename without ttf ) |
 | font_size | number | Height of font                        |  |
 
-### Methods:
+### Methods
 
 * `draw.create_font(string font_name, number font_size)`
 * `draw.create_font(string font_name)`
@@ -445,7 +445,7 @@ enum EDrawContextColor_
 | ---- | ------ | ------------- |
 | font | ImFont | Created font. |
 
-### Methods:
+### Methods
 
 * `draw.set_font(font)`
 
@@ -461,7 +461,7 @@ enum EDrawContextColor_
 | y    | number | Text position on the Y axis |
 | text | string | Text                        |
 
-### Methods:
+### Methods
 
 * `draw.text(number x, number y, string text)`
 
@@ -475,7 +475,7 @@ enum EDrawContextColor_
 | ---- | ------ | ----------- |
 | text | string | Text        |
 
-### Methods:
+### Methods
 
 * `draw.get_text_size(string text)`
 
@@ -495,7 +495,7 @@ enum EDrawContextColor_
 | ---- | ------ | ----------- |
 | text | string | Text        |
 
-### Methods:
+### Methods
 
 * `draw.get_text_size_x(string text)`
 
@@ -515,7 +515,7 @@ enum EDrawContextColor_
 | ---- | ------ | ----------- |
 | text | string | Text        |
 
-### Methods:
+### Methods
 
 * `draw.get_text_size_y(string text)`
 
@@ -538,7 +538,7 @@ enum EDrawContextColor_
 | x2   | number | End position on the X-axis   |
 | y2   | number | End position on the Y-axis   |
 
-### Methods:
+### Methods
 
 * `draw.rect(number x1, number y1, number x2, number y2)`
 
@@ -555,7 +555,7 @@ enum EDrawContextColor_
 | x2   | number | End position on the X-axis   |
 | y2   | number | End position on the Y-axis   |
 
-### Methods:
+### Methods
 
 * `draw.rect_filled(number x1, number y1, number x2, number y2)`
 
@@ -572,7 +572,7 @@ enum EDrawContextColor_
 | x2   | number | End position on the X-axis   |
 | y2   | number | End position on the Y-axis   |
 
-### Methods:
+### Methods
 
 * `draw.draw.rect_filled_multi_color(number x1, number y1, number x2, number y2)`
 
@@ -593,7 +593,7 @@ enum EDrawContextColor_
 | x4   | number | Position 4 on the X-axis |
 | y4   | number | Position 5 on the Y-axis |
 
-### Methods:
+### Methods
 
 * `draw.quad(number x1, number y1, number x2, number y2, number x3, number y3, number x4, number y4)`
 
@@ -614,7 +614,7 @@ enum EDrawContextColor_
 | x4   | number | Position 4 on the X-axis |
 | y4   | number | Position 5 on the Y-axis |
 
-### Methods:
+### Methods
 
 * `draw.quad_filled(number x1, number y1, number x2, number y2, number x3, number y3, number x4, number y4)`
 
@@ -633,7 +633,7 @@ enum EDrawContextColor_
 | x3   | number | Position 3 on the X-axis |
 | y3   | number | Position 3 on the Y-axis |
 
-### Methods:
+### Methods
 
 * `draw.triangle(number x1, number y1, number x2, number y2, x3, y3)`
 
@@ -652,7 +652,7 @@ enum EDrawContextColor_
 | x3   | number | Position 3 on the X-axis |
 | y3   | number | Position 3 on the Y-axis |
 
-### Methods:
+### Methods
 
 * `draw.triangle_filled(number x1, number y1, number x2, number y2, x3, y3)`
 
@@ -667,7 +667,7 @@ enum EDrawContextColor_
 | center\_x | number | Center-x of circle |
 | center\_y | number | Center-y of circle |
 
-### Methods:
+### Methods
 
 * `draw.circle(number center_x, number center_y)`
 
@@ -682,7 +682,7 @@ enum EDrawContextColor_
 | center\_x | number | Center-x of circle |
 | center\_y | number | Center-y of circle |
 
-### Methods:
+### Methods
 
 * `draw.circle_filled(number center_x, number center_y)`
 
@@ -697,7 +697,7 @@ enum EDrawContextColor_
 | center\_x | number | Center-x of circle |
 | center\_y | number | Center-y of circle |
 
-### Methods:
+### Methods
 
 * `draw.ngon(number center_x, number center_y`
 
@@ -712,7 +712,7 @@ enum EDrawContextColor_
 | center\_x | number | Center-x of circle |
 | center\_y | number | Center-y of circle |
 
-### Methods:
+### Methods
 
 * `draw.ngon_filled(number center_x, number center_y)`
 
@@ -730,7 +730,7 @@ enum EDrawContextColor_
 | height | number   |                |
 | handle | userdata | Texture handle |
 
-### Methods:
+### Methods
 
 * `draw.texture(handle, number x, number y)`
 * `draw.texture(handle, number x, number y, number width, number height)`

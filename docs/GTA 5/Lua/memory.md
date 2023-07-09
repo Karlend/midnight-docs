@@ -27,7 +27,7 @@ Methods to work with game memory
 | ----- | ----------------- |
 | table | Table of pointers |
 
-### Methods:
+### Methods
 
 * `memory.scan(module_name, signature, offset, only_one)`
 * `memory.scan(module_name, signature, offset)`
@@ -53,7 +53,7 @@ Methods to work with game memory
 | ------- | ------------------------------------------------------------------------------- |
 | pointer | The address where the signature was found, or 0 if the signature was not foundz |
 
-### Methods:
+### Methods
 
 * `memory.scan_script(code_blocks, code_size, signature, offset, only_one)`
 * `memory.scan_script(code_blocks, code_size, signature, offset)`
@@ -78,7 +78,7 @@ Methods to work with game memory
 | ------ | ----------------------------------------------------------------------------------- |
 | number | The global offset where the tuneable was found, or 0 if the tuneable was not found. |
 
-### Methods:
+### Methods
 
 * `memory.scan_tuneable(hHash)`
 * `memory.scan_tuneable(sName)`
@@ -98,7 +98,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Method:
+### Methods
 
 * `memory.alloc(nSize)`
 
@@ -111,7 +111,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Method:
+### Methods
 
 * `memory.alloc_u8()`
 ## `memory.alloc_u16`
@@ -123,7 +123,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Method:
+### Methods
 
 * `memory.alloc_u16()`
 
@@ -136,7 +136,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Method:
+### Methods
 
 * `memory.alloc_u24()`
 
@@ -149,7 +149,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Method:
+### Methods
 
 * `memory.alloc_u32()`
 
@@ -162,7 +162,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Method:
+### Methods
 
 * `memory.alloc_u64()`
 
@@ -174,7 +174,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Method:
+### Methods
 * `memory.alloc_s8()`
 
 ## `memory.alloc_s16`
@@ -185,7 +185,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Method:
+### Methods
 * `memory.alloc_s16()`
 
 ## `memory.alloc_s24`
@@ -196,7 +196,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Method:
+### Methods
 * `memory.alloc_s24()`
 
 ## `memory.alloc_s32`
@@ -207,7 +207,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Method:
+### Methods
 * `memory.alloc_s32()`
 
 ## `memory.alloc_s64`
@@ -218,7 +218,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Method:
+### Methods
 * `memory.alloc_s64()`
 
 ## `memory.alloc_vector`
@@ -236,7 +236,7 @@ Methods to work with game memory
 | ------- | -------------------------- |
 | pointer | Pointer to the allocated memory. |
 
-### Methods:
+### Methods
 
 * `memory.alloc_vector(is8Aligned)`
 * `memory.alloc_vector()`

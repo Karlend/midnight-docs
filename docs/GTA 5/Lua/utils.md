@@ -22,7 +22,7 @@ Some utils to make life a bit easier
 | y    | number | World position |
 | z    | number | World position |
 
-### Methods:
+### Methods
 
 * `utils.teleport(ent, x, y, z)`
 * `utils.teleport(ent, vecpos)`
@@ -38,7 +38,7 @@ Some utils to make life a bit easier
 | ent   | int  | Entity handle  |
 | tries | int  | Count of tries |
 
-### Methods:
+### Methods
 
 * `utils.request_control(ent, tries)`
 * `utils.request_control(ent)`
@@ -67,7 +67,7 @@ Some utils to make life a bit easier
 | ------- | ---- | ----------------------- |
 | success | bool | Is operation successful |
 
-### Methods:
+### Methods
 
 * `utils.set_mouse_pos(v_pos)`
 * `utils.set_mouse_pos(pos_x, pos_y)`
@@ -88,7 +88,7 @@ Some utils to make life a bit easier
 | ------- | ---- | ----------------------- |
 | success | bool | Is operation successful |
 
-### Methods:
+### Methods
 
 * `utils.get_mouse_pos(v_pos)`
 
@@ -108,7 +108,7 @@ Some utils to make life a bit easier
 | ------- | ---- | ----------------------- |
 | success | bool | Is operation successful |
 
-### Methods:
+### Methods
 
 * `utils.set_clipboard(text)`
 
@@ -129,7 +129,7 @@ Some utils to make life a bit easier
 | ------- | ---- | ----------------------- |
 | success | bool | Is operation successful |
 
-### Methods:
+### Methods
 
 * `utils.vector_to_angle(forward, angles)`
 
@@ -150,7 +150,7 @@ Some utils to make life a bit easier
 | ------- | ---- | ----------------------- |
 | success | bool | Is operation successful |
 
-### Methods:
+### Methods
 
 * `utils.world_to_screen(world, screen)`
 
@@ -171,7 +171,7 @@ Some utils to make life a bit easier
 | ------- | ---- | ----------------------- |
 | success | bool | Is operation successful |
 
-### Methods:
+### Methods
 
 * `utils.send_chat(text, is_team)`
 
@@ -237,7 +237,7 @@ notify_type =
 }
 ```
 
-### Methods:
+### Methods
 
 * `utils.notify(name, description, icon, type)`
 
@@ -251,7 +251,7 @@ notify_type =
 | ---- | ------------- | ----------- |
 | hash | number/string | Model hash  |
 
-### Methods:
+### Methods
 
 * `utils.change_ped_model(hash)`
 ## `utils.get_key_state`
@@ -268,7 +268,7 @@ notify_type =
 | ---- | ---- | ----------- |
 | down | bool | Is key down |
 
-### Methods:
+### Methods
 
 * `utils.get_key_state(key)`
 ## `utils.get_key_name`
@@ -285,7 +285,7 @@ notify_type =
 | ---- | ------ | ----------- |
 | name | string | Key name    |
 
-### Methods:
+### Methods
 
 * `utils.get_key_name(key)`
 
@@ -298,7 +298,7 @@ notify_type =
 | ------- | ---- | ----------- |
 | success | bool | Is success  |
 
-### Methods:
+### Methods
 
 * `utils.stop_script()`
 
@@ -311,7 +311,7 @@ notify_type =
 | ------- | ---- | ----------- |
 | success | bool | Is success  |
 
-### Methods:
+### Methods
 
 * `utils.reload_script()`
 
@@ -324,7 +324,7 @@ notify_type =
 | ---- | ------ | ----------------- |
 | fps  | number | Frames per second |
 
-### Methods:
+### Methods
 
 * `utils.get_fps()`
 
@@ -337,6 +337,6 @@ notify_type =
 | ---- | ------ | ----------------- |
 | fps  | number | Frame rate |
 
-### Methods:
+### Methods
 
 * `utils.get_frame_rate()`

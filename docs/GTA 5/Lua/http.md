@@ -22,7 +22,7 @@ Http request to fetch/post info
 | link        | string   | Link to fetch                |
 | on_response | function | Callback on successful fetch |
 
-### Methods:
+### Methods
 
 * `http.get(link, on_response)`
 

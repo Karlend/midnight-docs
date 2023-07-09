@@ -23,7 +23,7 @@ Methods related to entities
 | position    | Vector3       | Spawn position               |
 | on\_spawned | function      | Callback on successful spawn |
 
-### Methods:
+### Methods
 
 * `entity.spawn_ped(hash, position, on_spawned)`
 * `entity.spawn_ped(hash, position)`
@@ -46,7 +46,7 @@ Methods related to entities
 | position    | Vector3       | Spawn position               |
 | on\_spawned | function      | Callback on successful spawn |
 
-### Methods:
+### Methods
 
 * `entity.spawn_veh(hash, position, on_spawned)`
 * `entity.spawn_veh(hash, position)`
@@ -69,7 +69,7 @@ Methods related to entities
 | position    | Vector3  | Spawn position               |
 | on\_spawned | function | Callback on successful spawn |
 
-### Methods:
+### Methods
 
 * `entity.spawn_cloud_veh(name, position, on_spawned)`
 * `entity.spawn_cloud_veh(name, position)`
@@ -92,7 +92,7 @@ Methods related to entities
 | position    | Vector3       | Spawn position               |
 | on\_spawned | function      | Callback on successful spawn |
 
-### Methods:
+### Methods
 
 * `entity.spawn_obj(hash, position, on_spawned)`
 * `entity.spawn_obj(hash, position)`
@@ -115,7 +115,7 @@ Methods related to entities
 | on\_failed  | function | Callback on fail    |
 | on\_deleted | function | Callback on success |
 
-### Methods:
+### Methods
 
 * `entity.delete(entity, on_deleted, on_failed)`
 * `entity.delete(entity, on_deleted)`
@@ -142,7 +142,7 @@ Methods related to entities
 | ------- | ---- | --------------------------------------------------------- |
 | success | bool | true if there is control over the entity, false otherwise |
 
-### Methods:
+### Methods
 
 * `entity.is_controlled(entity)`
 
@@ -158,7 +158,7 @@ Methods related to entities
 | on\_obtain | function | Callback, which will be called if the control is successfully received |
 | tag        |          | A script-defined value to be passed to the callback                    |
 
-### Methods:
+### Methods
 
 * `entity.request_control(entity, on_obtain, tag)`
 * `entity.request_control(entity, on_obtain)`
@@ -184,6 +184,6 @@ Methods related to entities
 | Name  | Type   | Description              |
 | ----- | ------ | ------------------------ |
 | owner | number | Owner's ( player ) index |
-### Methods:
+### Methods
 
 * `entity.get_owner(entity)`

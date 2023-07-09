@@ -21,7 +21,7 @@ Workspace to work with entity pools
 | ---- | ----- | --------------------- |
 | list | table | List of all vehicles. |
 
-### Methods:
+### Methods
 
 * `pools.get_all_vehicles()`
 
@@ -35,7 +35,7 @@ Workspace to work with entity pools
 | ---- | ----- | ----------------- |
 | list | table | List of all peds. |
 
-### Methods:
+### Methods
 
 * `pools.get_all_peds()`
 
@@ -49,7 +49,7 @@ Workspace to work with entity pools
 | ---- | ----- | -------------------- |
 | list | table | List of all objects. |
 
-### Methods:
+### Methods
 
 * `pools.get_all_objects()`
 
@@ -63,7 +63,7 @@ Workspace to work with entity pools
 | ---- | ----- | -------------------------------------------------------------------------------------------- |
 | list | table | List of all entities (a separate list of entities that do not belong to any entity subtype). |
 
-### Methods:
+### Methods
 
 * `pools.get_all_ents()`
 
@@ -77,6 +77,6 @@ Workspace to work with entity pools
 | ---- | ----- | ---------------------------------------- |
 | list | table | List of all items that can be picked up. |
 
-### Methods:
+### Methods
 
 * `pools.get_all_pickups()`

@@ -19,7 +19,7 @@ For a list of possible members see [memory](../memory.md)
 | pAddr     | pointer??? | A pointer to be managed                                      |
 | bIsScript | boolean    | A boolean indicating whether the pointer belongs to a script |
 
-### Methods:
+### Methods
 
 * `Pointer:set(pAddr, bIsScript)`
 * `Pointer:set(pAddr)`
@@ -33,7 +33,7 @@ For a list of possible members see [memory](../memory.md)
 | ---------- | ------------------------- |
 | pointer??? | The pointer being managed |
 
-### Methods:
+### Methods
 
 * `Pointer:get()`
 
@@ -46,7 +46,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | ------------------------------------------------------------------- |
 | boolean | A boolean indicating whether the class is managing a valid pointer. |
 
-### Methods:
+### Methods
 
 * `Pointer:is_valid()`
 
@@ -66,7 +66,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:check_s8(nValue)`
 * `Pointer:check_s8(nValue, nOffset)`
@@ -87,7 +87,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:check_s16(nValue)`
 * `Pointer:check_s16(nValue, nOffset)`
@@ -108,7 +108,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:check_s24(nValue)`
 * `Pointer:check_s24(nValue, nOffset)`
@@ -129,7 +129,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:check_s32(nValue)`
 * `Pointer:check_s32(nValue, nOffset)`
@@ -150,7 +150,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:check_s64(nValue)`
 * `Pointer:check_s64(nValue, nOffset)`
@@ -171,7 +171,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:check_u8(nValue)`
 * `Pointer:check_u8(nValue, nOffset)`
@@ -192,7 +192,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:check_u16(nValue)`
 * `Pointer:check_u16(nValue, nOffset)`
@@ -213,7 +213,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:check_u24(nValue)`
 * `Pointer:check_u24(nValue, nOffset)`
@@ -234,7 +234,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:check_u32(nValue)`
 * `Pointer:check_u32(nValue, nOffset)`
@@ -255,7 +255,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:check_u64(nValue)`
 * `Pointer:check_u64(nValue, nOffset)`
@@ -277,7 +277,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | --------------------------------------------------------------- |
 | boolean | A boolean indicating whether the string matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:check_string(pValue)`
 * `Pointer:check_string(pValue, nLen)`
@@ -299,7 +299,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:write_s8(nValue)`
 * `Pointer:write_s8(nValue, nOffset)`
@@ -320,7 +320,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:write_s16(nValue)`
 * `Pointer:write_s16(nValue, nOffset)`
@@ -341,7 +341,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:write_s24(nValue)`
 * `Pointer:write_s24(nValue, nOffset)`
@@ -362,7 +362,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:write_s32(nValue)`
 * `Pointer:write_s32(nValue, nOffset)`
@@ -383,7 +383,7 @@ For a list of possible members see [memory](../memory.md)
 | ------- | -------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value matches the given value |
 
-### Methods:
+### Methods
 
 * `Pointer:write_s64(nValue)`
 * `Pointer:write_s64(nValue, nOffset)`
@@ -402,7 +402,7 @@ Writes an 8-bit unsigned integer value to the managed pointer.
 | ------- | -------------------------------------------------------- |
 | boolean | A boolean indicating the success of the write operation. |
 
-### Methods:
+### Methods
 * `Pointer:write_u8(nValue)`
 * `Pointer:write_u8(nValue, nOffset)`
 
@@ -420,7 +420,7 @@ Writes an 8-bit unsigned integer value to the managed pointer.
 | ------- | -------------------------------------------------------- |
 | boolean | A boolean indicating the success of the write operation. |
 
-### Methods:
+### Methods
 * `Pointer:write_u16(nValue)`
 * `Pointer:write_u16(nValue, nOffset)`
 
@@ -437,7 +437,7 @@ Writes an 8-bit unsigned integer value to the managed pointer.
 | ---- | ---------------------------------------------------------------------- |
 | s8   | An 8-bit signed integer value read from the managed pointer or offset. |
 
-### Methods:
+### Methods
 * `Pointer:read_s8()`
 * `Pointer:read_s8(nOffset)`
 
@@ -454,7 +454,7 @@ Writes an 8-bit unsigned integer value to the managed pointer.
 | ---- | ------------------------------------------------------------------------ |
 | u32  | A 32-bit unsigned integer value read from the managed pointer or offset. |
 
-### Methods:
+### Methods
 * `Pointer:read_u32()`
 * `Pointer:read_u32(nOffset)`
 
@@ -471,7 +471,7 @@ Writes an 8-bit unsigned integer value to the managed pointer.
 | ---- | ------------------------------------------------------------------------ |
 | u64  | A 64-bit unsigned integer value read from the managed pointer or offset. |
 
-### Methods:
+### Methods
 * `Pointer:read_u64()`
 * `Pointer:read_u64(nOffset)`
 
@@ -489,7 +489,7 @@ Writes an 8-bit unsigned integer value to the managed pointer.
 | ------- | -------------------------------------------------------- |
 | boolean | A boolean indicating the success of the write operation. |
 
-### Methods:
+### Methods
 * `Pointer:write_float(nValue)`
 * `Pointer:write_float(nValue, nOffset)`
 
@@ -506,7 +506,7 @@ Writes an 8-bit unsigned integer value to the managed pointer.
 | ----- | --------------------------------------------------------------- |
 | float | A floating-point value read from the managed pointer or offset. |
 
-### Methods:
+### Methods
 * `Pointer:read_float()`
 * `Pointer:read_float(nOffset)`
 
@@ -524,7 +524,7 @@ Writes an 8-bit unsigned integer value to the managed pointer.
 | ------- | -------------------------------------------------------------------------------------------------- |
 | boolean | A boolean indicating whether the value at the managed pointer (or offset) matches the given value. |
 
-### Methods:
+### Methods
 * `Pointer:check_float(nValue)`
 * `Pointer:check_float(nValue, nOffset)`
 
@@ -541,7 +541,7 @@ Writes an 8-bit unsigned integer value to the managed pointer.
 | ------ | ------------------------------------------------- |
 | string | A string read from the managed pointer or offset. |
 
-### Methods:
+### Methods
 * `Pointer:read_string()`
 * `Pointer:read_string(nOffset)`
 
@@ -559,7 +559,7 @@ Writes an 8-bit unsigned integer value to the managed pointer.
 | ------- | --------------------------------------------------------- |
 | Vector3 | A Vector3 object read from the managed pointer or offset. |
 
-### Methods:
+### Methods
 * `Pointer:read_vector()`
 * `Pointer:read_vector(is8Aligned)`
 * `Pointer:read_vector(is8Aligned, nOffset)`

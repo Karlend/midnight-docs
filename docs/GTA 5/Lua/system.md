@@ -18,7 +18,7 @@ Provides a low-level API for some operating system functionality.
 | ---- | ---------------------------------------- |
 | int  | The number of CPU cycles since its reset |
 
-### Methods:
+### Methods
 - `system.rdtsc()`
 
 ## `system.ticks`
@@ -28,7 +28,7 @@ Provides a low-level API for some operating system functionality.
 | ---- | ------------------------------------------------------------------------- |
 | int  | The number of milliseconds that have elapsed since the system was started |
 
-### Methods:
+### Methods
 - `system.ticks()`
 
 ## `system.time`
@@ -38,7 +38,7 @@ Provides a low-level API for some operating system functionality.
 | ---- | -------------- |
 | int  | Unix timestamp |
 
-### Methods:
+### Methods
 - `system.time()`
 
 ## `system.fiber`
@@ -56,7 +56,7 @@ Functionality that use a scripting engine (for example, natives) should be place
 | ---- | --------------------------------------------------- |
 | bool | True if fiber successfully created, false otherwise |
 
-### Methods:
+### Methods
 - `system.fiber(func)`
 
 ## Examples
@@ -67,8 +67,8 @@ function OnTransitionEnd(is_multiplayer)
   if is_multiplayer then
     system.fiber
     (
-      function() 
-        vehicle.spawn(string.joaat("shotaro")) 
+      function()
+        vehicle.spawn(string.joaat("shotaro"))
       end
     )
   end

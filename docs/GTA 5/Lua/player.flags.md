@@ -31,7 +31,7 @@ Workspace to work with player flags
 | ---- | ----------- |
 | int  | Flag id     |
 
-### Methods:
+### Methods
 
 * `player.flags.create(check, caption, description, color_r, color_g, color_b)`
 
@@ -43,7 +43,7 @@ Workspace to work with player flags
 | ---- | ---- | ----------- |
 | id   | int  | Flag id     |
 
-### Methods:
+### Methods
 
 * `player.flags.delete(id)`
 
@@ -59,7 +59,7 @@ Workspace to work with player flags
 | color\_b | int  | Color - B   |
 | color\_a | int  | Color - A   |
 
-### Methods:
+### Methods
 
 * `player.flags.set_color(id, color_r, color_g, color_b, color_a)`
 
@@ -72,7 +72,7 @@ Workspace to work with player flags
 | id      | int    | Flag id            |
 | caption | string | Short name of flag |
 
-### Methods:
+### Methods
 
 * `player.flags.set_caption(id, caption)`
 
@@ -85,7 +85,7 @@ Workspace to work with player flags
 | id          | int    | Flag id                                            |
 | description | string | Description of flag, shown on hover in player list |
 
-### Methods:
+### Methods
 
 * `player.flags.set_description(id, description)`
 
@@ -98,6 +98,6 @@ Workspace to work with player flags
 | id       | int      | Flag id          |
 | callback | function | Callback of flag |
 
-### Methods:
+### Methods
 
 * `player.flags.set_callback(id, callback)`

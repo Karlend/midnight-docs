@@ -39,7 +39,7 @@ local session_type =
 | ------------- | ---- | ------------ |
 | session\_type | int  | Session type |
 
-### Methods:
+### Methods
 
 * `lobby.change_session(session_type)`
 
@@ -52,7 +52,7 @@ local session_type =
 | rid    | int  | R\*ID in uint32                |
 | friend | bool | Should use friend(old) method? |
 
-### Methods:
+### Methods
 
 * `lobby.join_by_rid(rid)`
 * `lobby.join_by_rid(rid, friend)`
@@ -65,7 +65,7 @@ local session_type =
 | ---- | ----------------- |
 | bool | Is session active |
 
-### Methods:
+### Methods
 
 * `lobby.is_session_active()`
 

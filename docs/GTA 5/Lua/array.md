@@ -25,7 +25,7 @@ Methods to work with C arrays
 | ---- | --------------------------------- |
 | int  | UInt8 value for requested element |
 
-### Methods:
+### Methods
 
 * `array:read_byte(index)`
 
@@ -43,7 +43,7 @@ Methods to work with C arrays
 | ---- | ---------------------------------- |
 | int  | UInt16 value for requested element |
 
-### Methods:
+### Methods
 
 * `array:read_word(index)`
 
@@ -61,7 +61,7 @@ Methods to work with C arrays
 | ---- | ---------------------------------- |
 | int  | UInt32 value for requested element |
 
-### Methods:
+### Methods
 
 * `array:read_long(index)`
 
@@ -79,7 +79,7 @@ Methods to work with C arrays
 | ---- | ---------------------------------- |
 | int  | UInt64 value for requested element |
 
-### Methods:
+### Methods
 
 * `array:read_int64(index)`
 
@@ -91,7 +91,7 @@ Methods to work with C arrays
 | ---- | ------------------------------- |
 | int  | Current element count for array |
 
-### Methods:
+### Methods
 
 * `array:size()`
 

@@ -25,7 +25,7 @@ Midnight Lua provides the ability to call script natives. To define the natives,
 | --------- | ------ | ----------------- |
 | namespace | string | Native namespace. |
 
-### Methods:
+### Methods
 
 * `native.get_native_namespace(native_hash)`
 
@@ -43,7 +43,7 @@ Midnight Lua provides the ability to call script natives. To define the natives,
 | ---- | ------ | ------------ |
 | name | string | Native name. |
 
-### Methods:
+### Methods
 
 * `native.get_native_name(native_hash)`
 
@@ -61,7 +61,7 @@ Midnight Lua provides the ability to call script natives. To define the natives,
 | ---- | ------ | ------------ |
 | name | string | Native name. |
 
-### Methods:
+### Methods
 
 * `native.get_native_name_full(native_hash)`
 
@@ -79,7 +79,7 @@ Midnight Lua provides the ability to call script natives. To define the natives,
 | ------ | ---------------------- |
 | object | Depends on return_type |
 
-### Methods:
+### Methods
 - `native.invoke(return_type, hash, ...)`
 ## `native.is_invoker_ready`
 
@@ -91,7 +91,7 @@ Midnight Lua provides the ability to call script natives. To define the natives,
 | ----- | ---- | ----------- |
 | ready | bool | Is ready.   |
 
-### Methods:
+### Methods
 
 * `native.is_invoker_ready()`
 

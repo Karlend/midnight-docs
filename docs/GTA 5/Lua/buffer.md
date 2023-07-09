@@ -16,7 +16,7 @@ These functions are declared in the buffer class. This class is used in the OnNe
 ## `buffer:begin`
 `Sets the reading position to the beginning. This function is recommended to be used after the completion of reading the message inside the Lua script.`
 
-### Methods:
+### Methods
 - `buffer:begin()`
 
 ## `buffer:read_byte`
@@ -27,7 +27,7 @@ These functions are declared in the buffer class. This class is used in the OnNe
 | ---- | ----------- |
 | int  | UInt8 value |
 
-### Methods:
+### Methods
 - `buffer:read_byte()`
 
 ## `buffer:read_word`
@@ -38,7 +38,7 @@ These functions are declared in the buffer class. This class is used in the OnNe
 | ---- | ------------ |
 | int  | UInt16 value |
 
-### Methods:
+### Methods
 - `buffer:read_word()`
 
 ## `buffer:read_long`
@@ -49,7 +49,7 @@ These functions are declared in the buffer class. This class is used in the OnNe
 | ---- | ------------ |
 | int  | UInt32 value |
 
-### Methods:
+### Methods
 - `buffer:read_long()`
 
 ## `buffer:read_int64`
@@ -60,7 +60,7 @@ These functions are declared in the buffer class. This class is used in the OnNe
 | ---- | ------------ |
 | int  | UInt64 value |
 
-### Methods:
+### Methods
 - `buffer:read_int64()`
 
 ## `buffer:read_float`
@@ -71,7 +71,7 @@ These functions are declared in the buffer class. This class is used in the OnNe
 | ----- | ----------- |
 | float | float value |
 
-### Methods:
+### Methods
 - `buffer:read_float()`
 
 ## `buffer:read_bit`
@@ -82,7 +82,7 @@ These functions are declared in the buffer class. This class is used in the OnNe
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 - `buffer:read_bit()`
 
 ## `buffer:read_array`
@@ -99,7 +99,7 @@ These functions are declared in the buffer class. This class is used in the OnNe
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 - `buffer:read_array(data, size)`
 
 ## `buffer:skip`
@@ -115,7 +115,7 @@ These functions are declared in the buffer class. This class is used in the OnNe
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 - `buffer:skip(bits)`
 
 ## `buffer:skip_to_pos`
@@ -131,19 +131,19 @@ These functions are declared in the buffer class. This class is used in the OnNe
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 - `buffer:skip_to_pos(bits)`
 
 ## Examples
 
-### Process incoming FIRE_EVENT network message 
+### Process incoming FIRE_EVENT network message
 
 ```lua
 function OnNetworkEvent(ply, event, buf)
 	local event_id = net.get_hash(event)
 	local event_name = net.get_name(event)
 	local player_name = player.get_name(ply)
-	
+
 	if event_id == -1352177760 then -- joaat("FIRE_EVENT")
 		local count = buf:read_long(3)
 		buf:begin()

@@ -26,7 +26,7 @@ Methods to work with menu
 | ---- | ----------- |
 | page | Page object |
 
-### Methods:
+### Methods
 
 * `menu.add_page(name, icon)`
 
@@ -46,7 +46,7 @@ Methods to work with menu
 | ----- | ------------ |
 | block | Block object |
 
-### Methods:
+### Methods
 
 * `menu.add_mono_block(page, name, position)`
 
@@ -66,7 +66,7 @@ Methods to work with menu
 | -------- | ---------------- |
 | checkbox | Checkbox element |
 
-### Methods:
+### Methods
 
 * `menu.add_checkbox(block, name, callback)`
 * `menu.add_checkbox(block, name)`
@@ -88,7 +88,7 @@ Methods to work with menu
 | ----- | ------------- |
 | combo | Combo element |
 
-### Methods:
+### Methods
 
 * `menu.add_combo(block, name, list, callback)`
 * `menu.add_combo(block, name, list)`
@@ -111,7 +111,7 @@ Methods to work with menu
 | ----- | ------------- |
 | combo | Combo element |
 
-### Methods:
+### Methods
 
 * `menu.add_combo_ex(block, name, name_getter, amount_getter, callback)`
 * `menu.add_combo_ex(block, name, name_getter, amount_getter)`
@@ -132,7 +132,7 @@ Methods to work with menu
 | ------ | -------------- |
 | button | Button element |
 
-### Methods:
+### Methods
 
 * `menu.add_button(block, name, callback)`
 
@@ -153,7 +153,7 @@ Methods to work with menu
 | ----- | ------------- |
 | input | Input element |
 
-### Methods:
+### Methods
 
 * `menu.add_input_text(block, name, length, callback)`
 * `menu.add_input_text(block, name, length)`
@@ -173,7 +173,7 @@ Methods to work with menu
 | ---- | ------------ |
 | text | Text element |
 
-### Methods:
+### Methods
 
 * `menu.add_text(block, text)`
 
@@ -192,14 +192,14 @@ Methods to work with menu
 | ---- | ------------ |
 | text | Text element |
 
-### Methods:
+### Methods
 
 * `menu.add_dynamic_text(block, text_getter)`
 
 ## Data types
 
 ```lua
-local menu_color = 
+local menu_color =
 {
 	Text,
 	TextDisabled,
@@ -267,10 +267,10 @@ local menu_widget_color =
 	PopupBg,
 	Header,
 	HeaderHovered,
-	
+
 	Icons,
 	TitleName,
-	
+
 	TagsBlocked,
 	TagsModder,
 	TagsCheater,
@@ -287,7 +287,7 @@ local menu_widget_color =
 	NotifyIcon,
 	NotifyText,
 	NotifyTextShadow,
-	
+
 	NotifyDefault,
 	NotifySuccess,
 	NotifyWarning,
@@ -312,7 +312,7 @@ local menu_widget_color =
 | rgb   | Vector3     | Color RGB     |
 | rgba  | Vector4     | Color RGBA    |
 
-### Methods:
+### Methods
 
 * `menu.set_color(color, r, g, b, a)`
 * `menu.set_color(color, rgb)`
@@ -332,7 +332,7 @@ local menu_widget_color =
 | rgb   | Vector3             | Color RGB            |         |
 | rgba  | Vector4             | Color RGBA           |         |
 
-### Methods:
+### Methods
 
 * `menu.set_widget_color(color, r, g, b, a)`
 * `menu.set_widget_color(color, rgb)`
@@ -346,7 +346,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | Success     |
 
-### Methods:
+### Methods
 
 * `menu.backup_styles()`
 
@@ -358,7 +358,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | Success     |
 
-### Methods:
+### Methods
 
 * `menu.restore_styles()`
 
@@ -376,7 +376,7 @@ local menu_widget_color =
 | ------- | ----------- |
 | Vector4 | Color RGBA  |
 
-### Methods:
+### Methods
 
 * `menu.get_color(color)`
 
@@ -394,7 +394,7 @@ local menu_widget_color =
 | ------- | ----------- |
 | Vector4 | Color RGBA  |
 
-### Methods:
+### Methods
 
 * `menu.get_widget_color(widget)`
 
@@ -406,7 +406,7 @@ local menu_widget_color =
 | ----- | ---- | ----------- |
 | value | int  | Color Alpha |
 
-### Methods:
+### Methods
 
 * `menu.set_alpha(value)`
 
@@ -418,7 +418,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | int  | Color Alpha |
 
-### Methods:
+### Methods
 
 * `menu.get_alpha()`
 
@@ -430,7 +430,7 @@ local menu_widget_color =
 | ----- | ----- | -------------- |
 | value | float | Padding amount |
 
-### Methods:
+### Methods
 
 * `menu.set_first_item_padding(value)`
 
@@ -442,7 +442,7 @@ local menu_widget_color =
 | ----- | -------------- |
 | float | Padding amount |
 
-### Methods:
+### Methods
 
 * `menu.get_first_item_padding()`
 
@@ -454,7 +454,7 @@ local menu_widget_color =
 | ----- | ----- | --------------- |
 | value | float | Rounding amount |
 
-### Methods:
+### Methods
 
 * `menu.set_window_rounding(value)`
 
@@ -466,7 +466,7 @@ local menu_widget_color =
 | ----- | --------------- |
 | float | Rounding amount |
 
-### Methods:
+### Methods
 
 * `menu.get_window_rounding()`
 
@@ -478,7 +478,7 @@ local menu_widget_color =
 | ----- | ----- | ----------- |
 | value | float | Border size |
 
-### Methods:
+### Methods
 
 * `menu.set_window_border_size(value)`
 
@@ -490,7 +490,7 @@ local menu_widget_color =
 | ----- | ----------- |
 | float | Border size |
 
-### Methods:
+### Methods
 
 * `menu.get_window_border_size()`
 
@@ -502,7 +502,7 @@ local menu_widget_color =
 | ----- | ----- | -------------- |
 | value | float | Child rounding |
 
-### Methods:
+### Methods
 
 * `menu.set_child_rounding(value)`
 
@@ -514,7 +514,7 @@ local menu_widget_color =
 | ----- | -------------- |
 | float | Child rounding |
 
-### Methods:
+### Methods
 
 * `menu.get_child_rounding()`
 
@@ -526,7 +526,7 @@ local menu_widget_color =
 | ----- | ----- | ----------------- |
 | value | float | Child border size |
 
-### Methods:
+### Methods
 
 * `menu.set_child_border_size(value)`
 
@@ -538,7 +538,7 @@ local menu_widget_color =
 | ----- | ----------------- |
 | float | Child border size |
 
-### Methods:
+### Methods
 
 * `menu.get_child_border_size()`
 
@@ -550,7 +550,7 @@ local menu_widget_color =
 | ----- | ----- | -------------- |
 | value | float | Popup rounding |
 
-### Methods:
+### Methods
 
 * `menu.set_popup_rounding(value)`
 
@@ -562,7 +562,7 @@ local menu_widget_color =
 | ----- | -------------- |
 | float | Popup rounding |
 
-### Methods:
+### Methods
 
 * `menu.get_popup_rounding()`
 
@@ -574,7 +574,7 @@ local menu_widget_color =
 | ----- | ----- | ----------------- |
 | value | float | Popup border size |
 
-### Methods:
+### Methods
 
 * `menu.set_popup_border_size(value)`
 
@@ -586,7 +586,7 @@ local menu_widget_color =
 | ----- | ----------------- |
 | float | Popup border size |
 
-### Methods:
+### Methods
 
 * `menu.get_popup_border_size()`
 
@@ -598,7 +598,7 @@ local menu_widget_color =
 | ----- | ----- | -------------- |
 | value | float | Frame rounding |
 
-### Methods:
+### Methods
 
 * `menu.set_frame_rounding(value)`
 
@@ -610,7 +610,7 @@ local menu_widget_color =
 | ----- | -------------- |
 | float | Frame rounding |
 
-### Methods:
+### Methods
 
 * `menu.get_frame_rounding()`
 
@@ -622,7 +622,7 @@ local menu_widget_color =
 | ----- | ----- | ----------------- |
 | value | float | Frame border size |
 
-### Methods:
+### Methods
 
 * `menu.set_frame_border_size(value)`
 
@@ -634,7 +634,7 @@ local menu_widget_color =
 | ----- | ----------------- |
 | float | Frame border size |
 
-### Methods:
+### Methods
 
 * `menu.get_frame_border_size()`
 
@@ -646,7 +646,7 @@ local menu_widget_color =
 | ----- | ----- | -------------- |
 | value | float | Indent spacing |
 
-### Methods:
+### Methods
 
 * `menu.set_indent_spacing(value)`
 
@@ -658,7 +658,7 @@ local menu_widget_color =
 | ----- | -------------- |
 | float | Indent spacing |
 
-### Methods:
+### Methods
 
 * `menu.get_indent_spacing()`
 
@@ -670,7 +670,7 @@ local menu_widget_color =
 | ----- | ----- | ---------------------- |
 | value | float | Column minimal spacing |
 
-### Methods:
+### Methods
 
 * `menu.set_column_min_spacing(value)`
 
@@ -682,7 +682,7 @@ local menu_widget_color =
 | ----- | ---------------------- |
 | float | Column minimal spacing |
 
-### Methods:
+### Methods
 
 * `menu.get_column_min_spacing()`
 
@@ -694,7 +694,7 @@ local menu_widget_color =
 | ----- | ----- | -------------- |
 | value | float | Scrollbar size |
 
-### Methods:
+### Methods
 
 * `menu.set_scrollbar_size(value)`
 
@@ -706,7 +706,7 @@ local menu_widget_color =
 | ----- | -------------- |
 | float | Scrollbar size |
 
-### Methods:
+### Methods
 
 * `menu.get_scrollbar_size()`
 
@@ -718,7 +718,7 @@ local menu_widget_color =
 | ----- | ----- | ------------------ |
 | value | float | Scrollbar rounding |
 
-### Methods:
+### Methods
 
 * `menu.set_scrollbar_rounding(value)`
 
@@ -730,7 +730,7 @@ local menu_widget_color =
 | ----- | ------------------ |
 | float | Scrollbar rounding |
 
-### Methods:
+### Methods
 
 * `menu.get_scrollbar_rounding()`
 
@@ -742,7 +742,7 @@ local menu_widget_color =
 | ----- | ----- | ----------------- |
 | value | float | Grab minimal size |
 
-### Methods:
+### Methods
 
 * `menu.set_grab_min_size(value)`
 
@@ -754,7 +754,7 @@ local menu_widget_color =
 | ----- | ----------------- |
 | float | Grab minimal size |
 
-### Methods:
+### Methods
 
 * `menu.get_grab_min_size()`
 
@@ -766,7 +766,7 @@ local menu_widget_color =
 | ----- | ----- | ------------- |
 | value | float | Grab rounding |
 
-### Methods:
+### Methods
 
 * `menu.set_grab_rounding(value)`
 
@@ -778,7 +778,7 @@ local menu_widget_color =
 | ----- | ------------- |
 | float | Grab rounding |
 
-### Methods:
+### Methods
 
 * `menu.get_grab_rounding()`
 
@@ -790,7 +790,7 @@ local menu_widget_color =
 | ----- | ----- | --------------- |
 | value | float | Slider deadzone |
 
-### Methods:
+### Methods
 
 * `menu.set_log_slider_deadzone(value)`
 
@@ -802,7 +802,7 @@ local menu_widget_color =
 | ----- | --------------- |
 | float | Slider deadzone |
 
-### Methods:
+### Methods
 
 * `menu.get_log_slider_deadzone()`
 
@@ -814,7 +814,7 @@ local menu_widget_color =
 | ----- | ----- | ------------ |
 | value | float | Tab rounding |
 
-### Methods:
+### Methods
 
 * `menu.set_tab_rounding(value)`
 
@@ -826,7 +826,7 @@ local menu_widget_color =
 | ----- | ------------ |
 | float | Tab rounding |
 
-### Methods:
+### Methods
 
 * `menu.get_tab_rounding()`
 
@@ -838,7 +838,7 @@ local menu_widget_color =
 | ----- | ----- | --------------- |
 | value | float | Tab border size |
 
-### Methods:
+### Methods
 
 * `menu.set_tab_border_size(value)`
 
@@ -850,7 +850,7 @@ local menu_widget_color =
 | ----- | --------------- |
 | float | Tab border size |
 
-### Methods:
+### Methods
 
 * `menu.get_tab_border_size()`
 
@@ -862,7 +862,7 @@ local menu_widget_color =
 | ----- | ----- | ---------------------------------- |
 | value | float | Tab minimal width for close button |
 
-### Methods:
+### Methods
 
 * `menu.set_tab_min_width_for_close_button(value)`
 
@@ -874,7 +874,7 @@ local menu_widget_color =
 | ----- | ---------------------------------- |
 | float | Tab minimal width for close button |
 
-### Methods:
+### Methods
 
 * `menu.get_tab_min_width_for_close_button()`
 
@@ -886,7 +886,7 @@ local menu_widget_color =
 | ----- | ----- | ------------------ |
 | value | float | Mouse cursor scale |
 
-### Methods:
+### Methods
 
 * `menu.set_mouse_cursor_scale(value)`
 
@@ -898,7 +898,7 @@ local menu_widget_color =
 | ----- | ------------------ |
 | float | Mouse cursor scale |
 
-### Methods:
+### Methods
 
 * `menu.get_mouse_cursor_scale()`
 
@@ -910,7 +910,7 @@ local menu_widget_color =
 | ----- | ----- | ----------- |
 | value | float | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_curve_tesselation_tol(value)`
 
@@ -922,7 +922,7 @@ local menu_widget_color =
 | ----- | ----------- |
 | float | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_curve_tesselation_tol()`
 
@@ -934,7 +934,7 @@ local menu_widget_color =
 | ----- | ----- | ----------- |
 | value | float | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_circle_tessellation_max_error(value)`
 
@@ -946,7 +946,7 @@ local menu_widget_color =
 | ----- | ----------- |
 | float | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_circle_tessellation_max_error()`
 
@@ -958,7 +958,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_window_padding(value)`
 
@@ -976,7 +976,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_window_padding(output)`
 
@@ -988,7 +988,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_window_min_size(value)`
 
@@ -1006,7 +1006,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_window_min_size(output)`
 
@@ -1018,7 +1018,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_window_title_align(value)`
 
@@ -1036,7 +1036,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_window_title_align(output)`
 
@@ -1048,7 +1048,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_frame_padding(value)`
 
@@ -1066,7 +1066,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_frame_padding(output)`
 
@@ -1078,7 +1078,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_item_spacing(value)`
 
@@ -1096,7 +1096,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_item_spacing(output)`
 
@@ -1108,7 +1108,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_item_inner_spacing(value)`
 
@@ -1126,7 +1126,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_item_inner_spacing(output)`
 
@@ -1138,7 +1138,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_cell_padding(value)`
 
@@ -1156,7 +1156,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_cell_padding(output)`
 
@@ -1168,7 +1168,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_touch_extra_padding(value)`
 
@@ -1186,7 +1186,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_touch_extra_padding(output)`
 
@@ -1198,7 +1198,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_button_text_align(value)`
 
@@ -1216,7 +1216,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_button_text_align(output)`
 
@@ -1228,7 +1228,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_selectable_text_align(value)`
 
@@ -1246,7 +1246,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_selectable_text_align(output)`
 
@@ -1258,7 +1258,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_display_window_padding(value)`
 
@@ -1276,7 +1276,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_display_window_padding(output)`
 
@@ -1288,7 +1288,7 @@ local menu_widget_color =
 | ----- | ------- | ----------- |
 | value | Vector2 | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_display_safe_area_padding(value)`
 
@@ -1306,7 +1306,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_display_safe_area_padding(output)`
 
@@ -1318,7 +1318,7 @@ local menu_widget_color =
 | ----- | ---- | ----------- |
 | value | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_anti_aliased_lines(value)`
 
@@ -1330,7 +1330,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_anti_aliased_lines()`
 
@@ -1342,7 +1342,7 @@ local menu_widget_color =
 | ----- | ---- | ----------- |
 | value | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_anti_aliased_lines_use_tex(value)`
 
@@ -1354,7 +1354,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_anti_aliased_lines_use_tex()`
 
@@ -1366,7 +1366,7 @@ local menu_widget_color =
 | ----- | ---- | ----------- |
 | value | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.set_anti_aliased_fill(value)`
 
@@ -1378,7 +1378,7 @@ local menu_widget_color =
 | ---- | ----------- |
 | bool | None given  |
 
-### Methods:
+### Methods
 
 * `menu.get_anti_aliased_fill()`
 
@@ -1392,7 +1392,7 @@ local menu_widget_color =
 | ------- | ---- | ------------------------------------------ |
 | success | bool | true if the menu is open, false otherwise. |
 
-### Methods:
+### Methods
 
 * `menu.is_menu_opened()`
 
@@ -1406,7 +1406,7 @@ local menu_widget_color =
 | ---- | ------- | ----------- |
 | size | Vector2 | Menu size   |
 
-### Methods:
+### Methods
 
 * `menu.get_main_menu_size()`
 
@@ -1420,7 +1420,7 @@ local menu_widget_color =
 | ----- | ----- | ------------------- |
 | Width | float | Width of main menu. |
 
-### Methods:
+### Methods
 
 * `menu.get_main_menu_size_x()`
 
@@ -1434,7 +1434,7 @@ local menu_widget_color =
 | ------ | ----- | -------------------- |
 | Height | float | Height of main menu. |
 
-### Methods:
+### Methods
 
 * `menu.get_main_menu_size_y()`
 
@@ -1448,7 +1448,7 @@ local menu_widget_color =
 | -------- | ------- | -------------------------- |
 | position | Vector2 | Returns main menu position |
 
-### Methods:
+### Methods
 
 * `menu.get_main_menu_pos()`
 
@@ -1462,7 +1462,7 @@ local menu_widget_color =
 | -------- | ----- | ----------------------------------------------------------------- |
 | Position | float | Window position by X coordinate relative to the main game window. |
 
-### Methods:
+### Methods
 
 * `menu.get_main_menu_pos_x()`
 
@@ -1476,7 +1476,7 @@ local menu_widget_color =
 | -------- | ----- | ----------------------------------------------------------------- |
 | Position | float | Window position by Y coordinate relative to the main game window. |
 
-### Methods:
+### Methods
 
 * `menu.get_main_menu_pos_y()`
 
@@ -1490,7 +1490,7 @@ local menu_widget_color =
 | ------ | ---- | --------------------- |
 | active | bool | Is menu input active. |
 
-### Methods:
+### Methods
 
 * `menu.is_input_active()`
 

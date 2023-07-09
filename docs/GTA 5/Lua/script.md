@@ -28,7 +28,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ---- | --------------------- |
 | bool | True if script exists |
 
-### Methods:
+### Methods
 
 * `script.exists(script_name)`
 * `script.exists(script_hash)`
@@ -47,7 +47,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ------ | ----------- |
 | script | Script wrap |
 
-### Methods:
+### Methods
 
 * `script_global:new(index)`
 
@@ -67,7 +67,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ------ | ----------- |
 | script | Script wrap |
 
-### Methods:
+### Methods
 
 * `script_local:new(script_name, index)`
 * `script_local:new(script_hash, index)`
@@ -87,7 +87,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ------ | ----------- |
 | script | Script wrap |
 
-### Methods:
+### Methods
 
 * `script:at(index, size)`
 * `script:at(index)`
@@ -100,7 +100,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ---- | ----------- |
 | int  | Int8 value |
 
-### Methods:
+### Methods
 
 * `script:get_byte()`
 
@@ -112,7 +112,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ---- | ------------ |
 | int  | Int16 value |
 
-### Methods:
+### Methods
 
 * `script:get_word()`
 
@@ -124,7 +124,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ---- | ------------ |
 | int  | Int32 value |
 
-### Methods:
+### Methods
 
 * `script:get_long()`
 
@@ -136,7 +136,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ---- | ------------ |
 | int  | Int64 value |
 
-### Methods:
+### Methods
 
 * `script:get_int64()`
 
@@ -148,7 +148,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ----- | ----------- |
 | float | Float value |
 
-### Methods:
+### Methods
 
 * `script:get_float()`
 
@@ -160,7 +160,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ----- | ---- | ----------- |
 | value | int  | Int8 value |
 
-### Methods:
+### Methods
 
 * `script:set_byte(value)`
 
@@ -172,7 +172,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ----- | ---- | ------------ |
 | value | int  | Int16 value |
 
-### Methods:
+### Methods
 
 * `script:set_word(value)`
 
@@ -184,7 +184,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ----- | ---- | ------------ |
 | value | int  | Int32 value |
 
-### Methods:
+### Methods
 
 * `script:set_long(value)`
 
@@ -196,7 +196,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ----- | ---- | ------------ |
 | value | int  | Int64 value |
 
-### Methods:
+### Methods
 
 * `script:set_int64(value)`
 
@@ -208,7 +208,7 @@ Functions script_global:new(), script_local:new() will return script objects whi
 | ----- | ----- | ----------- |
 | value | float | Float value |
 
-### Methods:
+### Methods
 
 * `script:set_float(value)`
 

@@ -27,7 +27,7 @@ File system to work with files
 | ------------ | ------- | ------------------------------------------------ |
 | memory\_file | pointer | A pointer to the file memory. nullptr otherwise. |
 
-### Methods:
+### Methods
 
 * `fs.file_load_bin(name)`
 
@@ -47,7 +47,7 @@ File system to work with files
 | ------- | ------ | ------------- |
 | content | string | File Contents |
 
-### Methods:
+### Methods
 
 * `fs.file_load_txt(name)`
 
@@ -68,7 +68,7 @@ File system to work with files
 | ------- | ---- | -------------------------------------------- |
 | success | bool | true if the entry succeeds, false otherwise. |
 
-### Methods:
+### Methods
 
 * `fs.file_write(name, text)`
 
@@ -89,7 +89,7 @@ File system to work with files
 | ------- | ---- | -------------------------------------------- |
 | success | bool | true if the entry succeeds, false otherwise. |
 
-### Methods:
+### Methods
 
 * `fs.file_append(name, text)`
 
@@ -109,7 +109,7 @@ File system to work with files
 | ------- | ---- | ----------------------------------------------------------------- |
 | success | bool | true if the binary file is released from memory, false otherwise. |
 
-### Methods:
+### Methods
 
 * `fs.file_free(ptr)`
 
@@ -129,7 +129,7 @@ File system to work with files
 | ------- | ---- | ------------------------------------------------------ |
 | success | bool | true if the file or directory exists, false otherwise. |
 
-### Methods:
+### Methods
 
 * `fs.exists(name)`
 
@@ -149,7 +149,7 @@ File system to work with files
 | ------- | ---- | ----------------------------------------- |
 | success | bool | true if the file exists, false otherwise. |
 
-### Methods:
+### Methods
 
 * `fs.file_exists(name)`
 
@@ -169,7 +169,7 @@ File system to work with files
 | ------- | ---- | ---------------------------------------------- |
 | success | bool | true if the directory exists, false otherwise. |
 
-### Methods:
+### Methods
 
 * `fs.directory_exists(name)`
 
@@ -189,7 +189,7 @@ File system to work with files
 | ------- | ---- | ---------------------------------------------------------------- |
 | success | bool | true if the directory was successfully created, false otherwise. |
 
-### Methods:
+### Methods
 
 * `fs.create_dir(name)`
 
@@ -209,7 +209,7 @@ File system to work with files
 | ------- | ---- | ---------------------------------------------- |
 | success | bool | true if the object is a file, false otherwise. |
 
-### Methods:
+### Methods
 
 * `fs.is_file(name)`
 
@@ -229,7 +229,7 @@ File system to work with files
 | ------- | ---- | ------------------------------------------------ |
 | success | bool | true if the object is a folder, false otherwise. |
 
-### Methods:
+### Methods
 
 * `fs.is_dir(name)`
 
@@ -249,7 +249,7 @@ File system to work with files
 | ------- | ---- | --------------------------------------------------------------------- |
 | success | bool | true if the file or folder was successfully deleted, false otherwise. |
 
-### Methods:
+### Methods
 
 * `fs.delete(name)`
 
@@ -263,7 +263,7 @@ File system to work with files
 | ---- | ------ | ---------------------------------------- |
 | path | string | The absolute path to the appdata folder. |
 
-### Methods:
+### Methods
 
 * `fs.get_dir_appdata()`
 
@@ -277,7 +277,7 @@ File system to work with files
 | ---- | ------ | -------------------------------------------- |
 | path | string | The absolute path to the folder with loader. |
 
-### Methods:
+### Methods
 
 * `fs.get_dir_product()`
 
@@ -291,7 +291,7 @@ File system to work with files
 | ---- | ------ | ------------------------------------------ |
 | path | string | The absolute path to the folder with logs. |
 
-### Methods:
+### Methods
 
 * `fs.get_dir_log()`
 
@@ -305,7 +305,7 @@ File system to work with files
 | ---- | ------ | ------------------------------------------------- |
 | path | string | The absolute path to the folder with the scripts. |
 
-### Methods:
+### Methods
 
 * `fs.get_dir_script()`
 
@@ -319,7 +319,7 @@ File system to work with files
 | ---- | ------ | ---------------------------------------- |
 | path | string | The absolute path to the Windows folder. |
 
-### Methods:
+### Methods
 
 * `fs.get_dir_windows()`
 
@@ -333,7 +333,7 @@ File system to work with files
 | ---- | ------ | ---------------------------------------------- |
 | path | string | The absolute path to the folder with the game. |
 
-### Methods:
+### Methods
 
 * `fs.get_dir_game()`
 
@@ -353,7 +353,7 @@ File system to work with files
 | ---- | ----- | ------------------------------- |
 | size | bites | Size of file or folder in bytes |
 
-### Methods:
+### Methods
 
 * `fs.get_size(name)`
 
@@ -373,7 +373,7 @@ File system to work with files
 | ---- | ----- | -------------- |
 | list | table | List of files. |
 
-### Methods:
+### Methods
 
 * `fs.get_files(name)`
 
@@ -393,7 +393,7 @@ File system to work with files
 | ---- | ----- | ---------------- |
 | list | table | List of folders. |
 
-### Methods:
+### Methods
 
 * `fs.get_directories(name)`
 
@@ -413,6 +413,6 @@ File system to work with files
 | ---- | ----- | -------------------------------------- |
 | list | table | List of folders and files in a folder. |
 
-### Methods:
+### Methods
 
 * `fs.get_all(name)`

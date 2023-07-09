@@ -21,7 +21,7 @@ Workspace to get info about account
 | ------- | ---- | --------------------------------------------------------- |
 | success | bool | true if the social workspace is avaible, false otherwise. |
 
-### Methods:
+### Methods
 
 * `social.is_ready()`
 
@@ -35,7 +35,7 @@ Workspace to get info about account
 | -------- | ------ | ----------------- |
 | username | string | Current username. |
 
-### Methods:
+### Methods
 
 * `social.get_username()`
 
@@ -49,7 +49,7 @@ Workspace to get info about account
 | ----- | ------ | -------------- |
 | email | string | Current email. |
 
-### Methods:
+### Methods
 
 * `social.get_mail()`
 
@@ -63,7 +63,7 @@ Workspace to get info about account
 | ---- | ---- | ------------------- |
 | rid  | int  | Current RockstarID. |
 
-### Methods:
+### Methods
 
 * `social.get_rid()`
 
@@ -79,7 +79,7 @@ Workspace to get info about account
 | name        | string   | Player name        |
 | on_response | function | Callback           |
 
-### Methods:
+### Methods
 
 * `social.is_player_online(name, on_response)`
 * `social.is_player_online(rid, on_response)`

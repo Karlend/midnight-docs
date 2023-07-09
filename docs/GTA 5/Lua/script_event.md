@@ -21,12 +21,12 @@ Midnight Lua provides the ability to send script hash to players in a session. T
 | hash   | int   | Script event hash      |          |
 | args   | table | Script event arguments |          |
 
-### Methods:
+### Methods
 - `script.send(player, hash, args)`
 
 ## Examples
 
-### Player who sent any message to the chat will receive an invitation to the island. 
+### Player who sent any message to the chat will receive an invitation to the island.
 
 ```lua
 function OnChatMsg(ply, text)

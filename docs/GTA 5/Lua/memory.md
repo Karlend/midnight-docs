@@ -115,7 +115,7 @@ Methods to work with game memory
 
 * `memory.alloc_u8()`
 ## `memory.alloc_u16`
-`Function allocates memory of size 2 bytes and initializes it to zero.`
+`Function allocates memory of size 2 bytes and initializes it to zero`
 
 ### Return value
 
@@ -128,7 +128,7 @@ Methods to work with game memory
 * `memory.alloc_u16()`
 
 ## `memory.alloc_u24`
-`Function allocates memory of size 3 bytes and initializes it to zero.`
+`Function allocates memory of size 3 bytes and initializes it to zero`
 
 ### Return value
 
@@ -141,7 +141,7 @@ Methods to work with game memory
 * `memory.alloc_u24()`
 
 ## `memory.alloc_u32`
-`Function allocates memory of size 4 bytes and initializes it to zero.`
+`Function allocates memory of size 4 bytes and initializes it to zero`
 
 ### Return value
 
@@ -154,7 +154,7 @@ Methods to work with game memory
 * `memory.alloc_u32()`
 
 ## `memory.alloc_u64`
-`Function allocates memory of size 8 bytes and initializes it to zero.`
+`Function allocates memory of size 8 bytes and initializes it to zero`
 
 ### Return value
 
@@ -222,7 +222,7 @@ Methods to work with game memory
 * `memory.alloc_s64()`
 
 ## `memory.alloc_vector`
-`Function allocates memory of size either 24 or 12 bytes based on the boolean parameter passed, and initializes it to zero.`
+`Function allocates memory of size either 24 or 12 bytes based on the boolean parameter passed, and initializes it to zero`
 
 ### Parameters
 

@@ -9,94 +9,6 @@ title: memory
 Methods to work with game memory
 ```
 
-## Data types
-
-### ptr\_info\_t
-
-| Member       | Type   | Description                      |
-| ------------ | ------ | -------------------------------- |
-| name         | string | Prettified memory pointer string |
-| address      | void\* | Absolute memory address          |
-| rel\_address | void\* | Memory address relative to DLL   |
-| module\_base | void\* | DLL instance                     |
-| module\_name | string | DLL name                         |
-
-## Functions
-
-## `memory.alloc`
-
-### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| size | int  | None given  |
-
-### Return value
-
-| Type   | Description             |
-| ------ | ----------------------- |
-| void\* | Allocated memory region |
-
-### Methods:
-
-* `memory.alloc(size)`
-
-## `memory.free`
-
-### Parameters
-
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| addr | void\* | None given  |
-
-### Return value
-
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
-
-### Methods:
-
-* `memory.free(addr)`
-
-## `memory.is_valid_addr`
-
-### Parameters
-
-| Name | Type   | Description | Optional |
-| ---- | ------ | ----------- | -------- |
-| addr | void\* | None given  |          |
-| size | int    | None given  | +        |
-
-### Return value
-
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
-
-### Methods:
-
-* `memory.is_valid_addr(addr, size)`
-
-## `memory.search`
-
-### Parameters
-
-| Name         | Type   | Description |
-| ------------ | ------ | ----------- |
-| module\_name | string | None given  |
-| pattern      | string | None given  |
-
-### Return value
-
-| Type   | Description         |
-| ------ | ------------------- |
-| void\* | Found memory region |
-
-### Methods:
-
-* `memory.search(module_name, pattern)`
-
 ## `memory.scan`
 `Function that scans memory in a specific DLL for a particular signature`
 
@@ -111,9 +23,9 @@ Methods to work with game memory
 
 ### Return value
 
-| Type  | Description         |
-| ----- | ------------------- |
-| table | Table of signatures |
+| Type  | Description       |
+| ----- | ----------------- |
+| table | Table of pointers |
 
 ### Methods:
 
@@ -121,336 +33,212 @@ Methods to work with game memory
 * `memory.scan(module_name, signature, offset)`
 * `memory.scan(module_name, signature)`
 
-## `memory.absolute`
+## `memory.scan_script`
+`Function that scans the memory of script code blocks or specific scripts for a particular signature`
 
 ### Parameters
 
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| addr | void\* | None given  |
+| Name         | Type    | Description                                                          |
+| ------------ | ------- | -------------------------------------------------------------------- |
+| code\_blocks | table   | An array of pointers to the code blocks to scan                      |
+| code\_size   | number  | The size of program code                                             |
+| script\_name | string  | The name of the script to scan (f.e. freemode)                       |
+| signature    | string  | The signature to search for                                          |
+| offset       | number  | The offset to add to the found signatures                            |
+| only\_one    | boolean | Whether to stop searching after finding the first matching signature |
 
 ### Return value
 
-| Type   | Description        |
-| ------ | ------------------ |
-| void\* | Dereferenced value |
+| Type    | Description                                                                     |
+| ------- | ------------------------------------------------------------------------------- |
+| pointer | The address where the signature was found, or 0 if the signature was not foundz |
 
 ### Methods:
 
-* `memory.absolute(addr)`
+* `memory.scan_script(code_blocks, code_size, signature, offset, only_one)`
+* `memory.scan_script(code_blocks, code_size, signature, offset)`
+* `memory.scan_script(code_blocks, code_size, signature)`
+* `memory.scan_script(script_name, signature, offset, only_one)`
+* `memory.scan_script(script_name, signature, offset)`
+* `memory.scan_script(script_name, signature)`
 
-## `memory.relative`
+## `memory.scan_tuneable`
+`Function that attempts to find the global offset for a specific tuneable. Script must be loaded in order for this function to work. Make sure to fully connect to the game before using this function`
 
 ### Parameters
 
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| addr | void\* | None given  |
+| Name  | Type   | Description                            |
+| ----- | ------ | -------------------------------------- |
+| hHash | number | The hash of the tuneable to search for |
+| sName | string | The name of the tuneable to search for |
 
 ### Return value
 
-| Type   | Description                           |
-| ------ | ------------------------------------- |
-| void\* | Address relative to the addr argument |
+| Type   | Description                                                                         |
+| ------ | ----------------------------------------------------------------------------------- |
+| number | The global offset where the tuneable was found, or 0 if the tuneable was not found. |
 
 ### Methods:
 
-* `memory.relative(addr)`
+* `memory.scan_tuneable(hHash)`
+* `memory.scan_tuneable(sName)`
 
-## `memory.add`
+## `memory.alloc`
+`Function allocates memory of the size given as a parameter and initializes it to zero`
 
 ### Parameters
 
-| Name  | Type   | Description |
-| ----- | ------ | ----------- |
-| addr  | void\* | None given  |
-| value | int    | None given  |
+| Name      | Type   | Description                            |
+| --------- | ------ | -------------------------------------- |
+| nSize   | number | The size of the memory to allocate.     |
 
 ### Return value
 
-| Type   | Description |
-| ------ | ----------- |
-| void\* | None given  |
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
 
-### Methods:
+### Method:
 
-* `memory.add(addr, value)`
+* `memory.alloc(nSize)`
 
-## `memory.sub`
-
-### Parameters
-
-| Name  | Type   | Description |
-| ----- | ------ | ----------- |
-| addr  | void\* | None given  |
-| value | int    | None given  |
+## `memory.alloc_u8`
+`Function allocates memory of size 1 byte and initializes it to zero`
 
 ### Return value
 
-| Type   | Description |
-| ------ | ----------- |
-| void\* | None given  |
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
 
-### Methods:
+### Method:
 
-* `memory.sub(addr, value)`
-
-## `memory.distribute`
-
-### Parameters
-
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| addr | void\* | None given  |
+* `memory.alloc_u8()`
+## `memory.alloc_u16`
+`Function allocates memory of size 2 bytes and initializes it to zero.`
 
 ### Return value
 
-| Type         | Description                   |
-| ------------ | ----------------------------- |
-| ptr\_info\_t | Collected pointer information |
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
 
-### Methods:
+### Method:
 
-* `memory.distribute(addr)`
+* `memory.alloc_u16()`
 
-## `memory.read_byte`
-
-### Parameters
-
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| addr | void\* | None given  |
+## `memory.alloc_u24`
+`Function allocates memory of size 3 bytes and initializes it to zero.`
 
 ### Return value
 
-| Type | Description |
-| ---- | ----------- |
-| int  | None given  |
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
 
-### Methods:
+### Method:
 
-* `memory.read_byte(addr)`
+* `memory.alloc_u24()`
 
-## `memory.read_word`
-
-### Parameters
-
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| addr | void\* | None given  |
+## `memory.alloc_u32`
+`Function allocates memory of size 4 bytes and initializes it to zero.`
 
 ### Return value
 
-| Type | Description |
-| ---- | ----------- |
-| int  | None given  |
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
 
-### Methods:
+### Method:
 
-* `memory.read_word(addr)`
+* `memory.alloc_u32()`
 
-## `memory.read_long`
-
-### Parameters
-
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| addr | void\* | None given  |
+## `memory.alloc_u64`
+`Function allocates memory of size 8 bytes and initializes it to zero.`
 
 ### Return value
 
-| Type | Description |
-| ---- | ----------- |
-| int  | None given  |
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
 
-### Methods:
+### Method:
 
-* `memory.read_long(addr)`
+* `memory.alloc_u64()`
 
-## `memory.read_int64`
+## `memory.alloc_s8`
+`Function that allocates 1 byte of memory (char)`
+
+### Return value
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
+
+### Method:
+* `memory.alloc_s8()`
+
+## `memory.alloc_s16`
+`Function that allocates 2 bytes of memory (short)`
+
+### Return value
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
+
+### Method:
+* `memory.alloc_s16()`
+
+## `memory.alloc_s24`
+`Function that allocates 3 bytes of memory`
+
+### Return value
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
+
+### Method:
+* `memory.alloc_s24()`
+
+## `memory.alloc_s32`
+`Function that allocates 4 bytes of memory (integer)`
+
+### Return value
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
+
+### Method:
+* `memory.alloc_s32()`
+
+## `memory.alloc_s64`
+`Function that allocates 8 bytes of memory (long long)`
+
+### Return value
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
+
+### Method:
+* `memory.alloc_s64()`
+
+## `memory.alloc_vector`
+`Function allocates memory of size either 24 or 12 bytes based on the boolean parameter passed, and initializes it to zero.`
 
 ### Parameters
 
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| addr | void\* | None given  |
+| Name         | Type    | Description                                                          |
+| ------------ | ------- | -------------------------------------------------------------------- |
+| is8Aligned   | boolean | Value to determine if the allocated memory should be 8-byte aligned or not. (default = true) |
 
 ### Return value
 
-| Type | Description |
-| ---- | ----------- |
-| int  | None given  |
+| Type    | Description                |
+| ------- | -------------------------- |
+| pointer | Pointer to the allocated memory. |
 
 ### Methods:
 
-* `memory.read_int64(addr)`
+* `memory.alloc_vector(is8Aligned)`
+* `memory.alloc_vector()`
 
-## `memory.read_float`
 
-### Parameters
-
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| addr | void\* | None given  |
-
-### Return value
-
-| Type  | Description |
-| ----- | ----------- |
-| float | None given  |
-
-### Methods:
-
-* `memory.read_float(addr)`
-
-## `memory.read_double`
-
-### Parameters
-
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| addr | void\* | None given  |
-
-### Return value
-
-| Type  | Description |
-| ----- | ----------- |
-| float | None given  |
-
-### Methods:
-
-* `memory.read_double(addr)`
-
-## `memory.read_vector`
-
-### Parameters
-
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| addr | void\* | None given  |
-
-### Return value
-
-| Type    | Description |
-| ------- | ----------- |
-| Vector3 | None given  |
-
-### Methods:
-
-* `memory.read_vector(addr)`
-
-## `memory.write_byte`
-
-### Parameters
-
-| Name  | Type   | Description |
-| ----- | ------ | ----------- |
-| addr  | void\* | None given  |
-| value | int    | None given  |
-
-### Methods:
-
-* `memory.write_byte(addr, value)`
-
-## `memory.write_word`
-
-### Parameters
-
-| Name  | Type   | Description |
-| ----- | ------ | ----------- |
-| addr  | void\* | None given  |
-| value | int    | None given  |
-
-### Methods:
-
-* `memory.write_word(addr, value)`
-
-## `memory.write_long`
-
-### Parameters
-
-| Name  | Type   | Description |
-| ----- | ------ | ----------- |
-| addr  | void\* | None given  |
-| value | int    | None given  |
-
-### Methods:
-
-* `memory.write_long(addr, value)`
-
-## `memory.write_int64`
-
-### Parameters
-
-| Name  | Type   | Description |
-| ----- | ------ | ----------- |
-| addr  | void\* | None given  |
-| value | int    | None given  |
-
-### Methods:
-
-* `memory.write_int64(addr, value)`
-
-## `memory.write_float`
-
-### Parameters
-
-| Name  | Type   | Description |
-| ----- | ------ | ----------- |
-| addr  | void\* | None given  |
-| value | float  | None given  |
-
-### Methods:
-
-* `memory.write_float(addr, value)`
-
-## `memory.write_double`
-
-### Parameters
-
-| Name  | Type   | Description |
-| ----- | ------ | ----------- |
-| addr  | void\* | None given  |
-| value | float  | None given  |
-
-### Methods:
-
-* `memory.write_double(addr, value)`
-
-## `memory.write_vector`
-
-### Parameters
-
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| addr  | void\*  | None given  |
-| value | Vector3 | None given  |
-
-### Methods:
-
-* `memory.write_vector(addr, value)`
-
-## Examples
-
-### Finding GameState variable address
-
-```lua
-local GameState = {}
-
-function OnInit()
-  local addr = memory.search("GTA5.exe", "48 85 C9 74 4B 83 3D")
-
-  if not memory.is_valid_addr(addr) then
-    print("[Lua] Failed to find GameState address.")
-    return
-  end
-
-  addr = memory.add(addr, 7)
-  addr = memory.relative(addr)
-  addr = memory.add(addr, 1)
-
-  GameState = addr
-
-  print("GameState addr is " .. memory.distribute(GameState).name)
-end
-```

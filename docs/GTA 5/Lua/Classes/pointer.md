@@ -8,4 +8,4 @@ title: Pointer
 ```ebnf
 This is a list of all available methods for all pointers
 ```
-For a list of possible members see [memory](./memory.md)
+For a list of possible members see [memory](../memory.md)

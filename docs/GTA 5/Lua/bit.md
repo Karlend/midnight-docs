@@ -268,6 +268,8 @@ bla bla bla
 
 `bit.reverse(var)`
 
+---
+
 ## bit.parity
 `Calculates the parity of an integer.`
 - Parameters:

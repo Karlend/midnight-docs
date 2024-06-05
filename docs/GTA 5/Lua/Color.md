@@ -10,7 +10,7 @@ title: Color
 
  | Type         | Description                                           |
  | ------------ | ----------------------------------------------------- |
- | col_instance | A new instance of a [Color](classes/color.md) object. |
+ | col_instance | A new instance of a [Color](classes/color) object. |
 
 - Methods:
 

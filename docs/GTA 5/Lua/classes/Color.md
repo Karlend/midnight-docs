@@ -1,5 +1,5 @@
 ---
-slug: /gta/lua/classes/Color
+slug: /gta/lua/classes/color
 title: Color
 ---
 

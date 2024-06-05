@@ -10,11 +10,11 @@ title: Color
 
  | Type         | Description                                           |
  | ------------ | ----------------------------------------------------- |
- | col_instance | A new instance of a [classes/color.md](Color) object. |
+ | col_instance | A new instance of a [Color](classes/color.md) object. |
 
 - Methods:
 
-`chat.send(text, is_team, target)`
+`Color()`
 
 ---
 

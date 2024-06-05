@@ -8,7 +8,7 @@ title: bit
 ```ebnf
 bla bla bla
 ```
-### `bit.set`
+## `bit.set`
 `Sets a bit in an integer.`
 - Parameters:
 
@@ -24,9 +24,10 @@ bla bla bla
  | integer | The new integer value with the bit set. |
 
 - Methods:
-- `bit.set(var, bit)`
 
-### `bit.is_set`
+* `bit.set(var, bit)`
+
+## `bit.is_set`
 `Checks if a bit is set in an integer.`
 - Parameters:
 
@@ -42,9 +43,10 @@ bla bla bla
  | boolean | Whether the bit is set. |
 
 - Methods:
-- `bit.is_set(var, bit)`
 
-### `bit.reset`
+* `bit.is_set(var, bit)`
+
+## `bit.reset`
 `Resets a bit in an integer.`
 - Parameters:
 
@@ -60,9 +62,10 @@ bla bla bla
  | integer | The new integer value with the bit reset. |
 
 - Methods:
-- `bit.reset(var, bit)`
 
-### `bit.toggle`
+* `bit.reset(var, bit)`
+
+## `bit.toggle`
 `Toggles a bit in an integer.`
 - Parameters:
 
@@ -78,9 +81,10 @@ bla bla bla
  | integer | The new integer value with the bit toggled. |
 
 - Methods:
-- `bit.toggle(var, bit)`
 
-### `bit.clear`
+* `bit.toggle(var, bit)`
+
+## `bit.clear`
 `Clears all bits in an integer.`
 - Parameters:
 
@@ -95,9 +99,10 @@ bla bla bla
  | integer | The integer value with all bits cleared (0). |
 
 - Methods:
-- `bit.clear(var)`
 
-### `bit.fill`
+* `bit.clear(var)`
+
+## `bit.fill`
 `Sets all bits in an integer.`
 - Parameters:
 
@@ -112,9 +117,10 @@ bla bla bla
  | integer | The integer value with all bits set. |
 
 - Methods:
-- `bit.fill(var)`
 
-### `bit.count`
+* `bit.fill(var)`
+
+## `bit.count`
 `Counts set bits in an integer.`
 - Parameters:
 
@@ -129,9 +135,10 @@ bla bla bla
  | integer | The count of bits set. |
 
 - Methods:
-- `bit.count(var)`
 
-### `bit.invert`
+* `bit.count(var)`
+
+## `bit.invert`
 `Inverts all bits in an integer.`
 - Parameters:
 
@@ -146,9 +153,10 @@ bla bla bla
  | integer | The integer value with all bits inverted. |
 
 - Methods:
-- `bit.invert(var)`
 
-### `bit.find_first_set`
+* `bit.invert(var)`
+
+## `bit.find_first_set`
 `Finds the first set bit in an integer.`
 - Parameters:
 
@@ -163,9 +171,10 @@ bla bla bla
  | integer | The position of the first set bit, or -1 if no bits are set. |
 
 - Methods:
-- `bit.find_first_set(var)`
 
-### `bit.find_first_reset`
+* `bit.find_first_set(var)`
+
+## `bit.find_first_reset`
 `Finds the first reset bit in an integer.`
 - Parameters:
 
@@ -180,9 +189,10 @@ bla bla bla
  | integer | The position of the first reset bit. |
 
 - Methods:
-- `bit.find_first_reset(var)`
 
-### `bit.rotate_left`
+* `bit.find_first_reset(var)`
+
+## `bit.rotate_left`
 `Rotates the bits of an integer to the left.`
 - Parameters:
 
@@ -198,9 +208,10 @@ bla bla bla
  | integer | The integer value after the bits have been rotated left. |
 
 - Methods:
-- `bit.rotate_left(var, n)`
 
-### `bit.rotate_right`
+* `bit.rotate_left(var, n)`
+
+## `bit.rotate_right`
 `Rotates the bits of an integer to the right.`
 - Parameters:
 
@@ -216,9 +227,10 @@ bla bla bla
  | integer | The integer value after the bits have been rotated right. |
 
 - Methods:
-- `bit.rotate_right(var, n)`
 
-### `bit.swap`
+* `bit.rotate_right(var, n)`
+
+## `bit.swap`
 `Swaps two bits in an integer.`
 - Parameters:
 
@@ -235,9 +247,10 @@ bla bla bla
  | integer | The integer value after the bits have been swapped. |
 
 - Methods:
-- `bit.swap(var, pos1, pos2)`
 
-### `bit.reverse`
+* `bit.swap(var, pos1, pos2)`
+
+## `bit.reverse`
 `Reverses all bits in an integer.`
 - Parameters:
 
@@ -252,9 +265,10 @@ bla bla bla
  | integer | The integer value with all bits reversed. |
 
 - Methods:
-- `bit.reverse(var)`
 
-### `bit.parity`
+* `bit.reverse(var)`
+
+## `bit.parity`
 `Calculates the parity of an integer.`
 - Parameters:
 
@@ -269,5 +283,6 @@ bla bla bla
  | boolean | The parity of the integer (true if even, false if odd). |
 
 - Methods:
-- `bit.parity(var)`
+
+* `bit.parity(var)`
 

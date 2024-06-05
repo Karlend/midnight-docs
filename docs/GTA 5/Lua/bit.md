@@ -1,3 +1,9 @@
+---
+slug: /gta/lua/bit
+title: bit
+---
+
+
 Method: function bit.set
 Description: Sets a bit in an integer.
 Parameters:

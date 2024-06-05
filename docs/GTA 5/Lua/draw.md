@@ -84,8 +84,8 @@ title: Draw
 
 - Return:
 
- | Type   | Description                                                                    |
- | ------ | ------------------------------------------------------------------------------ |
+ | Type   | Description                                                                     |
+ | ------ | ------------------------------------------------------------------------------- |
  | number | The height of the window in pixels, or 0 if the resolution cannot be retrieved. |
 
 - Methods:
@@ -95,7 +95,13 @@ title: Draw
 ---
 
 ## draw.get_screen_width
-`@return number The width of the screen in pixels, or 0 if the resolution cannot be retrieved.`
+`The width of the screen in pixels, or 0 if the resolution cannot be retrieved.`
+
+- Return:
+
+ | Type   | Description                                                                    |
+ | ------ | ------------------------------------------------------------------------------ |
+ | number | The width of the screen in pixels, or 0 if the resolution cannot be retrieved. |
 
 - Methods:
 
@@ -104,7 +110,13 @@ title: Draw
 ---
 
 ## draw.get_screen_height
-`@return number The height of the screen in pixels, or 0 if the resolution cannot be retrieved.`
+`The height of the screen in pixels, or 0 if the resolution cannot be retrieved.`
+
+- Return:
+
+ | Type   | Description                                                                     |
+ | ------ | ------------------------------------------------------------------------------- |
+ | number | The height of the screen in pixels, or 0 if the resolution cannot be retrieved. |
 
 - Methods:
 

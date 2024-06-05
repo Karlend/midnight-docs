@@ -24,6 +24,7 @@ bla bla bla
  | integer | The new integer value with the bit set. |
 
 - Methods:
+
 `bit.set(var, bit)`
 
 ### bit.is_set
@@ -42,6 +43,7 @@ bla bla bla
  | boolean | Whether the bit is set. |
 
 - Methods:
+
 `bit.is_set(var, bit)`
 
 ### bit.reset
@@ -60,6 +62,7 @@ bla bla bla
  | integer | The new integer value with the bit reset. |
 
 - Methods:
+
 `bit.reset(var, bit)`
 
 ### bit.toggle
@@ -78,6 +81,7 @@ bla bla bla
  | integer | The new integer value with the bit toggled. |
 
 - Methods:
+
 `bit.toggle(var, bit)`
 
 ### bit.clear
@@ -95,6 +99,7 @@ bla bla bla
  | integer | The integer value with all bits cleared (0). |
 
 - Methods:
+
 `bit.clear(var)`
 
 ### bit.fill
@@ -112,6 +117,7 @@ bla bla bla
  | integer | The integer value with all bits set. |
 
 - Methods:
+
 `bit.fill(var)`
 
 ### bit.count
@@ -129,6 +135,7 @@ bla bla bla
  | integer | The count of bits set. |
 
 - Methods:
+
 `bit.count(var)`
 
 ### bit.invert
@@ -146,6 +153,7 @@ bla bla bla
  | integer | The integer value with all bits inverted. |
 
 - Methods:
+
 `bit.invert(var)`
 
 ### bit.find_first_set
@@ -163,6 +171,7 @@ bla bla bla
  | integer | The position of the first set bit, or -1 if no bits are set. |
 
 - Methods:
+
 `bit.find_first_set(var)`
 
 ### bit.find_first_reset
@@ -180,6 +189,7 @@ bla bla bla
  | integer | The position of the first reset bit. |
 
 - Methods:
+
 `bit.find_first_reset(var)`
 
 ### bit.rotate_left
@@ -198,6 +208,7 @@ bla bla bla
  | integer | The integer value after the bits have been rotated left. |
 
 - Methods:
+
 `bit.rotate_left(var, n)`
 
 ### bit.rotate_right
@@ -216,6 +227,7 @@ bla bla bla
  | integer | The integer value after the bits have been rotated right. |
 
 - Methods:
+
 `bit.rotate_right(var, n)`
 
 ### bit.swap
@@ -235,6 +247,7 @@ bla bla bla
  | integer | The integer value after the bits have been swapped. |
 
 - Methods:
+
 `bit.swap(var, pos1, pos2)`
 
 ### bit.reverse
@@ -252,6 +265,7 @@ bla bla bla
  | integer | The integer value with all bits reversed. |
 
 - Methods:
+
 `bit.reverse(var)`
 
 ### bit.parity
@@ -269,5 +283,6 @@ bla bla bla
  | boolean | The parity of the integer (true if even, false if odd). |
 
 - Methods:
+
 `bit.parity(var)`
 

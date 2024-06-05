@@ -25,7 +25,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.set(var, bit)`
+`bit.set(var, bit)`
 
 ## `bit.is_set`
 `Checks if a bit is set in an integer.`
@@ -44,7 +44,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.is_set(var, bit)`
+`bit.is_set(var, bit)`
 
 ## `bit.reset`
 `Resets a bit in an integer.`
@@ -63,7 +63,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.reset(var, bit)`
+`bit.reset(var, bit)`
 
 ## `bit.toggle`
 `Toggles a bit in an integer.`
@@ -82,7 +82,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.toggle(var, bit)`
+`bit.toggle(var, bit)`
 
 ## `bit.clear`
 `Clears all bits in an integer.`
@@ -100,7 +100,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.clear(var)`
+`bit.clear(var)`
 
 ## `bit.fill`
 `Sets all bits in an integer.`
@@ -118,7 +118,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.fill(var)`
+`bit.fill(var)`
 
 ## `bit.count`
 `Counts set bits in an integer.`
@@ -136,7 +136,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.count(var)`
+`bit.count(var)`
 
 ## `bit.invert`
 `Inverts all bits in an integer.`
@@ -154,7 +154,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.invert(var)`
+`bit.invert(var)`
 
 ## `bit.find_first_set`
 `Finds the first set bit in an integer.`
@@ -172,7 +172,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.find_first_set(var)`
+`bit.find_first_set(var)`
 
 ## `bit.find_first_reset`
 `Finds the first reset bit in an integer.`
@@ -190,7 +190,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.find_first_reset(var)`
+`bit.find_first_reset(var)`
 
 ## `bit.rotate_left`
 `Rotates the bits of an integer to the left.`
@@ -209,7 +209,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.rotate_left(var, n)`
+`bit.rotate_left(var, n)`
 
 ## `bit.rotate_right`
 `Rotates the bits of an integer to the right.`
@@ -228,7 +228,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.rotate_right(var, n)`
+`bit.rotate_right(var, n)`
 
 ## `bit.swap`
 `Swaps two bits in an integer.`
@@ -248,7 +248,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.swap(var, pos1, pos2)`
+`bit.swap(var, pos1, pos2)`
 
 ## `bit.reverse`
 `Reverses all bits in an integer.`
@@ -266,7 +266,7 @@ bla bla bla
 
 - Methods:
 
-* `bit.reverse(var)`
+`bit.reverse(var)`
 
 ## `bit.parity`
 `Calculates the parity of an integer.`
@@ -284,5 +284,5 @@ bla bla bla
 
 - Methods:
 
-* `bit.parity(var)`
+`bit.parity(var)`
 

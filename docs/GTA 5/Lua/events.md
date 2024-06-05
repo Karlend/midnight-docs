@@ -1,484 +1,329 @@
 ---
-slug: /gta/lua/events
-title: events
+slug: /gta/lua/Events
+title: Events
 ---
 
-# Events
+## events.on_player_join
+`@param callback fun(ply: player_t):void`
 
-```ebnf
-Callbacks for specific events
-```
+- Methods:
 
-## `OnInit`
-`Called when the Lua script is loaded.`
+`events.on_player_join(callback)`
 
-### Methods
+---
 
-* `OnInit()`
+## events.on_player_left
+`@param callback fun(ply: player_t):void`
 
-## `OnDone`
-`Called when the Lua script is unloaded.`
+- Methods:
 
-### Methods
+`events.on_player_left(callback)`
 
-* `OnDone()`
+---
 
-## `OnFrame`
-`Called every frame.`
+## events.on_player_active
+`@param callback fun(ply: player_t):void`
 
-### Methods
+- Methods:
 
-* `OnFrame()`
+`events.on_player_active(callback)`
 
-## `OnPlayerJoin`
-`Called when a player joins the lobby. Player is still invalid on this moment. For interaction use OnPlayerActive instead`
+---
 
-| Argument | Type   | Description               |
-| -------- | ------ | ------------------------- |
-| ply      | int    | Connecting player index   |
-| name     | string | Player name               |
-| ip       | string | Player IP. Can be spoofed |
-| host_key | number | Player host key           |
+## events.on_player_adding
+`@param callback fun(name: string, rid: number):boolean|nil`
 
-### Methods
+- Methods:
 
-* `OnPlayerJoin(ply, name, ip, host_key)`
+`events.on_player_adding(callback)`
 
-## `OnPlayerActive`
-`Called when a player joined lobby.`
+---
 
-| Argument | Type | Description            |
-| -------- | ---- | ---------------------- |
-| ply      | int  | Connected player index |
+## events.on_session_join
+`@param callback fun():void`
 
-### Methods
+- Methods:
 
-* `OnPlayerActive(ply)`
+`events.on_session_join(callback)`
 
-## `OnPlayerLeft`
-`Called when a player leaves the lobby.`
+---
 
-| Argument | Type | Description                |
-| -------- | ---- | -------------------------- |
-| ply      | int  | Disconnecting player index |
+## events.on_session_left
+`@param callback fun():void`
 
-### Methods
+- Methods:
 
-* `OnPlayerLeft(ply)`
+`events.on_session_left(callback)`
 
-## `OnWeaponReceived`
-`Called when a pedestrian or local player receives a weapon.`
+---
 
-| Argument | Type | Description            |
-| -------- | ---- | ---------------------- |
-| ped      | int  | Pedestrian handle      |
-| weapon   | int  | Received weapon handle |
-| ammo     | int  | Weapon ammo count      |
+## events.on_game_state
+`@param callback fun(prev_state: number, cur_state: number):void`
 
-### Methods
+- Methods:
 
-* `OnWeaponReceived(ped, weapon, ammo)`
+`events.on_game_state(callback)`
 
-## `OnPlayerJoinByRid`
-`Called when a connection to the local player has been made using the RID Joiner or Join Button.`
+---
 
-| Argument | Type | Description                                |
-| -------- | ---- | ------------------------------------------ |
-| rid      | int  | Connecting player's R\*ID (may be spoofed) |
+## events.on_spawn
+`@param callback fun(is_online: boolean):void`
 
-### Methods
+- Methods:
 
-* `OnPlayerJoinByRid(rid)`
+`events.on_spawn(callback)`
 
-## `OnScriptEvent`
-`Called when a Script Event hash is received.`
+---
 
-| Argument | Type  | Description            |
-| -------- | ----- | ---------------------- |
-| ply      | int   | Player index           |
-| event    | int   | Script event hash      |
-| args     | table | Script event arguments |
+## events.on_death
+`@param callback fun():void`
 
-### Return value:
+- Methods:
 
-| Type | Description                                           |
-| ---- | ----------------------------------------------------- |
-| bool | true if script event can be executed, false otherwise |
+`events.on_death(callback)`
 
-### Methods
+---
 
-* `OnScriptEvent(ply, event, args)`
+## events.on_script_started
+`@param callback fun(script_name: string):void`
 
-## `OnScriptSend`
-`Called when a Script Event hash is sent by local player.`
+- Methods:
 
-| Argument  | Type  | Description                   |
-| --------- | ----- | ----------------------------- |
-| ply\_bits | int   | Player indexes packed in bits |
-| event     | int   | Script event hash             |
-| args      | table | Script event arguments        |
+`events.on_script_started(callback)`
 
-### Methods
+---
 
-* `OnScriptSend(ply_bits, event, args)`
+## events.on_script_stopped
+`@param callback fun(script_name: string, reason: number):void`
 
-## `OnScriptMigrate`
-`Called on script host migration`
+- Methods:
 
-| Argument    | Type   | Description                   |
-| ----------- | ------ | ----------------------------- |
-| is_freemode | bool   | Is freemode                   |
-| is_you      | bool   | Is new host equal localplayer |
-| script_name | string | Script name                   |
-| ply         | int    | Player index                  |
+`events.on_script_stopped(callback)`
 
-### Methods
+---
 
-* `OnScriptMigrate(is_freemode, is_you, script_name, ply)`
+## events.on_key_state
+`@param callback fun(key: string, is_down: boolean):void`
 
-## `OnChatMsg`
-`Called when a message appears in the game chat.`
+- Methods:
 
-| Argument | Type   | Description                    |
-| -------- | ------ | ------------------------------ |
-| ply      | int    | Player index of message sender |
-| text     | string | Message text                   |
+`events.on_key_state(callback)`
 
-### Methods
+---
 
-* `OnChatMsg(ply, text)`
+## events.on_transition_end
+`@param callback fun(is_online: boolean):void`
 
-## `OnSMS`
-`Called on SMS receive.`
+- Methods:
 
-| Argument   | Type   | Description                    |
-| ---------- | ------ | ------------------------------ |
-| ply        | int    | Player index of message sender |
-| text       | string | Message text                   |
-| rid        | int    | Player Rockstar ID             |
-| is\_script | bool   | Is SMS sent via script         |
+`events.on_transition_end(callback)`
 
-### Methods
+---
 
-* `OnSMS(ply, text, rid, is_script)`
+## events.on_first_singleplayer_join
+`@param callback fun():void`
 
-## `OnNetworkEvent`
-`Called when a Network Event is received.`
+- Methods:
 
-| Argument | Type           | Description                                                  |
-| -------- | -------------- | ------------------------------------------------------------ |
-| ply      | int            | Player index                                                 |
-| event    | event\_info\_t | A structure containing a hash of the event name and its name |
-| buf      | LuaBuffer      | Network event payload                                        |
+`events.on_first_singleplayer_join(callback)`
 
-### Return value:
+---
 
-| Type | Description                                            |
-| ---- | ------------------------------------------------------ |
-| bool | true if network event can be executed, false otherwise |
+## events.on_window_proc
+`@param callback fun(hwnd: number, uMsg: number, wParam: number, lParam: number):number|nil`
 
-### Methods
+- Methods:
 
-* `OnNetworkEvent(ply, event, buf)`
+`events.on_window_proc(callback)`
 
-## `OnSpectating`
-`Called when a player in a session is spectating another player.`
+---
 
-| Argument  | Type | Description                      |
-| --------- | ---- | -------------------------------- |
-| spectator | int  | Player index of spectator        |
-| target    | int  | Player index of observer         |
-| is\_you   | bool | true if target is a local player |
+## events.on_player_shot
+`@param callback fun(ply: player_t, weapon: number):void`
 
-### Methods
+- Methods:
 
-* `OnSpectating(spectator, target, is_you)`
+`events.on_player_shot(callback)`
 
-## `OnStopSpectating`
-`Called when some player in the session has stopped spectating another player.`
+---
 
-| Argument  | Type | Description                      |
-| --------- | ---- | -------------------------------- |
-| spectator | int  | Player index of spectator        |
-| target    | int  | Player index of observer         |
-| is\_you   | bool | true if target is a local player |
+## events.on_modder_detected
+`@param callback fun(ply: player_t, flag: number, params: table):void`
 
-### Methods
+- Methods:
 
-* `OnStopSpectating(spectator, target, is_you)`
+`events.on_modder_detected(callback)`
 
-## `OnFeatureStart`
-`Called when Feature is activated.`
+---
 
-### Methods
+## events.on_script_migrate
+`@param callback fun(is_freemode: boolean, is_you: boolean, script_name: string, ply: player_t):void`
 
-* `OnFeatureStart()`
+- Methods:
 
-## `OnFeatureStop`
-`Called when Feature stops.`
+`events.on_script_migrate(callback)`
 
-### Methods
+---
 
-* `OnFeatureStop()`
+## events.on_sync_blocked
+`@param callback fun(ply: player_t, reason: string, ban_time: number):void`
 
-## `OnFeatureTick`
-`Called every script tick.`
+- Methods:
 
-### Methods
+`events.on_sync_blocked(callback)`
 
-* `OnFeatureTick()`
+---
 
-## `OnScriptStopped`
-`Called when the game script terminates.`
+## events.on_script_event
+`@param callback fun(ply: player_t, hash: number, args: table):void`
 
-| Argument | Type   | Description        |
-| -------- | ------ | ------------------ |
-| name     | string | Script name        |
-| reason   | int    | Termination reason |
+- Methods:
 
-### Reasons
+`events.on_script_event(callback)`
 
-```lua
-local reasons = { -- can give nil in case of unknown
-	[0] = "Native",
-	[1] = "Main Exit",
-	[2] = "Crash"
-}
-```
+---
 
-### Methods
+## events.on_session_host_changed
+`@param callback fun(ply: player_t):void`
 
-* `OnScriptStopped(name, reason)`
+- Methods:
 
-## `OnScriptStarted`
-`Called when the game script starts.`
+`events.on_session_host_changed(callback)`
 
-| Argument    | Type     | Description      |
-| ----------- | -------- | ---------------- |
-| name        | string   | Script name      |
-| args        | LuaArray | Script arguments |
-| stack\_size | int      | Stack size       |
+---
 
-### Methods
+## events.on_weapon_received
+`@param callback fun(ped: number, weapon_hash: number, ammo_count: number):void`
 
-* `OnScriptStarted(name, args, stack_size)`
+- Methods:
 
-## `OnGameState`
-`Called every time the GameState value changes.`
+`events.on_weapon_received(callback)`
 
-| Argument   | Type | Description              |
-| ---------- | ---- | ------------------------ |
-| state\_old | int  | Previous GameState value |
-| state\_new | int  | New GameState value      |
+---
 
-### Methods
+## events.on_chat_msg
+`@param callback fun(ply: player_t, text: string):void`
 
-* `OnGameState(state_old, state_new)`
+- Methods:
 
-## void OnKeyPressed(key, down)
-`Called every time a key or mouse button is pressed.`
+`events.on_chat_msg(callback)`
 
-| Argument | Type | Description                          |
-| -------- | ---- | ------------------------------------ |
-| key      | int  | Virtual key index                    |
-| down     | bool | true if key pressed, false otherwise |
+---
 
-### Methods
+## events.on_frame
+`@param callback fun():void`
 
-* `OnKeyPressed(key, down)`
+- Methods:
 
-## `OnPrepareTreeNode`
-`Called before sending the sync tree to the session.`
+`events.on_frame(callback)`
 
-| Argument | Type   | Description                     |
-| -------- | ------ | ------------------------------- |
-| node     | void\* | netSyncNodeBase pointer         |
-| name     | string | Tree name, i.e. CSectorDataNode |
-| hash     | int    | Tree name hash, i.e. 2329527195 |
+---
 
-| Type | Description                                        |
-| ---- | -------------------------------------------------- |
-| bool | true if node pointer was modifier, false otherwise |
+## events.on_script_tick
+`@param callback fun():void`
 
-### Methods
+- Methods:
 
-* `OnPrepareTreeNode(node, name, hash)`
+`events.on_script_tick(callback)`
 
-## `OnDirectXResizeBuffers`
-`Called when the IDXGISwapChain::ResizeBuffers method is called.`
+---
 
-### Methods
+## events.on_vehicle_leave
+`@param callback fun(vehicle: number, was_driver: boolean):void`
 
-* `OnDirectXResizeBuffers()`
+- Methods:
 
-## `OnDirectXPresent`
-`Called when the IDXGISwapChain::Present method is called.`
+`events.on_vehicle_leave(callback)`
 
-### Methods
+---
 
-* `OnDirectXPresent()`
+## events.on_vehicle_enter
+`@param callback fun(vehicle: number, is_driver: boolean):void`
 
-## `OnWindowProc`
-`Called when the WindowProc callback is called.`
+- Methods:
 
-| Argument | Type | Description                    |
-| -------- | ---- | ------------------------------ |
-| hwnd     | int  | A handle to the window         |
-| msg      | int  | The message                    |
-| wparam   | int  | Additional message information |
-| lparam   | int  | Additional message information |
+`events.on_vehicle_enter(callback)`
 
-### Methods
+---
 
-* `OnWindowProc(hwnd, msg, wparam, lparam)`
+## events.on_build_ui
+`@param callback fun():void`
 
-## `OnTransitionEnd`
-`Called when the cutscene ends (single player) and at the moment the camera lands from the sky (online).`
+- Methods:
 
-| Argument        | Type | Description                                                                   |
-| --------------- | ---- | ----------------------------------------------------------------------------- |
-| is\_multiplayer | bool | If true, then the event was triggered online, false - in a single player game |
+`events.on_build_ui(callback)`
 
-### Methods
+---
 
-* `OnTransitionEnd(is_multiplayer)`
+## events.on_net_game_event
+`@param callback fun(ply: player_t, event_info: {id: number, name: string}, buf: CBitBufferRead):void`
 
-## `OnFirstSingleplayerJoin`
-`Called upon first entering a single player game.`
+- Methods:
 
-### Methods
+`events.on_net_game_event(callback)`
 
-* `OnFirstSingleplayerJoin()`
+---
 
-## `OnModderDetected`
-`Called when a modder is detected in the session.`
+## events.on_player_rid_join
+`@param callback fun(rid: number):void`
 
-| Argument | Type          | Description  |
-| -------- | ------------- | ------------ |
-| ply      | int           | Player index |
-| reason   | modder\_flags | Modder flag  |
+- Methods:
 
-### Modder flags
-```lua
-modder_flags =
-{
-    spoofed_rid = bit.lshift(1, 0),
-    force_host = bit.lshift(1, 1),
-    money_drop = bit.lshift(1, 2),
-    update_fxn = bit.lshift(1, 3),
-    crc_mismatch = bit.lshift(1, 4),
-    malformed_script = bit.lshift(1, 5),
-    super_jump = bit.lshift(1, 6), -- Not implemented yet
-    wrong_model = bit.lshift(1, 7),
-    spoofed_ip = bit.lshift(1, 8),
-    censor_bypass = bit.lshift(1, 9),
-}
-```
+`events.on_player_rid_join(callback)`
 
-### Methods
+---
 
-* `OnModderDetected(ply, reason)`
+## events.on_stop_spectating
+`@param callback fun(ply: player_t, ply_target: player_t, is_you: boolean):void`
 
-## `OnVehicleEnter`
-`Called when the local player has entered the vehicle.`
+- Methods:
 
-| Argument | Type | Description            |
-| -------- | ---- | ---------------------- |
-| veh      | int  | Entered vehicle handle |
+`events.on_stop_spectating(callback)`
 
-### Methods
+---
 
-* `OnVehicleEnter(veh)`
+## events.on_spectating
+`@param callback fun(ply: player_t, ply_target: player_t, is_you: boolean):void`
 
-## `OnVehicleLeave`
-`Called when the local player has leaved the vehicle.`
+- Methods:
 
-| Argument | Type | Description           |
-| -------- | ---- | --------------------- |
-| veh      | int  | Leaved vehicle handle |
+`events.on_spectating(callback)`
 
-### Methods
+---
 
-* `OnVehicleLeave(veh)`
+## events.on_init
+`@param callback fun():void`
 
-## `OnSessionJoin`
-`Called when the local player has joined session.`
+- Methods:
 
-### Methods
+`events.on_init(callback)`
 
-* `OnSessionJoin()`
+---
 
-## `OnSessionLeft`
-`Called when the local player has left session.`
+## events.on_done
+`@param callback fun():void`
 
-### Methods
+- Methods:
 
-* `OnSessionLeft()`
+`events.on_done(callback)`
 
-## `OnSpawn`
-`Called when the local player has spawned.`
+---
 
-| Argument  | Type | Description                                          |
-| --------- | ---- | ---------------------------------------------------- |
-| is_online | bool | Whether spawned in online session or in singleplayer |
+## events.on_sync_can_apply
+`@param callback fun(ply: player_t, node: SyncDataNode, ent: entity_t):boolean|nil`
 
-### Methods
+- Methods:
 
-* `OnSpawn(is_online)`
+`events.on_sync_can_apply(callback)`
 
-## `OnWarningScreen`
-`Called before showing warning screen.`
+---
 
-| Argument         | Type   | Description            |
-| ---------------- | ------ | ---------------------- |
-| script_thread    | string | Script thread          |
-| entryHeader      | string | Warning message header |
-| entryLine1       | string | Line 1 of text         |
-| entryLine2       | string | Line 2 of text         |
-| instructionalKey | string | Instructional key      |
+## events.on_mouse_click
+`@param callback fun(button: MouseButton, region: MouseClickRegion, x: number, y: number): void`
 
-### Return value:
+- Methods:
 
-| Type | Description                   |
-| ---- | ----------------------------- |
-| bool | false to prevent from showing |
+`events.on_mouse_click(callback)`
 
-### Methods
+---
 
-* `OnWarningScreen(script_thread, entryHeader, entryLine1, entryLine2, instructionalKey)`
-
-## `OnSyncBlocked`
-`Called after protection blocked sync.`
-
-| Argument | Type   | Description             |
-| -------- | ------ | ----------------------- |
-| ply      | int    | Player index            |
-| reason   | string | Reason of blocking sync |
-| ban_time | int    | Ban time in seconds     |
-
-### Methods
-
-* `OnSyncBlocked(ply, reason, ban_time)`
-
-## `OnSessionHostChanged`
-`Called after session host change.`
-
-| Argument | Type | Description  |
-| -------- | ---- | ------------ |
-| ply      | int  | Player index |
-
-### Methods
-
-* `OnSessionHostChanged(ply)`
-
-## `OnPlayerShot`
-`Called on player shoot.`
-
-| Argument | Type | Description  |
-| -------- | ---- | ------------ |
-| ply      | int  | Player index |
-| hash     | int  | Weapon hash  |
-
-### Methods
-
-* `OnPlayerShot(ply, hash)`

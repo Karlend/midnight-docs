@@ -1,736 +1,419 @@
 ---
-slug: /gta/lua/draw
-title: draw
+slug: /gta/lua/Draw
+title: Draw
 ---
 
-# draw
+## draw.is_ready
+`@return boolean True if drawing is possible.`
 
-```ebnf
-Draws function must be used in OnFrame event
-```
+- Methods:
 
-## Functions
+`draw.is_ready()`
 
-## `draw.get_window_width`
+---
 
-`Get window width in pixels.`
+## draw.get_window_width
+`@return number The width of the window in pixels, or 0 if the resolution cannot be retrieved.`
 
-### Return value:
+- Methods:
 
-| Name  | Type   | Description                     |
-| ----- | ------ | ------------------------------- |
-| Width | number | Width of game window in pixels. |
+`draw.get_window_width()`
 
-### Methods
+---
 
-* `draw.get_window_width()`
+## draw.get_window_height
+`@return number The height of the window in pixels, or 0 if the resolution cannot be retrieved.`
 
-## `draw.get_window_height`
+- Methods:
 
-`Get window height in pixels.`
+`draw.get_window_height()`
 
-### Return value:
+---
 
-| Name   | Type   | Description                      |
-| ------ | ------ | -------------------------------- |
-| Height | number | Height of game window in pixels. |
+## draw.get_screen_width
+`@return number The width of the screen in pixels, or 0 if the resolution cannot be retrieved.`
 
-### Methods
+- Methods:
 
-* `draw.get_window_height()`
+`draw.get_screen_width()`
 
-## `draw.get_screen_width`
+---
 
-`Get screen width in pixels.`
+## draw.get_screen_height
+`@return number The height of the screen in pixels, or 0 if the resolution cannot be retrieved.`
 
-### Return value:
+- Methods:
 
-| Name  | Type   | Description                |
-| ----- | ------ | -------------------------- |
-| Width | number | Width of screen in pixels. |
+`draw.get_screen_height()`
 
-### Methods
+---
 
-* `draw.get_screen_width()`
+## draw.create_texture_from_memory
+`@return number A texture handle if successful, or 0 if the texture could not be created.`
 
-## `draw.get_screen_height`
+- Methods:
 
-`Get screen height in pixels.`
+`draw.create_texture_from_memory(buffer, len)`
 
-### Return value:
+---
 
-| Name   | Type   | Description                 |
-| ------ | ------ | --------------------------- |
-| Height | number | Height of screen in pixels. |
+## draw.create_texture_from_file
+`@return number A texture handle if successful, or 0 if the texture could not be created.`
 
-### Methods
+- Methods:
 
-* `draw.get_screen_height()`
+`draw.create_texture_from_file(file_name)`
 
-## `draw.create_texture_from_file`
+---
 
-`Load texture from file.`
+## draw.create_texture_from_base64
+`@return number A texture handle if successful, or 0 if the texture could not be created.`
 
-### Parameters:
+- Methods:
 
-| Name       | Type   | Description |
-| ---------- | ------ | ----------- |
-| file\_name | string | File name   |
+`draw.create_texture_from_base64(base64)`
 
-### Return value:
+---
 
-| Name   | Type     | Description                           |
-| ------ | -------- | ------------------------------------- |
-| Object | userdata | Texture handle, 0 if failed to create |
+## draw.create_debug_texture
+`@return number A texture handle if successful, or 0 if the texture could not be created.`
 
-### Methods
+- Methods:
 
-* `draw.create_texture_from_file(string file_name)`
+`draw.create_debug_texture(width, height)`
 
-## `draw.create_texture_from_memory`
+---
 
-`Load texture from memory.`
+## draw.release_texture
+`@return boolean True if the texture was successfully released, false otherwise.`
 
-### Parameters:
+- Methods:
 
-| Name | Type     | Description      |
-| ---- | -------- | ---------------- |
-| ptr  | userdata | Texture          |
-| size | number   | Amount of memory |
+`draw.release_texture(handle)`
 
-### Return value:
+---
 
-| Name   | Type     | Description                           |
-| ------ | -------- | ------------------------------------- |
-| Object | userdata | Texture handle, 0 if failed to create |
+## draw.texture
+`@return boolean True if the texture was successfully drawn, false otherwise.`
 
-### Methods
+- Methods:
 
-* `draw.create_texture_from_memory(ptr, size)`
+`draw.texture(handle, x, y, width, height)`
 
-## `draw.release_texture`
+---
 
-`Release texture from memory.`
+## draw.set_hsv
+`@param a number? The alpha component of the color (0-1).`
 
-### Parameters:
+- Methods:
 
-| Name   | Type     | Description    |
-| ------ | -------- | -------------- |
-| handle | userdata | Texture handle |
+`draw.set_hsv(color, h, s, v, a)`
 
-### Return value:
+---
 
-| Name    | Type | Description                                       |
-| ------- | ---- | ------------------------------------------------- |
-| success | bool | true if the texture was released, false otherwise |
+## draw.set_color
+`@overload fun(color: EDrawContextColor, r: number, g: number, b: number)`
 
-### Methods
+- Methods:
 
-* `draw.release_texture(handle)`
+`draw.set_color(color, ...)`
 
-## Color contexts `ctx_color`
-```C
-enum EDrawContextColor_
-{
-    kDrawContextColor_Common = 0,
-    kDrawContextColor_UpperLeft = 1,
-    kDrawContextColor_UpperRight = 2,
-    kDrawContextColor_BottomLeft = 3,
-    kDrawContextColor_BottomRight = 4,
-};
-```
+---
 
-## `draw.set_hsv`
+## draw.get_colors
+`print("Current common color RGBA: ", r, g, b, a)`
 
-`Set HSV color to draw.`
+- Methods:
 
-### Parameters:
+`draw.get_colors(color)`
 
-| Name      | Type   | Description    |
-| --------- | ------ | -------------- |
-| ctx_color | int    | Color context. |
-| h         | number | Hue.           |
-| s         | number | Saturation.    |
-| v         | number | Brightness.    |
-| a         | number | Alpha.         |
+---
 
-### Methods
+## draw.set_thickness
+`@param value number The thickness to set.`
 
-* `draw.set_hsv(int ctx_color, number h, number s, number v, number a)`
-* `draw.set_hsv(int ctx_color, number h, number s, number v)`
+- Methods:
 
-## `draw.set_color`
+`draw.set_thickness(value)`
 
-`Set RGB color to draw.`
+---
 
-### Parameters:
+## draw.get_thickness
+`@return number The current line thickness.`
 
-| Name      | Type | Description    |
-| --------- | ---- | -------------- |
-| ctx_color | int  | Color context. |
-| rgba      | int  | Int32 color.   |
-| r         | int  | Red.           |
-| g         | int  | Green.         |
-| b         | int  | Blue.          |
-| a         | int  | Alpha.         |
+- Methods:
 
-### Methods
+`draw.get_thickness()`
 
-* `draw.set_color(int ctx_color, int rgba)`
-* `draw.set_color(int ctx_color, int r, int g, int b, int a)`
-* `draw.set_color(int ctx_color, int r, int g, int b)`
+---
 
-## `draw.get_color`
+## draw.set_rounding
+`@param value number The rounding radius to set.`
 
-`Get color to draw.`
+- Methods:
 
-### Parameters:
+`draw.set_rounding(value)`
 
-| Name      | Type | Description    |
-| --------- | ---- | -------------- |
-| ctx_color | int  | Color context. |
+---
 
-### Return value:
+## draw.get_rounding
+`@return number The current rounding radius.`
 
-| Name  | Type  | Description            |
-| ----- | ----- | ---------------------- |
-| color | int32 | Current color to draw. |
+- Methods:
 
-### Methods
+`draw.get_rounding()`
 
-* `draw.get_color(int ctx_color)`
+---
 
-## `draw.set_thickness`
+## draw.set_radius
+`@param value number The radius to set for circles and arcs.`
 
-`Set element thickness.`
+- Methods:
 
-### Parameters:
+`draw.set_radius(value)`
 
-| Name      | Type   | Description                 |
-| --------- | ------ | --------------------------- |
-| thickness | number | Thickness of Draws element. |
+---
 
-### Methods
+## draw.get_radius
+`@return number The current radius.`
 
-* `draw.set_thickness(number thickness)`
+- Methods:
 
-## `draw.get_thickness`
+`draw.get_radius()`
 
-`Get element thickness.`
+---
 
-### Return value:
+## draw.set_num_segments
+`@param value number The number of segments to set.`
 
-| Name      | Type   | Description                 |
-| --------- | ------ | --------------------------- |
-| thickness | number | Thickness of Draws element. |
+- Methods:
 
-### Methods
+`draw.set_num_segments(value)`
 
-* `draw.get_thickness()`
+---
 
-## `draw.set_rounding`
+## draw.get_num_segments
+`@return number The current number of segments.`
 
-`Set element rounding.`
+- Methods:
 
-### Parameters:
+`draw.get_num_segments()`
 
-| Name     | Type   | Description                |
-| -------- | ------ | -------------------------- |
-| rounding | number | Rounding of Draws element. |
+---
 
-### Methods
+## draw.set_flags
+`@param value number The flags to set, as defined by ImDrawCornerFlags.`
 
-* `draw.set_rounding(number rounding)`
+- Methods:
 
-## `draw.get_rounding`
+`draw.set_flags(value)`
 
-`Get element rounding.`
+---
 
-### Return value:
+## draw.get_flags
+`@return number The current flags.`
 
-| Name     | Type   | Description                |
-| -------- | ------ | -------------------------- |
-| rounding | number | Rounding of Draws element. |
+- Methods:
 
-### Methods
+`draw.get_flags()`
 
-* `draw.get_rounding()`
+---
 
-## `draw.set_radius`
+## draw.set_min_uv
+`@param value number The minimum UV to set.`
 
-`Set element radius.`
+- Methods:
 
-### Parameters:
+`draw.set_min_uv(value)`
 
-| Name   | Type   | Description              |
-| ------ | ------ | ------------------------ |
-| radius | number | Radius of Draws element. |
+---
 
-### Methods
+## draw.get_min_uv
+`@return number The current minimum UV.`
 
-* `draw.set_radius(number radius)`
+- Methods:
 
-## `draw.get_radius`
+`draw.get_min_uv()`
 
-`Get element radius.`
+---
 
-### Return value:
+## draw.set_max_uv
+`@param value number The maximum UV to set.`
 
-| Name   | Type   | Description              |
-| ------ | ------ | ------------------------ |
-| radius | number | Radius of Draws element. |
+- Methods:
 
-### Methods
+`draw.set_max_uv(value)`
 
-* `draw.get_radius()`
+---
 
-## `draw.set_num_segments`
+## draw.get_max_uv
+`@return number The current maximum UV.`
 
-`Set element amount of segments.`
+- Methods:
 
-### Parameters:
+`draw.get_max_uv()`
 
-| Name         | Type | Description                       |
-| ------------ | ---- | --------------------------------- |
-| num_segments | int  | Amount of Draws element segments. |
+---
 
-### Methods
+## draw.create_font
+`@return boolean True if the font is successfully queued for loading, false if there is an error.`
 
-* `draw.set_num_segments(int num_segments)`
+- Methods:
 
-## `draw.get_num_segments`
+`draw.create_font(font_name, font_size, on_requested)`
 
-`Get element amount of segments.`
+---
 
-### Return value:
+## draw.set_font
+`@param font ImFont* The font to set for drawing.`
 
-| Name         | Type | Description                       |
-| ------------ | ---- | --------------------------------- |
-| num_segments | int  | Amount of Draws element segments. |
+- Methods:
 
-### Methods
+`draw.set_font(font)`
 
-* `draw.get_num_segments()`
+---
 
-## `draw.set_flags`
+## draw.get_text_size
+`@return number, number The width and height of the text in pixels, respectively.`
 
-`Set element flags.`
+- Methods:
 
-### Parameters:
+`draw.get_text_size(text)`
 
-| Name  | Type | Description             |
-| ----- | ---- | ----------------------- |
-| flags | int  | Flags of Draws element. |
+---
 
-### Methods
+## draw.get_text_size_x
+`@return number The width of the text in pixels.`
 
-* `draw.set_flags(int flags)`
+- Methods:
 
-## `draw.get_flags`
+`draw.get_text_size_x(text)`
 
-`Get element flags.`
+---
 
-### Return value:
+## draw.get_text_size_y
+`@return number The height of the text in pixels.`
 
-| Name  | Type | Description             |
-| ----- | ---- | ----------------------- |
-| flags | int  | Flags of Draws element. |
+- Methods:
 
-### Methods
+`draw.get_text_size_y(text)`
 
-* `draw.get_flags()`
+---
 
-## `draw.set_min_uv`
+## draw.line
+`@param y2 number The y-coordinate of the second point.`
 
-`Set element min_uv.`
+- Methods:
 
-### Parameters:
+`draw.line(x1, y1, x2, y2)`
 
-| Name   | Type   | Description                 |
-| ------ | ------ | --------------------------- |
-| min_uv | number | Minimal uv of draw element. |
+---
 
-### Methods
+## draw.text
+`@param text string The text to draw.`
 
-* `draw.set_min_uv(number min_uv)`
+- Methods:
 
-## `draw.get_min_uv`
+`draw.text(x, y, text)`
 
-`Get element min_uv.`
+---
 
-### Return value:
+## draw.rect
+`@param y2 number The y-coordinate of the opposite corner.`
 
-| Name   | Type   | Description                 |
-| ------ | ------ | --------------------------- |
-| min_uv | number | Minimal uv of draw element. |
+- Methods:
 
-### Methods
+`draw.rect(x1, y1, x2, y2)`
 
-* `draw.get_min_uv()`
+---
 
-## `draw.set_max_uv`
+## draw.rect_filled
+`@param y2 number The y-coordinate of the opposite corner.`
 
-`Set element max_uv.`
+- Methods:
 
-### Parameters:
+`draw.rect_filled(x1, y1, x2, y2)`
 
-| Name   | Type   | Description                 |
-| ------ | ------ | --------------------------- |
-| max_uv | number | Maximal uv of draw element. |
+---
 
-### Methods
+## draw.rect_filled_multi_color
+`@param y2 number The y-coordinate of the opposite corner.`
 
-* `draw.set_max_uv(number max_uv)`
+- Methods:
 
-## `draw.get_max_uv`
+`draw.rect_filled_multi_color(x1, y1, x2, y2)`
 
-`Get element max_uv.`
+---
 
-### Return value:
+## draw.quad
+`@param y4 number The y-coordinate of the fourth corner.`
 
-| Name   | Type   | Description                 |
-| ------ | ------ | --------------------------- |
-| max_uv | number | Maximal uv of draw element. |
+- Methods:
 
-### Methods
+`draw.quad(x1, y1, x2, y2, x3, y3, x4, y4)`
 
-* `draw.get_max_uv()`
+---
 
-## `draw.line`
+## draw.quad_filled
+`@param y4 number The y-coordinate of the fourth corner.`
 
-`Draws line.`
+- Methods:
 
-### Parameters:
+`draw.quad_filled(x1, y1, x2, y2, x3, y3, x4, y4)`
 
-| Name | Type   | Description                              |
-| ---- | ------ | ---------------------------------------- |
-| x1   | number | Starting point position along the X axis |
-| y1   | number | Starting point position along the Y axis |
-| x2   | number | Ending point position along the X axis   |
-| y2   | number | Ending point position along the Y axis   |
+---
 
-### Methods
+## draw.triangle
+`@param y3 number The y-coordinate of the third corner.`
 
-* `draw.line(number x1, number y1, number x2, number y2)`
+- Methods:
 
-## `draw.create_font`
+`draw.triangle(x1, y1, x2, y2, x3, y3)`
 
-`Creates font.`
+---
 
-### Parameters:
+## draw.triangle_filled
+`@param y3 number The y-coordinate of the third corner.`
 
-| Name      | Type   | Description                           |
-| --------- | ------ | ------------------------------------- |
-| font_name | string | Name of font ( filename without ttf ) |
-| font_size | number | Height of font                        |  |
+- Methods:
 
-### Methods
+`draw.triangle_filled(x1, y1, x2, y2, x3, y3)`
 
-* `draw.create_font(string font_name, number font_size)`
-* `draw.create_font(string font_name)`
+---
 
-### Return value:
+## draw.circle
+`@param y number The y-coordinate of the circle's center.`
 
-| Name | Type   | Description   |
-| ---- | ------ | ------------- |
-| font | ImFont | Created font. |
+- Methods:
 
-## `draw.set_font`
+`draw.circle(x, y)`
 
-`Set font to draw.`
+---
 
-### Parameters:
+## draw.circle_filled
+`@param y number The y-coordinate of the circle's center.`
 
-| Name | Type   | Description   |
-| ---- | ------ | ------------- |
-| font | ImFont | Created font. |
+- Methods:
 
-### Methods
+`draw.circle_filled(x, y)`
 
-* `draw.set_font(font)`
+---
 
-## `draw.text`
+## draw.set_draw_list
+`@return DrawList The previous DrawList that was set.`
 
-`Draws text.`
+- Methods:
 
-### Parameters:
+`draw.set_draw_list(list)`
 
-| Name | Type   | Description                 |
-| ---- | ------ | --------------------------- |
-| x    | number | Text position on the X-axis |
-| y    | number | Text position on the Y axis |
-| text | string | Text                        |
+---
 
-### Methods
+## draw.get_draw_list
+`@return DrawList The current draw list.`
 
-* `draw.text(number x, number y, string text)`
+- Methods:
 
-## `draw.get_text_size`
+`draw.get_draw_list()`
 
-`Get text size.`
+---
 
-### Parameters:
-
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| text | string | Text        |
-
-### Methods
-
-* `draw.get_text_size(string text)`
-
-### Return value:
-
-| Name | Type    | Description         |
-| ---- | ------- | ------------------- |
-| size | Vector2 | Size of given text. |
-
-## `draw.get_text_size_x`
-
-`Get text width.`
-
-### Parameters:
-
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| text | string | Text        |
-
-### Methods
-
-* `draw.get_text_size_x(string text)`
-
-### Return value:
-
-| Name  | Type   | Description          |
-| ----- | ------ | -------------------- |
-| width | number | Width of given text. |
-
-## `draw.get_text_size_y`
-
-`Get text height.`
-
-### Parameters:
-
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| text | string | Text        |
-
-### Methods
-
-* `draw.get_text_size_y(string text)`
-
-### Return value:
-
-| Name   | Type   | Description           |
-| ------ | ------ | --------------------- |
-| height | number | Height of given text. |
-
-## `draw.rect`
-
-`Draws rectangle.`
-
-### Parameters:
-
-| Name | Type   | Description                  |
-| ---- | ------ | ---------------------------- |
-| x1   | number | Start position on the X-axis |
-| y1   | number | Start position on the X-axis |
-| x2   | number | End position on the X-axis   |
-| y2   | number | End position on the Y-axis   |
-
-### Methods
-
-* `draw.rect(number x1, number y1, number x2, number y2)`
-
-## `draw.rect_filled`
-
-`Draws filled rectangle.`
-
-### Parameters:
-
-| Name | Type   | Description                  |
-| ---- | ------ | ---------------------------- |
-| x1   | number | Start position on the X-axis |
-| y1   | number | Start position on the X-axis |
-| x2   | number | End position on the X-axis   |
-| y2   | number | End position on the Y-axis   |
-
-### Methods
-
-* `draw.rect_filled(number x1, number y1, number x2, number y2)`
-
-## `draw.rect_filled_multi_color`
-
-`Draws multicolored filled rect.`
-
-### Parameters:
-
-| Name | Type   | Description                  |
-| ---- | ------ | ---------------------------- |
-| x1   | number | Start position on the X-axis |
-| y1   | number | Start position on the X-axis |
-| x2   | number | End position on the X-axis   |
-| y2   | number | End position on the Y-axis   |
-
-### Methods
-
-* `draw.draw.rect_filled_multi_color(number x1, number y1, number x2, number y2)`
-
-## `draw.quad`
-
-`Draws quadrangle.`
-
-### Parameters:
-
-| Name | Type   | Description              |
-| ---- | ------ | ------------------------ |
-| x1   | number | Position 1 on the X-axis |
-| y1   | number | Position 1 on the Y-axis |
-| x2   | number | Position 2 on the X-axis |
-| y2   | number | Position 2 on the Y-axis |
-| x3   | number | Position 3 on the X-axis |
-| y3   | number | Position 3 on the Y-axis |
-| x4   | number | Position 4 on the X-axis |
-| y4   | number | Position 5 on the Y-axis |
-
-### Methods
-
-* `draw.quad(number x1, number y1, number x2, number y2, number x3, number y3, number x4, number y4)`
-
-## `draw.quad_filled`
-
-`Draws filled quadrangle.`
-
-### Parameters:
-
-| Name | Type   | Description              |
-| ---- | ------ | ------------------------ |
-| x1   | number | Position 1 on the X-axis |
-| y1   | number | Position 1 on the Y-axis |
-| x2   | number | Position 2 on the X-axis |
-| y2   | number | Position 2 on the Y-axis |
-| x3   | number | Position 3 on the X-axis |
-| y3   | number | Position 3 on the Y-axis |
-| x4   | number | Position 4 on the X-axis |
-| y4   | number | Position 5 on the Y-axis |
-
-### Methods
-
-* `draw.quad_filled(number x1, number y1, number x2, number y2, number x3, number y3, number x4, number y4)`
-
-## `draw.triangle`
-
-`Draws triangle`
-
-### Parameters:
-
-| Name | Type   | Description              |
-| ---- | ------ | ------------------------ |
-| x1   | number | Position 1 on the X-axis |
-| y1   | number | Position 1 on the Y-axis |
-| x2   | number | Position 2 on the X-axis |
-| y2   | number | Position 2 on the Y-axis |
-| x3   | number | Position 3 on the X-axis |
-| y3   | number | Position 3 on the Y-axis |
-
-### Methods
-
-* `draw.triangle(number x1, number y1, number x2, number y2, x3, y3)`
-
-## `draw.triangle_filled`
-
-`Draws filled triangle`
-
-### Parameters:
-
-| Name | Type   | Description              |
-| ---- | ------ | ------------------------ |
-| x1   | number | Position 1 on the X-axis |
-| y1   | number | Position 1 on the Y-axis |
-| x2   | number | Position 2 on the X-axis |
-| y2   | number | Position 2 on the Y-axis |
-| x3   | number | Position 3 on the X-axis |
-| y3   | number | Position 3 on the Y-axis |
-
-### Methods
-
-* `draw.triangle_filled(number x1, number y1, number x2, number y2, x3, y3)`
-
-## `draw.circle`
-
-`Draws circle`
-
-### Parameters:
-
-| Name      | Type   | Description        |
-| --------- | ------ | ------------------ |
-| center\_x | number | Center-x of circle |
-| center\_y | number | Center-y of circle |
-
-### Methods
-
-* `draw.circle(number center_x, number center_y)`
-
-## `draw.circle_filled`
-
-`Draws filled circle`
-
-### Parameters:
-
-| Name      | Type   | Description        |
-| --------- | ------ | ------------------ |
-| center\_x | number | Center-x of circle |
-| center\_y | number | Center-y of circle |
-
-### Methods
-
-* `draw.circle_filled(number center_x, number center_y)`
-
-## `draw.ngon`
-
-`Draws ngon`
-
-### Parameters:
-
-| Name      | Type   | Description        |
-| --------- | ------ | ------------------ |
-| center\_x | number | Center-x of circle |
-| center\_y | number | Center-y of circle |
-
-### Methods
-
-* `draw.ngon(number center_x, number center_y`
-
-## `draw.ngon_filled`
-
-`Draws filled ngon`
-
-### Parameters:
-
-| Name      | Type   | Description        |
-| --------- | ------ | ------------------ |
-| center\_x | number | Center-x of circle |
-| center\_y | number | Center-y of circle |
-
-### Methods
-
-* `draw.ngon_filled(number center_x, number center_y)`
-
-## `draw.texture`
-
-`Draws loaded texture.`
-
-### Parameters:
-
-| Name   | Type     | Description    |
-| ------ | -------- | -------------- |
-| x      | number   |                |
-| y      | number   |                |
-| width  | number   |                |
-| height | number   |                |
-| handle | userdata | Texture handle |
-
-### Methods
-
-* `draw.texture(handle, number x, number y)`
-* `draw.texture(handle, number x, number y, number width, number height)`

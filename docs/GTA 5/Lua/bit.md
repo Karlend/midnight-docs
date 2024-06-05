@@ -1,13 +1,8 @@
 ---
-slug: /gta/lua/bit
-title: bit
+slug: /gta/lua/Bit
+title: Bit
 ---
 
-# bit
-
-```ebnf
-bla bla bla
-```
 ## bit.set
 `Sets a bit in an integer.`
 - Parameters:

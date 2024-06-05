@@ -1,342 +1,312 @@
 ---
-slug: /gta/lua/utils
-title: utils
+slug: /gta/lua/Utils
+title: Utils
 ---
 
-# utils
+## utils.get_clipboard
+`@return string The text currently in the clipboard.`
 
-```ebnf
-Some utils to make life a bit easier
-```
+- Methods:
 
-## Functions
+`utils.get_clipboard()`
 
-## `utils.teleport`
+---
 
-### Parameters
+## utils.set_clipboard
+`@return boolean True if the text was successfully set to the clipboard, otherwise false.`
 
-| Name | Type   | Description    |
-| ---- | ------ | -------------- |
-| ent  | int    | Entity handle  |
-| x    | number | World position |
-| y    | number | World position |
-| z    | number | World position |
+- Methods:
 
-### Methods
+`utils.set_clipboard(message)`
 
-* `utils.teleport(ent, x, y, z)`
-* `utils.teleport(ent, vecpos)`
-* `utils.teleport(x, y, z)`
-* `utils.teleport(vecpos)`
+---
 
-## `utils.request_control`
+## utils.get_mouse_pos
+`@return boolean, number, number True if the position was retrieved successfully along with the x and y coordinates of the mouse cursor. Returns False, 0.0, 0.0 if unsuccessful.`
 
-### Parameters
+- Methods:
 
-| Name  | Type | Description    |
-| ----- | ---- | -------------- |
-| ent   | int  | Entity handle  |
-| tries | int  | Count of tries |
+`utils.get_mouse_pos()`
 
-### Methods
+---
 
-* `utils.request_control(ent, tries)`
-* `utils.request_control(ent)`
+## utils.set_mouse_pos
+`@return boolean True if the cursor was successfully moved, otherwise false.`
 
-### Return value:
+- Methods:
 
-| Name    | Type | Description       |
-| ------- | ---- | ----------------- |
-| success | bool | Получен ли доступ |
+`utils.set_mouse_pos(x, y)`
 
-## `utils.set_mouse_pos`
+---
 
-`Set cursor position.`
+## utils.vector_angles
+`@return number, number, number The pitch, yaw, and roll angles calculated from the forward vector.`
 
-### Parameters:
+- Methods:
 
-| Name   | Type    | Description     |
-| ------ | ------- | --------------- |
-| v\_pos | Vector2 | Vector position |
-| pos\_x | number  | X positiom      |
-| pos\_y | number  | Y position      |
+`utils.vector_angles(forward)`
 
-### Return value:
+---
 
-| Name    | Type | Description             |
-| ------- | ---- | ----------------------- |
-| success | bool | Is operation successful |
+## utils.world_to_screen
+`@return boolean, number, number True and the x, y screen coordinates if the conversion is successful. Returns False, 0.0, 0.0 if unsuccessful.`
 
-### Methods
+- Methods:
 
-* `utils.set_mouse_pos(v_pos)`
-* `utils.set_mouse_pos(pos_x, pos_y)`
+`utils.world_to_screen(world)`
 
-## `utils.get_mouse_pos`
+---
 
-`Get the current cursor position.`
+## utils.get_key_state
+`@return boolean True if the key is pressed, false if not.`
 
-### Parameters:
+- Methods:
 
-| Name   | Type    | Description        |
-| ------ | ------- | ------------------ |
-| v\_pos | Vector2 | Vector to override |
+`utils.get_key_state(key)`
 
-### Return value:
+---
 
-| Name    | Type | Description             |
-| ------- | ---- | ----------------------- |
-| success | bool | Is operation successful |
+## utils.get_key_name
+`@return string The name of the key including any modifiers.`
 
-### Methods
+- Methods:
 
-* `utils.get_mouse_pos(v_pos)`
+`utils.get_key_name(key)`
 
-## `utils.set_clipboard`
+---
 
-`Set text to clipboard.`
+## utils.stop_script
+`@return boolean True if the script was successfully stopped, false if the script was not loaded or could not be stopped.`
 
-### Parameters:
+- Methods:
 
-| Name | Type   | Description    |
-| ---- | ------ | -------------- |
-| text | string | Clipboard text |
+`utils.stop_script()`
 
-### Return value:
+---
 
-| Name    | Type | Description             |
-| ------- | ---- | ----------------------- |
-| success | bool | Is operation successful |
+## utils.reload_script
+`@return boolean True if the script was successfully reloaded, otherwise false.`
 
-### Methods
+- Methods:
 
-* `utils.set_clipboard(text)`
+`utils.reload_script()`
 
-## `utils.vector_to_angle`
+---
 
-`Convert vector to angles.`
+## utils.get_fps
+`@return integer The current FPS value.`
 
-### Parameters:
+- Methods:
 
-| Name    | Type    | Description        |
-| ------- | ------- | ------------------ |
-| forward | Vector3 | Vector to override |
-| angles  | Vector3 | Vector to override |
+`utils.get_fps()`
 
-### Return value:
+---
 
-| Name    | Type | Description             |
-| ------- | ---- | ----------------------- |
-| success | bool | Is operation successful |
+## utils.get_frame_rate
+`@return number The time duration of one frame in seconds.`
 
-### Methods
+- Methods:
 
-* `utils.vector_to_angle(forward, angles)`
+`utils.get_frame_rate()`
 
-## `utils.world_to_screen`
+---
 
-`Convert a Vector3 to a Vector2.`
-
-### Parameters:
+## utils.get_current_date
+`@return integer, integer, integer The formatted date as year, month, and day, based on the specified format.`
 
-| Name   | Type    | Description        |
-| ------ | ------- | ------------------ |
-| world  | Vector3 | Input vector       |
-| screen | Vector2 | Vector to override |
+- Methods:
 
-### Return value:
+`utils.get_current_date(format)`
 
-| Name    | Type | Description             |
-| ------- | ---- | ----------------------- |
-| success | bool | Is operation successful |
+---
 
-### Methods
+## utils.get_current_time
+`@return integer, integer, integer The formatted time as hour, minute, and second, based on the specified format.`
 
-* `utils.world_to_screen(world, screen)`
+- Methods:
 
-## `utils.send_chat`
+`utils.get_current_time(format)`
 
-`Send message in game chat.`
+---
 
-### Parameters:
+## utils.get_current_time_millis
+`@return integer The number of milliseconds elapsed since the Unix epoch.`
 
-| Name     | Type   | Description              |
-| -------- | ------ | ------------------------ |
-| text     | string | Message text             |
-| is\_team | bool   | Should send in team chat |
+- Methods:
 
-### Return value:
+`utils.get_current_time_millis()`
 
-| Name    | Type | Description             |
-| ------- | ---- | ----------------------- |
-| success | bool | Is operation successful |
+---
 
-### Methods
+## utils.get_current_unix_time_seconds
+`@return integer The number of seconds elapsed since the Unix epoch.`
 
-* `utils.send_chat(text, is_team)`
+- Methods:
 
-## `utils.notify`
+`utils.get_current_unix_time_seconds()`
 
-`Create a notification for player.`
+---
 
-### Parameters:
+## utils.execute_in_os_thread
+`@param lua_function function The Lua function to be executed asynchronously.`
 
-| Name        | Type        | Description         |
-| ----------- | ----------- | ------------------- |
-| name        | string      | Notification header |
-| description | string      | Notification text   |
-| icon        | gui_icon    | Notification icon   |
-| type        | notify_type | Notification type   |
+- Methods:
 
-### Icons `gui_icon`
-```lua
-gui_icon =
-{
-   aimbot = 0,
-   bind = 1,
-   warning = 2,
-   color = 3,
-   visuals = 4,
-   grenade = 5,
-   boost = 6,
-   image = 7,
-   inventory = 8,
-   join = 9,
-   kick = 10,
-   leave = 11,
-   misc = 12,
-   players = 13,
-   self = 14,
-   radar = 15,
-   configs = 16,
-   scripts = 17,
-   security = 18,
-   settings = 19,
-   share = 20,
-   incognito = 21,
-   teleport = 22,
-   tools = 23,
-   triggerbot = 24,
-   vehicle = 25,
-   weapons = 26,
-   armor = 27,
-   world = 28,
-   spoofing = 29,
-}
-```
+`utils.execute_in_os_thread(lua_function)`
 
-### Notification types `notify_type`
-```lua
-notify_type =
-{
-    default = 0,
-    success = 1,
-    warning = 2,
-    important = 3,
-    fatal = 4,
-}
-```
+---
 
-### Methods
+## utils.require_async
+`function is passed as an argument to this callback. If the loading fails, 'nil' is passed instead.`
 
-* `utils.notify(name, description, icon, type)`
+- Methods:
 
-## `utils.change_ped_model`
+`utils.require_async(file, on_load)`
 
-`Change ped model.`
+---
 
-### Parameters:
+## utils.read_colons_and_tabs_file
+`@return table A Lua table containing the data read from the file.`
 
-| Name | Type          | Description |
-| ---- | ------------- | ----------- |
-| hash | number/string | Model hash  |
+- Methods:
 
-### Methods
+`utils.read_colons_and_tabs_file(filePath, separator)`
 
-* `utils.change_ped_model(hash)`
-## `utils.get_key_state`
+---
 
-`Is key down.`
-### Parameters:
+## utils.write_colons_file
+`@return boolean True if the data was successfully written to the file, false otherwise.`
 
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| key  | number | Key code    |
-### Return value:
+- Methods:
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| down | bool | Is key down |
+`utils.write_colons_file(filePath, data, separator)`
 
-### Methods
+---
 
-* `utils.get_key_state(key)`
-## `utils.get_key_name`
+## utils.yield
+`This function should be called within a coroutine managed by the fiber system.`
 
-`Get key name by code.`
-### Parameters:
+- Methods:
 
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| key  | number | Key code    |
-### Return value:
+`utils.yield()`
 
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| name | string | Key name    |
+---
 
-### Methods
+## utils.sleep
+`allowing other operations to proceed before resuming.`
+- Parameters:
 
-* `utils.get_key_name(key)`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | ms | integer | The number of milliseconds for which the fiber should sleep. |
 
-## `utils.stop_script`
 
-`Stop current script.`
-### Return value:
+- Methods:
 
-| Name    | Type | Description |
-| ------- | ---- | ----------- |
-| success | bool | Is success  |
+`utils.sleep(ms)`
 
-### Methods
+---
 
-* `utils.stop_script()`
+## utils.exec_fiber
+`end)`
+- Parameters:
 
-## `utils.reload_script`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | func | function | The Lua function to be executed within a new fiber. |
 
-`Reload current script.`
-### Return value:
+- Return:
 
-| Name    | Type | Description |
-| ------- | ---- | ----------- |
-| success | bool | Is success  |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the function was successfully registered to run, false otherwise. |
 
-### Methods
+- Methods:
 
-* `utils.reload_script()`
+`utils.exec_fiber(func)`
 
-## `utils.get_fps`
+---
 
-`Get current FPS.`
-### Return value:
+## utils.loop_fiber
+`end)`
+- Parameters:
 
-| Name | Type   | Description       |
-| ---- | ------ | ----------------- |
-| fps  | number | Frames per second |
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | func | function | The Lua function to be executed within the fiber indefinitely. |
 
-### Methods
+- Return:
 
-* `utils.get_fps()`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the function was successfully registered to loop, false otherwise. |
 
-## `utils.get_frame_rate`
+- Methods:
 
-`Get current frame rate.`
-### Return value:
+`utils.loop_fiber(func)`
 
-| Name | Type   | Description       |
-| ---- | ------ | ----------------- |
-| fps  | number | Frame rate |
+---
 
-### Methods
+## utils.teleport_self
+`@param z number The z coordinate to teleport the player to.`
 
-* `utils.get_frame_rate()`
+- Methods:
+
+`utils.teleport_self(coords)`
+
+---
+
+## utils.teleport_entity
+`@param z number The z coordinate to teleport the entity to.`
+
+- Methods:
+
+`utils.teleport_entity(ent, coords)`
+
+---
+
+## utils.change_self_model
+`@return boolean Returns true if the model change process is initiated successfully.`
+
+- Methods:
+
+`utils.change_self_model(model)`
+
+---
+
+## utils.get_rp_required_for_rank
+`@return int The amount of RP needed to reach the specified level.`
+
+- Methods:
+
+`utils.get_rp_required_for_rank(level)`
+
+---
+
+## utils.get_session_players_bitflag
+`@return unsigned The bitflag representing the players in the session.`
+
+- Methods:
+
+`utils.get_session_players_bitflag(ignoreLocalPlayer)`
+
+---
+
+## utils.get_ground_z
+`@return number The ground Z coordinate at the specified location or 0.0 if the function fails.`
+
+- Methods:
+
+`utils.get_ground_z(x, y, z_hint)`
+
+---
+
+## utils.reverse_joaat
+`@return string A string that corresponds to the hash if found in the internal lists; otherwise, returns an empty string.`
+
+- Methods:
+
+`utils.reverse_joaat(hash)`
+
+---
+

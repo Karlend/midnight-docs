@@ -1,548 +1,275 @@
 ---
-slug: /gta/lua/stats
-title: stats
+slug: /gta/lua/Stats
+title: Stats
 ---
 
-# stats
+## stats.exists
+`@return boolean True if the stat exists, false otherwise.`
 
-```ebnf
-Namespace to work with stats
-```
+- Methods:
 
-## Functions
+`stats.exists(stat)`
 
-## `stats.exists`
+---
 
-### Parameters
+## stats.get_stat_type
+`@return integer The integer code of the stat type, or -1 if the stat does not exist.`
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
+- Methods:
 
-### Methods
+`stats.get_stat_type(stat)`
 
-* `stats.exists(hash)`
+---
 
-### Return value:
+## stats.get_stat_type_name
+`@return string The name of the stat type, or nil if the stat does not exist.`
 
-| Name   | Type | Description    |
-| ------ | ---- | -------------- |
-| exists | bool | Is stat exists |
+- Methods:
 
-## `stats.get_stat_type`
+`stats.get_stat_type_name(stat)`
 
-### Parameters
+---
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
+## stats.set_bool
+`@return boolean True if the stat was successfully set, false otherwise.`
 
-### Methods
+- Methods:
 
-* `stats.get_stat_type(hash)`
+`stats.set_bool(stat, value)`
 
-### Return value:
+---
 
-| Name        | Type | Description |
-| ----------- | ---- | ----------- |
-| StatType\_e | int  | Stat type   |
+## stats.set_u8
+`@return boolean True if the stat was successfully set, false otherwise.`
 
-## `stats.get_stat_type_name`
+- Methods:
 
-### Parameters
+`stats.set_u8(stat, value)`
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
+---
 
-### Methods
+## stats.set_u16
+`@return boolean True if the stat was successfully set, false otherwise.`
 
-* `stats.get_stat_type_name(hash)`
+- Methods:
 
-### Return value:
+`stats.set_u16(stat, value)`
 
-| Name       | Type   | Description |
-| ---------- | ------ | ----------- |
-| stat\_type | string | Stat type   |
+---
 
-### Types `StatType_e`
-```lua
-StatType_e =
-{
-    NONE = 0,
-    INT = 1,
-    FLOAT = 2,
-    STRING = 3,
-    BOOL = 4,
-    UINT8 = 5,
-    UINT16 = 6,
-    UINT32 = 7,
-    UINT64 = 8,
-    DATE = 20,
-    POS = 21,
-    TEXTLABEL = 22,
-    PACKED = 23,
-    USERID = 24,
-    PROFILE_SETTING = 25,
-    INT64 = 26,
-}
-```
+## stats.set_u32
+`@return boolean True if the stat was successfully set, false otherwise.`
 
-## `stats.set_bool`
+- Methods:
 
-### Parameters
+`stats.set_u32(stat, value)`
 
-| Name  | Type | Description    |
-| ----- | ---- | -------------- |
-| hash  | int  | Stat hash      |
-| value | bool | New stat value |
+---
 
-### Methods
+## stats.set_u64
+`@return boolean True if the stat was successfully set, false otherwise.`
 
-* `stats.set_bool(hash, value)`
+- Methods:
 
-## `stats.set_u8`
+`stats.set_u64(stat, value)`
 
-### Parameters
+---
 
-| Name  | Type | Description    |
-| ----- | ---- | -------------- |
-| hash  | int  | Stat hash      |
-| value | int  | New stat value |
+## stats.set_float
+`@return boolean True if the stat was successfully set, false otherwise.`
 
-### Methods
+- Methods:
 
-* `stats.set_u8(hash, value)`
+`stats.set_float(stat, value)`
 
-## `stats.set_u16`
+---
 
-### Parameters
+## stats.set_string
+`@return boolean True if the stat was successfully set, false otherwise.`
 
-| Name  | Type | Description    |
-| ----- | ---- | -------------- |
-| hash  | int  | Stat hash      |
-| value | int  | New stat value |
+- Methods:
 
-### Methods
+`stats.set_string(stat, value)`
 
-* `stats.set_u16(hash, value)`
+---
 
-## `stats.set_u32`
+## stats.get_bool
+`@return boolean The boolean value of the specified stat, or nil if the stat does not exist or has a different type.`
 
-### Parameters
+- Methods:
 
-| Name  | Type | Description    |
-| ----- | ---- | -------------- |
-| hash  | int  | Stat hash      |
-| value | int  | New stat value |
+`stats.get_bool(stat_hash)`
 
-### Methods
+---
 
-* `stats.set_u32(hash, value)`
+## stats.get_u8
+`@return integer The unsigned 8-bit integer value of the specified stat, or 0 if the stat does not exist or has a different type.`
 
-## `stats.set_u64`
+- Methods:
 
-### Parameters
+`stats.get_u8(stat_hash)`
 
-| Name  | Type | Description    |
-| ----- | ---- | -------------- |
-| hash  | int  | Stat hash      |
-| value | int  | New stat value |
+---
 
-### Methods
+## stats.get_u16
+`@return integer The unsigned 16-bit integer value of the specified stat, or 0 if the stat does not exist or has a different type.`
 
-* `stats.set_u64(hash, value)`
+- Methods:
 
-## `stats.set_float`
+`stats.get_u16(stat_hash)`
 
-### Parameters
+---
 
-| Name  | Type  | Description    |
-| ----- | ----- | -------------- |
-| hash  | int   | Stat hash      |
-| value | float | New stat value |
+## stats.get_u32
+`@return integer The unsigned 32-bit integer value of the specified stat, or 0 if the stat does not exist or has a different type.`
 
-### Methods
+- Methods:
 
-* `stats.set_float(hash, value)`
+`stats.get_u32(stat_hash)`
 
-## `stats.set_string`
+---
 
-### Parameters
+## stats.get_u64
+`@return integer The unsigned 64-bit integer value of the specified stat, or 0 if the stat does not exist or has a different type.`
 
-| Name  | Type   | Description    |
-| ----- | ------ | -------------- |
-| hash  | int    | Stat hash      |
-| value | string | New stat value |
+- Methods:
 
-### Methods
+`stats.get_u64(stat_hash)`
 
-* `stats.set_string(hash, value)`
+---
 
-## `stats.get_bool`
+## stats.get_float
+`@return float The floating-point value of the specified stat, or 0.0 if the stat does not exist or has a different type.`
 
-### Parameters
+- Methods:
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
+`stats.get_float(stat_hash)`
 
-### Methods
+---
 
-* `stats.get_bool(hash)`
+## stats.get_string
+`@return string The string value of the specified stat, or nil if the stat does not exist or has a different type.`
 
-### Return value:
+- Methods:
 
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | bool | Stat value  |
+`stats.get_string(stat_hash)`
 
-### Return value:
+---
 
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | bool | Stat value  |
+## stats.is_masked_valid
+`@return boolean True if the masked value is valid, false otherwise.`
 
-## `stats.get_u8`
+- Methods:
 
-### Parameters
+`stats.is_masked_valid(stat_hash, offset, mask)`
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
+---
 
-### Methods
+## stats.get_masked_int
+`@return integer The masked integer value of the specified stat, or 0 if the stat does not exist.`
 
-* `stats.get_u8(hash)`
+- Methods:
 
-### Return value:
+`stats.get_masked_int(stat_hash, offset, mask)`
 
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | int  | Stat value  |
+---
 
-## `stats.get_u16`
+## stats.set_masked_int
+`@return boolean True if the operation was successful, false otherwise.`
 
-### Parameters
+- Methods:
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
+`stats.set_masked_int(stat_hash, stat_value, offset, mask)`
 
-### Methods
+---
 
-* `stats.get_u16(hash)`
+## stats.get_packed_mask
+`--- local packedMask = stats.get_packed_mask(statEnum)`
 
-### Return value:
+- Methods:
 
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | int  | Stat value  |
+`stats.get_packed_mask(statEnum)`
 
-## `stats.get_u32`
+---
 
-### Parameters
+## stats.get_packed_stat_int
+`@return integer The packed integer value for the specified index and character slot.`
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
+- Methods:
 
-### Methods
+`stats.get_packed_stat_int(index, characterSlot)`
 
-* `stats.get_u32(hash)`
+---
 
-### Return value:
+## stats.get_packed_stat_bool
+`@return boolean The packed boolean value for the specified index and character slot.`
 
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | int  | Stat value  |
+- Methods:
 
-## `stats.get_u64`
+`stats.get_packed_stat_bool(index, characterSlot)`
 
-### Parameters
+---
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
+## stats.set_packed_stat_int
+`@param characterSlot integer The character slot associated with the packed stat.`
 
-### Methods
+- Methods:
 
-* `stats.get_u64(hash)`
+`stats.set_packed_stat_int(index, value, characterSlot)`
 
-### Return value:
+---
 
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | int  | Stat value  |
+## stats.set_packed_stat_bool
+`@param characterSlot integer The character slot associated with the packed stat.`
 
-## `stats.get_float`
+- Methods:
 
-### Parameters
+`stats.set_packed_stat_bool(index, value, characterSlot)`
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
+---
 
-### Methods
+## stats.set_packed_stat_bool
+`@param characterSlot integer The character slot associated with the stat.`
 
-* `stats.get_float(hash)`
+- Methods:
 
-### Return value:
+`stats.set_packed_stat_bool(index, value, characterSlot)`
 
-| Name  | Type   | Description |
-| ----- | ------ | ----------- |
-| value | number | Stat value  |
+---
 
-## `stats.get_string`
+## stats.set_packed_int_stat_key
+`@return hash The hash key for the packed integer stat.`
 
-### Parameters
+- Methods:
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
+`stats.set_packed_int_stat_key(index, spStat, charStat, character)`
 
-### Methods
+---
 
-* `stats.get_string(hash)`
+## stats.set_date
+`@return boolean True if the date was successfully set, false otherwise.`
 
-### Return value:
+- Methods:
 
-| Name  | Type   | Description |
-| ----- | ------ | ----------- |
-| value | string | Stat value  |
+`stats.set_date(stat_hash, year, month, day, hour, minute, second, millisecond)`
 
-## `stats.is_masked_valid`
+---
 
-### Parameters
+## stats.get_date
+`end`
 
-| Name   | Type | Description |
-| ------ | ---- | ----------- |
-| hash   | int  | Stat hash   |
-| offset | int  | Stat offset |
-| mask   | int  | Stat mask   |
+- Methods:
 
-### Methods
+`stats.get_date(stat_hash, lua)`
 
-* `stats.is_masked_valid(hash, offset, mask)`
+---
 
-### Return value:
+## stats.get_character_index
+`@return integer The character index.`
 
-| Name  | Type | Description   |
-| ----- | ---- | ------------- |
-| valid | bool | Is stat valid |
+- Methods:
 
-## `stats.get_masked_int`
+`stats.get_character_index()`
 
-### Parameters
+---
 
-| Name   | Type | Description |
-| ------ | ---- | ----------- |
-| hash   | int  | Stat hash   |
-| offset | int  | Stat offset |
-| mask   | int  | Stat mask   |
-
-### Methods
-
-* `stats.get_masked_int(hash, offset, mask)`
-
-### Return value:
-
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | int  | Stat value  |
-
-## `stats.set_masked_int`
-
-### Methods
-
-* `stats.set_masked_int(value)`
-
-### Parameters
-
-| Name   | Type | Description    |
-| ------ | ---- | -------------- |
-| hash   | int  | Stat hash      |
-| value  | int  | New stat value |
-| offset | int  | Stat offset    |
-| mask   | int  | Stat mask      |
-
-### Methods
-
-* `stats.set_masked_int(hash, value, offset, mask)`
-
-### Return value:
-
-| Name    | Type | Description             |
-| ------- | ---- | ----------------------- |
-| success | bool | Is operation successful |
-
-## `stats.get_packed_mask`
-
-### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
-
-### Methods
-
-* `stats.get_packed_mask(hash)`
-
-### Return value:
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| mask | int  | Packed mask |
-
-### Methods
-
-* `stats.get_packed_mask(hash)`
-
-## `stats.get_packed_stat_int`
-
-### Parameters
-
-| Name | Type | Description    |
-| ---- | ---- | -------------- |
-| hash | int  | Stat hash      |
-| slot | int  | Character slot |
-
-### Methods
-
-* `stats.get_packed_stat_int(hash, slot)`
-
-### Return value:
-
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | int  | Stat value  |
-
-## `stats.get_packed_stat_bool`
-
-### Parameters
-
-| Name | Type | Description    |
-| ---- | ---- | -------------- |
-| hash | int  | Stat hash      |
-| slot | int  | Character slot |
-
-### Methods
-
-* `stats.get_packed_stat_bool(hash, slot)`
-
-### Return value:
-
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | bool | Stat value  |
-
-
-## `stats.set_packed_stat_int`
-
-### Parameters
-
-| Name  | Type | Description    |
-| ----- | ---- | -------------- |
-| hash  | int  | Stat hash      |
-| value | int  | New stat value |
-| slot  | int  | Character slot |
-
-### Methods
-
-* `stats.set_packed_stat_int(hash, value, slot)`
-
-## `stats.set_packed_stat_bool`
-
-### Parameters
-
-| Name  | Type | Description    |
-| ----- | ---- | -------------- |
-| hash  | int  | Stat hash      |
-| value | bool | New stat value |
-| slot  | int  | Character slot |
-
-### Methods
-
-* `stats.set_packed_stat_bool(hash, value, slot)`
-
-## `stats.set_packed_int_stat_key`
-
-### Parameters
-
-| Name      | Type | Description          |
-| --------- | ---- | -------------------- |
-| index     | int  | Stat index           |
-| sp_stat   | bool | Is singleplayer stat |
-| char_stat | bool | Is character stat    |
-| slot      | int  | Character slot       |
-
-### Methods
-
-* `stats.set_packed_int_stat_key(index, sp_stat, char_stat, slot)`
-
-### Return value:
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Unknown     |
-
-## `stats.get_date`
-
-### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
-
-### Methods
-
-* `stats.get_date(hash)`
-
-### Return value:
-
-| Name | Type  | Description         |
-| ---- | ----- | ------------------- |
-| date | table | Lua table with date |
-
-## `stats.get_date`
-
-### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| hash | int  | Stat hash   |
-
-### Methods
-
-* `stats.get_date(hash)`
-
-### Return value:
-
-| Name | Type  | Description         |
-| ---- | ----- | ------------------- |
-| date | table | Lua table with date |
-
-## `stats.set_date`
-
-### Parameters
-
-| Name        | Type | Description            |
-| ----------- | ---- | ---------------------- |
-| hash        | int  | Stat hash              |
-| year        | int  | New date - year        |
-| month       | int  | New date - month       |
-| day         | int  | New date - day         |
-| hour        | int  | New date - hour        |
-| minute      | int  | New date - minute      |
-| second      | int  | New date - second      |
-| millisecond | int  | New date - millisecond |
-
-### Methods
-
-* `stats.set_date(hash, year = 0, month = 0, day = 0, hour = 0, minute = 0, second = 0, millisecond = 0)`
-
-### Return value:
-
-| Name    | Type | Description             |
-| ------- | ---- | ----------------------- |
-| success | bool | Is operation successful |

@@ -1,1536 +1,1167 @@
 ---
-slug: /gta/lua/menu
-title: menu
+slug: /gta/lua/Menu
+title: Menu
 ---
 
-# menu
+## ui.is_opened
+`Checks if the UI menu is currently opened.`
 
-```ebnf
-Methods to work with menu
-```
+- Methods:
 
-## Functions
+`ui.is_opened()`
 
-## `menu.add_page`
+---
 
-### Parameters
+## ui.popup
+`Creates a popup window inside the game.`
+- Parameters:
 
-| Name | Type   | Description    |
-| ---- | ------ | -------------- |
-| name | string | Page name      |
-| icon | int    | Page icon enum |
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | title | string | The title of the popup. |
+ | body | string | The content of the popup. |
+ | icon | Icons | The icon of the popup. |
+ | type | PopupType | The type of the popup. |
 
-### Return value
+- Return:
 
-| Type | Description |
-| ---- | ----------- |
-| page | Page object |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the popup was successfully created. |
 
-### Methods
+- Methods:
 
-* `menu.add_page(name, icon)`
+`ui.popup(title, body, icon, type)`
 
-## `menu.add_mono_block`
+---
 
-### Parameters
+## ui.get_alpha
+`Retrieves the current alpha transparency of the UI.`
+- Return:
 
-| Name     | Type   | Description         |
-| -------- | ------ | ------------------- |
-| page     | page   | Page object         |
-| name     | string | Block name          |
-| position | int    | Block position enum |
+ | Type | Description |
+ | --- | --- |
+ | number | The alpha transparency value. |
 
-### Return value
+- Methods:
 
-| Type  | Description  |
-| ----- | ------------ |
-| block | Block object |
+`ui.get_alpha()`
 
-### Methods
+---
 
-* `menu.add_mono_block(page, name, position)`
+## ui.get_size
+`Retrieves the size of the UI layout.`
+- Return:
 
-## `menu.add_checkbox`
+ | Type | Description |
+ | --- | --- |
+ | number, | number The width and height of the UI layout. |
 
-### Parameters
+- Methods:
 
-| Name     | Type     | Description      |
-| -------- | -------- | ---------------- |
-| block    | block    | Block object     |
-| name     | string   | Element name     |
-| callback | function | Element callback |
+`ui.get_size()`
 
-### Return value
+---
 
-| Type     | Description      |
-| -------- | ---------------- |
-| checkbox | Checkbox element |
+## ui.get_position
+`Retrieves the position of the UI layout.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | number, | number The x (left) and y (top) position of the UI layout. |
 
-* `menu.add_checkbox(block, name, callback)`
-* `menu.add_checkbox(block, name)`
+- Methods:
 
-## `menu.add_combo`
+`ui.get_position()`
 
-### Parameters
+---
 
-| Name     | Type     | Description      |
-| -------- | -------- | ---------------- |
-| block    | block    | Block object     |
-| name     | string   | Element name     |
-| list     | table    | Combo list       |
-| callback | function | Element callback |
+## ui.get_mouse_position
+`Retrieves the current mouse position within the UI.`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | number, | number The x and y coordinates of the mouse. |
 
-| Type  | Description   |
-| ----- | ------------- |
-| combo | Combo element |
+- Methods:
 
-### Methods
+`ui.get_mouse_position()`
 
-* `menu.add_combo(block, name, list, callback)`
-* `menu.add_combo(block, name, list)`
+---
 
-## `menu.add_combo_ex`
+## ui.get_scale
+`Retrieves the scale factor of the UI based on the DPI setting.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | number | The scale factor of the UI. |
 
-| Name          | Type     | Description                                          |
-| ------------- | -------- | ---------------------------------------------------- |
-| block         | block    | Block object                                         |
-| name          | string   | Element name                                         |
-| name_getter   | function | Function with returned name of list element by index |
-| amount_getter | function | Function with returned amount of list                |
-| callback      | function | Element callback                                     |
+- Methods:
 
-### Return value
+`ui.get_scale()`
 
-| Type  | Description   |
-| ----- | ------------- |
-| combo | Combo element |
+---
 
-### Methods
+## ui.new_page
+`Creates a new page in the UI with a specified icon.`
+- Parameters:
 
-* `menu.add_combo_ex(block, name, name_getter, amount_getter, callback)`
-* `menu.add_combo_ex(block, name, name_getter, amount_getter)`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the new page. |
+ | icon | Icons | The icon to use for the new page. |
 
-## `menu.add_button`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | MenuPage | The new page object or nil if the creation fails. |
 
-| Name     | Type     | Description      |
-| -------- | -------- | ---------------- |
-| block    | block    | Block object     |
-| name     | string   | Element name     |
-| callback | function | Element callback |
+- Methods:
 
-### Return value
+`ui.new_page(name, icon)`
 
-| Type   | Description    |
-| ------ | -------------- |
-| button | Button element |
+---
 
-### Methods
+## ui.new_page
+`Creates a new page in the UI without specifying an icon.`
+- Parameters:
 
-* `menu.add_button(block, name, callback)`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the new page. |
 
-## `menu.add_input_text`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | MenuPage | The new page object or nil if the creation fails. |
 
-| Name     | Type     | Description      |
-| -------- | -------- | ---------------- |
-| block    | block    | Block object     |
-| name     | string   | Element name     |
-| length   | int      | Max text length  |
-| callback | function | Element callback |
-
-### Return value
-
-| Type  | Description   |
-| ----- | ------------- |
-| input | Input element |
-
-### Methods
-
-* `menu.add_input_text(block, name, length, callback)`
-* `menu.add_input_text(block, name, length)`
-
-## `menu.add_text`
-
-### Parameters
-
-| Name  | Type   | Description  |
-| ----- | ------ | ------------ |
-| block | block  | Block object |
-| text  | string | Element text |
-
-### Return value
-
-| Type | Description  |
-| ---- | ------------ |
-| text | Text element |
-
-### Methods
-
-* `menu.add_text(block, text)`
-
-## `menu.add_dynamic_text`
-
-### Parameters
-
-| Name        | Type     | Description                   |
-| ----------- | -------- | ----------------------------- |
-| block       | block    | Block object                  |
-| text_getter | function | Function with returned string |
-
-### Return value
-
-| Type | Description  |
-| ---- | ------------ |
-| text | Text element |
-
-### Methods
-
-* `menu.add_dynamic_text(block, text_getter)`
-
-## Data types
-
-```lua
-local menu_color =
-{
-	Text,
-	TextDisabled,
-	WindowBg,
-	ChildBg,
-	PopupBg,
-	Border,
-	BorderShadow,
-	FrameBg,
-	FrameBgHovered,
-	FrameBgActive,
-	TitleBg,
-	TitleBgActive,
-	TitleBgCollapsed,
-	MenuBarBg,
-	ScrollbarBg,
-	ScrollbarGrab,
-	ScrollbarGrabHovered,
-	ScrollbarGrabActive,
-	CheckMark,
-	SliderGrab,
-	SliderGrabActive,
-	Button,
-	ButtonHovered,
-	ButtonActive,
-	Header,
-	HeaderHovered,
-	HeaderActive,
-	Separator,
-	SeparatorHovered,
-	SeparatorActive,
-	ResizeGrip,
-	ResizeGripHovered,
-	ResizeGripActive,
-	Tab,
-	TabHovered,
-	TabActive,
-	TabUnfocused,
-	TabUnfocusedActive,
-	PlotLines,
-	PlotLinesHovered,
-	PlotHistogram,
-	PlotHistogramHovered,
-	TableHeaderBg,
-	TableBorderStrong,
-	TableBorderLight,
-	TableRowBg,
-	TableRowBgAlt,
-	TextSelectedBg,
-	DragDropTarget,
-	NavHighlight,
-	NavWindowingHighlight,
-	NavWindowingDimBg,
-	ModalWindowDimBg,
-}
-```
-
-```lua
-local menu_widget_color =
-{
-	Text,
-	ScrollbarGrab,
-	ScrollbarGrabHovered,
-	ScrollbarGrabActive,
-	PopupBg,
-	Header,
-	HeaderHovered,
-
-	Icons,
-	TitleName,
-
-	TagsBlocked,
-	TagsModder,
-	TagsCheater,
-	TagsAdmin,
-	TagsLocal,
-	TagsSessionHost,
-	TagsScriptHost,
-	TagsGodmode,
-	TagsFriend,
-	TagsInterior,
-
-	NotifyRect,
-	NotifyRectLine,
-	NotifyIcon,
-	NotifyText,
-	NotifyTextShadow,
-
-	NotifyDefault,
-	NotifySuccess,
-	NotifyWarning,
-	NotifyImportant,
-	NotifyFatal,
-}
-```
+- Methods:
 
-## Functions
+`ui.new_page(name)`
 
-## `menu.set_color`
+---
 
-### Parameters
+## ui.get_all_widgets
+`@return table[MenuWidget] A table containing all MenuWidgets.`
 
-| Name  | Type        | Description   | Optinal |
-| ----- | ----------- | ------------- | ------- |
-| color | menu\_color | Menu category |         |
-| r     | int         | Color Red     |         |
-| g     | int         | Color Green   |         |
-| b     | int         | Color Blue    |         |
-| a     | int         | Color Alpha   | +       |
-| rgb   | Vector3     | Color RGB     |
-| rgba  | Vector4     | Color RGBA    |
+- Methods:
 
-### Methods
+`ui.get_all_widgets()`
 
-* `menu.set_color(color, r, g, b, a)`
-* `menu.set_color(color, rgb)`
-* `menu.set_color(color, rgba)`
+---
 
-## `menu.set_widget_color`
+## ui.get_widget
+`@return MenuWidget|nil The widget handle if found, or nil if no widget matches the given UUID.`
 
-### Parameters
+- Methods:
 
-| Name  | Type                | Description          | Optinal |
-| ----- | ------------------- | -------------------- | ------- |
-| color | menu\_widget\_color | Menu widget category |         |
-| r     | int                 | Color Red            |         |
-| g     | int                 | Color Green          |         |
-| b     | int                 | Color Blue           |         |
-| a     | int                 | Color Alpha          | +       |
-| rgb   | Vector3             | Color RGB            |         |
-| rgba  | Vector4             | Color RGBA           |         |
+`ui.get_widget(uuid)`
 
-### Methods
+---
 
-* `menu.set_widget_color(color, r, g, b, a)`
-* `menu.set_widget_color(color, rgb)`
-* `menu.set_widget_color(color, rgba)`
+## MenuPage:new_subpage
+`Creates a new subpage for a given page.`
+- Parameters:
 
-## `menu.backup_styles`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the new subpage. |
 
-### Return value
+- Return:
 
-| Type | Description |
-| ---- | ----------- |
-| bool | Success     |
+ | Type | Description |
+ | --- | --- |
+ | MenuSubPage | The new subpage object or nil if the creation fails. |
 
-### Methods
+- Methods:
 
-* `menu.backup_styles()`
+`MenuPage:new_subpage(name)`
 
-## `menu.restore_styles`
+---
 
-### Return value
+## MenuPage:new_group
+`If there are already existing tabs, the new group will be added to the first created tab.`
+- Parameters:
 
-| Type | Description |
-| ---- | ----------- |
-| bool | Success     |
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the new group. |
+ | pos | PageColumn? | The position of the group within the page. |
 
-### Methods
+- Return:
 
-* `menu.restore_styles()`
+ | Type | Description |
+ | --- | --- |
+ | MenuGroup | Returns a MenuGroup object if the group is successfully created. Returns nil if the creation fails. |
 
-## `menu.get_color`
+- Methods:
 
-### Parameters
+`MenuPage:new_group(name, pos)`
 
-| Name  | Type        | Description   |
-| ----- | ----------- | ------------- |
-| color | menu\_color | Menu category |
+---
 
-### Return value
+## MenuSubPage:new_group
+`Creates a new group within this submenu page.`
+- Parameters:
 
-| Type    | Description |
-| ------- | ----------- |
-| Vector4 | Color RGBA  |
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the new group. |
+ | pos | PageColumn | The position of the group within the submenu page. |
 
-### Methods
+- Return:
 
-* `menu.get_color(color)`
+ | Type | Description |
+ | --- | --- |
+ | MenuGroup | Returns a MenuGroup object if creation was successful, nil otherwise. |
 
-## `menu.get_widget_color`
+- Methods:
 
-### Parameters
+`MenuSubPage:new_group(name, pos)`
 
-| Name   | Type                | Description          |
-| ------ | ------------------- | -------------------- |
-| widget | menu\_widget\_color | Menu widget category |
+---
 
-### Return value
+## MenuGroup:is_collapsed
+`Returns whether the group is collapsed.`
+- Return:
 
-| Type    | Description |
-| ------- | ----------- |
-| Vector4 | Color RGBA  |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the group is collapsed. |
 
-### Methods
+- Methods:
 
-* `menu.get_widget_color(widget)`
+`MenuGroup:is_collapsed()`
 
-## `menu.set_alpha`
+---
 
-### Parameters
+## MenuGroup:is_collapsible
+`Returns whether the group is collapsible.`
+- Return:
 
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | int  | Color Alpha |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the group can be collapsed. |
 
-### Methods
+- Methods:
 
-* `menu.set_alpha(value)`
+`MenuGroup:is_collapsible()`
 
-## `menu.get_alpha`
+---
 
-### Return value
+## MenuGroup:is_visible
+`Returns whether the group is visible (being rendered).`
+- Return:
 
-| Type | Description |
-| ---- | ----------- |
-| int  | Color Alpha |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the group is visible. |
 
-### Methods
+- Methods:
 
-* `menu.get_alpha()`
+`MenuGroup:is_visible()`
 
-## `menu.set_first_item_padding`
+---
 
-### Parameters
+## MenuGroup:set_collapsed
+`Sets the group's collapsed state.`
+- Parameters:
 
-| Name  | Type  | Description    |
-| ----- | ----- | -------------- |
-| value | float | Padding amount |
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | state | boolean | The state to set, true to collapse the group, false to expand it. |
 
-### Methods
 
-* `menu.set_first_item_padding(value)`
+- Methods:
 
-## `menu.get_first_item_padding`
+`MenuGroup:set_collapsed(state)`
 
-### Return value
+---
 
-| Type  | Description    |
-| ----- | -------------- |
-| float | Padding amount |
+## MenuGroup:set_collapsible
+`Sets whether the group can be collapsed.`
+- Parameters:
 
-### Methods
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | state | boolean | The state to set, true if the group can be collapsed, false otherwise. |
 
-* `menu.get_first_item_padding()`
 
-## `menu.set_window_rounding`
+- Methods:
 
-### Parameters
+`MenuGroup:set_collapsible(state)`
 
-| Name  | Type  | Description     |
-| ----- | ----- | --------------- |
-| value | float | Rounding amount |
+---
 
-### Methods
+## MenuGroup:set_visible
+`Sets the visibility of the group.`
+- Parameters:
 
-* `menu.set_window_rounding(value)`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | state | boolean | The visibility state to set, true to show the group, false to hide it. |
 
-## `menu.get_window_rounding`
 
-### Return value
+- Methods:
 
-| Type  | Description     |
-| ----- | --------------- |
-| float | Rounding amount |
+`MenuGroup:set_visible(state)`
 
-### Methods
+---
 
-* `menu.get_window_rounding()`
+## MenuGroup:new_checkbox
+`Creates a new checkbox within this group.`
+- Parameters:
 
-## `menu.set_window_border_size`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the checkbox. |
+ | init | boolean | The initial state of the checkbox. Defaults to false if not specified. |
 
-### Parameters
+- Return:
 
-| Name  | Type  | Description |
-| ----- | ----- | ----------- |
-| value | float | Border size |
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns a checkbox widget if creation was successful. |
 
-### Methods
+- Methods:
 
-* `menu.set_window_border_size(value)`
+`MenuGroup:new_checkbox(name, init)`
 
-## `menu.get_window_border_size`
+---
 
-### Return value
+## MenuGroup:new_slider
+`Creates a new slider within this group.`
+- Parameters:
 
-| Type  | Description |
-| ----- | ----------- |
-| float | Border size |
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the slider. |
+ | min | integer | The minimum value of the slider. |
+ | max | integer | The maximum value of the slider. |
+ | init | integer | The initial value of the slider. Defaults to the minimum value if not specified. |
+ | scale | integer | The step size of the slider. Defaults to 1 if not specified. |
 
-### Methods
+- Return:
 
-* `menu.get_window_border_size()`
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns a slider widget if creation was successful. |
 
-## `menu.set_child_rounding`
+- Methods:
 
-### Parameters
+`MenuGroup:new_slider(name, min, max, init, scale)`
 
-| Name  | Type  | Description    |
-| ----- | ----- | -------------- |
-| value | float | Child rounding |
+---
 
-### Methods
+## MenuGroup:new_combo
+`This combo box allows for selection from a list of strings provided.`
+- Parameters:
 
-* `menu.set_child_rounding(value)`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the combo box. |
+ | ... | string | The list of options available in the combo box. |
 
-## `menu.get_child_rounding`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns a combo box widget if creation was successful. |
 
-| Type  | Description    |
-| ----- | -------------- |
-| float | Child rounding |
+- Methods:
 
-### Methods
+`MenuGroup:new_combo(name, ...)`
 
-* `menu.get_child_rounding()`
+---
 
-## `menu.set_child_border_size`
+## MenuGroup:new_text
+`The text content is fixed and defined upon creation.`
+- Parameters:
 
-### Parameters
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | text | string | The static text content to display in the widget. |
 
-| Name  | Type  | Description       |
-| ----- | ----- | ----------------- |
-| value | float | Child border size |
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns a text widget if creation was successful. |
 
-* `menu.set_child_border_size(value)`
+- Methods:
 
-## `menu.get_child_border_size`
+`MenuGroup:new_text(text)`
 
-### Return value
+---
 
-| Type  | Description       |
-| ----- | ----------------- |
-| float | Child border size |
+## MenuGroup:new_text
+`The text content can change dynamically based on a Lua function.`
+- Parameters:
 
-### Methods
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | function | A Lua function that returns the string to display. |
 
-* `menu.get_child_border_size()`
+- Return:
 
-## `menu.set_popup_rounding`
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns a text widget if creation was successful. |
 
-### Parameters
+- Methods:
 
-| Name  | Type  | Description    |
-| ----- | ----- | -------------- |
-| value | float | Popup rounding |
+`MenuGroup:new_text(callback)`
 
-### Methods
+---
 
-* `menu.set_popup_rounding(value)`
+## MenuGroup:new_button
+`If no callback is provided, the button performs no action on click.`
+- Parameters:
 
-## `menu.get_popup_rounding`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the button. |
+ | callback | function? | An optional Lua function that executes when the button is clicked. |
 
-### Return value
+- Return:
 
-| Type  | Description    |
-| ----- | -------------- |
-| float | Popup rounding |
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns a button widget if creation was successful, nil if failed. |
 
-### Methods
+- Methods:
 
-* `menu.get_popup_rounding()`
+`MenuGroup:new_button(name, callback)`
 
-## `menu.set_popup_border_size`
+---
 
-### Parameters
+## MenuGroup:new_table_list
+`This allows for real-time updates and interactions based on the table's data.`
+- Parameters:
 
-| Name  | Type  | Description       |
-| ----- | ----- | ----------------- |
-| value | float | Popup border size |
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the new list widget. |
+ | ref_table | table | The reference table containing elements that populate the list initially. Any changes to this table will dynamically update the list's content. |
 
-### Methods
+- Return:
 
-* `menu.set_popup_border_size(value)`
+ | Type | Description |
+ | --- | --- |
+ | MenuList | Returns the new list as a MenuList object, which can be further configured. |
 
-## `menu.get_popup_border_size`
+- Methods:
 
-### Return value
+`MenuGroup:new_table_list(name, ref_table)`
 
-| Type  | Description       |
-| ----- | ----------------- |
-| float | Popup border size |
+---
 
-### Methods
+## MenuGroup:new_list
+`This function initializes a list where items can be dynamically added or removed after its creation.`
+- Parameters:
 
-* `menu.get_popup_border_size()`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the new dynamic list widget. |
 
-## `menu.set_frame_rounding`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | MenuList | Returns the new dynamic list as a MenuList object, which can be further configured. |
 
-| Name  | Type  | Description    |
-| ----- | ----- | -------------- |
-| value | float | Frame rounding |
+- Methods:
 
-### Methods
+`MenuGroup:new_list(name)`
 
-* `menu.set_frame_rounding(value)`
+---
 
-## `menu.get_frame_rounding`
+## MenuGroup:new_input
+`The input field can include an initial value and a hint that appears when the field is empty.`
+- Parameters:
 
-### Return value
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the input field. |
+ | hint | string? | Optional hint text that appears in the input field when it is empty. |
+ | init | string? | Initial text to populate the input field with. |
 
-| Type  | Description    |
-| ----- | -------------- |
-| float | Frame rounding |
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns an input field widget if creation was successful. |
 
-* `menu.get_frame_rounding()`
+- Methods:
 
-## `menu.set_frame_border_size`
+`MenuGroup:new_input(name, hint, init)`
 
-### Parameters
+---
 
-| Name  | Type  | Description       |
-| ----- | ----- | ----------------- |
-| value | float | Frame border size |
+## MenuGroup:new_separator
+`This function adds a simple line to visually distinguish between sections of the UI.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns a separator widget if creation was successful. |
 
-* `menu.set_frame_border_size(value)`
+- Methods:
 
-## `menu.get_frame_border_size`
+`MenuGroup:new_separator()`
 
-### Return value
+---
 
-| Type  | Description       |
-| ----- | ----------------- |
-| float | Frame border size |
+## MenuGroup:new_hotkey
+`Creates a hotkey widget within this group.`
+- Parameters:
 
-### Methods
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the hotkey widget. |
+ | default_key | integer? | The default key code to be set in the hotkey widget. |
 
-* `menu.get_frame_border_size()`
+- Return:
 
-## `menu.set_indent_spacing`
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns a hotkey widget if creation was successful. |
 
-### Parameters
+- Methods:
 
-| Name  | Type  | Description    |
-| ----- | ----- | -------------- |
-| value | float | Indent spacing |
+`MenuGroup:new_hotkey(name, default_key)`
 
-### Methods
+---
 
-* `menu.set_indent_spacing(value)`
+## MenuGroup:new_hasher
+`This widget allows users to input text and automatically generates a hash of the input.`
+- Parameters:
 
-## `menu.get_indent_spacing`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | name | string | The name of the hasher widget. |
+ | hint | string? | An optional hint text that appears in the hasher input field when it is empty. |
 
-### Return value
+- Return:
 
-| Type  | Description    |
-| ----- | -------------- |
-| float | Indent spacing |
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns a hasher widget if creation was successful. |
 
-### Methods
+- Methods:
 
-* `menu.get_indent_spacing()`
+`MenuGroup:new_hasher(name, hint)`
 
-## `menu.set_column_min_spacing`
+---
 
-### Parameters
+## MenuGroup:set_visibility_callback
+`If an invalid value or type is returned by the callback, or if an error occurs in the callback, visibility defaults to false.`
+- Parameters:
 
-| Name  | Type  | Description            |
-| ----- | ----- | ---------------------- |
-| value | float | Column minimal spacing |
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | function | A Lua function that determines the visibility of the group. |
 
-### Methods
+- Return:
 
-* `menu.set_column_min_spacing(value)`
+ | Type | Description |
+ | --- | --- |
+ | MenuGroup | Returns the group object itself. |
 
-## `menu.get_column_min_spacing`
+- Methods:
 
-### Return value
+`MenuGroup:set_visibility_callback(callback)`
 
-| Type  | Description            |
-| ----- | ---------------------- |
-| float | Column minimal spacing |
+---
 
-### Methods
+## MenuGroup:get_min
+`Retrieves the minimum drawing position of the specified groupbox region.`
 
-* `menu.get_column_min_spacing()`
+- Methods:
 
-## `menu.set_scrollbar_size`
+`MenuGroup:get_min(rect)`
 
-### Parameters
+---
 
-| Name  | Type  | Description    |
-| ----- | ----- | -------------- |
-| value | float | Scrollbar size |
+## MenuGroup:get_max
+`Retrieves the maximum drawing position of the specified groupbox region.`
 
-### Methods
+- Methods:
 
-* `menu.set_scrollbar_size(value)`
+`MenuGroup:get_max(rect)`
 
-## `menu.get_scrollbar_size`
+---
 
-### Return value
+## MenuGroup:get_arrow_pos
+`Retrieves the position of the arrow in the groupbox.`
 
-| Type  | Description    |
-| ----- | -------------- |
-| float | Scrollbar size |
+- Methods:
 
-### Methods
+`MenuGroup:get_arrow_pos()`
 
-* `menu.get_scrollbar_size()`
+---
 
-## `menu.set_scrollbar_rounding`
+## MenuWidget:get
+`Retrieves the current value of a widget.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | any | Returns the current value of the widget. |
 
-| Name  | Type  | Description        |
-| ----- | ----- | ------------------ |
-| value | float | Scrollbar rounding |
+- Methods:
 
-### Methods
+`MenuWidget:get()`
 
-* `menu.set_scrollbar_rounding(value)`
+---
 
-## `menu.get_scrollbar_rounding`
+## MenuWidget:set
+`Sets a new value to a widget.`
+- Parameters:
 
-### Return value:
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | value | any | The value to set to the widget. |
 
-| Type  | Description        |
-| ----- | ------------------ |
-| float | Scrollbar rounding |
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns the widget itself for method chaining. |
 
-* `menu.get_scrollbar_rounding()`
+- Methods:
 
-## `menu.set_grab_min_size`
+`MenuWidget:set(value)`
 
-### Parameters
+---
 
-| Name  | Type  | Description       |
-| ----- | ----- | ----------------- |
-| value | float | Grab minimal size |
+## MenuWidget:get_parent
+`Returns the parent of the widget.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | MenuGroup | Returns the parent group of the widget. |
 
-* `menu.set_grab_min_size(value)`
+- Methods:
 
-## `menu.get_grab_min_size`
+`MenuWidget:get_parent()`
 
-### Return value
+---
 
-| Type  | Description       |
-| ----- | ----------------- |
-| float | Grab minimal size |
+## MenuWidget:get_type
+`Retrieves the type name of the widget.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | string | Returns the type name of the widget. |
 
-* `menu.get_grab_min_size()`
+- Methods:
 
-## `menu.set_grab_rounding`
+`MenuWidget:get_type()`
 
-### Parameters
+---
 
-| Name  | Type  | Description   |
-| ----- | ----- | ------------- |
-| value | float | Grab rounding |
+## MenuWidget:is_enabled
+`Checks if the widget is enabled.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the widget is enabled, false otherwise. |
 
-* `menu.set_grab_rounding(value)`
+- Methods:
 
-## `menu.get_grab_rounding`
+`MenuWidget:is_enabled()`
 
-### Return value
+---
 
-| Type  | Description   |
-| ----- | ------------- |
-| float | Grab rounding |
+## MenuWidget:set_enabled
+`Sets the enabled state of the widget.`
+- Parameters:
 
-### Methods
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | value | boolean | The enabled state to set. |
 
-* `menu.get_grab_rounding()`
+- Return:
 
-## `menu.set_log_slider_deadzone`
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns the widget itself for method chaining. |
 
-### Parameters
+- Methods:
 
-| Name  | Type  | Description     |
-| ----- | ----- | --------------- |
-| value | float | Slider deadzone |
+`MenuWidget:set_enabled(value)`
 
-### Methods
+---
 
-* `menu.set_log_slider_deadzone(value)`
+## MenuWidget:is_visible
+`Checks if the widget is visible.`
+- Return:
 
-## `menu.get_log_slider_deadzone`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the widget is visible, false otherwise. |
 
-### Return value
+- Methods:
 
-| Type  | Description     |
-| ----- | --------------- |
-| float | Slider deadzone |
+`MenuWidget:is_visible()`
 
-### Methods
+---
 
-* `menu.get_log_slider_deadzone()`
+## MenuWidget:set_visible
+`Sets the visibility of the widget.`
+- Parameters:
 
-## `menu.set_tab_rounding`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | value | boolean | The visibility state to set. |
 
-### Parameters
+- Return:
 
-| Name  | Type  | Description  |
-| ----- | ----- | ------------ |
-| value | float | Tab rounding |
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns the widget itself for method chaining. |
 
-### Methods
+- Methods:
 
-* `menu.set_tab_rounding(value)`
+`MenuWidget:set_visible(value)`
 
-## `menu.get_tab_rounding`
+---
 
-### Return value
+## MenuWidget:set_color_picker
+`Attaches a color picker to the widget that modifies the referenced color.`
+- Parameters:
 
-| Type  | Description  |
-| ----- | ------------ |
-| float | Tab rounding |
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | color | Color | The color object whose values will be modified by the color picker. |
 
-### Methods
+- Return:
 
-* `menu.get_tab_rounding()`
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns the widget itself for method chaining. |
 
-## `menu.set_tab_border_size`
+- Methods:
 
-### Parameters
+`MenuWidget:set_color_picker(color)`
 
-| Name  | Type  | Description     |
-| ----- | ----- | --------------- |
-| value | float | Tab border size |
+---
 
-### Methods
+## MenuWidget:set_hint
+`Attaches a hint text to the widget.`
+- Parameters:
 
-* `menu.set_tab_border_size(value)`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | text | string | The hint text to display. |
 
-## `menu.get_tab_border_size`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns the widget itself for method chaining. |
 
-| Type  | Description     |
-| ----- | --------------- |
-| float | Tab border size |
+- Methods:
 
-### Methods
+`MenuWidget:set_hint(text)`
 
-* `menu.get_tab_border_size()`
+---
 
-## `menu.set_tab_min_width_for_close_button`
+## MenuWidget:set_visibility_callback
+`end)`
+- Parameters:
 
-### Parameters
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | function? | The function to determine visibility. Returns bool (true to draw the widget, false to not draw it). |
 
-| Name  | Type  | Description                        |
-| ----- | ----- | ---------------------------------- |
-| value | float | Tab minimal width for close button |
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns the widget itself for method chaining. |
 
-* `menu.set_tab_min_width_for_close_button(value)`
+- Methods:
 
-## `menu.get_tab_min_width_for_close_button`
+`MenuWidget:set_visibility_callback(callback)`
 
-### Return value
+---
 
-| Type  | Description                        |
-| ----- | ---------------------------------- |
-| float | Tab minimal width for close button |
+## MenuWidget:set_enabled_callback
+`end)`
+- Parameters:
 
-### Methods
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | function? | The function to determine if the widget is enabled. Returns bool (true if enabled, false if not). |
 
-* `menu.get_tab_min_width_for_close_button()`
+- Return:
 
-## `menu.set_mouse_cursor_scale`
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns the widget itself for method chaining. |
 
-### Parameters
+- Methods:
 
-| Name  | Type  | Description        |
-| ----- | ----- | ------------------ |
-| value | float | Mouse cursor scale |
+`MenuWidget:set_enabled_callback(callback)`
 
-### Methods
+---
 
-* `menu.set_mouse_cursor_scale(value)`
+## MenuWidget:set_label_callback
+`end)`
+- Parameters:
 
-## `menu.get_mouse_cursor_scale`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | function? | The function to generate the label text. Returns string. |
 
-### Return value
+- Return:
 
-| Type  | Description        |
-| ----- | ------------------ |
-| float | Mouse cursor scale |
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns the widget itself for method chaining. |
 
-### Methods
+- Methods:
 
-* `menu.get_mouse_cursor_scale()`
+`MenuWidget:set_label_callback(callback)`
 
-## `menu.set_curve_tesselation_tol`
+---
 
-### Parameters
+## MenuWidget:set_hovered_callback
+`end)`
+- Parameters:
 
-| Name  | Type  | Description |
-| ----- | ----- | ----------- |
-| value | float | None given  |
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | function? | The callback to be invoked. Takes coordinates x and y as parameters (number x, number y). |
 
-### Methods
+- Return:
 
-* `menu.set_curve_tesselation_tol(value)`
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns the widget itself for method chaining. |
 
-## `menu.get_curve_tesselation_tol`
+- Methods:
 
-### Return value
+`MenuWidget:set_hovered_callback(callback)`
 
-| Type  | Description |
-| ----- | ----------- |
-| float | None given  |
+---
 
-### Methods
+## MenuWidget:set_data_callback
+`end)`
+- Parameters:
 
-* `menu.get_curve_tesselation_tol()`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | function? | The function to manage widget data. It should return a pointer to the data (returns void*). |
 
-## `menu.set_circle_tessellation_max_error`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns the widget itself for method chaining. |
 
-| Name  | Type  | Description |
-| ----- | ----- | ----------- |
-| value | float | None given  |
+- Methods:
 
-### Methods
+`MenuWidget:set_data_callback(callback)`
 
-* `menu.set_circle_tessellation_max_error(value)`
+---
 
-## `menu.get_circle_tessellation_max_error`
+## MenuWidget:set_on_changed_callback
+`end)`
+- Parameters:
 
-### Return value
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | function? | The function to execute upon data change. Sends the new data value as the first argument. |
 
-| Type  | Description |
-| ----- | ----------- |
-| float | None given  |
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | MenuWidget | Returns the widget itself for method chaining. |
 
-* `menu.get_circle_tessellation_max_error()`
+- Methods:
 
-## `menu.set_window_padding`
+`MenuWidget:set_on_changed_callback(callback)`
 
-### Parameters
+---
 
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
+## MenuWidget:get_uuid
+`Example result: 609258681`
 
-### Methods
+- Methods:
 
-* `menu.set_window_padding(value)`
+`MenuWidget:get_uuid()`
 
-## `menu.get_window_padding`
+---
 
-### Parameters
+## MenuWidget:get_label
+`Example result: 'Godmode'`
 
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
+- Methods:
 
-### Return value
+`MenuWidget:get_label()`
 
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
+---
 
-### Methods
+## MenuWidget:get_deep_label
+`Example result: 'Self > MAIN > Modifiers > Godmode'`
 
-* `menu.get_window_padding(output)`
+- Methods:
 
-## `menu.set_window_min_size`
+`MenuWidget:get_deep_label()`
 
-### Parameters
+---
 
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
+## MenuWidget:get_min
+`Retrieves the minimum drawing position of the widget.`
 
-### Methods
+- Methods:
 
-* `menu.set_window_min_size(value)`
+`MenuWidget:get_min()`
 
-## `menu.get_window_min_size`
+---
 
-### Parameters
+## MenuWidget:get_max
+`Retrieves the maximum drawing position of the widget.`
 
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
+- Methods:
 
-### Return value
+`MenuWidget:get_max()`
 
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
+---
 
-### Methods
+## MenuList:set_getter_callback
+`Sets a getter callback for the list, which defines how each list item is represented as a text label.`
+- Parameters:
 
-* `menu.get_window_min_size(output)`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | fun(item: | number):string The function to generate the label text for each item. |
 
-## `menu.set_window_title_align`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | MenuList | Returns the list itself for method chaining. |
 
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
+- Methods:
 
-### Methods
+`MenuList:set_getter_callback(callback)`
 
-* `menu.set_window_title_align(value)`
+---
 
-## `menu.get_window_title_align`
+## MenuList:set_counter_callback
+`Sets a counter callback for the list, which defines the number of items in the list.`
+- Parameters:
 
-### Parameters
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | fun():number | The function to count the total number of items in the list. |
 
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | MenuList | Returns the list itself for method chaining. |
 
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
+- Methods:
 
-### Methods
+`MenuList:set_counter_callback(callback)`
 
-* `menu.get_window_title_align(output)`
+---
 
-## `menu.set_frame_padding`
+## MenuList:set_click_callback
+`Sets a click callback for the list, which defines the action taken when an item is clicked.`
+- Parameters:
 
-### Parameters
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | fun(item: | number) The function to execute when an item is clicked. |
 
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | MenuList | Returns the list itself for method chaining. |
 
-* `menu.set_frame_padding(value)`
+- Methods:
 
-## `menu.get_frame_padding`
+`MenuList:set_click_callback(callback)`
 
-### Parameters
+---
 
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
+## MenuList:set_selected_callback
+`Sets a selected callback for the list, which checks if the specified item is selected.`
+- Parameters:
 
-### Return value
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | fun(item: | number):bool The function to determine if an item is selected. |
 
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | MenuList | Returns the list itself for method chaining. |
 
-* `menu.get_frame_padding(output)`
+- Methods:
 
-## `menu.set_item_spacing`
+`MenuList:set_selected_callback(callback)`
 
-### Parameters
+---
 
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
+## MenuList:set_hovered_callback
+`Sets a hovered callback for the list, which defines the action taken when an item is hovered over.`
+- Parameters:
 
-### Methods
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | callback | fun(item: | number, caption: string, x: number, y: number) The function to execute when an item is hovered over. |
 
-* `menu.set_item_spacing(value)`
+- Return:
 
-## `menu.get_item_spacing`
+ | Type | Description |
+ | --- | --- |
+ | MenuList | Returns the list itself for method chaining. |
 
-### Parameters
+- Methods:
 
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
+`MenuList:set_hovered_callback(callback)`
 
-### Return value
+---
 
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
+## MenuList:set_sizes
+`Sets the dimensions of the list.`
+- Parameters:
 
-### Methods
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | width | number | The width of the list. |
+ | height | number | The height of the list. |
 
-* `menu.get_item_spacing(output)`
 
-## `menu.set_item_inner_spacing`
+- Methods:
 
-### Parameters
+`MenuList:set_sizes(width, height)`
 
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
+---
 
-### Methods
+## MenuList:set_use_search_bar
+`Enables or disables the use of a search bar within the list.`
+- Parameters:
 
-* `menu.set_item_inner_spacing(value)`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | use | bool | Whether to use a search bar. |
 
-## `menu.get_item_inner_spacing`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | MenuList | Returns the list itself for method chaining. |
 
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
+- Methods:
 
-### Return value
+`MenuList:set_use_search_bar(use)`
 
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
+---
 
-### Methods
+## MenuList:set_search_bar_text
+`Sets the placeholder text for the search bar in the list, if one is used.`
+- Parameters:
 
-* `menu.get_item_inner_spacing(output)`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | text | string | The placeholder text for the search bar. |
 
-## `menu.set_cell_padding`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | MenuList | Returns the list itself for method chaining. |
 
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
+- Methods:
 
-### Methods
+`MenuList:set_search_bar_text(text)`
 
-* `menu.set_cell_padding(value)`
+---
 
-## `menu.get_cell_padding`
+## MenuList:is_item_selected
+`Checks if a specific item is selected in the list.`
+- Parameters:
 
-### Parameters
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | item | number | The index of the item to check. |
 
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the item is selected, false otherwise. |
 
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
+- Methods:
 
-### Methods
+`MenuList:is_item_selected(item)`
 
-* `menu.get_cell_padding(output)`
+---
 
-## `menu.set_touch_extra_padding`
+## MenuList:get_selected_items
+`Retrieves the indices of all selected items in the list.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | table | Returns a table containing the indices of all selected items. |
 
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
+- Methods:
 
-### Methods
+`MenuList:get_selected_items()`
 
-* `menu.set_touch_extra_padding(value)`
+---
 
-## `menu.get_touch_extra_padding`
+## MenuList:get_selected_items_lines
+`This function constructs a table containing the text for each selected item in the list. If no items are selected or an error occurs, it returns an empty table.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | table | Returns a table with the texts of the selected items. Each entry in the table corresponds to the text of one selected item. |
 
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
+- Methods:
 
-### Return value
+`MenuList:get_selected_items_lines()`
 
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
+---
 
-### Methods
+## MenuList:get_item_text
+`This function gets the text of the item at the specified index. If the item does not exist or an error occurs, it returns an empty string.`
+- Parameters:
 
-* `menu.get_touch_extra_padding(output)`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | item | number | The index of the item from which to retrieve the text. |
 
-## `menu.set_button_text_align`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | string | Returns the text of the specified item. If the item is not found, returns an empty string. |
 
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
+- Methods:
 
-### Methods
+`MenuList:get_item_text(item)`
 
-* `menu.set_button_text_align(value)`
+---
 
-## `menu.get_button_text_align`
-
-### Parameters
-
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
-
-### Return value
-
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
-
-### Methods
-
-* `menu.get_button_text_align(output)`
-
-## `menu.set_selectable_text_align`
-
-### Parameters
-
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
-
-### Methods
-
-* `menu.set_selectable_text_align(value)`
-
-## `menu.get_selectable_text_align`
-
-### Parameters
-
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
-
-### Return value
-
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
-
-### Methods
-
-* `menu.get_selectable_text_align(output)`
-
-## `menu.set_display_window_padding`
-
-### Parameters
-
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
-
-### Methods
-
-* `menu.set_display_window_padding(value)`
-
-## `menu.get_display_window_padding`
-
-### Parameters
-
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
-
-### Return value
-
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
-
-### Methods
-
-* `menu.get_display_window_padding(output)`
-
-## `menu.set_display_safe_area_padding`
-
-### Parameters
-
-| Name  | Type    | Description |
-| ----- | ------- | ----------- |
-| value | Vector2 | None given  |
-
-### Methods
-
-* `menu.set_display_safe_area_padding(value)`
-
-## `menu.get_display_safe_area_padding`
-
-### Parameters
-
-| Name   | Type    | Description |
-| ------ | ------- | ----------- |
-| output | Vector2 | None given  |
-
-### Return value
-
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
-
-### Methods
-
-* `menu.get_display_safe_area_padding(output)`
-
-## `menu.set_anti_aliased_lines`
-
-### Parameters
-
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | bool | None given  |
-
-### Methods
-
-* `menu.set_anti_aliased_lines(value)`
-
-## `menu.get_anti_aliased_lines`
-
-### Return value
-
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
-
-### Methods
-
-* `menu.get_anti_aliased_lines()`
-
-## `menu.set_anti_aliased_lines_use_tex`
-
-### Parameters
-
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | bool | None given  |
-
-### Methods
-
-* `menu.set_anti_aliased_lines_use_tex(value)`
-
-## `menu.get_anti_aliased_lines_use_tex`
-
-### Return value
-
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
-
-### Methods
-
-* `menu.get_anti_aliased_lines_use_tex()`
-
-## `menu.set_anti_aliased_fill`
-
-### Parameters
-
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | bool | None given  |
-
-### Methods
-
-* `menu.set_anti_aliased_fill(value)`
-
-## `menu.get_anti_aliased_fill`
-
-### Return value
-
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
-
-### Methods
-
-* `menu.get_anti_aliased_fill()`
-
-## `menu.is_menu_opened`
-
-`Check if the menu is open.`
-
-### Return value:
-
-| Name    | Type | Description                                |
-| ------- | ---- | ------------------------------------------ |
-| success | bool | true if the menu is open, false otherwise. |
-
-### Methods
-
-* `menu.is_menu_opened()`
-
-## `menu.get_main_menu_size`
-
-`Get menu size.`
-
-### Return value:
-
-| Name | Type    | Description |
-| ---- | ------- | ----------- |
-| size | Vector2 | Menu size   |
-
-### Methods
-
-* `menu.get_main_menu_size()`
-
-## `menu.get_main_menu_size_x`
-
-`Get menu width.`
-
-### Return value:
-
-| Name  | Type  | Description         |
-| ----- | ----- | ------------------- |
-| Width | float | Width of main menu. |
-
-### Methods
-
-* `menu.get_main_menu_size_x()`
-
-## `menu.get_main_menu_size_y`
-
-`Get menu height.`
-
-### Return value:
-
-| Name   | Type  | Description          |
-| ------ | ----- | -------------------- |
-| Height | float | Height of main menu. |
-
-### Methods
-
-* `menu.get_main_menu_size_y()`
-
-## `menu.get_main_menu_pos`
-
-`Get menu position.`
-
-### Return value:
-
-| Name     | Type    | Description                |
-| -------- | ------- | -------------------------- |
-| position | Vector2 | Returns main menu position |
-
-### Methods
-
-* `menu.get_main_menu_pos()`
-
-## `menu.get_main_menu_pos_x`
-
-`Get the menu position by X coordinate.`
-
-### Return value:
-
-| Name     | Type  | Description                                                       |
-| -------- | ----- | ----------------------------------------------------------------- |
-| Position | float | Window position by X coordinate relative to the main game window. |
-
-### Methods
-
-* `menu.get_main_menu_pos_x()`
-
-## `menu.get_main_menu_pos_y`
-
-`Get the menu position by Y coordinate.`
-
-### Return value:
-
-| Name     | Type  | Description                                                       |
-| -------- | ----- | ----------------------------------------------------------------- |
-| Position | float | Window position by Y coordinate relative to the main game window. |
-
-### Methods
-
-* `menu.get_main_menu_pos_y()`
-
-## `menu.is_input_active`
-
-`Is menu input active.`
-
-### Return value:
-
-| Name   | Type | Description           |
-| ------ | ---- | --------------------- |
-| active | bool | Is menu input active. |
-
-### Methods
-
-* `menu.is_input_active()`
-
-## Examples
-
-### Simple page
-
-```lua
-local page = menu.add_page("My page", 5)
-local my_block = menu.add_mono_block(page, "My block", 0)
-menu.add_dynamic_text(my_block, function(self)
-	local index = player.index()
-	return "Local player name: " .. player.get_name(index)
-end)
-```
-
-### Player selection
-
-```lua
-local page = menu.add_page("My page", 5)
-local left = menu.add_mono_block(page, "Player selection", 0)
-local right = menu.add_mono_block(page, "Interaction", 0)
-local dyn_combo	= menu.add_combo_ex(left, "Player",
-	function(self, index)
-		local player_index = index - 1
-		return player_index	.. ". "	.. player.get_name(player_index)
-	end, function()
-		return 32
-	end, function(self, index)
-		local player_index = index - 1
-		print("Changed selection to " .. index .. " | Player index: " .. player_index .. " | Name: " .. player.get_name(player_index))
-	end
-)
-menu.add_button(right, "Kick", function()
-	local player_index = dyn_combo:get_long() - 1
-	if not player.is_valid(player_index) then
-		print("Invalid player index")
-		return
-	end
-	print("Kicking player " .. player_index .. " | Name: " .. player.get_name(player_index))
-	player.kick(player_index)
-end)
-```

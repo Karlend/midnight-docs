@@ -1,89 +1,158 @@
 ---
-slug: /gta/lua/social
-title: social
+slug: /gta/lua/Social
+title: Social
 ---
 
-# social
+## social.is_player_online
+`- `result`: The session token.`
 
-```ebnf
-Workspace to get info about account
-```
+- Methods:
 
-## Functions
+`social.is_player_online(rockstar_id_or_name, on_response)`
 
-## `social.is_ready`
+---
 
-`Determines whether information about the Rockstar account is available. In other words, whether the social space functions can be called.`
+## social.is_ready
+`@return boolean Returns true if the social system is ready, enabling further interaction with 'account' and 'geoloc' modules.`
 
-### Return value:
+- Methods:
 
-| Name    | Type | Description                                               |
-| ------- | ---- | --------------------------------------------------------- |
-| success | bool | true if the social workspace is avaible, false otherwise. |
+`social.is_ready()`
 
-### Methods
+---
 
-* `social.is_ready()`
+## geoloc.get_region_code
+`@return integer The region code if available, otherwise 0.`
 
-## `social.get_username`
+- Methods:
 
-`Get your username.`
+`geoloc.get_region_code()`
 
-### Return value:
+---
 
-| Name     | Type   | Description       |
-| -------- | ------ | ----------------- |
-| username | string | Current username. |
+## geoloc.get_longitude
+`@return number The longitude if available, otherwise 0.0.`
 
-### Methods
+- Methods:
 
-* `social.get_username()`
+`geoloc.get_longitude()`
 
-## `social.get_mail`
+---
 
-`Get your email.`
+## geoloc.get_latitude
+`@return number The latitude if available, otherwise 0.0.`
 
-### Return value:
+- Methods:
 
-| Name  | Type   | Description    |
-| ----- | ------ | -------------- |
-| email | string | Current email. |
+`geoloc.get_latitude()`
 
-### Methods
+---
 
-* `social.get_mail()`
+## geoloc.get_is_secure
+`@return boolean Returns true if secure relays are being used, false otherwise.`
 
-## `social.get_rid`
+- Methods:
 
-`Get local player RockstarID.`
+`geoloc.get_is_secure()`
 
-### Return value:
+---
 
-| Name | Type | Description         |
-| ---- | ---- | ------------------- |
-| rid  | int  | Current RockstarID. |
+## geoloc.get_country_code
+`@return string The country code if available, otherwise an empty string.`
 
-### Methods
+- Methods:
 
-* `social.get_rid()`
+`geoloc.get_country_code()`
 
-## `social.is_player_online`
+---
 
-`Check player for online.`
+## account.get_age
+`@return integer The age if available, otherwise 0.`
 
-### Parameters:
+- Methods:
 
-| Name        | Type     | Description        |
-| ----------- | -------- | ------------------ |
-| rid         | int      | Player Rockstar ID |
-| name        | string   | Player name        |
-| on_response | function | Callback           |
+`account.get_age()`
 
-### Methods
+---
 
-* `social.is_player_online(name, on_response)`
-* `social.is_player_online(rid, on_response)`
+## account.get_avatar_url
+`@return string The URL to the avatar image if available, otherwise an empty string.`
 
-### Callbacks:
+- Methods:
 
-* `function on_response(int rid, bool result)`
+`account.get_avatar_url()`
+
+---
+
+## account.get_country_code
+`@return string The country code if available, otherwise an empty string.`
+
+- Methods:
+
+`account.get_country_code()`
+
+---
+
+## account.get_dob
+`@return string The DOB if available, otherwise an empty string.`
+
+- Methods:
+
+`account.get_dob()`
+
+---
+
+## account.get_is_approx_dob
+`@return boolean Returns true if the DOB is approximate, false otherwise.`
+
+- Methods:
+
+`account.get_is_approx_dob()`
+
+---
+
+## account.get_language_code
+`@return string The language code if available, otherwise an empty string.`
+
+- Methods:
+
+`account.get_language_code()`
+
+---
+
+## account.get_phone
+`@return string The phone number if available, otherwise an empty string.`
+
+- Methods:
+
+`account.get_phone()`
+
+---
+
+## account.get_rockstar_id
+`@return integer The Rockstar ID if available, otherwise 0.`
+
+- Methods:
+
+`account.get_rockstar_id()`
+
+---
+
+## account.get_zip_code
+`@return string The ZIP code if available, otherwise an empty string.`
+
+- Methods:
+
+`account.get_zip_code()`
+
+---
+
+## account.get_nickname
+`@return string The nickname if available, otherwise an empty string.`
+
+- Methods:
+
+`account.get_nickname()`
+
+---
+

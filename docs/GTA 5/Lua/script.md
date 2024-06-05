@@ -1,229 +1,218 @@
 ---
-slug: /gta/lua/script
-title: script
+slug: /gta/lua/Script
+title: Script
 ---
 
-# script
+## script.ready
+`Checks if script globals are available. Can be used to check when it is possible to work with functions like `script.get_global`.`
+- Return:
 
-```ebnf
-Scripts provides the ability to change ingame variables.
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if script globals are available. |
 
-Functions script_global:new(), script_local:new() will return script objects which you can read and write.
-```
+- Methods:
 
-## Functions
+`script.ready()`
 
-## `script.exists`
+---
 
-### Parameters
+## script.is_loaded
+`Checks if a script is loaded by hash or name.`
+- Return:
 
-| Name        | Type   | Description    |
-| ----------- | ------ | -------------- |
-| script_name | string | Name of script |
-| script_hash | int    | Hash of script |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the script is loaded. |
 
-### Return value:
+- Methods:
 
-| Type | Description           |
-| ---- | --------------------- |
-| bool | True if script exists |
+`script.is_loaded(hash_or_name)`
 
-### Methods
+---
 
-* `script.exists(script_name)`
-* `script.exists(script_hash)`
+## script.is_running
+`Checks if a script is currently running by hash or name.`
+- Return:
 
-## `script_global:new`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the script is running. |
 
-### Parameters
+- Methods:
 
-| Name  | Type | Description  |
-| ----- | ---- | ------------ |
-| index | int  | Global index |
+`script.is_running(hash_or_name)`
 
-### Return value:
+---
 
-| Type   | Description |
-| ------ | ----------- |
-| script | Script wrap |
+## script.request
+`Requests loading a script by hash or name.`
 
-### Methods
+- Methods:
 
-* `script_global:new(index)`
+`script.request(hash_or_name)`
 
-## `script_local:new`
+---
 
-### Parameters
+## script.start
+`Starts a script by hash or name with an optional stack size and additional arguments.`
+- Parameters:
 
-| Name         | Type   | Description |
-| ------------ | ------ | ----------- |
-| script\_name | string | Script name |
-| script\_hash | int    | Script hash |
-| index        | int    | Local index |
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | hash_or_name | Hash|string | The script hash or name. |
+ | stack_size | number | The stack size for the new script. |
+ | ... | any | Additional arguments to pass to the script. |
 
-### Return value:
+- Return:
 
-| Type   | Description |
-| ------ | ----------- |
-| script | Script wrap |
+ | Type | Description |
+ | --- | --- |
+ | integer | Returns the thread ID of the started script. |
 
-### Methods
+- Methods:
 
-* `script_local:new(script_name, index)`
-* `script_local:new(script_hash, index)`
+`script.start(hash_or_name, stack_size, ...)`
 
-## `script:at`
+---
 
-### Parameters
+## script.spoof
+`Spoofs a script by hash or name using a callback function.`
+- Return:
 
-| Name  | Type | Description        |
-| ----- | ---- | ------------------ |
-| index | int  | Local/Global index |
-| size  | int  | Structure size     |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the spoof was successful. |
 
-### Return value
+- Methods:
 
-| Type   | Description |
-| ------ | ----------- |
-| script | Script wrap |
+`script.spoof(hash_or_name, callback)`
 
-### Methods
+---
 
-* `script:at(index, size)`
-* `script:at(index)`
+## script.force_host
+`Forces migration to local player a script by hash or name, with an optional callback for completion.`
 
-## `script:get_byte`
+- Methods:
 
-### Return value:
+`script.force_host(hash_or_name, on_migration_finish)`
 
-| Type | Description |
-| ---- | ----------- |
-| int  | Int8 value |
+---
 
-### Methods
+## script.get_yscs
+`}`
 
-* `script:get_byte()`
+- Methods:
 
-## `script:get_word`
+`script.get_yscs()`
 
-### Return value
+---
 
-| Type | Description  |
-| ---- | ------------ |
-| int  | Int16 value |
+## script.start_mission
+`@usage script.start_mission(1163912414)`
 
-### Methods
+- Methods:
 
-* `script:get_word()`
+`script.start_mission(name_or_hash)`
 
-## `script:get_long`
+---
 
-### Return value
+## script.get_tse
+`@usage local hash = script.get_tse(ScriptEventId.ISLAND) -- Will return '373376135' (1.68)`
 
-| Type | Description  |
-| ---- | ------------ |
-| int  | Int32 value |
+- Methods:
 
-### Methods
+`script.get_tse(index)`
 
-* `script:get_long()`
+---
 
-## `script:get_int64`
+## script.get_script_magic
+`@return number The magic number for the specified player. Returns 0 if the player object is nil.`
 
-### Return value
+- Methods:
 
-| Type | Description  |
-| ---- | ------------ |
-| int  | Int64 value |
+`script.get_script_magic(player)`
 
-### Methods
+---
 
-* `script:get_int64()`
+## script.trigger_script_event
+`end`
 
-## `script:get_float`
+- Methods:
 
-### Return value
+`script.trigger_script_event(player, hash, args)`
 
-| Type  | Description |
-| ----- | ----------- |
-| float | Float value |
+---
 
-### Methods
+## ScrVar:at
+`@return ScrVar A new ScrVar instance representing the variable at the calculated position.`
 
-* `script:get_float()`
+- Methods:
 
-## `script:set_byte`
+`ScrVar:at(index)`
 
-### Parameters
+---
 
-| Name  | Type | Description |
-| ----- | ---- | ----------- |
-| value | int  | Int8 value |
+## ScrVar:at
+`@return ScrVar A new ScrVar instance representing the variable at the calculated position.`
 
-### Methods
+- Methods:
 
-* `script:set_byte(value)`
+`ScrVar:at(index, size)`
 
-## `script:set_word`
+---
 
-### Parameters
+## ScrVar:get_base
+`@return base number The base address as a number.`
 
-| Name  | Type | Description  |
-| ----- | ---- | ------------ |
-| value | int  | Int16 value |
+- Methods:
 
-### Methods
+`ScrVar:get_base()`
 
-* `script:set_word(value)`
+---
 
-## `script:set_long`
+## ScrVar:get_index
+`@return index number The index of the script variable.`
 
-### Parameters
+- Methods:
 
-| Name  | Type | Description  |
-| ----- | ---- | ------------ |
-| value | int  | Int32 value |
+`ScrVar:get_index()`
 
-### Methods
+---
 
-* `script:set_long(value)`
+## ScrVar:is_local
+`@return result boolean Returns true if the object is a ScrLocal class, false otherwise.`
 
-## `script:set_int64`
+- Methods:
 
-### Parameters
+`ScrVar:is_local()`
 
-| Name  | Type | Description  |
-| ----- | ---- | ------------ |
-| value | int  | Int64 value |
+---
 
-### Methods
+## ScrVar:is_global
+`@return result boolean Returns true if the object is a ScrGlobal class, false otherwise.`
 
-* `script:set_int64(value)`
+- Methods:
 
-## `script:set_float`
+`ScrVar:is_global()`
 
-### Parameters
+---
 
-| Name  | Type  | Description |
-| ----- | ----- | ----------- |
-| value | float | Float value |
+## script.get_global
+`@return ScrGlobal A ScrGlobal instance representing the global variable at the given index.`
 
-### Methods
+- Methods:
 
-* `script:set_float(value)`
+`script.get_global(index)`
 
-## Examples
+---
 
-### Demonstration of getting a script magic value for a local player.
+## script.get_local
+`@return ScrLocal A ScrLocal instance representing the local variable at the given index in the specified script context.`
 
-```lua
-local magic = script_global:new(1630816):at(player.index(), 597):at(508):get_long()
-```
+- Methods:
 
-### Demonstration of editing amount of lives in mission.
+`script.get_local(string_or_hash, index)`
 
-```lua
-local lives = script_local:new("fm_mission_controller_2020", 43059):at(865):at(1)
-print("Value before editing: " .. tostring(lives:get_long()))
-lives:set_long(100)
-```
+---
+

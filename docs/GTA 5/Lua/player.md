@@ -1,1496 +1,2102 @@
 ---
-slug: /gta/lua/player
-title: player
+slug: /gta/lua/Player
+title: Player
 ---
 
-# player
+## player_t:get_id
+`Returns the entity handle of the player.`
+- Return:
 
-```ebnf
-Workspace to work with players
-```
+ | Type | Description |
+ | --- | --- |
+ | number | The entity handle of the player. |
 
-## Functions
+- Methods:
 
-## `player.bits_to_players`
+`player_t:get_id()`
 
-### Parameters
+---
 
-| Name | Type | Description                   |
-| ---- | ---- | ----------------------------- |
-| bits | int  | Player indexes packed in bits |
+## player_t:get_netid
+`Returns the network handle of the player.`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | number | The network handle (ObjectId) of the player. |
 
-| Type  | Description             |
-| ----- | ----------------------- |
-| pairs | Array of player indexes |
+- Methods:
 
-### Methods
+`player_t:get_netid()`
 
-* `player.bits_to_players(bits)`
+---
 
-## `player.id`
+## player_t:get_index
+`This index ranges from 0 to 31, representing the player's slot in the game.`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | integer | The index of the player. |
 
-| Type | Description                   |
-| ---- | ----------------------------- |
-| int  | Entity handle of local player |
+- Methods:
 
-### Methods
+`player_t:get_index()`
 
-* `player.id()`
+---
 
-## `player.index`
+## player_t:get_entity_ptr
+`Returns a pointer to the underlying rage::fwEntity object.`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | userdata | A pointer to the rage::fwEntity object. |
 
-| Type | Description                  |
-| ---- | ---------------------------- |
-| int  | Player index of local player |
+- Methods:
 
-### Methods
+`player_t:get_entity_ptr()`
 
-* `player.index()`
+---
 
-## `player.ban`
+## player_t:get_netobj_ptr
+`Returns a pointer to the underlying rage::netObject.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | userdata | A pointer to the rage::netObject. |
 
-| Name          | Type   | Description  |
-| ------------- | ------ | ------------ |
-| player\_index | int    | Target index |
-| time          | int    | Ban time     |
-| reason        | string | Ban reason   |
+- Methods:
 
-### Methods
+`player_t:get_netobj_ptr()`
 
-* `player.ban(player_index, time, reason)`
+---
 
-## `player.is_banned`
+## player_t:get_interior
+`Returns the handle of the player's interior.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | integer | The handle of the interior in which the player is located. |
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+- Methods:
 
-### Return value
+`player_t:get_interior()`
 
-| Type | Description      |
-| ---- | ---------------- |
-| bool | Is player banned |
+---
 
-### Methods
+## player_t:is_on_screen
+`Checks if the player is currently rendered on the screen.`
+- Return:
 
-* `player.is_banned(player_index)`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is on the screen, false otherwise. |
 
-## `player.unban`
+- Methods:
 
-### Parameters
+`player_t:is_on_screen()`
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+---
 
-### Methods
+## player_t:get_coords
+`Retrieves the world coordinates of the player.`
+- Return:
 
-* `player.unban(player_index)`
+ | Type | Description |
+ | --- | --- |
+ | number, | number, number The x, y, and z coordinates of the player in the game world. |
 
-## `player.get_entity_handle`
+- Methods:
 
-### Parameters
+`player_t:get_coords()`
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+---
 
-### Return value
+## player_t:get_screen
+`Retrieves the screen coordinates of the player.`
+- Return:
 
-| Type | Description   |
-| ---- | ------------- |
-| int  | Player ped id |
+ | Type | Description |
+ | --- | --- |
+ | number, | number The x and y coordinates of the player on the screen. |
 
-### Methods
+- Methods:
 
-* `player.get_entity_handle(player_index)`
+`player_t:get_screen()`
 
-## `player.get_network_handle`
+---
 
-### Parameters
+## player_t:get_angles
+`Retrieves the angles of the player in Euler angles (pitch, yaw, roll).`
+- Return:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+ | Type | Description |
+ | --- | --- |
+ | number, | number, number The pitch, yaw, and roll angles of the player. |
 
-### Return value
+- Methods:
 
-| Type  | Description    |
-| ----- | -------------- |
-| table | Network handle |
+`player_t:get_angles()`
 
-### Methods
+---
 
-* `player.get_network_handle(player_index)`
+## player_t:get_mins
+`Retrieves the minimum bounding coordinates of the player.`
+- Return:
 
-## `player.get_interior_handle`
+ | Type | Description |
+ | --- | --- |
+ | number, | number, number The minimum x, y, and z coordinates of the player's bounding box. |
 
-### Parameters
+- Methods:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+`player_t:get_mins()`
 
-### Return value
+---
 
-| Type | Description  |
-| ---- | ------------ |
-| int  | Intrerior id |
+## player_t:get_maxs
+`Retrieves the maximum bounding coordinates of the player.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | number, | number, number The maximum x, y, and z coordinates of the player's bounding box. |
 
-* `player.get_interior_handle(player_index)`
+- Methods:
 
-## `player.get_vehicle_handle`
+`player_t:get_maxs()`
 
-### Parameters
+---
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+## player_t:get_forward
+`Retrieves the forward vector of the player.`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | number, | number, number The x, y, and z components of the forward vector. |
 
-| Type | Description |
-| ---- | ----------- |
-| int  | Vehicle id  |
+- Methods:
 
-### Methods
+`player_t:get_forward()`
 
-* `player.get_vehicle_handle(player_index)`
+---
 
-## `player.get_net_id`
+## player_t:get_right
+`Retrieves the right vector of the player.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | number, | number, number The x, y, and z components of the right vector. |
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+- Methods:
 
-### Return value
+`player_t:get_right()`
 
-| Type | Description |
-| ---- | ----------- |
-| int  | Network id  |
+---
 
-### Methods
+## player_t:get_up
+`Retrieves the up vector of the player.`
+- Return:
 
-* `player.get_net_id(player_index)`
+ | Type | Description |
+ | --- | --- |
+ | number, | number, number The x, y, and z components of the up vector. |
 
-## `player.get_vehicle_net_id`
+- Methods:
 
-### Parameters
+`player_t:get_up()`
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+---
 
-### Return value
+## player_t:get_heading
+`Gets the heading of the player in degrees.`
+- Return:
 
-| Type | Description           |
-| ---- | --------------------- |
-| int  | Network id of vehicle |
+ | Type | Description |
+ | --- | --- |
+ | number | The heading of the player, representing the direction it is facing. |
 
-### Methods
+- Methods:
 
-* `player.get_vehicle_net_id(player_index)`
+`player_t:get_heading()`
 
-## `player.get_dimentions`
+---
 
-### Parameters
+## player_t:get_distance
+`Calculates the distance from the local player to the another player.`
+- Return:
 
-| Name          | Type    | Description  |
-| ------------- | ------- | ------------ |
-| player\_index | int     | Target index |
-| mins          | Vector3 | None given   |
-| maxs          | Vector3 | None given   |
+ | Type | Description |
+ | --- | --- |
+ | number | The distance from the local player to the another player. |
 
-### Return value
+- Methods:
 
-| Type | Description |
-| ---- | ----------- |
-| bool | None given  |
+`player_t:get_distance()`
 
-### Methods
+---
 
-* `player.get_dimentions(player_index, mins, maxs)`
+## player_t:get_health
+`Retrieves the current health of the player.`
+- Return:
 
-## `player.get_coordinates`
+ | Type | Description |
+ | --- | --- |
+ | integer | The current health of the player. |
 
-### Parameters
+- Methods:
 
-| Name          | Type    | Description  |
-| ------------- | ------- | ------------ |
-| player\_index | int     | Target index |
-| position      | Vector3 | Var to write |
+`player_t:get_health()`
 
-### Return value
+---
 
-| Type | Description            |
-| ---- | ---------------------- |
-| bool | Successfully wrote var |
+## player_t:get_health_max
+`Retrieves the maximum health of the player.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | integer | The maximum health of the player. |
 
-* `player.get_coordinates(player_index, position)`
+- Methods:
 
-## `player.get_angles`
+`player_t:get_health_max()`
 
-### Parameters
+---
 
-| Name          | Type    | Description  |
-| ------------- | ------- | ------------ |
-| player\_index | int     | Target index |
-| angles        | Vector3 | Var to write |
+## player_t:is_alive
+`Checks if the player is alive.`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is alive, false if dead or the health is zero or below. |
 
-| Type | Description            |
-| ---- | ---------------------- |
-| bool | Successfully wrote var |
+- Methods:
 
-### Methods
+`player_t:is_alive()`
 
-* `player.get_angles(player_index, angles)`
+---
 
-## `player.get_health`
+## player_t:is_dead
+`Checks if the player is dead.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player's health is zero or below, false otherwise. |
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+- Methods:
 
-### Return value
+`player_t:is_dead()`
 
-| Type | Description      |
-| ---- | ---------------- |
-| int  | Amount of health |
+---
 
-### Methods
+## player_t:get_index_bit
+`The bitmask is calculated as '1 << get_index()'.`
+- Return:
 
-* `player.get_health(player_index)`
+ | Type | Description |
+ | --- | --- |
+ | integer | The bitmask for the player's index. |
 
-## `player.get_max_health`
+- Methods:
 
-### Parameters
+`player_t:get_index_bit()`
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+---
 
-### Return value
+## player_t:get_vehicle
+`Returns 0 if the player is not in any vehicle.`
+- Return:
 
-| Type | Description          |
-| ---- | -------------------- |
-| int  | Amount of max health |
+ | Type | Description |
+ | --- | --- |
+ | integer | The handle of the vehicle or 0 if the player is not in a vehicle. |
 
-### Methods
+- Methods:
 
-* `player.get_max_health(player_index)`
+`player_t:get_vehicle()`
 
-## `player.get_armor`
+---
 
-### Parameters
+## player_t:get_model
+`Gets the model hash of the player.`
+- Return:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+ | Type | Description |
+ | --- | --- |
+ | integer | The model hash of the player. |
 
-### Return value
+- Methods:
 
-| Type | Description     |
-| ---- | --------------- |
-| int  | Amount of armor |
+`player_t:get_model()`
 
-### Methods
+---
 
-* `player.get_armor(int player_index)`
+## player_t:is_active
+`A player is considered active if they are currently connected and have a pedestrian entity.`
+- Return:
 
-## `player.get_max_armor`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is active, false otherwise. |
 
-### Parameters
+- Methods:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+`player_t:is_active()`
 
-### Return value
+---
 
-| Type | Description         |
-| ---- | ------------------- |
-| int  | Amount of max armor |
+## player_t:is_valid
+`Performs several checks to ensure the player's data structures are properly initialized and valid.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is considered valid, false otherwise. |
 
-* `player.get_max_armor(player_index)`
+- Methods:
 
-## `player.get_model`
+`player_t:is_valid()`
 
-### Parameters
+---
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+## player_t:get_playerinfo_ptr
+`Returns a pointer to the CPlayerInfo object.`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | userdata | A pointer to the CPlayerInfo object. |
 
-| Type | Description |
-| ---- | ----------- |
-| int  | Model hash  |
+- Methods:
 
-### Methods
+`player_t:get_playerinfo_ptr()`
 
-* `player.get_model(player_index)`
+---
 
-## `player.get_weapon`
+## player_t:is_animal
+`Checks if the player is an animal.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is an animal, false otherwise. |
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+- Methods:
 
-### Return value
+`player_t:is_animal()`
 
-| Type | Description |
-| ---- | ----------- |
-| int  | Weapon hash |
+---
 
-### Methods
+## player_t:is_driver
+`Checks if the player is the driver of a vehicle.`
+- Return:
 
-* `player.get_weapon(player_index)`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is currently driving a vehicle, false otherwise. |
 
-## `player.is_valid`
+- Methods:
 
-### Parameters
+`player_t:is_driver()`
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+---
 
-### Return value
+## player_t:get_armor
+`Retrieves the current armor value of the player.`
+- Return:
 
-| Type | Description             |
-| ---- | ----------------------- |
-| bool | Whether player is valid |
+ | Type | Description |
+ | --- | --- |
+ | integer | The current armor value of the player. |
 
-### Methods
+- Methods:
 
-* `player.is_valid(player_index)`
+`player_t:get_armor()`
 
-## `player.is_animal`
+---
 
-### Parameters
+## player_t:get_name
+`Retrieves the name of the player.`
+- Return:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+ | Type | Description |
+ | --- | --- |
+ | string | The name of the player. |
 
-### Return value
+- Methods:
 
-| Type | Description              |
-| ---- | ------------------------ |
-| bool | Whether player is animal |
+`player_t:get_name()`
 
-### Methods
+---
 
-* `player.is_animal(player_index)`
+## player_t:is_blocked
+`Checks if the player is sync blocked.`
+- Return:
 
-## `player.is_alive`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is blocked. |
 
-### Parameters
+- Methods:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+`player_t:is_blocked()`
 
-### Return value
+---
 
-| Type | Description             |
-| ---- | ----------------------- |
-| bool | Whether player is alive |
+## player_t:is_modder
+`Checks if the player is marked as a modder.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is marked as a modder. |
 
-* `player.is_alive(player_index)`
+- Methods:
 
-## `player.is_friend`
+`player_t:is_modder()`
 
-### Parameters
+---
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+## player_t:is_local
+`Checks if this is the local player.`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if this is the local player. |
 
-| Type | Description              |
-| ---- | ------------------------ |
-| bool | Whether player is friend |
+- Methods:
 
-### Methods
+`player_t:is_local()`
 
-* `player.is_friend(player_index)`
+---
 
-## `player.is_modder`
+## player_t:is_session_host
+`Checks if the player is the session host.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is the session host. |
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+- Methods:
 
-### Return value
+`player_t:is_session_host()`
 
-| Type | Description              |
-| ---- | ------------------------ |
-| bool | Whether player is modder |
+---
 
-### Methods
+## player_t:is_script_host
+`Checks if the player is the script host.`
+- Return:
 
-* `player.is_modder(player_index)`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is the script host. |
 
-## `player.is_connected`
+- Methods:
 
-### Parameters
+`player_t:is_script_host()`
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+---
 
-### Return value
+## player_t:is_godmode
+`Checks if the player is in godmode.`
+- Return:
 
-| Type | Description                 |
-| ---- | --------------------------- |
-| bool | Whether player is connected |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is in godmode. |
 
-### Methods
+- Methods:
 
-* `player.is_connected(player_index)`
+`player_t:is_godmode()`
 
-## `player.is_on_screen`
+---
 
-### Parameters
+## player_t:is_friend
+`Checks if the player is added as a friend.`
+- Return:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is a friend. |
 
-### Return value
+- Methods:
 
-| Type | Description                              |
-| ---- | ---------------------------------------- |
-| bool | true if player is drawn, false otherwise |
+`player_t:is_friend()`
 
-### Methods
+---
 
-* `player.is_on_screen(player_index)`
+## player_t:is_marked_as_cheater
+`Checks if the player is marked as a cheater.`
+- Return:
 
-## `player.is_in_cutscene`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is marked as a cheater. |
 
-### Parameters
+- Methods:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+`player_t:is_marked_as_cheater()`
 
-### Return value
+---
 
-| Type | Description                   |
-| ---- | ----------------------------- |
-| bool | Whether player is in cutscene |
+## player_t:is_marked_as_admin
+`it is more likely that a modder has tampered with their player information to appear as such.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is marked as an admin (potentially a Rockstar employee), otherwise returns false. |
 
-* `player.is_in_cutscene(player_index)`
+- Methods:
 
-## `player.is_cheater`
+`player_t:is_marked_as_admin()`
 
-### Parameters
+---
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+## player:is_admin
+`This method ensures that the player is indeed a Rockstar employee and not just a modder with tampered credentials.`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is confirmed as a genuine Rockstar administrator, otherwise returns false. |
 
-| Type | Description                        |
-| ---- | ---------------------------------- |
-| bool | Whether player is cheater (R* tag) |
+- Methods:
 
-### Methods
+`player:is_admin()`
 
-* `player.is_cheater(player_index)`
+---
 
-## `player.is_rockstar_dev`
+## player_t:is_in_interior
+`Checks if the player is currently inside an interior.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is in an interior. |
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+- Methods:
 
-### Return value
+`player_t:is_in_interior()`
 
-| Type | Description                    |
-| ---- | ------------------------------ |
-| bool | Whether player is rockstar dev |
+---
 
-### Methods
+## player_t:is_in_vehicle
+`Checks if the player is currently inside a vehicle.`
+- Return:
 
-* `player.is_rockstar_dev(player_index)`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is in a vehicle. |
 
-## `player.get_heading`
+- Methods:
 
-### Parameters
+`player_t:is_in_vehicle()`
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+---
 
-### Return value
+## player_t:is_next_host
+`Checks if the player is slated to be the next session host.`
+- Return:
 
-| Type  | Description    |
-| ----- | -------------- |
-| float | Player heading |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is slated to be the next host. |
 
-### Methods
+- Methods:
 
-* `player.get_heading(player_index)`
+`player_t:is_next_host()`
 
-## `player.get_distance`
+---
 
-### Parameters
+## player_t:is_falling
+`Checks if the player is currently in a falling animation.`
+- Return:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is falling. |
 
-### Return value
+- Methods:
 
-| Type  | Description        |
-| ----- | ------------------ |
-| float | Distance to player |
+`player_t:is_falling()`
 
-### Methods
+---
 
-* `player.get_distance(player_index)`
+## player_t:is_swimming
+`Checks if the player is swimming on the surface of the water.`
+- Return:
 
-## `player.get_index`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is swimming. |
 
-### Parameters
+- Methods:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+`player_t:is_swimming()`
 
-### Return value
+---
 
-| Type | Description  |
-| ---- | ------------ |
-| int  | Player index |
+## player_t:is_underwater
+`Checks if the player is submerged underwater.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is underwater. |
 
-* `player.get_index(player_index)`
+- Methods:
 
-## `player.get_bit_index`
+`player_t:is_underwater()`
 
-### Parameters
+---
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+## player_t:is_shooting
+`Checks if the player is currently firing their weapon.`
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is shooting. |
 
-| Type | Description |
-| ---- | ----------- |
-| int  | Bit index   |
+- Methods:
 
-### Methods
+`player_t:is_shooting()`
 
-* `player.get_bit_index(player_index)`
+---
 
-## `player.get_join_time`
+## player_t:is_aiming
+`Checks if the player is aiming their weapon.`
+- Return:
 
-### Parameters
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is aiming. |
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+- Methods:
 
-### Return value
+`player_t:is_aiming()`
 
-| Type | Description |
-| ---- | ----------- |
-| int  | Join time   |
+---
 
-### Methods
+## player_t:is_drive_unreleased_vehicle
+`Checks if the player is driving a vehicle that is not yet legally obtainable in the game.`
+- Return:
 
-* `player.get_join_time(player_index)`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is driving an unreleased vehicle. |
 
-## `player.get_modder_flags`
+- Methods:
 
-### Parameters
+`player_t:is_drive_unreleased_vehicle()`
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+---
 
-### Return value
+## player_t:is_use_modded_weapon
+`Checks if the player is using a weapon that is modded and not legally obtainable in the game.`
+- Return:
 
-| Type | Description |
-| ---- | ----------- |
-| int  | Moder flags |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is using a modded weapon. |
 
-### Methods
+- Methods:
 
-* `player.get_modder_flags(player_index)`
+`player_t:is_use_modded_weapon()`
 
-## `player.is_local`
+---
 
-### Parameters
+## player_t:is_use_modded_vehicle
+`Checks if the player is using a vehicle that is modded and not legally obtainable in the game.`
+- Return:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is using a modded vehicle. |
 
-### Return value
+- Methods:
 
-| Type | Description                     |
-| ---- | ------------------------------- |
-| bool | true if local, false otherwise. |
+`player_t:is_use_modded_vehicle()`
 
-### Methods
+---
 
-* `player.is_local(player_index)`
+## player_t:is_use_super_drive
+`Checks if the player's vehicle is exceeding the maximum legitimate speed values.`
+- Return:
 
-## `player.get_name`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is using super drive capabilities. |
 
-### Parameters
+- Methods:
 
-| Name          | Type | Description  |
-| ------------- | ---- | ------------ |
-| player\_index | int  | Target index |
+`player_t:is_use_super_drive()`
 
-### Return value
+---
 
-| Type   | Description               |
-| ------ | ------------------------- |
-| string | `?` if name isn't avaible |
+## player_t:is_use_godmode_vehicle
+`Checks if the player's vehicle is currently in a godmode state, meaning it cannot be destroyed.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player's vehicle is using godmode. |
 
-* `player.get_name(player_index)`
+- Methods:
 
-## `player.get_script_host`
+`player_t:is_use_godmode_vehicle()`
 
-`Get Player index, which is a script host.`
+---
 
-### Return value:
+## player_t:has_flag_force_host
+`Checks if the player has unusual or mismatched host key values.`
+- Return:
 
-| Name          | Type | Description                |
-| ------------- | ---- | -------------------------- |
-| player\_index | int  | Index of script host or -1 |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has the force host flag. |
 
-### Methods
+- Methods:
 
-* `player.get_script_host()`
+`player_t:has_flag_force_host()`
 
-## `player.get_session_host`
+---
 
-`Get the Player index, which is the host of the session.`
+## player_t:has_flag_money_drop
+`Checks if the player has spawned money in-game.`
+- Return:
 
-### Return value:
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has the money drop flag. |
 
-| Name          | Type | Description         |
-| ------------- | ---- | ------------------- |
-| player\_index | int  | Index of host or -1 |
+- Methods:
 
-### Methods
+`player_t:has_flag_money_drop()`
 
-* `player.get_session_host()`
+---
 
-## `player.set_modder_flag`
+## player_t:has_flag_update_fxn
+`Checks if the player's client has reported use of unauthorized products.`
+- Return:
 
-`Set modder flag.`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has the update function flag. |
 
-### Parameters:
+- Methods:
 
-| Name | Type | Description    |
-| ---- | ---- | -------------- |
-| ply  | int  | Player index   |
-| flag | int  | Modder flag ID |
+`player_t:has_flag_update_fxn()`
 
-### Methods
+---
 
-* `player.set_modder_flag(ply, flag)`
+## player_t:has_flag_crcs_mismatch
+`Checks if there is a memory modification mismatch in the player's game client.`
+- Return:
 
-## `player.remove_modder_flag`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has the CRCs mismatch flag. |
 
-`Remove modder flag.`
+- Methods:
 
-### Parameters:
+`player_t:has_flag_crcs_mismatch()`
 
-| Name | Type | Description    |
-| ---- | ---- | -------------- |
-| ply  | int  | Player index   |
-| flag | int  | Modder flag ID |
+---
 
-### Methods
+## player_t:has_flag_malformed_script
+`Checks if the player has sent a script event classified as malicious.`
+- Return:
 
-* `player.remove_modder_flag(ply, flag)`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has the malformed script flag. |
 
-## `player.get_rid`
+- Methods:
 
-`Get player RockstarID.`
+`player_t:has_flag_malformed_script()`
 
-### Parameters:
+---
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+## player_t:has_flag_super_jump
+`Checks if the player is using modifications to jump unusually high.`
+- Return:
 
-### Return value:
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has the super jump flag. |
 
-| Name         | Type | Description                                |
-| ------------ | ---- | ------------------------------------------ |
-| rockstar\_id | int  | RockstarID of player, 0 if couldn't get it |
+- Methods:
 
-### Methods
+`player_t:has_flag_super_jump()`
 
-* `player.get_rid(ply)`
+---
 
-## `player.send_sms`
+## player_t:has_flag_wrong_model
+`Checks if the player is using a model that cannot be normally set for players.`
+- Return:
 
-`Send SMS to a player.`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has the wrong model flag. |
 
-### Parameters:
+- Methods:
 
-| Name | Type   | Description  |
-| ---- | ------ | ------------ |
-| ply  | int    | Player index |
-| text | string | Message text |
+`player_t:has_flag_wrong_model()`
 
-### Return value:
+---
 
-| Name    | Type | Description                                                 |
-| ------- | ---- | ----------------------------------------------------------- |
-| success | bool | true if the message was successfully sent, false otherwise. |
+## player_t:has_flag_censor_bypass
+`Checks if the player has bypassed content censors.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has the censor bypass flag. |
 
-* `player.send_sms(ply, text)`
+- Methods:
 
-## `player.is_spectating`
+`player_t:has_flag_censor_bypass()`
 
-`Determines if a player is spectating someone.`
+---
 
-### Parameters:
+## player_t:has_flag_malformed_armor
+`Checks if the player's armor values are incorrect or manipulated.`
+- Return:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has the malformed armor flag. |
 
-### Return value:
+- Methods:
 
-| Name    | Type | Description                                                |
-| ------- | ---- | ---------------------------------------------------------- |
-| success | bool | true if the player is spectating someone, false otherwise. |
+`player_t:has_flag_malformed_armor()`
 
-### Methods
+---
 
-* `player.is_spectating(ply)`
+## player_t:has_flag_network_kick
+`Checks if the player has attempted to kick other players from the lobby.`
+- Return:
 
-## `player.get_spectating`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has the network kick flag. |
 
-`Determines the Player index that the specified player is spectating.`
+- Methods:
 
-### Parameters:
+`player_t:has_flag_network_kick()`
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+---
 
-### Return value:
+## player_t:has_flag_crash_attempt
+`Checks if the player has attempted to crash the game for other players.`
+- Return:
 
-| Name          | Type | Description                                           |
-| ------------- | ---- | ----------------------------------------------------- |
-| player\_index | int  | The index of the player being spectate, -1 otherwise. |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has the crash attempt flag. |
 
-### Methods
+- Methods:
 
-* `player.get_spectating(ply)`
+`player_t:has_flag_crash_attempt()`
 
-## `player.is_god`
+---
 
-`Determines if the player has godmode enabled.`
+## player_t:get_game_stats
+`Returns a table containing various game statistics such as RP, GlobalRP, Rank, KdRatio, etc.`
+- Return:
 
-### Parameters:
+ | Type | Description |
+ | --- | --- |
+ | table | The table of game statistics. |
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+- Methods:
 
-### Return value:
+`player_t:get_game_stats()`
 
-| Name    | Type | Description                                              |
-| ------- | ---- | -------------------------------------------------------- |
-| success | bool | true if the player has godmode enabled, false otherwise. |
+---
 
-### Methods
+## player_t:get_ceo_meta
+`- language (integer): Language setting of the player within the CEO organization.`
+- Return:
 
-* `player.is_god(ply)`
+ | Type | Description |
+ | --- | --- |
+ | table | The table of CEO metadata. |
 
-## `player.is_script_host`
+- Methods:
 
-`Determines if the player is a script host.`
+`player_t:get_ceo_meta()`
 
-### Parameters:
+---
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+## player_t:is_in_ceo
+`Checks if the player is part of a CEO organization.`
+- Return:
 
-### Return value:
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is in a CEO organization. |
 
-| Name    | Type | Description                                           |
-| ------- | ---- | ----------------------------------------------------- |
-| success | bool | true if the player is a script host, false otherwise. |
+- Methods:
 
-### Methods
+`player_t:is_in_ceo()`
 
-* `player.is_script_host(ply)`
+---
 
-## `player.is_session_host`
+## player_t:is_ceo_banned
+`Checks if the player is banned from CEO activities.`
+- Return:
 
-`Determines whether a player is the host of a session.`
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is banned from CEO activities. |
 
-### Parameters:
+- Methods:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+`player_t:is_ceo_banned()`
 
-### Return value:
+---
 
-| Name    | Type | Description                                            |
-| ------- | ---- | ------------------------------------------------------ |
-| success | bool | true if the player is a session host, false otherwise. |
+## player_t:is_ceo_boss
+`Checks if the player is the boss of a CEO organization.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is the CEO boss. |
 
-* `player.is_session_host(ply)`
+- Methods:
 
-## `player.get_host_key`
+`player_t:is_ceo_boss()`
 
-`Returns player host key.`
+---
 
-### Parameters:
+## player_t:get_ceo_ban_time
+`Retrieves the time remaining on the player's CEO ban.`
+- Return:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+ | Type | Description |
+ | --- | --- |
+ | integer | The time remaining on the CEO ban in seconds. |
 
-### Return value:
+- Methods:
 
-| Name     | Type | Description      |
-| -------- | ---- | ---------------- |
-| host_key | int  | Player host key. |
+`player_t:get_ceo_ban_time()`
 
-### Methods
+---
 
-* `player.get_host_key(ply)`
+## player_t:get_ceo_role
+`Retrieves the player's role within the CEO organization.`
+- Return:
 
-## `player.is_next_host`
+ | Type | Description |
+ | --- | --- |
+ | integer | Numeric identifier of the player's CEO role. |
 
-`Returns if player is next host.`
+- Methods:
 
-### Parameters:
+`player_t:get_ceo_role()`
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+---
 
-### Return value:
+## player_t:get_ceo_name
+`Retrieves the name of the CEO organization.`
+- Return:
 
-| Name         | Type | Description          |
-| ------------ | ---- | -------------------- |
-| is_next_host | bool | Is player next host. |
+ | Type | Description |
+ | --- | --- |
+ | string | The name of the CEO organization. |
 
-### Methods
+- Methods:
 
-* `player.is_next_host(ply)`
+`player_t:get_ceo_name()`
 
-## `player.get_host_priority`
+---
 
-`Returns player host priority.`
+## player_t:get_ceo_owner
+`Retrieves the index of the CEO owner.`
+- Return:
 
-### Parameters:
+ | Type | Description |
+ | --- | --- |
+ | integer | The index of the CEO owner. |
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+- Methods:
 
-### Return value:
+`player_t:get_ceo_owner()`
 
-| Name     | Type | Description           |
-| -------- | ---- | --------------------- |
-| host_key | int  | Player host priority. |
+---
 
-### Methods
+## player_t:get_ceo_owner_name
+`Retrieves the name of the CEO owner.`
+- Return:
 
-* `player.get_host_priority(ply)`
+ | Type | Description |
+ | --- | --- |
+ | string | The name of the CEO owner. |
 
-## `player.get_hosts_queue`
+- Methods:
 
-`Returns host queue.`
+`player_t:get_ceo_owner_name()`
 
-### Return value:
+---
 
-| Name       | Type  | Description                        |
-| ---------- | ----- | ---------------------------------- |
-| host queue | table | Sorted table by players' host key. |
+## player_t:get_ceo_clubhouse_name
+`Retrieves the name of the Motorcycle Club associated with the CEO.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | string | The name of the Motorcycle Club. |
 
-* `player.get_hosts_queue()`
+- Methods:
 
-## `player.is_in_interior`
+`player_t:get_ceo_clubhouse_name()`
 
-`Determines whether the player is in the interior.`
+---
 
-### Parameters:
+## player_t:get_ceo_gang_name
+`Retrieves the name of the SecuroServ gang associated with the CEO.`
+- Return:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+ | Type | Description |
+ | --- | --- |
+ | string | The name of the SecuroServ gang. |
 
-### Return value:
+- Methods:
 
-| Name    | Type | Description                                             |
-| ------- | ---- | ------------------------------------------------------- |
-| success | bool | true if the player is in the interior, false otherwise. |
+`player_t:get_ceo_gang_name()`
 
-### Methods
+---
 
-* `player.is_in_interior(ply)`
+## player_t:get_ceo_members_total
+`Retrieves the total number of members in the CEO organization.`
+- Return:
 
-## `player.is_in_vehicle`
+ | Type | Description |
+ | --- | --- |
+ | integer | The total number of members. |
 
-`Determines whether the player is in the vehicle.`
+- Methods:
 
-### Parameters:
+`player_t:get_ceo_members_total()`
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+---
 
-### Return value:
+## player_t:get_ceo_language
+`Retrieves the language setting of the CEO organization.`
+- Return:
 
-| Name    | Type | Description                                       |
-| ------- | ---- | ------------------------------------------------- |
-| success | bool | true if the player is in the TC, false otherwise. |
+ | Type | Description |
+ | --- | --- |
+ | integer | The language setting as a numeric code. |
 
-### Methods
+- Methods:
 
-* `player.is_in_vehicle(ply)`
+`player_t:get_ceo_language()`
 
-## `player.get_client`
+---
 
-`Returns client from which player launched game.`
+## player_t:get_ceo_last_called_vehicle_name
+`Retrieves the name of the last vehicle called by the CEO.`
+- Return:
 
-### Parameters:
+ | Type | Description |
+ | --- | --- |
+ | string | The name of the last called vehicle. |
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+- Methods:
 
-### Return value:
+`player_t:get_ceo_last_called_vehicle_name()`
 
-| Name   | Type   | Description                       |
-| ------ | ------ | --------------------------------- |
-| client | string | Client player launched game from. |
+---
 
-### Methods
+## player_t:get_ceo_last_called_vehicle
+`Retrieves the hash of the last vehicle called by the CEO.`
+- Return:
 
-* `player.get_client(ply)`
+ | Type | Description |
+ | --- | --- |
+ | integer | The hash of the last vehicle called. |
 
-## `player.get_ip`
+- Methods:
 
-`Returns player ip address as table.`
+`player_t:get_ceo_last_called_vehicle()`
 
-### Parameters:
+---
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+## player_t:get_ceo_members
+`Retrieves a list of members in the CEO organization.`
+- Return:
 
-### Return value:
+ | Type | Description |
+ | --- | --- |
+ | table | A table containing the player instances of each member. |
 
-| Name | Type  | Description                           |
-| ---- | ----- | ------------------------------------- |
-| ip   | table | Player ip address ( can be spoofed ). |
+- Methods:
 
-### Methods
+`player_t:get_ceo_members()`
 
-* `player.get_ip(ply)`
+---
 
-## `player.get_ip_string`
+## player_t:is_player_a_member_of_players_ceo
+`This function can accept a player object or a player index as the second argument.`
+- Parameters:
 
-`Returns player ip address.`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | target | player_t|integer | The target player or the target player's index. |
 
-### Parameters:
+- Return:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the target player is a member of the current player's CEO organization. |
 
-### Return value:
+- Methods:
 
-| Name | Type   | Description                           |
-| ---- | ------ | ------------------------------------- |
-| ip   | string | Player ip address ( can be spoofed ). |
+`player_t:is_player_a_member_of_players_ceo(target)`
 
-### Methods
+---
 
-* `player.get_ip_string(ply)`
+## player_t:get_outfit
+`}`
+- Return:
 
-## `player.get_resolved_ip`
+ | Type | Description |
+ | --- | --- |
+ | table | A table containing arrays for variations and props with detailed info about each item. |
 
-`Returns resolved player ip address as table.`
+- Methods:
 
-### Parameters:
+`player_t:get_outfit()`
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+---
 
-### Return value:
+## player_t:get_rockstar_id
+`Retrieves the Rockstar ID of the player.`
+- Return:
 
-| Name | Type  | Description                                             |
-| ---- | ----- | ------------------------------------------------------- |
-| ip   | table | Player ip address. Zeroes if ip isn't spoofed/resolved. |
+ | Type | Description |
+ | --- | --- |
+ | integer | The Rockstar ID of the player. |
 
-### Methods
+- Methods:
 
-* `player.get_resolved_ip(ply)`
+`player_t:get_rockstar_id()`
 
-## `player.get_resolved_ip_string`
+---
 
-`Returns player ip address.`
+## player_t:kick
+`Attempts to kick the player from the lobby.`
 
-### Parameters:
+- Methods:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+`player_t:kick()`
 
-### Return value:
+---
 
-| Name | Type   | Description                                              |
-| ---- | ------ | -------------------------------------------------------- |
-| ip   | string | Player ip address. 0.0.0.0 if ip isn't spoofed/resolved. |
+## player_t:crash
+`Attempts to crash the player's game.`
 
-### Methods
+- Methods:
 
-* `player.get_resolved_ip_string(ply)`
+`player_t:crash()`
 
-## `player.teleport_to_island`
+---
 
-`Send invite to island.`
+## player_t:sync_block
+`Blocks all synchronization with the player.`
 
-### Parameters:
+- Methods:
 
-| Name      | Type | Description                              |
-| --------- | ---- | ---------------------------------------- |
-| ply       | int  | Player index                             |
-| is_invite | bool | Should send invite instead of force send |
+`player_t:sync_block()`
 
-### Methods
+---
 
-* `player.teleport_to_island(ply, is_invite)`
+## player_t:sync_unblock
+`Unblocks synchronization with the player, if it was previously blocked.`
 
-## `player.teleport_to_interior`
+- Methods:
 
-`Send player to interior.`
+`player_t:sync_unblock()`
 
-### Parameters:
+---
 
-| Name        | Type | Description  |
-| ----------- | ---- | ------------ |
-| ply         | int  | Player index |
-| interior_id | int  | Interior id  |
+## player_t:is_sync_blocked
+`Checks if synchronization with the player is currently blocked.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if synchronization is blocked, false otherwise. |
 
-* `player.teleport_to_interior(ply, interior_id)`
+- Methods:
 
-## `player.teleport_to_mission`
+`player_t:is_sync_blocked()`
 
-`Send player to mission.`
+---
 
-### Parameters:
+## player_t:get_clan_meta
+`}`
+- Return:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+ | Type | Description |
+ | --- | --- |
+ | table | The table of clan metadata. |
 
-### Methods
+- Methods:
 
-* `player.teleport_to_mission(ply)`
+`player_t:get_clan_meta()`
 
-## `player.teleport_to_cutscene`
+---
 
-`Send player to cutscene.`
+## player_t:get_clan_member_id
+`Retrieves the clan member ID of the player.`
+- Return:
 
-### Parameters:
+ | Type | Description |
+ | --- | --- |
+ | integer | The clan member ID of the player. |
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+- Methods:
 
-### Methods
+`player_t:get_clan_member_id()`
 
-* `player.teleport_to_cutscene(ply)`
+---
 
-## `player.ceo_kick`
+## player_t:get_clan_id
+`Retrieves the unique identifier of the player's clan.`
+- Return:
 
-`Kick player from organization.`
+ | Type | Description |
+ | --- | --- |
+ | integer | The clan ID. |
 
-### Parameters:
+- Methods:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+`player_t:get_clan_id()`
 
-### Methods
+---
 
-* `player.ceo_kick(ply)`
+## player_t:get_clan_color
+`Retrieves the color code of the player's clan.`
+- Return:
 
-## `player.ceo_ban`
+ | Type | Description |
+ | --- | --- |
+ | integer | The color code of the clan. |
 
-`Ban player from creating organization.`
+- Methods:
 
-### Parameters:
+`player_t:get_clan_color()`
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+---
 
-### Methods
+## player_t:get_clan_member_count
+`Retrieves the total number of members in the player's clan.`
+- Return:
 
-* `player.ceo_ban(ply)`
+ | Type | Description |
+ | --- | --- |
+ | integer | The total number of clan members. |
 
-## `player.vehicle_destroy`
+- Methods:
 
-`Destroy player vehicle.`
+`player_t:get_clan_member_count()`
 
-### Parameters:
+---
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+## player_t:get_clan_created_time
+`Retrieves the creation time of the player's clan.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | integer | The creation time of the clan. |
 
-* `player.vehicle_destroy(ply)`
+- Methods:
 
-## `player.vehicle_kick`
+`player_t:get_clan_created_time()`
 
-`Kick player from vehicle.`
+---
 
-### Parameters:
+## player_t:is_system_clan
+`Checks if the player's clan is a system-managed clan.`
+- Return:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if it is a system clan. |
 
-### Methods
+- Methods:
 
-* `player.vehicle_kick(ply)`
+`player_t:is_system_clan()`
 
-## `player.vehicle_disown`
+---
 
-`Disown player personal vehicle.`
+## player_t:is_clan_open
+`Checks if the player's clan is open for new members.`
+- Return:
 
-### Parameters:
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the clan is open. |
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+- Methods:
 
-### Methods
+`player_t:is_clan_open()`
 
-* `player.vehicle_disown(ply)`
+---
 
-## `player.vehicle_emp`
+## player_t:get_clan_name
+`Retrieves the name of the player's clan.`
+- Return:
 
-`EMP player's current vehicle.`
+ | Type | Description |
+ | --- | --- |
+ | string | The name of the clan. |
 
-### Parameters:
+- Methods:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+`player_t:get_clan_name()`
 
-### Methods
+---
 
-* `player.vehicle_emp(ply)`
+## player_t:get_clan_tag
+`Retrieves the tag of the player's clan.`
+- Return:
 
-## `player.clear_wanted_level`
+ | Type | Description |
+ | --- | --- |
+ | string | The clan tag. |
 
-`Clear player's wanted levle.`
+- Methods:
 
-### Parameters:
+`player_t:get_clan_tag()`
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+---
 
-### Methods
+## player_t:get_clan_motto
+`Retrieves the motto of the player's clan.`
+- Return:
 
-* `player.clear_wanted_level(ply)`
+ | Type | Description |
+ | --- | --- |
+ | string | The clan motto. |
 
-## `player.cops_blind_eye`
+- Methods:
 
-`Let cops ignore a player for a minute.`
+`player_t:get_clan_motto()`
 
-### Parameters:
+---
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+## player_t:get_clan_rank_name
+`Retrieves the rank name of the player within the clan.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | string | The clan rank name. |
 
-* `player.cops_blind_eye(ply)`
+- Methods:
 
-## `player.off_the_radar`
+`player_t:get_clan_rank_name()`
 
-`Hide a player from the radar for a minute.`
+---
 
-### Parameters:
+## player_t:get_clan_rank_order
+`Retrieves the order of the player's rank within the clan.`
+- Return:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+ | Type | Description |
+ | --- | --- |
+ | integer | The rank order. |
 
-### Methods
+- Methods:
 
-* `player.off_the_radar(ply)`
+`player_t:get_clan_rank_order()`
 
-## `player.set_bounty`
+---
 
-`Set bounty on player.`
+## player_t:get_clan_rank_flags
+`Retrieves the flags associated with the player's rank within the clan.`
+- Return:
 
-### Parameters:
+ | Type | Description |
+ | --- | --- |
+ | integer | The rank flags. |
 
-| Name    | Type | Description  |
-| ------- | ---- | ------------ |
-| ply     | int  | Player index |
-| bounty  | int  | Price        |
-| is_anon | bool | Anonymously  |
+- Methods:
 
-### Methods
+`player_t:get_clan_rank_flags()`
 
-* `player.set_bounty(ply, bounty, is_anon)`
+---
 
-## `player.force_cam`
+## player_t:get_max_armor
+`Retrieves the maximum armor capacity of the player.`
+- Return:
 
-`Center player's camera.`
+ | Type | Description |
+ | --- | --- |
+ | integer | The maximum armor value. |
 
-### Parameters:
+- Methods:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+`player_t:get_max_armor()`
 
-### Methods
+---
 
-* `player.force_cam(ply)`
+## player_t:get_relay_ip
+`Retrieves the relay IP address of the player as a table of bytes or nil if unavailable.`
+- Return:
 
-## `player.kick`
+ | Type | Description |
+ | --- | --- |
+ | table|nil | A table containing 4 bytes of the IP address or nil if the IP could not be retrieved. |
 
-`Host/vote kick a player.`
+- Methods:
 
-### Parameters:
+`player_t:get_relay_ip()`
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+---
 
-### Methods
+## player_t:get_relay_port
+`Retrieves the relay port of the player or 0 if unavailable.`
+- Return:
 
-* `player.kick(ply)`
+ | Type | Description |
+ | --- | --- |
+ | integer | The relay port number or 0 if the port could not be retrieved. |
 
-## `player.kick_brute`
+- Methods:
 
-`Kick a player with script events.`
+`player_t:get_relay_port()`
 
-### Parameters:
+---
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+## player_t:get_public_ip
+`Retrieves the public IP address of the player as a table of bytes or nil if unavailable.`
+- Return:
 
-### Methods
+ | Type | Description |
+ | --- | --- |
+ | table|nil | A table containing 4 bytes of the IP address or nil if the IP could not be retrieved. |
 
-* `player.kick_brute(ply)`
+- Methods:
 
-## `player.kick_idm`
+`player_t:get_public_ip()`
 
-`Kick a player with IDM kick.`
+---
 
-### Parameters:
+## player_t:get_public_port
+`Retrieves the public port of the player or 0 if unavailable.`
+- Return:
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+ | Type | Description |
+ | --- | --- |
+ | integer | The public port number or 0 if the port could not be retrieved. |
 
-### Methods
+- Methods:
 
-* `player.kick_idm(ply)`
+`player_t:get_public_port()`
 
-## `player.crash_himiko_active`
+---
 
-`Check if himiko crash is active.`
+## player_t:get_private_ip
+`Retrieves the private IP address of the player as a table of bytes or nil if unavailable.`
+- Return:
 
-### Parameters:
+ | Type | Description |
+ | --- | --- |
+ | table|nil | A table containing 4 bytes of the IP address or nil if the IP could not be retrieved. |
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+- Methods:
 
-### Return value
+`player_t:get_private_ip()`
 
-| Type | Description     |
-| ---- | --------------- |
-| bool | Is crash active |
+---
 
-### Methods
+## player_t:get_private_port
+`Retrieves the private port of the player or 0 if unavailable.`
+- Return:
 
-* `player.crash_himiko_active(ply)`
+ | Type | Description |
+ | --- | --- |
+ | integer | The private port number or 0 if the port could not be retrieved. |
 
-## `player.crash_himiko_start`
+- Methods:
 
-`Start himiko crash on player.`
+`player_t:get_private_port()`
 
-### Parameters:
+---
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+## player_t:get_relay_addr
+`This function can omit the port based on the optional boolean parameter.`
+- Parameters:
 
-### Methods
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | include_port | boolean | Optional, if false, the port is not included in the returned string. |
 
-* `player.crash_himiko_start(ply)`
+- Return:
 
-## `player.crash_himiko_stop`
+ | Type | Description |
+ | --- | --- |
+ | string | The relay IP address and port in the format "IP:Port" or just "IP". |
 
-`Stop himiko crash on player.`
+- Methods:
 
-### Parameters:
+`player_t:get_relay_addr(include_port)`
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Player index |
+---
 
-### Methods
+## player_t:get_public_addr
+`This function can omit the port based on the optional boolean parameter.`
+- Parameters:
 
-* `player.crash_himiko_stop(ply)`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | include_port | boolean | Optional, if false, the port is not included in the returned string. |
 
-## `player.outfit_save`
+- Return:
 
-`Save player's outfit.`
+ | Type | Description |
+ | --- | --- |
+ | string | The public IP address and port in the format "IP:Port" or just "IP". |
 
-### Parameters:
+- Methods:
 
-| Name | Type   | Description  |
-| ---- | ------ | ------------ |
-| ply  | int    | Player index |
-| name | string | Outfit name  |
+`player_t:get_public_addr(include_port)`
 
-### Methods
+---
 
-* `player.outfit_save(ply, name)`
+## player_t:get_private_addr
+`This function can omit the port based on the optional boolean parameter.`
+- Parameters:
 
-## `player.outfit_load`
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | include_port | boolean | Optional, if false, the port is not included in the returned string. |
 
-`Load saved outfit.`
+- Return:
 
-### Parameters:
+ | Type | Description |
+ | --- | --- |
+ | string | The private IP address and port in the format "IP:Port" or just "IP". |
 
-| Name | Type   | Description |
-| ---- | ------ | ----------- |
-| name | string | Outfit name |
+- Methods:
 
-### Methods
+`player_t:get_private_addr(include_port)`
 
-* `player.outfit_load(name)`
+---
 
-## `player.get_ceo_info`
+## player_t:outfit_copy
+`The destination player must be the local player.`
+- Parameters:
 
-### Parameters
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | dest | player_t | The destination player who will receive the outfit. Must be the local player. |
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Target index |
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns false if the destination player is not local or if the destination player is the same as the source. |
 
-| Type  | Description    |
-| ----- | -------------- |
-| table | CEO info table |
+- Methods:
 
-### Methods
+`player_t:outfit_copy(dest)`
 
-* `player.get_ceo_info(ply)`
+---
 
-## `player.is_visible`
+## player_t:outfit_save
+`Saves the current player's outfit to a file on disk in the outfits folder as a JSON file.`
+- Parameters:
 
-### Parameters
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | filename | string | The name of the file to save the outfit to. |
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Target index |
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns false if unable to gather the outfit information for saving. |
 
-| Type | Description       |
-| ---- | ----------------- |
-| bool | Is player visible |
+- Methods:
 
-### Methods
+`player_t:outfit_save(filename)`
 
-* `player.is_visible(ply)`
+---
 
-## `player.is_shooting`
+## player_t:outfit_load
+`Loads an outfit for the player from a JSON file on disk.`
+- Parameters:
 
-### Parameters
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | filepath | string | The path to the JSON file containing the outfit information. |
 
-| Name | Type | Description  |
-| ---- | ---- | ------------ |
-| ply  | int  | Target index |
+- Return:
 
-### Return value
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns false if the player is not local or the file does not exist. |
 
-| Type | Description        |
-| ---- | ------------------ |
-| bool | Is player shooting |
+- Methods:
 
-### Methods
+`player_t:outfit_load(filepath)`
 
-* `player.is_shooting(ply)`
+---
+
+## player_t:get_cxn_id
+`Retrieves the connection ID of the player's remote machine.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | integer | The connection ID associated with the player. |
+
+- Methods:
+
+`player_t:get_cxn_id()`
+
+---
+
+## player_t:get_endpoint_id
+`Retrieves the endpoint ID of the player's remote machine.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | integer | The endpoint ID associated with the player. |
+
+- Methods:
+
+`player_t:get_endpoint_id()`
+
+---
+
+## player_t:get_active_id
+`Retrieves the index of this network player in the player manager's active list.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | integer | The active index of the player. |
+
+- Methods:
+
+`player_t:get_active_id()`
+
+---
+
+## player_t:get_peer_player_index
+`Retrieves the index of this player on the controlling machine.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | integer | The index of the player on the remote machine. |
+
+- Methods:
+
+`player_t:get_peer_player_index()`
+
+---
+
+## player_t:get_time_added
+`Retrieves the time the player was added to the game, based on network synced time.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | integer | The network synced time when the player was added. |
+
+- Methods:
+
+`player_t:get_time_added()`
+
+---
+
+## player_t:get_team
+`Retrieves the team ID associated with the player.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | integer | The player's team ID. |
+
+- Methods:
+
+`player_t:get_team()`
+
+---
+
+## player_t:get_voice_channel
+`Retrieves the voice channel ID assigned to the player. Returns -1 if no channel is assigned.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | integer | The voice channel ID or -1 if no channel is assigned. |
+
+- Methods:
+
+`player_t:get_voice_channel()`
+
+---
+
+## player_t:get_sizeof_net_array
+`Retrieves the total size of all network array handler data managed by this player.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | integer | The total size of network array data. |
+
+- Methods:
+
+`player_t:get_sizeof_net_array()`
+
+---
+
+## player_t:is_leaving
+`Checks if the player is leaving the session.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is leaving the session, false otherwise. |
+
+- Methods:
+
+`player_t:is_leaving()`
+
+---
+
+## player_t:is_player_otr
+`Checks if the player is currently Off The Radar (OTR).`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is OTR, otherwise returns false. |
+
+- Methods:
+
+`player_t:is_player_otr()`
+
+---
+
+## player_t:has_bounty_mark
+`Checks if the player has a bounty mark.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player has a bounty mark, otherwise returns false. |
+
+- Methods:
+
+`player_t:has_bounty_mark()`
+
+---
+
+## player_t:get_bounty_value
+`Retrieves the bounty value on the player.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | integer | Returns the bounty value on the player. |
+
+- Methods:
+
+`player_t:get_bounty_value()`
+
+---
+
+## player_t:get_respawn_state
+`Retrieves the respawn state of the player.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | integer | Returns the current respawn state of the player. |
+
+- Methods:
+
+`player_t:get_respawn_state()`
+
+---
+
+## player_t:is_player_connected
+`Checks if the player is currently connected to the session.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is connected, otherwise returns false. |
+
+- Methods:
+
+`player_t:is_player_connected()`
+
+---
+
+## player_t:is_player_in_my_interior
+`Checks if the player is in the same interior as the calling player.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is in the same interior, otherwise returns false. |
+
+- Methods:
+
+`player_t:is_player_in_my_interior()`
+
+---
+
+## player_t:is_player_typing
+`Checks if the player is currently typing a chat message.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is typing a chat message, otherwise returns false. |
+
+- Methods:
+
+`player_t:is_player_typing()`
+
+---
+
+## player_t:is_player_in_pause
+`Checks if the player is currently in a pause state.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is in pause state, otherwise returns false. |
+
+- Methods:
+
+`player_t:is_player_in_pause()`
+
+---
+
+## player_t:is_player_in_passive
+`Checks if the player is currently in a passive state.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is in passive state, otherwise returns false. |
+
+- Methods:
+
+`player_t:is_player_in_passive()`
+
+---
+
+## player_t:is_player_in_cutscene
+`Checks if the player is currently participating in a cutscene.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is in a cutscene, otherwise returns false. |
+
+- Methods:
+
+`player_t:is_player_in_cutscene()`
+
+---
+
+## player_t:is_player_in_interior_transfering
+`Checks if the player is currently transferring between interiors.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is in the process of interior transferring, otherwise returns false. |
+
+- Methods:
+
+`player_t:is_player_in_interior_transfering()`
+
+---
+
+## player_t:has_vpn
+`Checks if the player is currently using a VPN.`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | boolean | Returns true if the player is using a VPN, otherwise returns false. |
+
+- Methods:
+
+`player_t:has_vpn()`
+
+---
+
+## players.get_from_entity
+`the player in the player's world, specifically the CPed class.`
+- Parameters:
+
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | number|fwEntity | Handle | or entity object. |
+
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | player_t|nil | Player menu object, or nil if no player could be found. |
+
+- Methods:
+
+`players.get_from_entity(handle_or_ptr)`
+
+---
+
+## players.get
+`unknown`
+- Parameters:
+
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | number|string | Player | index or name. |
+
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | player_t|nil | Player menu object, or nil if no player could be found. |
+
+- Methods:
+
+`players.get(index_or_name)`
+
+---
+
+## players.get_random
+`Gets a random player in the session.`
+- Parameters:
+
+ | Name | Type | Description |
+ | --- | --- | --- |
+ | ignore_me? | boolean | Ignore the local player. |
+ | ignore_friends? | boolean | Ignore friends. |
+
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | player_t|nil | Random player in the session meeting the criteria, or nil if no player could be found. |
+
+- Methods:
+
+`players.get_random(ignore_me, ignore_friends)`
+
+---
+
+## players.get_all
+`@return table[player_t] - A table of player objects.`
+
+- Methods:
+
+`players.get_all(sort, reverse_order)`
+
+---
+
+## players.me
+`unknown`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | player_t|nil | Player menu object for local player or nil or failed to extract. |
+
+- Methods:
+
+`players.me()`
+
+---
+
+## players.id
+`unknown`
+- Return:
+
+ | Type | Description |
+ | --- | --- |
+ | number | Local player index. |
+
+- Methods:
+
+`players.id()`
+
+---
+
+## players.get_script_host
+`@return player_t | nil: The player object that is the host for the script 'freemode', or 'nil' if no host is found.`
+
+- Methods:
+
+`players.get_script_host(...)`
+
+---
+
+## players.get_host
+`Retrieves the session host player object.`
+
+- Methods:
+
+`players.get_host()`
+
+---
+
+## players.get_next_host
+`Retrieves the next session host player object.`
+
+- Methods:
+
+`players.get_next_host()`
+
+---
+
+## players.get_hosts_queue
+`@return table[player_t] A table of player_t objects representing players in the hosting queue.`
+
+- Methods:
+
+`players.get_hosts_queue()`
+
+---
+
+## player
+`@return player_t|nil Player menu object, or nil if no player could be found.`
+
+- Methods:
+
+`player(index_or_name)`
+
+---
+

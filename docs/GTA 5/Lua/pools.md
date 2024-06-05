@@ -1,82 +1,59 @@
 ---
-slug: /gta/lua/pools
-title: pools
+slug: /gta/lua/Pools
+title: Pools
 ---
 
-# pools
+## pools.get_all_vehicles
+`@return table A table of vehicle handles.`
 
-```ebnf
-Workspace to work with entity pools
-```
+- Methods:
 
-## Functions
+`pools.get_all_vehicles()`
 
-## `pools.get_all_vehicles`
+---
 
-`Get a list of all vehicles.`
+## pools.get_all_peds
+`@return table A table of pedestrian handles.`
 
-### Return value:
+- Methods:
 
-| Name | Type  | Description           |
-| ---- | ----- | --------------------- |
-| list | table | List of all vehicles. |
+`pools.get_all_peds()`
 
-### Methods
+---
 
-* `pools.get_all_vehicles()`
+## pools.get_all_objects
+`@return table A table of object handles.`
 
-## `pools.get_all_peds`
+- Methods:
 
-`Get a list of all peds.`
+`pools.get_all_objects()`
 
-### Return value:
+---
 
-| Name | Type  | Description       |
-| ---- | ----- | ----------------- |
-| list | table | List of all peds. |
+## pools.get_all_ents
+`@return table A table of all entity handles.`
 
-### Methods
+- Methods:
 
-* `pools.get_all_peds()`
+`pools.get_all_ents()`
 
-## `pools.get_all_objects`
+---
 
-`Get a list of all objects.`
+## pools.get_all_pickups
+`@return table A table of pickup handles.`
 
-### Return value:
+- Methods:
 
-| Name | Type  | Description          |
-| ---- | ----- | -------------------- |
-| list | table | List of all objects. |
+`pools.get_all_pickups()`
 
-### Methods
+---
 
-* `pools.get_all_objects()`
+## pools.get_all_blips
+`@return table A table of blip handles.`
 
-## `pools.get_all_ents`
+- Methods:
 
-`Get a list of entities.`
+`pools.get_all_blips()`
 
-### Return value:
+---
 
-| Name | Type  | Description                                                                                  |
-| ---- | ----- | -------------------------------------------------------------------------------------------- |
-| list | table | List of all entities (a separate list of entities that do not belong to any entity subtype). |
-
-### Methods
-
-* `pools.get_all_ents()`
-
-## `pools.get_all_pickups`
-
-`Get a list of all items that can be picked up.`
-
-### Return value:
-
-| Name | Type  | Description                              |
-| ---- | ----- | ---------------------------------------- |
-| list | table | List of all items that can be picked up. |
-
-### Methods
-
-* `pools.get_all_pickups()`

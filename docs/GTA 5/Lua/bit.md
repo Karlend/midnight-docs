@@ -8,7 +8,7 @@ title: bit
 ```ebnf
 bla bla bla
 ```
-## `bit.set`
+## bit.set
 `Sets a bit in an integer.`
 - Parameters:
 
@@ -27,7 +27,7 @@ bla bla bla
 
 `bit.set(var, bit)`
 
-## `bit.is_set`
+## bit.is_set
 `Checks if a bit is set in an integer.`
 - Parameters:
 
@@ -46,7 +46,7 @@ bla bla bla
 
 `bit.is_set(var, bit)`
 
-## `bit.reset`
+## bit.reset
 `Resets a bit in an integer.`
 - Parameters:
 
@@ -65,7 +65,7 @@ bla bla bla
 
 `bit.reset(var, bit)`
 
-## `bit.toggle`
+## bit.toggle
 `Toggles a bit in an integer.`
 - Parameters:
 
@@ -84,7 +84,7 @@ bla bla bla
 
 `bit.toggle(var, bit)`
 
-## `bit.clear`
+## bit.clear
 `Clears all bits in an integer.`
 - Parameters:
 
@@ -102,7 +102,7 @@ bla bla bla
 
 `bit.clear(var)`
 
-## `bit.fill`
+## bit.fill
 `Sets all bits in an integer.`
 - Parameters:
 
@@ -120,7 +120,7 @@ bla bla bla
 
 `bit.fill(var)`
 
-## `bit.count`
+## bit.count
 `Counts set bits in an integer.`
 - Parameters:
 
@@ -138,7 +138,7 @@ bla bla bla
 
 `bit.count(var)`
 
-## `bit.invert`
+## bit.invert
 `Inverts all bits in an integer.`
 - Parameters:
 
@@ -156,7 +156,7 @@ bla bla bla
 
 `bit.invert(var)`
 
-## `bit.find_first_set`
+## bit.find_first_set
 `Finds the first set bit in an integer.`
 - Parameters:
 
@@ -174,7 +174,7 @@ bla bla bla
 
 `bit.find_first_set(var)`
 
-## `bit.find_first_reset`
+## bit.find_first_reset
 `Finds the first reset bit in an integer.`
 - Parameters:
 
@@ -192,7 +192,7 @@ bla bla bla
 
 `bit.find_first_reset(var)`
 
-## `bit.rotate_left`
+## bit.rotate_left
 `Rotates the bits of an integer to the left.`
 - Parameters:
 
@@ -211,7 +211,7 @@ bla bla bla
 
 `bit.rotate_left(var, n)`
 
-## `bit.rotate_right`
+## bit.rotate_right
 `Rotates the bits of an integer to the right.`
 - Parameters:
 
@@ -230,7 +230,7 @@ bla bla bla
 
 `bit.rotate_right(var, n)`
 
-## `bit.swap`
+## bit.swap
 `Swaps two bits in an integer.`
 - Parameters:
 
@@ -250,7 +250,7 @@ bla bla bla
 
 `bit.swap(var, pos1, pos2)`
 
-## `bit.reverse`
+## bit.reverse
 `Reverses all bits in an integer.`
 - Parameters:
 
@@ -268,7 +268,7 @@ bla bla bla
 
 `bit.reverse(var)`
 
-## `bit.parity`
+## bit.parity
 `Calculates the parity of an integer.`
 - Parameters:
 

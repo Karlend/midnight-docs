@@ -59,8 +59,7 @@ title: Draw
  | boolean | Returns True if drawing is possible. |
 
 - Methods:
-
-`draw.is_ready()`
+  - `draw.is_ready()`
 
 ---
 
@@ -74,8 +73,7 @@ title: Draw
  | number | The width of the window in pixels, or 0 if the resolution cannot be retrieved. |
 
 - Methods:
-
-`draw.get_window_width()`
+  - `draw.get_window_width()`
 
 ---
 
@@ -89,8 +87,7 @@ title: Draw
  | number | The height of the window in pixels, or 0 if the resolution cannot be retrieved. |
 
 - Methods:
-
-`draw.get_window_height()`
+  - `draw.get_window_height()`
 
 ---
 
@@ -104,8 +101,7 @@ title: Draw
  | number | The width of the screen in pixels, or 0 if the resolution cannot be retrieved. |
 
 - Methods:
-
-`draw.get_screen_width()`
+  - `draw.get_screen_width()`
 
 ---
 
@@ -119,8 +115,7 @@ title: Draw
  | number | The height of the screen in pixels, or 0 if the resolution cannot be retrieved. |
 
 - Methods:
-
-`draw.get_screen_height()`
+  - `draw.get_screen_height()`
 
 ---
 
@@ -140,12 +135,11 @@ title: Draw
  | number | A texture handle if successful, or 0 if the texture could not be created.. |
 
 - Methods:
-
-`draw.create_texture_from_memory(buffer, len)`
+  - `draw.create_texture_from_memory(buffer, len)`
 
 ---
 
-### draw.create_texture_from_file
+## draw.create_texture_from_file
 `Creates a texture from a file`
 
 - Parameters:
@@ -161,8 +155,7 @@ title: Draw
  | number | A texture handle if successful, or 0 if the texture could not be created.  |
 
 - Methods:
-
-`draw.create_texture_from_file(file_name)`
+  - `draw.create_texture_from_file(file_name)`
 
 ---
 
@@ -182,17 +175,12 @@ title: Draw
  | number | A texture handle if successful, or 0 if the texture could not be created.  |
 
 - Methods:
-
-`draw.create_texture_from_base64(base64)`
+  - `draw.create_texture_from_base64(base64)`
 
 ---
 
 ## draw.create_debug_texture
 `Creates a debug texture with a checkerboard pattern for quick testing and debugging purposes`
-
-- Overloads:
-  - `draw.create_debug_texture()`
-  - `draw.create_debug_texture(width, height)`
 
 - Parameters:
 
@@ -208,8 +196,8 @@ title: Draw
  | number | A texture handle if successful, or 0 if the texture could not be created.  |
 
 - Methods:
-
-`draw.create_debug_texture(width, height)`
+  - `draw.create_debug_texture(width, height)`
+  - `draw.create_debug_texture()`
 
 ---
 
@@ -229,8 +217,7 @@ title: Draw
  | boolean | True if the texture was successfully released, false otherwise.  |
 
 - Methods:
-
-`draw.release_texture(handle)`
+  - `draw.release_texture(handle)`
 
 ---
 
@@ -254,8 +241,7 @@ title: Draw
  | boolean | True if the texture was successfully drawn, false otherwise.   |
 
 - Methods:
-
-`draw.texture(handle, x, y, width, height)`
+  - `draw.texture(handle, x, y, width, height)`
 
 ---
 
@@ -273,18 +259,12 @@ title: Draw
  | a      | number           | The alpha component of the color (0-1, optional).        | 1       |
 
 - Methods:
-
-`draw.set_hsv(color, h, s, v, a)`
+  - `draw.set_hsv(color, h, s, v, a)`
 
 ---
 
 ## draw.set_color
 `Sets the current drawing color. This function can be called with different sets of parameters`
-
-- Overloads:
-  1. `draw.set_color(color, value)`
-  2. `draw.set_color(color, r, g, b, a)`
-  3. `draw.set_color(color, r, g, b)`
 
 - Parameters:
 
@@ -298,12 +278,9 @@ title: Draw
  | a      | number           | The alpha component of the color (0-1, optional for full opacity).     |
 
 - Methods:
-
-`draw.set_color(color, value)`
-
-`draw.set_color(color, r, g, b, a)`
-
-`draw.set_color(color, r, g, b)`
+  - `draw.set_color(color, value)`
+  - `draw.set_color(color, r, g, b, a)`
+  - `draw.set_color(color, r, g, b)`
 
 ---
 
@@ -330,8 +307,7 @@ print("Current common color RGBA: ", r, g, b, a)
 ```
 
 - Methods:
-
-`draw.get_colors(color)`
+  - `draw.get_colors(color)`
 
 ---
 
@@ -345,8 +321,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | value  | number | The thickness to set. |
 
 - Methods:
-
-`draw.set_thickness(value)`
+  - `draw.set_thickness(value)`
 
 ---
 
@@ -360,8 +335,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | number | The current line thickness.    |
 
 - Methods:
-
-`draw.get_thickness()`
+  - `draw.get_thickness()`
 
 ---
 
@@ -375,8 +349,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | value  | number | The rounding radius to set.  |
 
 - Methods:
-
-`draw.set_rounding(value)`
+  - `draw.set_rounding(value)`
 
 ---
 
@@ -390,8 +363,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | number | The current rounding radius.    |
 
 - Methods:
-
-`draw.get_rounding()`
+  - `draw.get_rounding()`
 
 ---
 
@@ -405,12 +377,11 @@ print("Current common color RGBA: ", r, g, b, a)
  | value  | number | The radius to set for circles and arcs.     |
 
 - Methods:
-
-`draw.set_radius(value)`
+  - `draw.set_radius(value)`
 
 ---
 
-### draw.get_radius
+## draw.get_radius
 `Retrieves the current radius used in drawing operations for circles and arcs`
 
 - Return:
@@ -420,8 +391,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | number | The current radius.         |
 
 - Methods:
-
-`draw.get_radius()`
+  - `draw.get_radius()`
 
 ---
 
@@ -435,8 +405,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | value  | number | The number of segments to set.          |
 
 - Methods:
-
-`draw.set_num_segments(value)`
+  - `draw.set_num_segments(value)`
 
 ---
 
@@ -450,8 +419,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | number | The current number of segments.        |
 
 - Methods:
-
-`draw.get_num_segments()`
+  - `draw.get_num_segments()`
 
 ---
 
@@ -465,8 +433,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | value  | number | The flags to set, as defined by ImDrawCornerFlags. |
 
 - Methods:
-
-`draw.set_flags(value)`
+  - `draw.set_flags(value)`
 
 ---
 
@@ -480,8 +447,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | number | The current flags.        |
 
 - Methods:
-
-`draw.get_flags()`
+  - `draw.get_flags()`
 
 ---
 
@@ -495,8 +461,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | value  | number | The minimum UV to set.       |
 
 - Methods:
-
-`draw.set_min_uv(value)`
+  - `draw.set_min_uv(value)`
 
 ---
 
@@ -510,8 +475,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | number | The current minimum UV.         |
 
 - Methods:
-
-`draw.get_min_uv()`
+  - `draw.get_min_uv()`
 
 ---
 
@@ -525,8 +489,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | value  | number | The maximum UV to set.       |
 
 - Methods:
-
-`draw.set_max_uv(value)`
+  - `draw.set_max_uv(value)`
 
 ---
 
@@ -540,8 +503,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | number | The current maximum UV.         |
 
 - Methods:
-
-`draw.get_max_uv()`
+  - `draw.get_max_uv()`
 
 ---
 
@@ -567,10 +529,8 @@ print("Current common color RGBA: ", r, g, b, a)
  | boolean  | True if the font is successfully queued for loading, false if there is an error. |
 
 - Methods:
-
-`draw.create_font(font_name, font_size, on_requested)`
-
-`draw.create_font(font_name, on_requested)`
+  - `draw.create_font(font_name, font_size, on_requested)`
+  - `draw.create_font(font_name, on_requested)`
 
 ---
 
@@ -584,8 +544,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | font   | ImFont*   | The font to set for drawing.     |
 
 - Methods:
-
-`draw.set_font(font)`
+  - `draw.set_font(font)`
 
 ---
 
@@ -606,8 +565,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | number   | The height of the text in pixels.     |
 
 - Methods:
-
-`draw.get_text_size(text)`
+  - `draw.get_text_size(text)`
 
 ---
 
@@ -627,8 +585,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | number   | The width of the text in pixels.      |
 
 - Methods:
-
-`draw.get_text_size_x(text)`
+  - `draw.get_text_size_x(text)`
 
 ---
 
@@ -648,8 +605,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | number   | The height of the text in pixels.     |
 
 - Methods:
-
-`draw.get_text_size_y(text)`
+  - `draw.get_text_size_y(text)`
 
 ---
 
@@ -666,8 +622,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | y2     | number | The y-coordinate of the second point.|
 
 - Methods:
-
-`draw.line(x1, y1, x2, y2)`
+  - `draw.line(x1, y1, x2, y2)`
 
 ---
 
@@ -683,8 +638,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | text   | string | The text to draw.                 |
 
 - Methods:
-
-`draw.text(x, y, text)`
+  - `draw.text(x, y, text)`
 
 ---
 
@@ -701,8 +655,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | y2     | number | The y-coordinate of the opposite corner.   |
 
 - Methods:
-
-`draw.rect(x1, y1, x2, y2)`
+  - `draw.rect(x1, y1, x2, y2)`
 
 ---
 
@@ -719,8 +672,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | y2     | number | The y-coordinate of the opposite corner.   |
 
 - Methods:
-
-`draw.rect_filled(x1, y1, x2, y2)`
+  - `draw.rect_filled(x1, y1, x2, y2)`
 
 ---
 
@@ -737,8 +689,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | y2     | number | The y-coordinate of the opposite corner.   |
 
 - Methods:
-
-`draw.rect_filled_multi_color(x1, y1, x2, y2)`
+  - `draw.rect_filled_multi_color(x1, y1, x2, y2)`
 
 ---
 
@@ -759,8 +710,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | y4     | number | The y-coordinate of the fourth corner.     |
 
 - Methods:
-
-`draw.quad(x1, y1, x2, y2, x3, y3, x4, y4)`
+  - `draw.quad(x1, y1, x2, y2, x3, y3, x4, y4)`
 
 ---
 
@@ -781,8 +731,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | y4     | number | The y-coordinate of the fourth corner.     |
 
 - Methods:
-
-`draw.quad_filled(x1, y1, x2, y2, x3, y3, x4, y4)`
+  - `draw.quad_filled(x1, y1, x2, y2, x3, y3, x4, y4)`
 
 ---
 
@@ -801,8 +750,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | y3     | number | The y-coordinate of the third corner.      |
 
 - Methods:
-
-`draw.triangle(x1, y1, x2, y2, x3, y3)`
+  - `draw.triangle(x1, y1, x2, y2, x3, y3)`
 
 ---
 
@@ -821,8 +769,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | y3     | number | The y-coordinate of the third corner.      |
 
 - Methods:
-
-`draw.triangle_filled(x1, y1, x2, y2, x3, y3)`
+  - `draw.triangle_filled(x1, y1, x2, y2, x3, y3)`
 
 ---
 
@@ -837,8 +784,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | y      | number | The y-coordinate of the circle's center.|
 
 - Methods:
-
-`draw.circle(x, y)`
+  - `draw.circle(x, y)`
 
 ---
 
@@ -853,8 +799,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | y      | number | The y-coordinate of the circle's center.|
 
 - Methods:
-
-`draw.circle_filled(x, y)`
+  - `draw.circle_filled(x, y)`
 
 ---
 
@@ -874,8 +819,7 @@ print("Current common color RGBA: ", r, g, b, a)
  | DrawList | The previous DrawList that was set.         |
 
 - Methods:
-
-`draw.set_draw_list(list)`
+  - `draw.set_draw_list(list)`
 
 ---
 
@@ -889,7 +833,6 @@ print("Current common color RGBA: ", r, g, b, a)
  | DrawList | The current draw list.         |
 
 - Methods:
-
-`draw.get_draw_list()`
+  - `draw.get_draw_list()`
 
 ---

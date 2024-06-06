@@ -3,327 +3,419 @@ slug: /gta/lua/Events
 title: Events
 ---
 
+## enum DrawContextColor
+```lua
+MouseButton = {
+    --- Left mouse button.
+    LBUTTON = 0,
+    --- Right mouse button.
+    RBUTTON = 1,
+    --- Middle mouse button.
+    MBUTTON = 2,
+}
+```
+
+## enum MouseClickRegion
+```lua
+MouseClickRegion = {
+    --- Mouse click within the game area.
+    GAME = 0,
+    --- Mouse click within the menu area.
+    MENU = 1,
+}
+```
+
+---
+
 ## events.on_player_join
-`@param callback fun(ply: player_t):void`
+`Registers a callback that is called when a player joins.`
+
+- Parameters:
+
+ | Name     | Type                    | Description                                              |
+ | -------- | ----------------------- | -------------------------------------------------------- |
+ | callback | fun(ply: player_t):void | The callback function to be invoked when a player joins. |
+
+- Return: None
 
 - Methods:
-
-`events.on_player_join(callback)`
+  - `events.on_player_join(callback)`
 
 ---
 
 ## events.on_player_left
-`@param callback fun(ply: player_t):void`
+`Registers a callback that is called when a player leaves.`
+
+- Parameters:
+
+ | Name     | Type                    | Description                                               |
+ | -------- | ----------------------- | --------------------------------------------------------- |
+ | callback | fun(ply: player_t):void | The callback function to be invoked when a player leaves. |
+
+- Return: None
 
 - Methods:
-
-`events.on_player_left(callback)`
+  - `events.on_player_left(callback)`
 
 ---
 
 ## events.on_player_active
-`@param callback fun(ply: player_t):void`
+`Registers a callback that is called when a player becomes active.`
+
+- Parameters:
+
+ | Name     | Type                    | Description                                                       |
+ | -------- | ----------------------- | ----------------------------------------------------------------- |
+ | callback | fun(ply: player_t):void | The callback function to be invoked when a player becomes active. |
+
+- Return: None
 
 - Methods:
-
-`events.on_player_active(callback)`
+  - `events.on_player_active(callback)`
 
 ---
 
 ## events.on_player_adding
-`@param callback fun(name: string, rid: number):boolean|nil`
+`Registers a callback that is called when adding a player.`
+
+- Parameters:
+
+ | Name     | Type                                   | Description |
+ | -------- | -------------------------------------- | ----------- |
+ | callback | fun(name: string, rid: number):boolean | nil         | The callback function to be invoked when adding a player. |
+
+- Return: None
 
 - Methods:
-
-`events.on_player_adding(callback)`
+  - `events.on_player_adding(callback)`
 
 ---
 
 ## events.on_session_join
-`@param callback fun():void`
+`Registers a callback that is called when a session is joined.`
+
+- Parameters:
+
+ | Name     | Type       | Description                                                   |
+ | -------- | ---------- | ------------------------------------------------------------- |
+ | callback | fun():void | The callback function to be invoked when a session is joined. |
+
+- Return: None
 
 - Methods:
-
-`events.on_session_join(callback)`
+  - `events.on_session_join(callback)`
 
 ---
 
 ## events.on_session_left
-`@param callback fun():void`
+`Registers a callback that is called when a session is left.`
+
+- Parameters:
+
+ | Name     | Type       | Description                                                 |
+ | -------- | ---------- | ----------------------------------------------------------- |
+ | callback | fun():void | The callback function to be invoked when a session is left. |
+
+- Return: None
 
 - Methods:
-
-`events.on_session_left(callback)`
+  - `events.on_session_left(callback)`
 
 ---
 
 ## events.on_game_state
-`@param callback fun(prev_state: number, cur_state: number):void`
+`Registers a callback that is called when the game state changes.`
+
+- Parameters:
+
+ | Name     | Type                                            | Description                                                      |
+ | -------- | ----------------------------------------------- | ---------------------------------------------------------------- |
+ | callback | fun(prev_state: number, cur_state: number):void | The callback function to be invoked when the game state changes. |
+
+- Return: None
 
 - Methods:
-
-`events.on_game_state(callback)`
+  - `events.on_game_state(callback)`
 
 ---
 
 ## events.on_spawn
-`@param callback fun(is_online: boolean):void`
+`Registers a callback that is called when the local player is spawned.`
+
+- Parameters:
+
+ | Name     | Type                         | Description                                                           |
+ | -------- | ---------------------------- | --------------------------------------------------------------------- |
+ | callback | fun(is_online: boolean):void | The callback function to be invoked when the local player is spawned. |
+
+- Return: None
 
 - Methods:
-
-`events.on_spawn(callback)`
+  - `events.on_spawn(callback)`
 
 ---
 
 ## events.on_death
-`@param callback fun():void`
+`Registers a callback that is called when the local player dies.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun():void       | The callback function to be invoked when the local player dies. |
+
+- Return: None
 
 - Methods:
-
-`events.on_death(callback)`
+  - `events.on_death(callback)`
 
 ---
 
 ## events.on_script_started
-`@param callback fun(script_name: string):void`
+`Registers a callback that is called when a script starts.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(script_name: string):void | The callback function to be invoked when a script starts. |
+
+- Return: None
 
 - Methods:
-
-`events.on_script_started(callback)`
+  - `events.on_script_started(callback)`
 
 ---
 
 ## events.on_script_stopped
-`@param callback fun(script_name: string, reason: number):void`
+`Registers a callback that is called when a script stops.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(script_name: string, reason: number):void | The callback function to be invoked when a script stops. |
+
+- Return: None
 
 - Methods:
-
-`events.on_script_stopped(callback)`
+  - `events.on_script_stopped(callback)`
 
 ---
 
 ## events.on_key_state
-`@param callback fun(key: string, is_down: boolean):void`
+`Registers a callback that is called on key state change.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(key: string, is_down: boolean):void | The callback function to be invoked on key state change. |
+
+- Return: None
 
 - Methods:
-
-`events.on_key_state(callback)`
+  - `events.on_key_state(callback)`
 
 ---
 
 ## events.on_transition_end
-`@param callback fun(is_online: boolean):void`
+`Registers a callback that is called at the end of the transition to online or single-player mode.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(is_online: boolean):void | The callback function to be invoked at the end of the transition. |
+
+- Return: None
 
 - Methods:
-
-`events.on_transition_end(callback)`
+  - `events.on_transition_end(callback)`
 
 ---
 
 ## events.on_first_singleplayer_join
-`@param callback fun():void`
+`Registers a callback that is called when the player fully enters single-player for the first time.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun():void       | The callback function to be invoked when the player fully enters single-player. |
+
+- Return: None
 
 - Methods:
-
-`events.on_first_singleplayer_join(callback)`
+  - `events.on_first_singleplayer_join(callback)`
 
 ---
 
 ## events.on_window_proc
-`@param callback fun(hwnd: number, uMsg: number, wParam: number, lParam: number):number|nil`
+`Registers a callback that is called for the game window's WindowProc.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(hwnd: number, uMsg: number, wParam: number, lParam: number):number|nil | The callback function to be invoked for the game window's WindowProc. |
+
+- Return: None
 
 - Methods:
-
-`events.on_window_proc(callback)`
+  - `events.on_window_proc(callback)`
 
 ---
 
 ## events.on_player_shot
-`@param callback fun(ply: player_t, weapon: number):void`
+`Registers a callback that is called when a player shoots a weapon.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(ply: player_t, weapon: number):void | The callback function to be invoked when a player shoots a weapon. |
+
+- Return: None
 
 - Methods:
-
-`events.on_player_shot(callback)`
+  - `events.on_player_shot(callback)`
 
 ---
 
 ## events.on_modder_detected
-`@param callback fun(ply: player_t, flag: number, params: table):void`
+`Registers a callback that is called when a player is detected as a modder.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(ply: player_t, flag: number, params: table):void | The callback function to be invoked when a player is detected as a modder. |
+
+- Return: None
 
 - Methods:
-
-`events.on_modder_detected(callback)`
+  - `events.on_modder_detected(callback)`
 
 ---
 
 ## events.on_script_migrate
-`@param callback fun(is_freemode: boolean, is_you: boolean, script_name: string, ply: player_t):void`
+`Registers a callback that is called when a script migrates to another player.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(is_freemode: boolean, is_you: boolean, script_name: string, ply: player_t):void | The callback function to be invoked when a script migrates to another player. |
+
+- Return: None
 
 - Methods:
-
-`events.on_script_migrate(callback)`
+  - `events.on_script_migrate(callback)`
 
 ---
 
 ## events.on_sync_blocked
-`@param callback fun(ply: player_t, reason: string, ban_time: number):void`
+`Registers a callback that is called when synchronization is blocked for a player.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(ply: player_t, reason: string, ban_time: number):void | The callback function to be invoked when synchronization is blocked for a player. |
+
+- Return: None
 
 - Methods:
-
-`events.on_sync_blocked(callback)`
+  - `events.on_sync_blocked(callback)`
 
 ---
 
 ## events.on_script_event
-`@param callback fun(ply: player_t, hash: number, args: table):void`
+`Registers a callback that is called when a script event is received.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(ply: player_t, hash: number, args: table):void | The callback function to be invoked when a script event is received. |
+
+- Return: None
 
 - Methods:
-
-`events.on_script_event(callback)`
+  - `events.on_script_event(callback)`
 
 ---
 
 ## events.on_session_host_changed
-`@param callback fun(ply: player_t):void`
+`Registers a callback that is called when the session host changes.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(ply: player_t):void | The callback function to be invoked when the session host changes. |
+
+- Return: None
 
 - Methods:
-
-`events.on_session_host_changed(callback)`
+  - `events.on_session_host_changed(callback)`
 
 ---
 
 ## events.on_weapon_received
-`@param callback fun(ped: number, weapon_hash: number, ammo_count: number):void`
+`Registers a callback that is called when a pedestrian receives a weapon.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(ped: number, weapon_hash: number, ammo_count: number):void | The callback function to be invoked when a pedestrian receives a weapon. |
+
+- Return: None
 
 - Methods:
-
-`events.on_weapon_received(callback)`
+  - `events.on_weapon_received(callback)`
 
 ---
 
 ## events.on_chat_msg
-`@param callback fun(ply: player_t, text: string):void`
+`Registers a callback that is called when a chat message is received from a player.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun(ply: player_t, text: string):void | The callback function to be invoked when a chat message is received from a player. |
+
+- Return: None
 
 - Methods:
-
-`events.on_chat_msg(callback)`
+  - `events.on_chat_msg(callback)`
 
 ---
 
 ## events.on_frame
-`@param callback fun():void`
+`Registers a callback that is called during the UI drawing call of the product.`
+
+- Parameters:
+
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun():void       | The callback function to be invoked during the UI drawing call. |
+
+- Return: None
 
 - Methods:
-
-`events.on_frame(callback)`
+  - `events.on_frame(callback)`
 
 ---
 
 ## events.on_script_tick
-`@param callback fun():void`
+`Registers a callback that is called every script tick.`
 
-- Methods:
+- Parameters:
 
-`events.on_script_tick(callback)`
-
----
-
-## events.on_vehicle_leave
-`@param callback fun(vehicle: number, was_driver: boolean):void`
-
-- Methods:
-
-`events.on_vehicle_leave(callback)`
-
----
-
-## events.on_vehicle_enter
-`@param callback fun(vehicle: number, is_driver: boolean):void`
-
-- Methods:
-
-`events.on_vehicle_enter(callback)`
-
----
-
-## events.on_build_ui
-`@param callback fun():void`
-
-- Methods:
-
-`events.on_build_ui(callback)`
-
----
-
-## events.on_net_game_event
-`@param callback fun(ply: player_t, event_info: {id: number, name: string}, buf: CBitBufferRead):void`
-
-- Methods:
-
-`events.on_net_game_event(callback)`
-
----
-
-## events.on_player_rid_join
-`@param callback fun(rid: number):void`
-
-- Methods:
-
-`events.on_player_rid_join(callback)`
-
----
-
-## events.on_stop_spectating
-`@param callback fun(ply: player_t, ply_target: player_t, is_you: boolean):void`
-
-- Methods:
-
-`events.on_stop_spectating(callback)`
-
----
-
-## events.on_spectating
-`@param callback fun(ply: player_t, ply_target: player_t, is_you: boolean):void`
-
-- Methods:
-
-`events.on_spectating(callback)`
-
----
-
-## events.on_init
-`@param callback fun():void`
-
-- Methods:
-
-`events.on_init(callback)`
-
----
-
-## events.on_done
-`@param callback fun():void`
-
-- Methods:
-
-`events.on_done(callback)`
-
----
-
-## events.on_sync_can_apply
-`@param callback fun(ply: player_t, node: SyncDataNode, ent: entity_t):boolean|nil`
-
-- Methods:
-
-`events.on_sync_can_apply(callback)`
-
----
-
-## events.on_mouse_click
-`@param callback fun(button: MouseButton, region: MouseClickRegion, x: number, y: number): void`
-
-- Methods:
-
-`events.on_mouse_click(callback)`
-
----
-
+ | Name     | Type             | Description                        |
+ | -------- | ---------------- | ---------------------------------- |
+ | callback | fun():void       | The callback function to be invoked every script tick

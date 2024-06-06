@@ -5,46 +5,45 @@ title: Draw
 
 ## enum DrawContextColor
 ```lua
-	DrawContextColor = {
-		COMMON = 0,
-		UPPER_LEFT = 1,
-		UPPER_RIGHT = 2,
-		BOTTOM_LEFT = 3,
-		BOTTOM_RIGHT = 4,
-	}
+DrawContextColor = {
+	COMMON = 0,
+	UPPER_LEFT = 1,
+	UPPER_RIGHT = 2,
+	BOTTOM_LEFT = 3,
+	BOTTOM_RIGHT = 4,
+}
 ```
 
 ---
 
 ## enum DrawContextColor
 ```lua
-	DrawList = {
-		--- This layer is intended for elements that need to be rendered above all other content.
-		--- Use this layer for overlays, tooltips, and other UI components that must remain visible on top of main content.
-		FOREGROUND = 0,
-
-		--- This layer is used for background elements, which are drawn first and can be overlaid by other UI components.
-		--- Ideal for backgrounds, images, or any foundational visuals that support the main UI elements but should not obscure them.
-		BACKGROUND = 1
-	}
+DrawList = {
+	--- This layer is intended for elements that need to be rendered above all other content.
+	--- Use this layer for overlays, tooltips, and other UI components that must remain visible on top of main content.
+	FOREGROUND = 0,
+	--- This layer is used for background elements, which are drawn first and can be overlaid by other UI components.
+	--- Ideal for backgrounds, images, or any foundational visuals that support the main UI elements but should not obscure them.
+	BACKGROUND = 1
+}
 ```
 
 ---
 
 ## enum DrawContextColor
 ```lua
-	ImDrawCornerFlags = {
-		NONE = 0,
-		TOP_LEFT = 1, -- 1 << 0, 0x1
-		TOP_RIGHT = 2, -- 1 << 1, 0x2
-		BOT_LEFT = 4, -- 1 << 2, 0x4
-		BOT_RIGHT = 8, -- 1 << 3, 0x8
-		TOP = 3, -- (1 << 0) | (1 << 1), 0x3
-		BOT = 12, -- (1 << 2) | (1 << 3), 0xC
-		LEFT = 5, -- (1 << 0) | (1 << 2), 0x5
-		RIGHT = 10, -- (1 << 1) | (1 << 3), 0xA
-		ALL = 15 -- 0xF
-	}
+ImDrawCornerFlags = {
+	NONE = 0,
+	TOP_LEFT = 1, -- 1 << 0, 0x1
+	TOP_RIGHT = 2, -- 1 << 1, 0x2
+	BOT_LEFT = 4, -- 1 << 2, 0x4
+	BOT_RIGHT = 8, -- 1 << 3, 0x8
+	TOP = 3, -- (1 << 0) | (1 << 1), 0x3
+	BOT = 12, -- (1 << 2) | (1 << 3), 0xC
+	LEFT = 5, -- (1 << 0) | (1 << 2), 0x5
+	RIGHT = 10, -- (1 << 1) | (1 << 3), 0xA
+	ALL = 15 -- 0xF
+}
 ```
 
 ---

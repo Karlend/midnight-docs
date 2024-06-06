@@ -61,7 +61,7 @@ ScriptEventId = {
 ```
 
 ## script.ready
-`Checks if script globals are available. Can be used to check when it is possible to work with functions like `script.get_global`.`
+`Checks if script globals are available. Can be used to check when it is possible to work with functions like script.get_global.`
 - Return:
 
  | Type    | Description                                   |
@@ -260,7 +260,18 @@ ScriptEventId = {
 ---
 
 ## script.get_global
-`@return ScrGlobal A ScrGlobal instance representing the global variable at the given index.`
+`Retrieves a global script variable`
+- Parameters:
+
+ | Name  | Type   | Description                      |
+ | ----- | ------ | -------------------------------- |
+ | index | number | The index of the global variable |
+
+- Return:
+
+ | Type      | Description                                                               |
+ | --------- | ------------------------------------------------------------------------- |
+ | ScrGlobal | A ScrGlobal instance representing the global variable at the given index. |
 
 - Methods:
   - `script.get_global(index)`
@@ -268,7 +279,20 @@ ScriptEventId = {
 ---
 
 ## script.get_local
-`@return ScrLocal A ScrLocal instance representing the local variable at the given index in the specified script context.`
+`Retrieves a local script variable by name or hash and index`
+
+- Parameters:
+
+ | Name         | Type        | Description                                                                   |
+ | ------------ | ----------- | ----------------------------------------------------------------------------- |
+ | hash_or_name | Hash/string | The index of the global variable                                              |
+ | index        | number      | The index of the local variable within the specified script or thread context |
+
+- Return:
+
+ | Type     | Description                                                                                             |
+ | -------- | ------------------------------------------------------------------------------------------------------- |
+ | ScrLocal | A ScrLocal instance representing the local variable at the given index in the specified script context. |
 
 - Methods:
   - `script.get_local(string_or_hash, index)`
@@ -280,15 +304,15 @@ ScriptEventId = {
 
 - Parameters:
 
- | Name   | Type            | Description                            |
- | ------ | --------------- | -------------------------------------- |
- | index | number | The index offset from the current variable position |
- | size | number | The stride size for calculating the exact memory location |
+ | Name  | Type   | Description                                               |
+ | ----- | ------ | --------------------------------------------------------- |
+ | index | number | The index offset from the current variable position       |
+ | size  | number | The stride size for calculating the exact memory location |
 
 - Return:
 
- | Type   | Description                                                                      |
- | ------ | -------------------------------------------------------------------------------- |
+ | Type   | Description                                                                |
+ | ------ | -------------------------------------------------------------------------- |
  | ScrVar | A new ScrVar instance representing the variable at the calculated position |
 
 - Methods:

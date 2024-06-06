@@ -116,251 +116,187 @@ Icons = {
 ```
 
 ### ui.is_opened
-
 `Checks if the UI menu is currently opened.`
 
-#### Parameters
+- Return
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| None |      |             |
-
-#### Return
-
-| Type | Description |
-| ---- | ----------- |
+| Type | Description                                                     |
+| ---- | --------------------------------------------------------------- |
 | bool | Returns true if the UI menu is currently open, false otherwise. |
 
-#### Methods
-
-- `ui.is_opened()`
+- Methods
+ - `ui.is_opened()`
 
 ---
 
 ### ui.popup
-
 `Creates a popup window inside the game.`
 
-#### Parameters
+- Parameters
 
-| Name  | Type      | Description                  |
-| ----- | --------- | ---------------------------- |
-| title | string    | The title of the popup.      |
-| body  | string    | The content of the popup.    |
-| icon  | Icons     | The icon of the popup.       |
-| type  | PopupType | The type of the popup.       |
+| Name  | Type      | Description               |
+| ----- | --------- | ------------------------- |
+| title | string    | The title of the popup.   |
+| body  | string    | The content of the popup. |
+| icon  | Icons     | The icon of the popup.    |
+| type  | PopupType | The type of the popup.    |
 
-#### Return
+- Return
 
-| Type    | Description                             |
-| ------- | --------------------------------------- |
+| Type    | Description                                         |
+| ------- | --------------------------------------------------- |
 | boolean | Returns true if the popup was successfully created. |
 
-#### Methods
-
-- `ui.popup(title, body, icon, type)`
+- Methods
+  - `ui.popup(title, body, icon, type)`
 
 ---
 
 ### ui.get_alpha
-
 `Retrieves the current alpha transparency of the UI.`
 
-#### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| None |      |             |
-
-#### Return
+- Return
 
 | Type   | Description                   |
 | ------ | ----------------------------- |
 | number | The alpha transparency value. |
 
-#### Methods
-
-- `ui.get_alpha()`
+- Methods
+ - `ui.get_alpha()`
 
 ---
 
 ### ui.get_size
-
 `Retrieves the size of the UI layout.`
 
-#### Parameters
+- Return
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| None |      |             |
+| Type   | Description                  |
+| ------ | ---------------------------- |
+| number | The width of the UI layout.  |
+| number | The height of the UI layout. |
 
-#### Return
-
-| Type   | Description                        |
-| ------ | ---------------------------------- |
-| number | The width of the UI layout.        |
-| number | The height of the UI layout.       |
-
-#### Methods
-
-- `ui.get_size()`
+- Methods
+ - `ui.get_size()`
 
 ---
 
 ### ui.get_position
-
 `Retrieves the position of the UI layout.`
 
-#### Parameters
+- Return
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| None |      |             |
-
-#### Return
-
-| Type   | Description                |
-| ------ | -------------------------- |
+| Type   | Description                             |
+| ------ | --------------------------------------- |
 | number | The x (left) position of the UI layout. |
 | number | The y (top) position of the UI layout.  |
 
-#### Methods
-
-- `ui.get_position()`
+- Methods
+ - `ui.get_position()`
 
 ---
 
 ### ui.get_mouse_position
-
 `Retrieves the current mouse position within the UI.`
 
-#### Parameters
+- Return
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| None |      |             |
-
-#### Return
-
-| Type   | Description          |
-| ------ | -------------------- |
+| Type   | Description                    |
+| ------ | ------------------------------ |
 | number | The x coordinate of the mouse. |
 | number | The y coordinate of the mouse. |
 
-#### Methods
-
-- `ui.get_mouse_position()`
+- Methods
+ - `ui.get_mouse_position()`
 
 ---
 
 ### ui.get_scale
-
 `Retrieves the scale factor of the UI based on the DPI setting.`
 
-#### Parameters
+- Return
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| None |      |             |
-
-#### Return
-
-| Type   | Description             |
-| ------ | ----------------------- |
+| Type   | Description                 |
+| ------ | --------------------------- |
 | number | The scale factor of the UI. |
 
-#### Methods
-
-- `ui.get_scale()`
+- Methods
+ - `ui.get_scale()`
 
 ---
 
 ### ui.new_page
-
 `Creates a new page in the UI with a specified icon.`
 
-#### Parameters
+- Parameters
 
-| Name  | Type   | Description                     |
-| ----- | ------ | ------------------------------- |
-| name  | string | The name of the new page.       |
-| icon  | Icons  | The icon to use for the new page. |
+| Name | Type   | Description                       |
+| ---- | ------ | --------------------------------- |
+| name | string | The name of the new page.         |
+| icon | Icons  | The icon to use for the new page. |
 
-#### Return
+- Return
 
-| Type     | Description                                          |
-| -------- | ---------------------------------------------------- |
-| MenuPage | The new page object or nil if the creation fails.    |
+| Type     | Description                                       |
+| -------- | ------------------------------------------------- |
+| MenuPage | The new page object or nil if the creation fails. |
 
-#### Methods
-
-- `ui.new_page(name, icon)`
+- Methods
+ - `ui.new_page(name, icon)`
 
 ---
 
 ### ui.new_page
-
 `Creates a new page in the UI without specifying an icon.`
 
-#### Parameters
+- Parameters
 
 | Name | Type   | Description               |
 | ---- | ------ | ------------------------- |
 | name | string | The name of the new page. |
 
-#### Return
+- Return
 
-| Type     | Description                                          |
-| -------- | ---------------------------------------------------- |
-| MenuPage | The new page object or nil if the creation fails.    |
+| Type     | Description                                       |
+| -------- | ------------------------------------------------- |
+| MenuPage | The new page object or nil if the creation fails. |
 
-#### Methods
-
-- `ui.new_page(name)`
+- Methods
+ - `ui.new_page(name)`
 
 ---
 
 ### ui.get_all_widgets
-
 `Retrieves a table of all MenuWidgets currently available in the UI.`
 
-#### Parameters
+- Return
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| None |      |             |
+| Type              | Description                         |
+| ----------------- | ----------------------------------- |
+| table[MenuWidget] | A table containing all MenuWidgets. |
 
-#### Return
-
-| Type            | Description                               |
-| --------------- | ----------------------------------------- |
-| table[MenuWidget] | A table containing all MenuWidgets.      |
-
-#### Methods
-
-- `ui.get_all_widgets()`
+- Methods
+ - `ui.get_all_widgets()`
 
 ---
 
 ### ui.get_widget
-
 `Retrieves a specific MenuWidget by its unique identifier.`
 
-#### Parameters
+- Parameters
 
-| Name | Type   | Description                      |
-| ---- | ------ | -------------------------------- |
+| Name | Type   | Description                          |
+| ---- | ------ | ------------------------------------ |
 | uuid | number | The unique identifier of the widget. |
 
-#### Return
+- Return
 
-| Type       | Description                                     |
-| ---------- | ----------------------------------------------- |
+| Type       | Description                                                             |
+| ---------- | ----------------------------------------------------------------------- |
 | MenuWidget | The widget handle if found, or nil if no widget matches the given UUID. |
 
-#### Methods
-
-- `ui.get_widget(uuid)`
+- Methods
+ - `ui.get_widget(uuid)`
 
 ---
 
@@ -368,14 +304,14 @@ Icons = {
 `Creates a new subpage for a given page.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name | Type   | Description                  |
+ | ---- | ------ | ---------------------------- |
  | name | string | The name of the new subpage. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type        | Description                                          |
+ | ----------- | ---------------------------------------------------- |
  | MenuSubPage | The new subpage object or nil if the creation fails. |
 
 - Methods:
@@ -387,15 +323,15 @@ Icons = {
 `If there are already existing tabs, the new group will be added to the first created tab.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the new group. |
- | pos | PageColumn? | The position of the group within the page. |
+ | Name | Type        | Description                                |
+ | ---- | ----------- | ------------------------------------------ |
+ | name | string      | The name of the new group.                 |
+ | pos  | PageColumn? | The position of the group within the page. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type      | Description                                                                                         |
+ | --------- | --------------------------------------------------------------------------------------------------- |
  | MenuGroup | Returns a MenuGroup object if the group is successfully created. Returns nil if the creation fails. |
 
 - Methods:
@@ -407,15 +343,15 @@ Icons = {
 `Creates a new group within this submenu page.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the new group. |
- | pos | PageColumn | The position of the group within the submenu page. |
+ | Name | Type       | Description                                        |
+ | ---- | ---------- | -------------------------------------------------- |
+ | name | string     | The name of the new group.                         |
+ | pos  | PageColumn | The position of the group within the submenu page. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type      | Description                                                           |
+ | --------- | --------------------------------------------------------------------- |
  | MenuGroup | Returns a MenuGroup object if creation was successful, nil otherwise. |
 
 - Methods:
@@ -427,8 +363,8 @@ Icons = {
 `Returns whether the group is collapsed.`
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type    | Description                             |
+ | ------- | --------------------------------------- |
  | boolean | Returns true if the group is collapsed. |
 
 - Methods:
@@ -440,8 +376,8 @@ Icons = {
 `Returns whether the group is collapsible.`
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type    | Description                                 |
+ | ------- | ------------------------------------------- |
  | boolean | Returns true if the group can be collapsed. |
 
 - Methods:
@@ -453,8 +389,8 @@ Icons = {
 `Returns whether the group is visible (being rendered).`
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type    | Description                           |
+ | ------- | ------------------------------------- |
  | boolean | Returns true if the group is visible. |
 
 - Methods:
@@ -466,8 +402,8 @@ Icons = {
 `Sets the group's collapsed state.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name  | Type    | Description                                                       |
+ | ----- | ------- | ----------------------------------------------------------------- |
  | state | boolean | The state to set, true to collapse the group, false to expand it. |
 
 
@@ -480,8 +416,8 @@ Icons = {
 `Sets whether the group can be collapsed.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name  | Type    | Description                                                            |
+ | ----- | ------- | ---------------------------------------------------------------------- |
  | state | boolean | The state to set, true if the group can be collapsed, false otherwise. |
 
 
@@ -494,8 +430,8 @@ Icons = {
 `Sets the visibility of the group.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name  | Type    | Description                                                            |
+ | ----- | ------- | ---------------------------------------------------------------------- |
  | state | boolean | The visibility state to set, true to show the group, false to hide it. |
 
 
@@ -508,15 +444,15 @@ Icons = {
 `Creates a new checkbox within this group.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the checkbox. |
+ | Name | Type    | Description                                                            |
+ | ---- | ------- | ---------------------------------------------------------------------- |
+ | name | string  | The name of the checkbox.                                              |
  | init | boolean | The initial state of the checkbox. Defaults to false if not specified. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                           |
+ | ---------- | ----------------------------------------------------- |
  | MenuWidget | Returns a checkbox widget if creation was successful. |
 
 - Methods:
@@ -528,18 +464,18 @@ Icons = {
 `Creates a new slider within this group.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the slider. |
- | min | integer | The minimum value of the slider. |
- | max | integer | The maximum value of the slider. |
- | init | integer | The initial value of the slider. Defaults to the minimum value if not specified. |
- | scale | integer | The step size of the slider. Defaults to 1 if not specified. |
+ | Name  | Type    | Description                                                                      |
+ | ----- | ------- | -------------------------------------------------------------------------------- |
+ | name  | string  | The name of the slider.                                                          |
+ | min   | integer | The minimum value of the slider.                                                 |
+ | max   | integer | The maximum value of the slider.                                                 |
+ | init  | integer | The initial value of the slider. Defaults to the minimum value if not specified. |
+ | scale | integer | The step size of the slider. Defaults to 1 if not specified.                     |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                         |
+ | ---------- | --------------------------------------------------- |
  | MenuWidget | Returns a slider widget if creation was successful. |
 
 - Methods:
@@ -551,15 +487,15 @@ Icons = {
 `This combo box allows for selection from a list of strings provided.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the combo box. |
- | ... | string | The list of options available in the combo box. |
+ | Name | Type   | Description                                     |
+ | ---- | ------ | ----------------------------------------------- |
+ | name | string | The name of the combo box.                      |
+ | ...  | string | The list of options available in the combo box. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                            |
+ | ---------- | ------------------------------------------------------ |
  | MenuWidget | Returns a combo box widget if creation was successful. |
 
 - Methods:
@@ -571,14 +507,14 @@ Icons = {
 `The text content is fixed and defined upon creation.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name | Type   | Description                                       |
+ | ---- | ------ | ------------------------------------------------- |
  | text | string | The static text content to display in the widget. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                       |
+ | ---------- | ------------------------------------------------- |
  | MenuWidget | Returns a text widget if creation was successful. |
 
 - Methods:
@@ -590,14 +526,14 @@ Icons = {
 `The text content can change dynamically based on a Lua function.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type     | Description                                        |
+ | -------- | -------- | -------------------------------------------------- |
  | callback | function | A Lua function that returns the string to display. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                       |
+ | ---------- | ------------------------------------------------- |
  | MenuWidget | Returns a text widget if creation was successful. |
 
 - Methods:
@@ -609,15 +545,15 @@ Icons = {
 `If no callback is provided, the button performs no action on click.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the button. |
+ | Name     | Type      | Description                                                        |
+ | -------- | --------- | ------------------------------------------------------------------ |
+ | name     | string    | The name of the button.                                            |
  | callback | function? | An optional Lua function that executes when the button is clicked. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                                        |
+ | ---------- | ------------------------------------------------------------------ |
  | MenuWidget | Returns a button widget if creation was successful, nil if failed. |
 
 - Methods:
@@ -629,15 +565,15 @@ Icons = {
 `This allows for real-time updates and interactions based on the table's data.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the new list widget. |
- | ref_table | table | The reference table containing elements that populate the list initially. Any changes to this table will dynamically update the list's content. |
+ | Name      | Type   | Description                                                                                                                                     |
+ | --------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+ | name      | string | The name of the new list widget.                                                                                                                |
+ | ref_table | table  | The reference table containing elements that populate the list initially. Any changes to this table will dynamically update the list's content. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type     | Description                                                                 |
+ | -------- | --------------------------------------------------------------------------- |
  | MenuList | Returns the new list as a MenuList object, which can be further configured. |
 
 - Methods:
@@ -649,14 +585,14 @@ Icons = {
 `This function initializes a list where items can be dynamically added or removed after its creation.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name | Type   | Description                              |
+ | ---- | ------ | ---------------------------------------- |
  | name | string | The name of the new dynamic list widget. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type     | Description                                                                         |
+ | -------- | ----------------------------------------------------------------------------------- |
  | MenuList | Returns the new dynamic list as a MenuList object, which can be further configured. |
 
 - Methods:
@@ -668,16 +604,16 @@ Icons = {
 `The input field can include an initial value and a hint that appears when the field is empty.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the input field. |
+ | Name | Type    | Description                                                          |
+ | ---- | ------- | -------------------------------------------------------------------- |
+ | name | string  | The name of the input field.                                         |
  | hint | string? | Optional hint text that appears in the input field when it is empty. |
- | init | string? | Initial text to populate the input field with. |
+ | init | string? | Initial text to populate the input field with.                       |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                               |
+ | ---------- | --------------------------------------------------------- |
  | MenuWidget | Returns an input field widget if creation was successful. |
 
 - Methods:
@@ -689,8 +625,8 @@ Icons = {
 `This function adds a simple line to visually distinguish between sections of the UI.`
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                            |
+ | ---------- | ------------------------------------------------------ |
  | MenuWidget | Returns a separator widget if creation was successful. |
 
 - Methods:
@@ -702,15 +638,15 @@ Icons = {
 `Creates a hotkey widget within this group.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the hotkey widget. |
+ | Name        | Type     | Description                                          |
+ | ----------- | -------- | ---------------------------------------------------- |
+ | name        | string   | The name of the hotkey widget.                       |
  | default_key | integer? | The default key code to be set in the hotkey widget. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                         |
+ | ---------- | --------------------------------------------------- |
  | MenuWidget | Returns a hotkey widget if creation was successful. |
 
 - Methods:
@@ -722,15 +658,15 @@ Icons = {
 `This widget allows users to input text and automatically generates a hash of the input.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the hasher widget. |
+ | Name | Type    | Description                                                                    |
+ | ---- | ------- | ------------------------------------------------------------------------------ |
+ | name | string  | The name of the hasher widget.                                                 |
  | hint | string? | An optional hint text that appears in the hasher input field when it is empty. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                         |
+ | ---------- | --------------------------------------------------- |
  | MenuWidget | Returns a hasher widget if creation was successful. |
 
 - Methods:
@@ -742,14 +678,14 @@ Icons = {
 `If an invalid value or type is returned by the callback, or if an error occurs in the callback, visibility defaults to false.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type     | Description                                                 |
+ | -------- | -------- | ----------------------------------------------------------- |
  | callback | function | A Lua function that determines the visibility of the group. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type      | Description                      |
+ | --------- | -------------------------------- |
  | MenuGroup | Returns the group object itself. |
 
 - Methods:
@@ -785,9 +721,9 @@ Icons = {
 `Retrieves the current value of a widget.`
 - Return:
 
- | Type | Description |
- | --- | --- |
- | any | Returns the current value of the widget. |
+ | Type | Description                              |
+ | ---- | ---------------------------------------- |
+ | any  | Returns the current value of the widget. |
 
 - Methods:
   - `MenuWidget:get()`
@@ -798,14 +734,14 @@ Icons = {
 `Sets a new value to a widget.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | value | any | The value to set to the widget. |
+ | Name  | Type | Description                     |
+ | ----- | ---- | ------------------------------- |
+ | value | any  | The value to set to the widget. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                    |
+ | ---------- | ---------------------------------------------- |
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
@@ -817,8 +753,8 @@ Icons = {
 `Returns the parent of the widget.`
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type      | Description                             |
+ | --------- | --------------------------------------- |
  | MenuGroup | Returns the parent group of the widget. |
 
 - Methods:
@@ -830,8 +766,8 @@ Icons = {
 `Retrieves the type name of the widget.`
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type   | Description                          |
+ | ------ | ------------------------------------ |
  | string | Returns the type name of the widget. |
 
 - Methods:
@@ -843,8 +779,8 @@ Icons = {
 `Checks if the widget is enabled.`
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type    | Description                                             |
+ | ------- | ------------------------------------------------------- |
  | boolean | Returns true if the widget is enabled, false otherwise. |
 
 - Methods:
@@ -856,14 +792,14 @@ Icons = {
 `Sets the enabled state of the widget.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name  | Type    | Description               |
+ | ----- | ------- | ------------------------- |
  | value | boolean | The enabled state to set. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                    |
+ | ---------- | ---------------------------------------------- |
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
@@ -875,8 +811,8 @@ Icons = {
 `Checks if the widget is visible.`
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type    | Description                                             |
+ | ------- | ------------------------------------------------------- |
  | boolean | Returns true if the widget is visible, false otherwise. |
 
 - Methods:
@@ -888,14 +824,14 @@ Icons = {
 `Sets the visibility of the widget.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name  | Type    | Description                  |
+ | ----- | ------- | ---------------------------- |
  | value | boolean | The visibility state to set. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                    |
+ | ---------- | ---------------------------------------------- |
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
@@ -907,14 +843,14 @@ Icons = {
 `Attaches a color picker to the widget that modifies the referenced color.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name  | Type  | Description                                                         |
+ | ----- | ----- | ------------------------------------------------------------------- |
  | color | Color | The color object whose values will be modified by the color picker. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                    |
+ | ---------- | ---------------------------------------------- |
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
@@ -926,14 +862,14 @@ Icons = {
 `Attaches a hint text to the widget.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name | Type   | Description               |
+ | ---- | ------ | ------------------------- |
  | text | string | The hint text to display. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                    |
+ | ---------- | ---------------------------------------------- |
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
@@ -945,14 +881,14 @@ Icons = {
 `end)`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type      | Description                                                                                         |
+ | -------- | --------- | --------------------------------------------------------------------------------------------------- |
  | callback | function? | The function to determine visibility. Returns bool (true to draw the widget, false to not draw it). |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                    |
+ | ---------- | ---------------------------------------------- |
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
@@ -964,14 +900,14 @@ Icons = {
 `end)`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type      | Description                                                                                       |
+ | -------- | --------- | ------------------------------------------------------------------------------------------------- |
  | callback | function? | The function to determine if the widget is enabled. Returns bool (true if enabled, false if not). |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                    |
+ | ---------- | ---------------------------------------------- |
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
@@ -983,14 +919,14 @@ Icons = {
 `end)`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type      | Description                                              |
+ | -------- | --------- | -------------------------------------------------------- |
  | callback | function? | The function to generate the label text. Returns string. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                    |
+ | ---------- | ---------------------------------------------- |
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
@@ -1002,14 +938,14 @@ Icons = {
 `end)`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type      | Description                                                                               |
+ | -------- | --------- | ----------------------------------------------------------------------------------------- |
  | callback | function? | The callback to be invoked. Takes coordinates x and y as parameters (number x, number y). |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                    |
+ | ---------- | ---------------------------------------------- |
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
@@ -1021,14 +957,14 @@ Icons = {
 `end)`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type      | Description                                                                                 |
+ | -------- | --------- | ------------------------------------------------------------------------------------------- |
  | callback | function? | The function to manage widget data. It should return a pointer to the data (returns void*). |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                    |
+ | ---------- | ---------------------------------------------- |
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
@@ -1040,14 +976,14 @@ Icons = {
 `end)`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type      | Description                                                                               |
+ | -------- | --------- | ----------------------------------------------------------------------------------------- |
  | callback | function? | The function to execute upon data change. Sends the new data value as the first argument. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type       | Description                                    |
+ | ---------- | ---------------------------------------------- |
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
@@ -1099,14 +1035,14 @@ Icons = {
 `Sets a getter callback for the list, which defines how each list item is represented as a text label.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type      | Description                                                           |
+ | -------- | --------- | --------------------------------------------------------------------- |
  | callback | fun(item: | number):string The function to generate the label text for each item. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type     | Description                                  |
+ | -------- | -------------------------------------------- |
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
@@ -1118,14 +1054,14 @@ Icons = {
 `Sets a counter callback for the list, which defines the number of items in the list.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type         | Description                                                  |
+ | -------- | ------------ | ------------------------------------------------------------ |
  | callback | fun():number | The function to count the total number of items in the list. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type     | Description                                  |
+ | -------- | -------------------------------------------- |
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
@@ -1137,14 +1073,14 @@ Icons = {
 `Sets a click callback for the list, which defines the action taken when an item is clicked.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type      | Description                                              |
+ | -------- | --------- | -------------------------------------------------------- |
  | callback | fun(item: | number) The function to execute when an item is clicked. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type     | Description                                  |
+ | -------- | -------------------------------------------- |
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
@@ -1156,14 +1092,14 @@ Icons = {
 `Sets a selected callback for the list, which checks if the specified item is selected.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type      | Description                                                    |
+ | -------- | --------- | -------------------------------------------------------------- |
  | callback | fun(item: | number):bool The function to determine if an item is selected. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type     | Description                                  |
+ | -------- | -------------------------------------------- |
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
@@ -1175,14 +1111,14 @@ Icons = {
 `Sets a hovered callback for the list, which defines the action taken when an item is hovered over.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name     | Type      | Description                                                                                          |
+ | -------- | --------- | ---------------------------------------------------------------------------------------------------- |
  | callback | fun(item: | number, caption: string, x: number, y: number) The function to execute when an item is hovered over. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type     | Description                                  |
+ | -------- | -------------------------------------------- |
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
@@ -1194,9 +1130,9 @@ Icons = {
 `Sets the dimensions of the list.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | width | number | The width of the list. |
+ | Name   | Type   | Description             |
+ | ------ | ------ | ----------------------- |
+ | width  | number | The width of the list.  |
  | height | number | The height of the list. |
 
 
@@ -1209,14 +1145,14 @@ Icons = {
 `Enables or disables the use of a search bar within the list.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | use | bool | Whether to use a search bar. |
+ | Name | Type | Description                  |
+ | ---- | ---- | ---------------------------- |
+ | use  | bool | Whether to use a search bar. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type     | Description                                  |
+ | -------- | -------------------------------------------- |
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
@@ -1228,14 +1164,14 @@ Icons = {
 `Sets the placeholder text for the search bar in the list, if one is used.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name | Type   | Description                              |
+ | ---- | ------ | ---------------------------------------- |
  | text | string | The placeholder text for the search bar. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type     | Description                                  |
+ | -------- | -------------------------------------------- |
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
@@ -1247,14 +1183,14 @@ Icons = {
 `Checks if a specific item is selected in the list.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name | Type   | Description                     |
+ | ---- | ------ | ------------------------------- |
  | item | number | The index of the item to check. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type    | Description                                            |
+ | ------- | ------------------------------------------------------ |
  | boolean | Returns true if the item is selected, false otherwise. |
 
 - Methods:
@@ -1266,8 +1202,8 @@ Icons = {
 `Retrieves the indices of all selected items in the list.`
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type  | Description                                                   |
+ | ----- | ------------------------------------------------------------- |
  | table | Returns a table containing the indices of all selected items. |
 
 - Methods:
@@ -1279,8 +1215,8 @@ Icons = {
 `This function constructs a table containing the text for each selected item in the list. If no items are selected or an error occurs, it returns an empty table.`
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type  | Description                                                                                                                 |
+ | ----- | --------------------------------------------------------------------------------------------------------------------------- |
  | table | Returns a table with the texts of the selected items. Each entry in the table corresponds to the text of one selected item. |
 
 - Methods:
@@ -1292,14 +1228,14 @@ Icons = {
 `This function gets the text of the item at the specified index. If the item does not exist or an error occurs, it returns an empty string.`
 - Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
+ | Name | Type   | Description                                            |
+ | ---- | ------ | ------------------------------------------------------ |
  | item | number | The index of the item from which to retrieve the text. |
 
 - Return:
 
- | Type | Description |
- | --- | --- |
+ | Type   | Description                                                                                |
+ | ------ | ------------------------------------------------------------------------------------------ |
  | string | Returns the text of the specified item. If the item is not found, returns an empty string. |
 
 - Methods:

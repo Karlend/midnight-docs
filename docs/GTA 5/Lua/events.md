@@ -144,9 +144,9 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
- | callback | fun():void       | The callback function to be invoked when the local player dies. |
+ | Name     | Type       | Description                                                     |
+ | -------- | ---------- | --------------------------------------------------------------- |
+ | callback | fun():void | The callback function to be invoked when the local player dies. |
 
 - Methods:
   - `events.on_death(callback)`
@@ -158,8 +158,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                          | Description                                               |
+ | -------- | ----------------------------- | --------------------------------------------------------- |
  | callback | fun(script_name: string):void | The callback function to be invoked when a script starts. |
 
 - Methods:
@@ -172,8 +172,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                                          | Description                                              |
+ | -------- | --------------------------------------------- | -------------------------------------------------------- |
  | callback | fun(script_name: string, reason: number):void | The callback function to be invoked when a script stops. |
 
 - Methods:
@@ -186,8 +186,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                                    | Description                                              |
+ | -------- | --------------------------------------- | -------------------------------------------------------- |
  | callback | fun(key: string, is_down: boolean):void | The callback function to be invoked on key state change. |
 
 - Methods:
@@ -200,8 +200,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                         | Description                                                       |
+ | -------- | ---------------------------- | ----------------------------------------------------------------- |
  | callback | fun(is_online: boolean):void | The callback function to be invoked at the end of the transition. |
 
 - Methods:
@@ -214,9 +214,9 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
- | callback | fun():void       | The callback function to be invoked when the player fully enters single-player. |
+ | Name     | Type       | Description                                                                     |
+ | -------- | ---------- | ------------------------------------------------------------------------------- |
+ | callback | fun():void | The callback function to be invoked when the player fully enters single-player. |
 
 - Methods:
   - `events.on_first_singleplayer_join(callback)`
@@ -228,9 +228,9 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
- | callback | fun(hwnd: number, uMsg: number, wParam: number, lParam: number):number|nil | The callback function to be invoked for the game window's WindowProc. |
+ | Name     | Type                                                                   | Description |
+ | -------- | ---------------------------------------------------------------------- | ----------- |
+ | callback | fun(hwnd: number, uMsg: number, wParam: number, lParam: number):number | nil         | The callback function to be invoked for the game window's WindowProc. |
 
 - Methods:
   - `events.on_window_proc(callback)`
@@ -242,8 +242,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                                    | Description                                                        |
+ | -------- | --------------------------------------- | ------------------------------------------------------------------ |
  | callback | fun(ply: player_t, weapon: number):void | The callback function to be invoked when a player shoots a weapon. |
 
 - Methods:
@@ -256,8 +256,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                                                 | Description                                                                |
+ | -------- | ---------------------------------------------------- | -------------------------------------------------------------------------- |
  | callback | fun(ply: player_t, flag: number, params: table):void | The callback function to be invoked when a player is detected as a modder. |
 
 - Methods:
@@ -270,8 +270,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                                                                                | Description                                                                   |
+ | -------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
  | callback | fun(is_freemode: boolean, is_you: boolean, script_name: string, ply: player_t):void | The callback function to be invoked when a script migrates to another player. |
 
 - Methods:
@@ -284,8 +284,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                                                      | Description                                                                       |
+ | -------- | --------------------------------------------------------- | --------------------------------------------------------------------------------- |
  | callback | fun(ply: player_t, reason: string, ban_time: number):void | The callback function to be invoked when synchronization is blocked for a player. |
 
 - Methods:
@@ -298,8 +298,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                                               | Description                                                          |
+ | -------- | -------------------------------------------------- | -------------------------------------------------------------------- |
  | callback | fun(ply: player_t, hash: number, args: table):void | The callback function to be invoked when a script event is received. |
 
 - Methods:
@@ -312,8 +312,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                    | Description                                                        |
+ | -------- | ----------------------- | ------------------------------------------------------------------ |
  | callback | fun(ply: player_t):void | The callback function to be invoked when the session host changes. |
 
 - Methods:
@@ -326,8 +326,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                                                           | Description                                                              |
+ | -------- | -------------------------------------------------------------- | ------------------------------------------------------------------------ |
  | callback | fun(ped: number, weapon_hash: number, ammo_count: number):void | The callback function to be invoked when a pedestrian receives a weapon. |
 
 - Methods:
@@ -340,8 +340,8 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
+ | Name     | Type                                  | Description                                                                        |
+ | -------- | ------------------------------------- | ---------------------------------------------------------------------------------- |
  | callback | fun(ply: player_t, text: string):void | The callback function to be invoked when a chat message is received from a player. |
 
 - Methods:
@@ -354,9 +354,9 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
- | callback | fun():void       | The callback function to be invoked during the UI drawing call. |
+ | Name     | Type       | Description                                                     |
+ | -------- | ---------- | --------------------------------------------------------------- |
+ | callback | fun():void | The callback function to be invoked during the UI drawing call. |
 
 - Methods:
   - `events.on_frame(callback)`
@@ -368,6 +368,6 @@ MouseClickRegion = {
 
 - Parameters:
 
- | Name     | Type             | Description                        |
- | -------- | ---------------- | ---------------------------------- |
- | callback | fun():void       | The callback function to be invoked every script tick
+ | Name     | Type       | Description                                           |
+ | -------- | ---------- | ----------------------------------------------------- |
+ | callback | fun():void | The callback function to be invoked every script tick |

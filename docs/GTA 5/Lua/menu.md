@@ -3,153 +3,364 @@ slug: /gta/lua/Menu
 title: Menu
 ---
 
-## ui.is_opened
+## enum PopupType
+```lua
+PopupType = {
+	-- Represents a prominent notification. It appears as a rectangle on the right side 
+	-- of the screen and is used for important alerts that are less frequent but need 
+	-- significant attention.
+    BOX = 0,
+	
+	-- Represents a less obtrusive, single-lined popup notification. It is used for 
+	-- frequent but less critical information, appearing as a simple text with a 
+	-- background fill.
+    LINE = 1
+}
+```
+
+## enum PageColumn
+```lua
+PageColumn = {
+    --- The first column index.
+    FIRST = 1,
+    --- The second column index.
+    SECOND = 2,
+    --- The third column index.
+    THIRD = 3,
+}
+```
+
+## enum GroupRect
+```lua
+GroupRect = {
+    --- Represents the whole block including title and body.
+    FULL = 0,
+    --- Represents only the title area up to the separator.
+    TITLE = 1,
+    --- Represents only the content area below the separator.
+    BODY = 2,
+}
+```
+
+## enum Icons
+```lua
+Icons = {
+	INVALID = 0,
+	
+	FIRST_ICON = 59648,
+	LAST_ICON = 59710,
+	
+	ARROW_DOWN = 59648,
+	ARROW_UP = 59649,
+	CAR = 59650,
+	COLOR_PALETTE = 59651,
+	CONTRAST = 59652,
+	EXTENSION_PUZZLE = 59653,
+	EYE = 59654,
+	FISH = 59655,
+	FLASH = 59656,
+	GRID = 59657,
+	HARDWARE_CHIP = 59658,
+	LOGO_BUFFER = 59659,
+	PEOPLE = 59660,
+	PERSON = 59661,
+	PLANET = 59662,
+	SAVE = 59663,
+	SETTINGS = 59664,
+	SHIELD = 59665,
+	SKULL = 59666,
+	SPEEDOMETER = 59667,
+	TRASH = 59668,
+	WALLET = 59670,
+	SEARCH = 59671,
+	CANCEL = 59672,
+	CLOUD_DOWNLOAD = 59673,
+	CLOUD_UPLOAD = 59674,
+	CLOUD_DISCONNECTED = 59675,
+	CLOUD_SUCCESS = 59676,
+	EXCLAMATION_TRIANGLE = 59677,
+	SHIELD_SUCCESS = 59678,
+	SQUARE_CHECKMARK_SUCCESS = 59679,
+	CIRCLE_CANCEL = 59680,
+	GAMEPAD = 59681,
+	CROSSHAIR = 59682,
+	MIDNIGHT_HEADER_LOGO = 59683,
+	CHECKMARK_SUCCESS = 59684,
+	CANCEL2 = 59685,
+	PEN = 59686,
+	SHARE = 59687,
+	DOWNLOAD = 59688,
+	CLOUD = 59689,
+	GUN = 59690,
+	MOVEMENT = 59691,
+	WHEELCHAIR_MOVE = 59692,
+	EXCLAMATION_CIRCLE = 59693,
+	KEYBOARD = 59694,
+	MIDNIGHT_LOGO = 59695,
+	THREE_DOTS = 59696,
+	REFRESH = 59697,
+	PLUS = 59698,
+	COPY = 59699,
+	FILE = 59700,
+	CAR2 = 59701,
+	CARD = 59702,
+	EARTH = 59703,
+	BACKSPACE = 59704,
+	KARAMBIT = 59705,
+	GRIPDOTS = 59706,
+	PORTAL = 59707,
+	SPOOFING = 59708,
+	UI = 59709,
+	ETHERNET = 59710
+}
+```
+
+### ui.is_opened
+
 `Checks if the UI menu is currently opened.`
 
-- Methods:
-  - `ui.is_opened()`
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| None |      |             |
+
+#### Return
+
+| Type | Description |
+| ---- | ----------- |
+| bool | Returns true if the UI menu is currently open, false otherwise. |
+
+#### Methods
+
+- `ui.is_opened()`
 
 ---
 
-## ui.popup
+### ui.popup
+
 `Creates a popup window inside the game.`
-- Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | title | string | The title of the popup. |
- | body | string | The content of the popup. |
- | icon | Icons | The icon of the popup. |
- | type | PopupType | The type of the popup. |
+#### Parameters
 
-- Return:
+| Name  | Type      | Description                  |
+| ----- | --------- | ---------------------------- |
+| title | string    | The title of the popup.      |
+| body  | string    | The content of the popup.    |
+| icon  | Icons     | The icon of the popup.       |
+| type  | PopupType | The type of the popup.       |
 
- | Type | Description |
- | --- | --- |
- | boolean | Returns true if the popup was successfully created. |
+#### Return
 
-- Methods:
-  - `ui.popup(title, body, icon, type)`
+| Type    | Description                             |
+| ------- | --------------------------------------- |
+| boolean | Returns true if the popup was successfully created. |
+
+#### Methods
+
+- `ui.popup(title, body, icon, type)`
 
 ---
 
-## ui.get_alpha
+### ui.get_alpha
+
 `Retrieves the current alpha transparency of the UI.`
-- Return:
 
- | Type | Description |
- | --- | --- |
- | number | The alpha transparency value. |
+#### Parameters
 
-- Methods:
-  - `ui.get_alpha()`
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| None |      |             |
+
+#### Return
+
+| Type   | Description                   |
+| ------ | ----------------------------- |
+| number | The alpha transparency value. |
+
+#### Methods
+
+- `ui.get_alpha()`
 
 ---
 
-## ui.get_size
+### ui.get_size
+
 `Retrieves the size of the UI layout.`
-- Return:
 
- | Type | Description |
- | --- | --- |
- | number, | number The width and height of the UI layout. |
+#### Parameters
 
-- Methods:
-  - `ui.get_size()`
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| None |      |             |
+
+#### Return
+
+| Type   | Description                        |
+| ------ | ---------------------------------- |
+| number | The width of the UI layout.        |
+| number | The height of the UI layout.       |
+
+#### Methods
+
+- `ui.get_size()`
 
 ---
 
-## ui.get_position
+### ui.get_position
+
 `Retrieves the position of the UI layout.`
-- Return:
 
- | Type | Description |
- | --- | --- |
- | number, | number The x (left) and y (top) position of the UI layout. |
+#### Parameters
 
-- Methods:
-  - `ui.get_position()`
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| None |      |             |
+
+#### Return
+
+| Type   | Description                |
+| ------ | -------------------------- |
+| number | The x (left) position of the UI layout. |
+| number | The y (top) position of the UI layout.  |
+
+#### Methods
+
+- `ui.get_position()`
 
 ---
 
-## ui.get_mouse_position
+### ui.get_mouse_position
+
 `Retrieves the current mouse position within the UI.`
-- Return:
 
- | Type | Description |
- | --- | --- |
- | number, | number The x and y coordinates of the mouse. |
+#### Parameters
 
-- Methods:
-  - `ui.get_mouse_position()`
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| None |      |             |
+
+#### Return
+
+| Type   | Description          |
+| ------ | -------------------- |
+| number | The x coordinate of the mouse. |
+| number | The y coordinate of the mouse. |
+
+#### Methods
+
+- `ui.get_mouse_position()`
 
 ---
 
-## ui.get_scale
+### ui.get_scale
+
 `Retrieves the scale factor of the UI based on the DPI setting.`
-- Return:
 
- | Type | Description |
- | --- | --- |
- | number | The scale factor of the UI. |
+#### Parameters
 
-- Methods:
-  - `ui.get_scale()`
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| None |      |             |
+
+#### Return
+
+| Type   | Description             |
+| ------ | ----------------------- |
+| number | The scale factor of the UI. |
+
+#### Methods
+
+- `ui.get_scale()`
 
 ---
 
-## ui.new_page
+### ui.new_page
+
 `Creates a new page in the UI with a specified icon.`
-- Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the new page. |
- | icon | Icons | The icon to use for the new page. |
+#### Parameters
 
-- Return:
+| Name  | Type   | Description                     |
+| ----- | ------ | ------------------------------- |
+| name  | string | The name of the new page.       |
+| icon  | Icons  | The icon to use for the new page. |
 
- | Type | Description |
- | --- | --- |
- | MenuPage | The new page object or nil if the creation fails. |
+#### Return
 
-- Methods:
-  - `ui.new_page(name, icon)`
+| Type     | Description                                          |
+| -------- | ---------------------------------------------------- |
+| MenuPage | The new page object or nil if the creation fails.    |
+
+#### Methods
+
+- `ui.new_page(name, icon)`
 
 ---
 
-## ui.new_page
+### ui.new_page
+
 `Creates a new page in the UI without specifying an icon.`
-- Parameters:
 
- | Name | Type | Description |
- | --- | --- | --- |
- | name | string | The name of the new page. |
+#### Parameters
 
-- Return:
+| Name | Type   | Description               |
+| ---- | ------ | ------------------------- |
+| name | string | The name of the new page. |
 
- | Type | Description |
- | --- | --- |
- | MenuPage | The new page object or nil if the creation fails. |
+#### Return
 
-- Methods:
-  - `ui.new_page(name)`
+| Type     | Description                                          |
+| -------- | ---------------------------------------------------- |
+| MenuPage | The new page object or nil if the creation fails.    |
 
----
+#### Methods
 
-## ui.get_all_widgets
-`@return table[MenuWidget] A table containing all MenuWidgets.`
-
-- Methods:
-  - `ui.get_all_widgets()`
+- `ui.new_page(name)`
 
 ---
 
-## ui.get_widget
-`@return MenuWidget|nil The widget handle if found, or nil if no widget matches the given UUID.`
+### ui.get_all_widgets
 
-- Methods:
-  - `ui.get_widget(uuid)`
+`Retrieves a table of all MenuWidgets currently available in the UI.`
+
+#### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| None |      |             |
+
+#### Return
+
+| Type            | Description                               |
+| --------------- | ----------------------------------------- |
+| table[MenuWidget] | A table containing all MenuWidgets.      |
+
+#### Methods
+
+- `ui.get_all_widgets()`
+
+---
+
+### ui.get_widget
+
+`Retrieves a specific MenuWidget by its unique identifier.`
+
+#### Parameters
+
+| Name | Type   | Description                      |
+| ---- | ------ | -------------------------------- |
+| uuid | number | The unique identifier of the widget. |
+
+#### Return
+
+| Type       | Description                                     |
+| ---------- | ----------------------------------------------- |
+| MenuWidget | The widget handle if found, or nil if no widget matches the given UUID. |
+
+#### Methods
+
+- `ui.get_widget(uuid)`
 
 ---
 

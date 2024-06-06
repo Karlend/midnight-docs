@@ -115,7 +115,7 @@ Icons = {
 }
 ```
 
-### ui.is_opened
+## ui.is_opened
 `Checks if the UI menu is currently opened.`
 
 - Return
@@ -129,7 +129,7 @@ Icons = {
 
 ---
 
-### ui.popup
+## ui.popup
 `Creates a popup window inside the game.`
 
 - Parameters
@@ -152,7 +152,7 @@ Icons = {
 
 ---
 
-### ui.get_alpha
+## ui.get_alpha
 `Retrieves the current alpha transparency of the UI.`
 
 - Return
@@ -166,7 +166,7 @@ Icons = {
 
 ---
 
-### ui.get_size
+## ui.get_size
 `Retrieves the size of the UI layout.`
 
 - Return
@@ -181,7 +181,7 @@ Icons = {
 
 ---
 
-### ui.get_position
+## ui.get_position
 `Retrieves the position of the UI layout.`
 
 - Return
@@ -196,7 +196,7 @@ Icons = {
 
 ---
 
-### ui.get_mouse_position
+## ui.get_mouse_position
 `Retrieves the current mouse position within the UI.`
 
 - Return
@@ -211,7 +211,7 @@ Icons = {
 
 ---
 
-### ui.get_scale
+## ui.get_scale
 `Retrieves the scale factor of the UI based on the DPI setting.`
 
 - Return
@@ -225,7 +225,7 @@ Icons = {
 
 ---
 
-### ui.new_page
+## ui.new_page
 `Creates a new page in the UI with a specified icon.`
 
 - Parameters
@@ -246,7 +246,7 @@ Icons = {
 
 ---
 
-### ui.new_page
+## ui.new_page
 `Creates a new page in the UI without specifying an icon.`
 
 - Parameters
@@ -266,7 +266,7 @@ Icons = {
 
 ---
 
-### ui.get_all_widgets
+## ui.get_all_widgets
 `Retrieves a table of all MenuWidgets currently available in the UI.`
 
 - Return
@@ -280,7 +280,7 @@ Icons = {
 
 ---
 
-### ui.get_widget
+## ui.get_widget
 `Retrieves a specific MenuWidget by its unique identifier.`
 
 - Parameters

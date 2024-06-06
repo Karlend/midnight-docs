@@ -36,8 +36,6 @@ MouseClickRegion = {
  | -------- | ----------------------- | -------------------------------------------------------- |
  | callback | fun(ply: player_t):void | The callback function to be invoked when a player joins. |
 
-- Return: None
-
 - Methods:
   - `events.on_player_join(callback)`
 
@@ -51,8 +49,6 @@ MouseClickRegion = {
  | Name     | Type                    | Description                                               |
  | -------- | ----------------------- | --------------------------------------------------------- |
  | callback | fun(ply: player_t):void | The callback function to be invoked when a player leaves. |
-
-- Return: None
 
 - Methods:
   - `events.on_player_left(callback)`
@@ -68,8 +64,6 @@ MouseClickRegion = {
  | -------- | ----------------------- | ----------------------------------------------------------------- |
  | callback | fun(ply: player_t):void | The callback function to be invoked when a player becomes active. |
 
-- Return: None
-
 - Methods:
   - `events.on_player_active(callback)`
 
@@ -83,8 +77,6 @@ MouseClickRegion = {
  | Name     | Type                                   | Description |
  | -------- | -------------------------------------- | ----------- |
  | callback | fun(name: string, rid: number):boolean | nil         | The callback function to be invoked when adding a player. |
-
-- Return: None
 
 - Methods:
   - `events.on_player_adding(callback)`
@@ -100,8 +92,6 @@ MouseClickRegion = {
  | -------- | ---------- | ------------------------------------------------------------- |
  | callback | fun():void | The callback function to be invoked when a session is joined. |
 
-- Return: None
-
 - Methods:
   - `events.on_session_join(callback)`
 
@@ -115,8 +105,6 @@ MouseClickRegion = {
  | Name     | Type       | Description                                                 |
  | -------- | ---------- | ----------------------------------------------------------- |
  | callback | fun():void | The callback function to be invoked when a session is left. |
-
-- Return: None
 
 - Methods:
   - `events.on_session_left(callback)`
@@ -132,8 +120,6 @@ MouseClickRegion = {
  | -------- | ----------------------------------------------- | ---------------------------------------------------------------- |
  | callback | fun(prev_state: number, cur_state: number):void | The callback function to be invoked when the game state changes. |
 
-- Return: None
-
 - Methods:
   - `events.on_game_state(callback)`
 
@@ -147,8 +133,6 @@ MouseClickRegion = {
  | Name     | Type                         | Description                                                           |
  | -------- | ---------------------------- | --------------------------------------------------------------------- |
  | callback | fun(is_online: boolean):void | The callback function to be invoked when the local player is spawned. |
-
-- Return: None
 
 - Methods:
   - `events.on_spawn(callback)`
@@ -164,8 +148,6 @@ MouseClickRegion = {
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun():void       | The callback function to be invoked when the local player dies. |
 
-- Return: None
-
 - Methods:
   - `events.on_death(callback)`
 
@@ -179,8 +161,6 @@ MouseClickRegion = {
  | Name     | Type             | Description                        |
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(script_name: string):void | The callback function to be invoked when a script starts. |
-
-- Return: None
 
 - Methods:
   - `events.on_script_started(callback)`
@@ -196,8 +176,6 @@ MouseClickRegion = {
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(script_name: string, reason: number):void | The callback function to be invoked when a script stops. |
 
-- Return: None
-
 - Methods:
   - `events.on_script_stopped(callback)`
 
@@ -211,8 +189,6 @@ MouseClickRegion = {
  | Name     | Type             | Description                        |
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(key: string, is_down: boolean):void | The callback function to be invoked on key state change. |
-
-- Return: None
 
 - Methods:
   - `events.on_key_state(callback)`
@@ -228,8 +204,6 @@ MouseClickRegion = {
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(is_online: boolean):void | The callback function to be invoked at the end of the transition. |
 
-- Return: None
-
 - Methods:
   - `events.on_transition_end(callback)`
 
@@ -243,8 +217,6 @@ MouseClickRegion = {
  | Name     | Type             | Description                        |
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun():void       | The callback function to be invoked when the player fully enters single-player. |
-
-- Return: None
 
 - Methods:
   - `events.on_first_singleplayer_join(callback)`
@@ -260,8 +232,6 @@ MouseClickRegion = {
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(hwnd: number, uMsg: number, wParam: number, lParam: number):number|nil | The callback function to be invoked for the game window's WindowProc. |
 
-- Return: None
-
 - Methods:
   - `events.on_window_proc(callback)`
 
@@ -275,8 +245,6 @@ MouseClickRegion = {
  | Name     | Type             | Description                        |
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(ply: player_t, weapon: number):void | The callback function to be invoked when a player shoots a weapon. |
-
-- Return: None
 
 - Methods:
   - `events.on_player_shot(callback)`
@@ -292,8 +260,6 @@ MouseClickRegion = {
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(ply: player_t, flag: number, params: table):void | The callback function to be invoked when a player is detected as a modder. |
 
-- Return: None
-
 - Methods:
   - `events.on_modder_detected(callback)`
 
@@ -307,8 +273,6 @@ MouseClickRegion = {
  | Name     | Type             | Description                        |
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(is_freemode: boolean, is_you: boolean, script_name: string, ply: player_t):void | The callback function to be invoked when a script migrates to another player. |
-
-- Return: None
 
 - Methods:
   - `events.on_script_migrate(callback)`
@@ -324,8 +288,6 @@ MouseClickRegion = {
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(ply: player_t, reason: string, ban_time: number):void | The callback function to be invoked when synchronization is blocked for a player. |
 
-- Return: None
-
 - Methods:
   - `events.on_sync_blocked(callback)`
 
@@ -339,8 +301,6 @@ MouseClickRegion = {
  | Name     | Type             | Description                        |
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(ply: player_t, hash: number, args: table):void | The callback function to be invoked when a script event is received. |
-
-- Return: None
 
 - Methods:
   - `events.on_script_event(callback)`
@@ -356,8 +316,6 @@ MouseClickRegion = {
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(ply: player_t):void | The callback function to be invoked when the session host changes. |
 
-- Return: None
-
 - Methods:
   - `events.on_session_host_changed(callback)`
 
@@ -371,8 +329,6 @@ MouseClickRegion = {
  | Name     | Type             | Description                        |
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(ped: number, weapon_hash: number, ammo_count: number):void | The callback function to be invoked when a pedestrian receives a weapon. |
-
-- Return: None
 
 - Methods:
   - `events.on_weapon_received(callback)`
@@ -388,8 +344,6 @@ MouseClickRegion = {
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun(ply: player_t, text: string):void | The callback function to be invoked when a chat message is received from a player. |
 
-- Return: None
-
 - Methods:
   - `events.on_chat_msg(callback)`
 
@@ -403,8 +357,6 @@ MouseClickRegion = {
  | Name     | Type             | Description                        |
  | -------- | ---------------- | ---------------------------------- |
  | callback | fun():void       | The callback function to be invoked during the UI drawing call. |
-
-- Return: None
 
 - Methods:
   - `events.on_frame(callback)`

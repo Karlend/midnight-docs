@@ -125,7 +125,19 @@ title: Draw
 ---
 
 ## draw.create_texture_from_memory
-`@return number A texture handle if successful, or 0 if the texture could not be created.`
+`Creates a texture from memory buffer`
+- Parameters:
+
+ | Name   | Type   | Description                                                                   |
+ | ------ | ------ | ----------------------------------------------------------------------------- |
+ | buffer | string | The message text to send. If the string is empty, the function returns false. |
+ | len    | number | If true, the message is sent as a team message.                               |
+
+- Return:
+
+ | Type   | Description                                                                |
+ | ------ | -------------------------------------------------------------------------- |
+ | number | A texture handle if successful, or 0 if the texture could not be created.. |
 
 - Methods:
 
@@ -133,8 +145,20 @@ title: Draw
 
 ---
 
-## draw.create_texture_from_file
-`@return number A texture handle if successful, or 0 if the texture could not be created.`
+### draw.create_texture_from_file
+`Creates a texture from a file`
+
+- Parameters:
+
+ | Name      | Type   | Description                      |
+ | --------- | ------ | -------------------------------- |
+ | file_name | string | The path to the texture file.    |
+
+- Return:
+
+ | Type   | Description                                                                |
+ | ------ | -------------------------------------------------------------------------- |
+ | number | A texture handle if successful, or 0 if the texture could not be created.  |
 
 - Methods:
 
@@ -143,7 +167,19 @@ title: Draw
 ---
 
 ## draw.create_texture_from_base64
-`@return number A texture handle if successful, or 0 if the texture could not be created.`
+`Creates a texture from a base64 encoded string`
+
+- Parameters:
+
+ | Name   | Type   | Description                                         |
+ | ------ | ------ | --------------------------------------------------- |
+ | base64 | string | The base64 encoded string representing the image data. |
+
+- Return:
+
+ | Type   | Description                                                                |
+ | ------ | -------------------------------------------------------------------------- |
+ | number | A texture handle if successful, or 0 if the texture could not be created.  |
 
 - Methods:
 
@@ -152,7 +188,24 @@ title: Draw
 ---
 
 ## draw.create_debug_texture
-`@return number A texture handle if successful, or 0 if the texture could not be created.`
+`Creates a debug texture with a checkerboard pattern for quick testing and debugging purposes`
+
+- Overloads:
+  - `draw.create_debug_texture()`
+  - `draw.create_debug_texture(width, height)`
+
+- Parameters:
+
+ | Name   | Type   | Description                                | Default |
+ | ------ | ------ | ------------------------------------------ | ------- |
+ | width  | number | The width of the texture in pixels.        | 100     |
+ | height | number | The height of the texture in pixels.       | 100     |
+
+- Return:
+
+ | Type   | Description                                                                |
+ | ------ | -------------------------------------------------------------------------- |
+ | number | A texture handle if successful, or 0 if the texture could not be created.  |
 
 - Methods:
 
@@ -161,7 +214,19 @@ title: Draw
 ---
 
 ## draw.release_texture
-`@return boolean True if the texture was successfully released, false otherwise.`
+`Releases a previously created texture`
+
+- Parameters:
+
+ | Name   | Type   | Description                      |
+ | ------ | ------ | -------------------------------- |
+ | handle | number | The texture handle to release.   |
+
+- Return:
+
+ | Type    | Description                                                      |
+ | ------- | ---------------------------------------------------------------- |
+ | boolean | True if the texture was successfully released, false otherwise.  |
 
 - Methods:
 
@@ -170,7 +235,23 @@ title: Draw
 ---
 
 ## draw.texture
-`@return boolean True if the texture was successfully drawn, false otherwise.`
+`Draws a texture on the screen at the specified coordinates`
+
+- Parameters:
+
+ | Name   | Type   | Description                                           |
+ | ------ | ------ | ----------------------------------------------------- |
+ | handle | number | The texture handle to draw.                           |
+ | x      | number | The x-coordinate on the screen.                       |
+ | y      | number | The y-coordinate on the screen.                       |
+ | width  | number | The width of the image to draw (optional).            |
+ | height | number | The height of the image to draw (optional).           |
+
+- Return:
+
+ | Type    | Description                                                    |
+ | ------- | -------------------------------------------------------------- |
+ | boolean | True if the texture was successfully drawn, false otherwise.   |
 
 - Methods:
 
@@ -179,7 +260,17 @@ title: Draw
 ---
 
 ## draw.set_hsv
-`@param a number? The alpha component of the color (0-1).`
+`Sets the current drawing color using HSV values, with an optional alpha component`
+
+- Parameters:
+
+ | Name   | Type             | Description                                              | Default |
+ | ------ | ---------------- | -------------------------------------------------------- | ------- |
+ | color  | DrawContextColor | The drawing context color type.                          |         |
+ | h      | number           | The hue component of the color (0-1).                    |         |
+ | s      | number           | The saturation component of the color (0-1).             |         |
+ | v      | number           | The value component of the color (0-1).                  |         |
+ | a      | number           | The alpha component of the color (0-1, optional).        | 1       |
 
 - Methods:
 
@@ -188,16 +279,55 @@ title: Draw
 ---
 
 ## draw.set_color
-`@overload fun(color: EDrawContextColor, r: number, g: number, b: number)`
+`Sets the current drawing color. This function can be called with different sets of parameters`
+
+- Overloads:
+  1. `draw.set_color(color, value)`
+  2. `draw.set_color(color, r, g, b, a)`
+  3. `draw.set_color(color, r, g, b)`
+
+- Parameters:
+
+ | Name   | Type             | Description                                                            |
+ | ------ | ---------------- | ---------------------------------------------------------------------- |
+ | color  | EDrawContextColor | The drawing context color type.                                        |
+ | value  | number           | A number encapsulating RGBA components in a single four-byte number.   |
+ | r      | number           | The red component of the color (0-1).                                  |
+ | g      | number           | The green component of the color (0-1).                                |
+ | b      | number           | The blue component of the color (0-1).                                 |
+ | a      | number           | The alpha component of the color (0-1, optional for full opacity).     |
 
 - Methods:
 
-`draw.set_color(color, ...)`
+`draw.set_color(color, value)`
+
+`draw.set_color(color, r, g, b, a)`
+
+`draw.set_color(color, r, g, b)`
 
 ---
 
 ## draw.get_colors
-`print("Current common color RGBA: ", r, g, b, a)`
+`Retrieves the current RGBA color values for a specified drawing context`
+
+- Parameters:
+
+ | Name   | Type             | Description                                   |
+ | ------ | ---------------- | --------------------------------------------- |
+ | color  | EDrawContextColor | The specific drawing context color to retrieve. |
+
+- Return:
+
+ | Type   | Description                                                    |
+ | ------ | -------------------------------------------------------------- |
+ | number | Four integers representing the RGBA components of the color.   |
+
+- Example:
+
+```lua
+local r, g, b, a = draw.get_colors(DrawContextColor.COMMON)
+print("Current common color RGBA: ", r, g, b, a)
+```
 
 - Methods:
 
@@ -206,7 +336,13 @@ title: Draw
 ---
 
 ## draw.set_thickness
-`@param value number The thickness to set.`
+`Sets the line thickness for drawing operations`
+
+- Parameters:
+
+ | Name   | Type   | Description         |
+ | ------ | ------ | ------------------- |
+ | value  | number | The thickness to set. |
 
 - Methods:
 
@@ -215,7 +351,13 @@ title: Draw
 ---
 
 ## draw.get_thickness
-`@return number The current line thickness.`
+`Retrieves the current line thickness used in drawing operations`
+
+- Return:
+
+ | Type   | Description                    |
+ | ------ | ------------------------------ |
+ | number | The current line thickness.    |
 
 - Methods:
 
@@ -224,7 +366,13 @@ title: Draw
 ---
 
 ## draw.set_rounding
-`@param value number The rounding radius to set.`
+`Sets the rounding radius for drawing operations that require rounded corners`
+
+- Parameters:
+
+ | Name   | Type   | Description                  |
+ | ------ | ------ | ---------------------------- |
+ | value  | number | The rounding radius to set.  |
 
 - Methods:
 
@@ -233,7 +381,13 @@ title: Draw
 ---
 
 ## draw.get_rounding
-`@return number The current rounding radius.`
+`Retrieves the current rounding radius used in drawing operations`
+
+- Return:
+
+ | Type   | Description                     |
+ | ------ | ------------------------------- |
+ | number | The current rounding radius.    |
 
 - Methods:
 
@@ -242,7 +396,13 @@ title: Draw
 ---
 
 ## draw.set_radius
-`@param value number The radius to set for circles and arcs.`
+`Sets the radius for drawing operations that involve circular elements`
+
+- Parameters:
+
+ | Name   | Type   | Description                                 |
+ | ------ | ------ | ------------------------------------------- |
+ | value  | number | The radius to set for circles and arcs.     |
 
 - Methods:
 
@@ -250,8 +410,14 @@ title: Draw
 
 ---
 
-## draw.get_radius
-`@return number The current radius.`
+### draw.get_radius
+`Retrieves the current radius used in drawing operations for circles and arcs`
+
+- Return:
+
+ | Type   | Description                 |
+ | ------ | --------------------------- |
+ | number | The current radius.         |
 
 - Methods:
 
@@ -260,7 +426,13 @@ title: Draw
 ---
 
 ## draw.set_num_segments
-`@param value number The number of segments to set.`
+`Sets the number of segments used for drawing rounded elements`
+
+- Parameters:
+
+ | Name   | Type   | Description                              |
+ | ------ | ------ | ---------------------------------------- |
+ | value  | number | The number of segments to set.          |
 
 - Methods:
 
@@ -269,7 +441,13 @@ title: Draw
 ---
 
 ## draw.get_num_segments
-`@return number The current number of segments.`
+`Retrieves the current number of segments used for rounded elements`
+
+- Return:
+
+ | Type   | Description                            |
+ | ------ | -------------------------------------- |
+ | number | The current number of segments.        |
 
 - Methods:
 
@@ -278,7 +456,13 @@ title: Draw
 ---
 
 ## draw.set_flags
-`@param value number The flags to set, as defined by ImDrawCornerFlags.`
+`Sets drawing flags for customizing the behavior of drawing operations. These flags are based on the ImDrawCornerFlags enum`
+
+- Parameters:
+
+ | Name   | Type   | Description                                      |
+ | ------ | ------ | ------------------------------------------------ |
+ | value  | number | The flags to set, as defined by ImDrawCornerFlags. |
 
 - Methods:
 
@@ -287,7 +471,13 @@ title: Draw
 ---
 
 ## draw.get_flags
-`@return number The current flags.`
+`Retrieves the current drawing flags, as defined by the ImDrawCornerFlags enum`
+
+- Return:
+
+ | Type   | Description                |
+ | ------ | --------------------------|
+ | number | The current flags.        |
 
 - Methods:
 
@@ -296,7 +486,13 @@ title: Draw
 ---
 
 ## draw.set_min_uv
-`@param value number The minimum UV to set.`
+`Sets the minimum texture coordinate (UV) for texturing operations`
+
+- Parameters:
+
+ | Name   | Type   | Description                  |
+ | ------ | ------ | ---------------------------- |
+ | value  | number | The minimum UV to set.       |
 
 - Methods:
 
@@ -305,7 +501,13 @@ title: Draw
 ---
 
 ## draw.get_min_uv
-`@return number The current minimum UV.`
+`Retrieves the current minimum texture coordinate (UV) used in texturing operations`
+
+- Return:
+
+ | Type   | Description                     |
+ | ------ | ------------------------------- |
+ | number | The current minimum UV.         |
 
 - Methods:
 
@@ -314,7 +516,13 @@ title: Draw
 ---
 
 ## draw.set_max_uv
-`@param value number The maximum UV to set.`
+`Sets the maximum texture coordinate (UV) for texturing operations`
+
+- Parameters:
+
+ | Name   | Type   | Description                  |
+ | ------ | ------ | ---------------------------- |
+ | value  | number | The maximum UV to set.       |
 
 - Methods:
 
@@ -323,7 +531,13 @@ title: Draw
 ---
 
 ## draw.get_max_uv
-`@return number The current maximum UV.`
+`Retrieves the current maximum texture coordinate (UV) used in texturing operations`
+
+- Return:
+
+ | Type   | Description                     |
+ | ------ | ------------------------------- |
+ | number | The current maximum UV.         |
 
 - Methods:
 
@@ -332,16 +546,42 @@ title: Draw
 ---
 
 ## draw.create_font
-`@return boolean True if the font is successfully queued for loading, false if there is an error.`
+`Queues a font for loading and invokes a callback when the font is successfully loaded`
+
+- Overloads:
+  1. `draw.create_font(font_name, font_size, on_requested)`
+  2. `draw.create_font(font_name, on_requested)`
+
+- Parameters:
+
+ | Name        | Type               | Description                                                  | Default |
+ | ----------- | ------------------ | ------------------------------------------------------------ | ------- |
+ | font_name   | string             | The name of the font file. If the path is not specified, searches in the product directory and system fonts. |         |
+ | font_size   | number             | The size of the font.                                        | 14      |
+ | on_requested| fun(font: ImFont*) | The callback function that is invoked when the font is loaded. Receives an ImFont pointer as an argument. |         |
+
+- Return:
+
+ | Type     | Description                                              |
+ | -------- | -------------------------------------------------------- |
+ | boolean  | True if the font is successfully queued for loading, false if there is an error. |
 
 - Methods:
 
 `draw.create_font(font_name, font_size, on_requested)`
 
+`draw.create_font(font_name, on_requested)`
+
 ---
 
 ## draw.set_font
-`@param font ImFont* The font to set for drawing.`
+`Sets the current font for drawing operations`
+
+- Parameters:
+
+ | Name   | Type      | Description                      |
+ | ------ | --------- | -------------------------------- |
+ | font   | ImFont*   | The font to set for drawing.     |
 
 - Methods:
 
@@ -350,7 +590,20 @@ title: Draw
 ---
 
 ## draw.get_text_size
-`@return number, number The width and height of the text in pixels, respectively.`
+`Calculates the size of the given text using the current font`
+
+- Parameters:
+
+ | Name   | Type   | Description               |
+ | ------ | ------ | -------------------------|
+ | text   | string | The text for which to calculate the size. |
+
+- Return:
+
+ | Type     | Description                           |
+ | -------- | ------------------------------------- |
+ | number   | The width of the text in pixels.      |
+ | number   | The height of the text in pixels.     |
 
 - Methods:
 
@@ -359,7 +612,19 @@ title: Draw
 ---
 
 ## draw.get_text_size_x
-`@return number The width of the text in pixels.`
+`Calculates the width of the given text using the current font`
+
+- Parameters:
+
+ | Name   | Type   | Description               |
+ | ------ | ------ | -------------------------|
+ | text   | string | The text for which to calculate the width. |
+
+- Return:
+
+ | Type     | Description                           |
+ | -------- | ------------------------------------- |
+ | number   | The width of the text in pixels.      |
 
 - Methods:
 
@@ -368,7 +633,19 @@ title: Draw
 ---
 
 ## draw.get_text_size_y
-`@return number The height of the text in pixels.`
+`Calculates the height of the given text using the current font`
+
+- Parameters:
+
+ | Name   | Type   | Description               |
+ | ------ | ------ | -------------------------|
+ | text   | string | The text for which to calculate the height. |
+
+- Return:
+
+ | Type     | Description                           |
+ | -------- | ------------------------------------- |
+ | number   | The height of the text in pixels.     |
 
 - Methods:
 
@@ -377,7 +654,16 @@ title: Draw
 ---
 
 ## draw.line
-`@param y2 number The y-coordinate of the second point.`
+`Draws a line between two points`
+
+- Parameters:
+
+ | Name   | Type   | Description                         |
+ | ------ | ------ | ----------------------------------- |
+ | x1     | number | The x-coordinate of the first point.|
+ | y1     | number | The y-coordinate of the first point.|
+ | x2     | number | The x-coordinate of the second point.|
+ | y2     | number | The y-coordinate of the second point.|
 
 - Methods:
 
@@ -386,7 +672,15 @@ title: Draw
 ---
 
 ## draw.text
-`@param text string The text to draw.`
+`Draws text at a specified location`
+
+- Parameters:
+
+ | Name   | Type   | Description                       |
+ | ------ | ------ | --------------------------------- |
+ | x      | number | The x-coordinate where the text starts. |
+ | y      | number | The y-coordinate where the text starts. |
+ | text   | string | The text to draw.                 |
 
 - Methods:
 
@@ -395,7 +689,16 @@ title: Draw
 ---
 
 ## draw.rect
-`@param y2 number The y-coordinate of the opposite corner.`
+`Draws an unfilled rectangle`
+
+- Parameters:
+
+ | Name   | Type   | Description                                 |
+ | ------ | ------ | ------------------------------------------- |
+ | x1     | number | The x-coordinate of the first corner.      |
+ | y1     | number | The y-coordinate of the first corner.      |
+ | x2     | number | The x-coordinate of the opposite corner.   |
+ | y2     | number | The y-coordinate of the opposite corner.   |
 
 - Methods:
 
@@ -404,7 +707,16 @@ title: Draw
 ---
 
 ## draw.rect_filled
-`@param y2 number The y-coordinate of the opposite corner.`
+`Draws a filled rectangle`
+
+- Parameters:
+
+ | Name   | Type   | Description                                 |
+ | ------ | ------ | ------------------------------------------- |
+ | x1     | number | The x-coordinate of the first corner.      |
+ | y1     | number | The y-coordinate of the first corner.      |
+ | x2     | number | The x-coordinate of the opposite corner.   |
+ | y2     | number | The y-coordinate of the opposite corner.   |
 
 - Methods:
 
@@ -413,7 +725,16 @@ title: Draw
 ---
 
 ## draw.rect_filled_multi_color
-`@param y2 number The y-coordinate of the opposite corner.`
+`Draws a filled rectangle with multiple colors`
+
+- Parameters:
+
+ | Name   | Type   | Description                                 |
+ | ------ | ------ | ------------------------------------------- |
+ | x1     | number | The x-coordinate of the first corner.      |
+ | y1     | number | The y-coordinate of the first corner.      |
+ | x2     | number | The x-coordinate of the opposite corner.   |
+ | y2     | number | The y-coordinate of the opposite corner.   |
 
 - Methods:
 
@@ -422,7 +743,20 @@ title: Draw
 ---
 
 ## draw.quad
-`@param y4 number The y-coordinate of the fourth corner.`
+`Draws an unfilled quadrilateral`
+
+- Parameters:
+
+ | Name   | Type   | Description                                 |
+ | ------ | ------ | ------------------------------------------- |
+ | x1     | number | The x-coordinate of the first corner.      |
+ | y1     | number | The y-coordinate of the first corner.      |
+ | x2     | number | The x-coordinate of the second corner.     |
+ | y2     | number | The y-coordinate of the second corner.     |
+ | x3     | number | The x-coordinate of the third corner.      |
+ | y3     | number | The y-coordinate of the third corner.      |
+ | x4     | number | The x-coordinate of the fourth corner.     |
+ | y4     | number | The y-coordinate of the fourth corner.     |
 
 - Methods:
 
@@ -431,7 +765,20 @@ title: Draw
 ---
 
 ## draw.quad_filled
-`@param y4 number The y-coordinate of the fourth corner.`
+`Draws a filled quadrilateral`
+
+- Parameters:
+
+ | Name   | Type   | Description                                 |
+ | ------ | ------ | ------------------------------------------- |
+ | x1     | number | The x-coordinate of the first corner.      |
+ | y1     | number | The y-coordinate of the first corner.      |
+ | x2     | number | The x-coordinate of the second corner.     |
+ | y2     | number | The y-coordinate of the second corner.     |
+ | x3     | number | The x-coordinate of the third corner.      |
+ | y3     | number | The y-coordinate of the third corner.      |
+ | x4     | number | The x-coordinate of the fourth corner.     |
+ | y4     | number | The y-coordinate of the fourth corner.     |
 
 - Methods:
 
@@ -440,7 +787,18 @@ title: Draw
 ---
 
 ## draw.triangle
-`@param y3 number The y-coordinate of the third corner.`
+`Draws an unfilled triangle`
+
+- Parameters:
+
+ | Name   | Type   | Description                                 |
+ | ------ | ------ | ------------------------------------------- |
+ | x1     | number | The x-coordinate of the first corner.      |
+ | y1     | number | The y-coordinate of the first corner.      |
+ | x2     | number | The x-coordinate of the second corner.     |
+ | y2     | number | The y-coordinate of the second corner.     |
+ | x3     | number | The x-coordinate of the third corner.      |
+ | y3     | number | The y-coordinate of the third corner.      |
 
 - Methods:
 
@@ -449,7 +807,18 @@ title: Draw
 ---
 
 ## draw.triangle_filled
-`@param y3 number The y-coordinate of the third corner.`
+`Draws a filled triangle`
+
+- Parameters:
+
+ | Name   | Type   | Description                                 |
+ | ------ | ------ | ------------------------------------------- |
+ | x1     | number | The x-coordinate of the first corner.      |
+ | y1     | number | The y-coordinate of the first corner.      |
+ | x2     | number | The x-coordinate of the second corner.     |
+ | y2     | number | The y-coordinate of the second corner.     |
+ | x3     | number | The x-coordinate of the third corner.      |
+ | y3     | number | The y-coordinate of the third corner.      |
 
 - Methods:
 
@@ -458,7 +827,14 @@ title: Draw
 ---
 
 ## draw.circle
-`@param y number The y-coordinate of the circle's center.`
+`Draws an unfilled circle at a specified location`
+
+- Parameters:
+
+ | Name   | Type   | Description                         |
+ | ------ | ------ | ----------------------------------- |
+ | x      | number | The x-coordinate of the circle's center.|
+ | y      | number | The y-coordinate of the circle's center.|
 
 - Methods:
 
@@ -467,7 +843,14 @@ title: Draw
 ---
 
 ## draw.circle_filled
-`@param y number The y-coordinate of the circle's center.`
+`Draws a filled circle at a specified location`
+
+- Parameters:
+
+ | Name   | Type   | Description                         |
+ | ------ | ------ | ----------------------------------- |
+ | x      | number | The x-coordinate of the circle's center.|
+ | y      | number | The y-coordinate of the circle's center.|
 
 - Methods:
 
@@ -476,7 +859,19 @@ title: Draw
 ---
 
 ## draw.set_draw_list
-`@return DrawList The previous DrawList that was set.`
+`Sets the current draw list for drawing elements`
+
+- Parameters:
+
+ | Name   | Type     | Description                         |
+ | ------ | -------- | ----------------------------------- |
+ | list   | DrawList | The draw list to be set.            |
+
+- Return:
+
+ | Type     | Description                                 |
+ | -------- | ------------------------------------------- |
+ | DrawList | The previous DrawList that was set.         |
 
 - Methods:
 
@@ -485,11 +880,16 @@ title: Draw
 ---
 
 ## draw.get_draw_list
-`@return DrawList The current draw list.`
+`Retrieves the current draw list for drawing elements`
+
+- Return:
+
+ | Type     | Description                     |
+ | -------- | ------------------------------- |
+ | DrawList | The current draw list.         |
 
 - Methods:
 
 `draw.get_draw_list()`
 
 ---
-

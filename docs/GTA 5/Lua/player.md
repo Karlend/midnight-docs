@@ -12,8 +12,7 @@ title: Player
  | number | The entity handle of the player. |
 
 - Methods:
-
-`player_t:get_id()`
+  - `player_t:get_id()`
 
 ---
 
@@ -26,8 +25,7 @@ title: Player
  | number | The network handle (ObjectId) of the player. |
 
 - Methods:
-
-`player_t:get_netid()`
+  - `player_t:get_netid()`
 
 ---
 
@@ -40,8 +38,7 @@ title: Player
  | integer | The index of the player. |
 
 - Methods:
-
-`player_t:get_index()`
+  - `player_t:get_index()`
 
 ---
 
@@ -54,8 +51,7 @@ title: Player
  | userdata | A pointer to the rage::fwEntity object. |
 
 - Methods:
-
-`player_t:get_entity_ptr()`
+  - `player_t:get_entity_ptr()`
 
 ---
 
@@ -68,8 +64,7 @@ title: Player
  | userdata | A pointer to the rage::netObject. |
 
 - Methods:
-
-`player_t:get_netobj_ptr()`
+  - `player_t:get_netobj_ptr()`
 
 ---
 
@@ -82,8 +77,7 @@ title: Player
  | integer | The handle of the interior in which the player is located. |
 
 - Methods:
-
-`player_t:get_interior()`
+  - `player_t:get_interior()`
 
 ---
 
@@ -96,8 +90,7 @@ title: Player
  | boolean | Returns true if the player is on the screen, false otherwise. |
 
 - Methods:
-
-`player_t:is_on_screen()`
+  - `player_t:is_on_screen()`
 
 ---
 
@@ -110,8 +103,7 @@ title: Player
  | number, | number, number The x, y, and z coordinates of the player in the game world. |
 
 - Methods:
-
-`player_t:get_coords()`
+  - `player_t:get_coords()`
 
 ---
 
@@ -124,8 +116,7 @@ title: Player
  | number, | number The x and y coordinates of the player on the screen. |
 
 - Methods:
-
-`player_t:get_screen()`
+  - `player_t:get_screen()`
 
 ---
 
@@ -138,8 +129,7 @@ title: Player
  | number, | number, number The pitch, yaw, and roll angles of the player. |
 
 - Methods:
-
-`player_t:get_angles()`
+  - `player_t:get_angles()`
 
 ---
 
@@ -152,8 +142,7 @@ title: Player
  | number, | number, number The minimum x, y, and z coordinates of the player's bounding box. |
 
 - Methods:
-
-`player_t:get_mins()`
+  - `player_t:get_mins()`
 
 ---
 
@@ -166,8 +155,7 @@ title: Player
  | number, | number, number The maximum x, y, and z coordinates of the player's bounding box. |
 
 - Methods:
-
-`player_t:get_maxs()`
+  - `player_t:get_maxs()`
 
 ---
 
@@ -180,8 +168,7 @@ title: Player
  | number, | number, number The x, y, and z components of the forward vector. |
 
 - Methods:
-
-`player_t:get_forward()`
+  - `player_t:get_forward()`
 
 ---
 
@@ -194,8 +181,7 @@ title: Player
  | number, | number, number The x, y, and z components of the right vector. |
 
 - Methods:
-
-`player_t:get_right()`
+  - `player_t:get_right()`
 
 ---
 
@@ -208,8 +194,7 @@ title: Player
  | number, | number, number The x, y, and z components of the up vector. |
 
 - Methods:
-
-`player_t:get_up()`
+  - `player_t:get_up()`
 
 ---
 
@@ -222,8 +207,7 @@ title: Player
  | number | The heading of the player, representing the direction it is facing. |
 
 - Methods:
-
-`player_t:get_heading()`
+  - `player_t:get_heading()`
 
 ---
 
@@ -236,8 +220,7 @@ title: Player
  | number | The distance from the local player to the another player. |
 
 - Methods:
-
-`player_t:get_distance()`
+  - `player_t:get_distance()`
 
 ---
 
@@ -250,8 +233,7 @@ title: Player
  | integer | The current health of the player. |
 
 - Methods:
-
-`player_t:get_health()`
+  - `player_t:get_health()`
 
 ---
 
@@ -264,8 +246,7 @@ title: Player
  | integer | The maximum health of the player. |
 
 - Methods:
-
-`player_t:get_health_max()`
+  - `player_t:get_health_max()`
 
 ---
 
@@ -278,8 +259,7 @@ title: Player
  | boolean | Returns true if the player is alive, false if dead or the health is zero or below. |
 
 - Methods:
-
-`player_t:is_alive()`
+  - `player_t:is_alive()`
 
 ---
 
@@ -292,8 +272,7 @@ title: Player
  | boolean | Returns true if the player's health is zero or below, false otherwise. |
 
 - Methods:
-
-`player_t:is_dead()`
+  - `player_t:is_dead()`
 
 ---
 
@@ -306,8 +285,7 @@ title: Player
  | integer | The bitmask for the player's index. |
 
 - Methods:
-
-`player_t:get_index_bit()`
+  - `player_t:get_index_bit()`
 
 ---
 
@@ -320,8 +298,7 @@ title: Player
  | integer | The handle of the vehicle or 0 if the player is not in a vehicle. |
 
 - Methods:
-
-`player_t:get_vehicle()`
+  - `player_t:get_vehicle()`
 
 ---
 
@@ -334,8 +311,7 @@ title: Player
  | integer | The model hash of the player. |
 
 - Methods:
-
-`player_t:get_model()`
+  - `player_t:get_model()`
 
 ---
 
@@ -348,8 +324,7 @@ title: Player
  | boolean | Returns true if the player is active, false otherwise. |
 
 - Methods:
-
-`player_t:is_active()`
+  - `player_t:is_active()`
 
 ---
 
@@ -362,8 +337,7 @@ title: Player
  | boolean | Returns true if the player is considered valid, false otherwise. |
 
 - Methods:
-
-`player_t:is_valid()`
+  - `player_t:is_valid()`
 
 ---
 
@@ -376,8 +350,7 @@ title: Player
  | userdata | A pointer to the CPlayerInfo object. |
 
 - Methods:
-
-`player_t:get_playerinfo_ptr()`
+  - `player_t:get_playerinfo_ptr()`
 
 ---
 
@@ -390,8 +363,7 @@ title: Player
  | boolean | Returns true if the player is an animal, false otherwise. |
 
 - Methods:
-
-`player_t:is_animal()`
+  - `player_t:is_animal()`
 
 ---
 
@@ -404,8 +376,7 @@ title: Player
  | boolean | Returns true if the player is currently driving a vehicle, false otherwise. |
 
 - Methods:
-
-`player_t:is_driver()`
+  - `player_t:is_driver()`
 
 ---
 
@@ -418,8 +389,7 @@ title: Player
  | integer | The current armor value of the player. |
 
 - Methods:
-
-`player_t:get_armor()`
+  - `player_t:get_armor()`
 
 ---
 
@@ -432,8 +402,7 @@ title: Player
  | string | The name of the player. |
 
 - Methods:
-
-`player_t:get_name()`
+  - `player_t:get_name()`
 
 ---
 
@@ -446,8 +415,7 @@ title: Player
  | boolean | Returns true if the player is blocked. |
 
 - Methods:
-
-`player_t:is_blocked()`
+  - `player_t:is_blocked()`
 
 ---
 
@@ -460,8 +428,7 @@ title: Player
  | boolean | Returns true if the player is marked as a modder. |
 
 - Methods:
-
-`player_t:is_modder()`
+  - `player_t:is_modder()`
 
 ---
 
@@ -474,8 +441,7 @@ title: Player
  | boolean | Returns true if this is the local player. |
 
 - Methods:
-
-`player_t:is_local()`
+  - `player_t:is_local()`
 
 ---
 
@@ -488,8 +454,7 @@ title: Player
  | boolean | Returns true if the player is the session host. |
 
 - Methods:
-
-`player_t:is_session_host()`
+  - `player_t:is_session_host()`
 
 ---
 
@@ -502,8 +467,7 @@ title: Player
  | boolean | Returns true if the player is the script host. |
 
 - Methods:
-
-`player_t:is_script_host()`
+  - `player_t:is_script_host()`
 
 ---
 
@@ -516,8 +480,7 @@ title: Player
  | boolean | Returns true if the player is in godmode. |
 
 - Methods:
-
-`player_t:is_godmode()`
+  - `player_t:is_godmode()`
 
 ---
 
@@ -530,8 +493,7 @@ title: Player
  | boolean | Returns true if the player is a friend. |
 
 - Methods:
-
-`player_t:is_friend()`
+  - `player_t:is_friend()`
 
 ---
 
@@ -544,8 +506,7 @@ title: Player
  | boolean | Returns true if the player is marked as a cheater. |
 
 - Methods:
-
-`player_t:is_marked_as_cheater()`
+  - `player_t:is_marked_as_cheater()`
 
 ---
 
@@ -558,8 +519,7 @@ title: Player
  | boolean | Returns true if the player is marked as an admin (potentially a Rockstar employee), otherwise returns false. |
 
 - Methods:
-
-`player_t:is_marked_as_admin()`
+  - `player_t:is_marked_as_admin()`
 
 ---
 
@@ -572,8 +532,7 @@ title: Player
  | boolean | Returns true if the player is confirmed as a genuine Rockstar administrator, otherwise returns false. |
 
 - Methods:
-
-`player:is_admin()`
+  - `player:is_admin()`
 
 ---
 
@@ -586,8 +545,7 @@ title: Player
  | boolean | Returns true if the player is in an interior. |
 
 - Methods:
-
-`player_t:is_in_interior()`
+  - `player_t:is_in_interior()`
 
 ---
 
@@ -600,8 +558,7 @@ title: Player
  | boolean | Returns true if the player is in a vehicle. |
 
 - Methods:
-
-`player_t:is_in_vehicle()`
+  - `player_t:is_in_vehicle()`
 
 ---
 
@@ -614,8 +571,7 @@ title: Player
  | boolean | Returns true if the player is slated to be the next host. |
 
 - Methods:
-
-`player_t:is_next_host()`
+  - `player_t:is_next_host()`
 
 ---
 
@@ -628,8 +584,7 @@ title: Player
  | boolean | Returns true if the player is falling. |
 
 - Methods:
-
-`player_t:is_falling()`
+  - `player_t:is_falling()`
 
 ---
 
@@ -642,8 +597,7 @@ title: Player
  | boolean | Returns true if the player is swimming. |
 
 - Methods:
-
-`player_t:is_swimming()`
+  - `player_t:is_swimming()`
 
 ---
 
@@ -656,8 +610,7 @@ title: Player
  | boolean | Returns true if the player is underwater. |
 
 - Methods:
-
-`player_t:is_underwater()`
+  - `player_t:is_underwater()`
 
 ---
 
@@ -670,8 +623,7 @@ title: Player
  | boolean | Returns true if the player is shooting. |
 
 - Methods:
-
-`player_t:is_shooting()`
+  - `player_t:is_shooting()`
 
 ---
 
@@ -684,8 +636,7 @@ title: Player
  | boolean | Returns true if the player is aiming. |
 
 - Methods:
-
-`player_t:is_aiming()`
+  - `player_t:is_aiming()`
 
 ---
 
@@ -698,8 +649,7 @@ title: Player
  | boolean | Returns true if the player is driving an unreleased vehicle. |
 
 - Methods:
-
-`player_t:is_drive_unreleased_vehicle()`
+  - `player_t:is_drive_unreleased_vehicle()`
 
 ---
 
@@ -712,8 +662,7 @@ title: Player
  | boolean | Returns true if the player is using a modded weapon. |
 
 - Methods:
-
-`player_t:is_use_modded_weapon()`
+  - `player_t:is_use_modded_weapon()`
 
 ---
 
@@ -726,8 +675,7 @@ title: Player
  | boolean | Returns true if the player is using a modded vehicle. |
 
 - Methods:
-
-`player_t:is_use_modded_vehicle()`
+  - `player_t:is_use_modded_vehicle()`
 
 ---
 
@@ -740,8 +688,7 @@ title: Player
  | boolean | Returns true if the player is using super drive capabilities. |
 
 - Methods:
-
-`player_t:is_use_super_drive()`
+  - `player_t:is_use_super_drive()`
 
 ---
 
@@ -754,8 +701,7 @@ title: Player
  | boolean | Returns true if the player's vehicle is using godmode. |
 
 - Methods:
-
-`player_t:is_use_godmode_vehicle()`
+  - `player_t:is_use_godmode_vehicle()`
 
 ---
 
@@ -768,8 +714,7 @@ title: Player
  | boolean | Returns true if the player has the force host flag. |
 
 - Methods:
-
-`player_t:has_flag_force_host()`
+  - `player_t:has_flag_force_host()`
 
 ---
 
@@ -782,8 +727,7 @@ title: Player
  | boolean | Returns true if the player has the money drop flag. |
 
 - Methods:
-
-`player_t:has_flag_money_drop()`
+  - `player_t:has_flag_money_drop()`
 
 ---
 
@@ -796,8 +740,7 @@ title: Player
  | boolean | Returns true if the player has the update function flag. |
 
 - Methods:
-
-`player_t:has_flag_update_fxn()`
+  - `player_t:has_flag_update_fxn()`
 
 ---
 
@@ -810,8 +753,7 @@ title: Player
  | boolean | Returns true if the player has the CRCs mismatch flag. |
 
 - Methods:
-
-`player_t:has_flag_crcs_mismatch()`
+  - `player_t:has_flag_crcs_mismatch()`
 
 ---
 
@@ -824,8 +766,7 @@ title: Player
  | boolean | Returns true if the player has the malformed script flag. |
 
 - Methods:
-
-`player_t:has_flag_malformed_script()`
+  - `player_t:has_flag_malformed_script()`
 
 ---
 
@@ -838,8 +779,7 @@ title: Player
  | boolean | Returns true if the player has the super jump flag. |
 
 - Methods:
-
-`player_t:has_flag_super_jump()`
+  - `player_t:has_flag_super_jump()`
 
 ---
 
@@ -852,8 +792,7 @@ title: Player
  | boolean | Returns true if the player has the wrong model flag. |
 
 - Methods:
-
-`player_t:has_flag_wrong_model()`
+  - `player_t:has_flag_wrong_model()`
 
 ---
 
@@ -866,8 +805,7 @@ title: Player
  | boolean | Returns true if the player has the censor bypass flag. |
 
 - Methods:
-
-`player_t:has_flag_censor_bypass()`
+  - `player_t:has_flag_censor_bypass()`
 
 ---
 
@@ -880,8 +818,7 @@ title: Player
  | boolean | Returns true if the player has the malformed armor flag. |
 
 - Methods:
-
-`player_t:has_flag_malformed_armor()`
+  - `player_t:has_flag_malformed_armor()`
 
 ---
 
@@ -894,8 +831,7 @@ title: Player
  | boolean | Returns true if the player has the network kick flag. |
 
 - Methods:
-
-`player_t:has_flag_network_kick()`
+  - `player_t:has_flag_network_kick()`
 
 ---
 
@@ -908,8 +844,7 @@ title: Player
  | boolean | Returns true if the player has the crash attempt flag. |
 
 - Methods:
-
-`player_t:has_flag_crash_attempt()`
+  - `player_t:has_flag_crash_attempt()`
 
 ---
 
@@ -922,8 +857,7 @@ title: Player
  | table | The table of game statistics. |
 
 - Methods:
-
-`player_t:get_game_stats()`
+  - `player_t:get_game_stats()`
 
 ---
 
@@ -936,8 +870,7 @@ title: Player
  | table | The table of CEO metadata. |
 
 - Methods:
-
-`player_t:get_ceo_meta()`
+  - `player_t:get_ceo_meta()`
 
 ---
 
@@ -950,8 +883,7 @@ title: Player
  | boolean | Returns true if the player is in a CEO organization. |
 
 - Methods:
-
-`player_t:is_in_ceo()`
+  - `player_t:is_in_ceo()`
 
 ---
 
@@ -964,8 +896,7 @@ title: Player
  | boolean | Returns true if the player is banned from CEO activities. |
 
 - Methods:
-
-`player_t:is_ceo_banned()`
+  - `player_t:is_ceo_banned()`
 
 ---
 
@@ -978,8 +909,7 @@ title: Player
  | boolean | Returns true if the player is the CEO boss. |
 
 - Methods:
-
-`player_t:is_ceo_boss()`
+  - `player_t:is_ceo_boss()`
 
 ---
 
@@ -992,8 +922,7 @@ title: Player
  | integer | The time remaining on the CEO ban in seconds. |
 
 - Methods:
-
-`player_t:get_ceo_ban_time()`
+  - `player_t:get_ceo_ban_time()`
 
 ---
 
@@ -1006,8 +935,7 @@ title: Player
  | integer | Numeric identifier of the player's CEO role. |
 
 - Methods:
-
-`player_t:get_ceo_role()`
+  - `player_t:get_ceo_role()`
 
 ---
 
@@ -1020,8 +948,7 @@ title: Player
  | string | The name of the CEO organization. |
 
 - Methods:
-
-`player_t:get_ceo_name()`
+  - `player_t:get_ceo_name()`
 
 ---
 
@@ -1034,8 +961,7 @@ title: Player
  | integer | The index of the CEO owner. |
 
 - Methods:
-
-`player_t:get_ceo_owner()`
+  - `player_t:get_ceo_owner()`
 
 ---
 
@@ -1048,8 +974,7 @@ title: Player
  | string | The name of the CEO owner. |
 
 - Methods:
-
-`player_t:get_ceo_owner_name()`
+  - `player_t:get_ceo_owner_name()`
 
 ---
 
@@ -1062,8 +987,7 @@ title: Player
  | string | The name of the Motorcycle Club. |
 
 - Methods:
-
-`player_t:get_ceo_clubhouse_name()`
+  - `player_t:get_ceo_clubhouse_name()`
 
 ---
 
@@ -1076,8 +1000,7 @@ title: Player
  | string | The name of the SecuroServ gang. |
 
 - Methods:
-
-`player_t:get_ceo_gang_name()`
+  - `player_t:get_ceo_gang_name()`
 
 ---
 
@@ -1090,8 +1013,7 @@ title: Player
  | integer | The total number of members. |
 
 - Methods:
-
-`player_t:get_ceo_members_total()`
+  - `player_t:get_ceo_members_total()`
 
 ---
 
@@ -1104,8 +1026,7 @@ title: Player
  | integer | The language setting as a numeric code. |
 
 - Methods:
-
-`player_t:get_ceo_language()`
+  - `player_t:get_ceo_language()`
 
 ---
 
@@ -1118,8 +1039,7 @@ title: Player
  | string | The name of the last called vehicle. |
 
 - Methods:
-
-`player_t:get_ceo_last_called_vehicle_name()`
+  - `player_t:get_ceo_last_called_vehicle_name()`
 
 ---
 
@@ -1132,8 +1052,7 @@ title: Player
  | integer | The hash of the last vehicle called. |
 
 - Methods:
-
-`player_t:get_ceo_last_called_vehicle()`
+  - `player_t:get_ceo_last_called_vehicle()`
 
 ---
 
@@ -1146,8 +1065,7 @@ title: Player
  | table | A table containing the player instances of each member. |
 
 - Methods:
-
-`player_t:get_ceo_members()`
+  - `player_t:get_ceo_members()`
 
 ---
 
@@ -1166,8 +1084,7 @@ title: Player
  | boolean | Returns true if the target player is a member of the current player's CEO organization. |
 
 - Methods:
-
-`player_t:is_player_a_member_of_players_ceo(target)`
+  - `player_t:is_player_a_member_of_players_ceo(target)`
 
 ---
 
@@ -1180,8 +1097,7 @@ title: Player
  | table | A table containing arrays for variations and props with detailed info about each item. |
 
 - Methods:
-
-`player_t:get_outfit()`
+  - `player_t:get_outfit()`
 
 ---
 
@@ -1194,8 +1110,7 @@ title: Player
  | integer | The Rockstar ID of the player. |
 
 - Methods:
-
-`player_t:get_rockstar_id()`
+  - `player_t:get_rockstar_id()`
 
 ---
 
@@ -1203,8 +1118,7 @@ title: Player
 `Attempts to kick the player from the lobby.`
 
 - Methods:
-
-`player_t:kick()`
+  - `player_t:kick()`
 
 ---
 
@@ -1212,8 +1126,7 @@ title: Player
 `Attempts to crash the player's game.`
 
 - Methods:
-
-`player_t:crash()`
+  - `player_t:crash()`
 
 ---
 
@@ -1221,8 +1134,7 @@ title: Player
 `Blocks all synchronization with the player.`
 
 - Methods:
-
-`player_t:sync_block()`
+  - `player_t:sync_block()`
 
 ---
 
@@ -1230,8 +1142,7 @@ title: Player
 `Unblocks synchronization with the player, if it was previously blocked.`
 
 - Methods:
-
-`player_t:sync_unblock()`
+  - `player_t:sync_unblock()`
 
 ---
 
@@ -1244,8 +1155,7 @@ title: Player
  | boolean | Returns true if synchronization is blocked, false otherwise. |
 
 - Methods:
-
-`player_t:is_sync_blocked()`
+  - `player_t:is_sync_blocked()`
 
 ---
 
@@ -1258,8 +1168,7 @@ title: Player
  | table | The table of clan metadata. |
 
 - Methods:
-
-`player_t:get_clan_meta()`
+  - `player_t:get_clan_meta()`
 
 ---
 
@@ -1272,8 +1181,7 @@ title: Player
  | integer | The clan member ID of the player. |
 
 - Methods:
-
-`player_t:get_clan_member_id()`
+  - `player_t:get_clan_member_id()`
 
 ---
 
@@ -1286,8 +1194,7 @@ title: Player
  | integer | The clan ID. |
 
 - Methods:
-
-`player_t:get_clan_id()`
+  - `player_t:get_clan_id()`
 
 ---
 
@@ -1300,8 +1207,7 @@ title: Player
  | integer | The color code of the clan. |
 
 - Methods:
-
-`player_t:get_clan_color()`
+  - `player_t:get_clan_color()`
 
 ---
 
@@ -1314,8 +1220,7 @@ title: Player
  | integer | The total number of clan members. |
 
 - Methods:
-
-`player_t:get_clan_member_count()`
+  - `player_t:get_clan_member_count()`
 
 ---
 
@@ -1328,8 +1233,7 @@ title: Player
  | integer | The creation time of the clan. |
 
 - Methods:
-
-`player_t:get_clan_created_time()`
+  - `player_t:get_clan_created_time()`
 
 ---
 
@@ -1342,8 +1246,7 @@ title: Player
  | boolean | Returns true if it is a system clan. |
 
 - Methods:
-
-`player_t:is_system_clan()`
+  - `player_t:is_system_clan()`
 
 ---
 
@@ -1356,8 +1259,7 @@ title: Player
  | boolean | Returns true if the clan is open. |
 
 - Methods:
-
-`player_t:is_clan_open()`
+  - `player_t:is_clan_open()`
 
 ---
 
@@ -1370,8 +1272,7 @@ title: Player
  | string | The name of the clan. |
 
 - Methods:
-
-`player_t:get_clan_name()`
+  - `player_t:get_clan_name()`
 
 ---
 
@@ -1384,8 +1285,7 @@ title: Player
  | string | The clan tag. |
 
 - Methods:
-
-`player_t:get_clan_tag()`
+  - `player_t:get_clan_tag()`
 
 ---
 
@@ -1398,8 +1298,7 @@ title: Player
  | string | The clan motto. |
 
 - Methods:
-
-`player_t:get_clan_motto()`
+  - `player_t:get_clan_motto()`
 
 ---
 
@@ -1412,8 +1311,7 @@ title: Player
  | string | The clan rank name. |
 
 - Methods:
-
-`player_t:get_clan_rank_name()`
+  - `player_t:get_clan_rank_name()`
 
 ---
 
@@ -1426,8 +1324,7 @@ title: Player
  | integer | The rank order. |
 
 - Methods:
-
-`player_t:get_clan_rank_order()`
+  - `player_t:get_clan_rank_order()`
 
 ---
 
@@ -1440,8 +1337,7 @@ title: Player
  | integer | The rank flags. |
 
 - Methods:
-
-`player_t:get_clan_rank_flags()`
+  - `player_t:get_clan_rank_flags()`
 
 ---
 
@@ -1454,8 +1350,7 @@ title: Player
  | integer | The maximum armor value. |
 
 - Methods:
-
-`player_t:get_max_armor()`
+  - `player_t:get_max_armor()`
 
 ---
 
@@ -1468,8 +1363,7 @@ title: Player
  | table|nil | A table containing 4 bytes of the IP address or nil if the IP could not be retrieved. |
 
 - Methods:
-
-`player_t:get_relay_ip()`
+  - `player_t:get_relay_ip()`
 
 ---
 
@@ -1482,8 +1376,7 @@ title: Player
  | integer | The relay port number or 0 if the port could not be retrieved. |
 
 - Methods:
-
-`player_t:get_relay_port()`
+  - `player_t:get_relay_port()`
 
 ---
 
@@ -1496,8 +1389,7 @@ title: Player
  | table|nil | A table containing 4 bytes of the IP address or nil if the IP could not be retrieved. |
 
 - Methods:
-
-`player_t:get_public_ip()`
+  - `player_t:get_public_ip()`
 
 ---
 
@@ -1510,8 +1402,7 @@ title: Player
  | integer | The public port number or 0 if the port could not be retrieved. |
 
 - Methods:
-
-`player_t:get_public_port()`
+  - `player_t:get_public_port()`
 
 ---
 
@@ -1524,8 +1415,7 @@ title: Player
  | table|nil | A table containing 4 bytes of the IP address or nil if the IP could not be retrieved. |
 
 - Methods:
-
-`player_t:get_private_ip()`
+  - `player_t:get_private_ip()`
 
 ---
 
@@ -1538,8 +1428,7 @@ title: Player
  | integer | The private port number or 0 if the port could not be retrieved. |
 
 - Methods:
-
-`player_t:get_private_port()`
+  - `player_t:get_private_port()`
 
 ---
 
@@ -1558,8 +1447,7 @@ title: Player
  | string | The relay IP address and port in the format "IP:Port" or just "IP". |
 
 - Methods:
-
-`player_t:get_relay_addr(include_port)`
+  - `player_t:get_relay_addr(include_port)`
 
 ---
 
@@ -1578,8 +1466,7 @@ title: Player
  | string | The public IP address and port in the format "IP:Port" or just "IP". |
 
 - Methods:
-
-`player_t:get_public_addr(include_port)`
+  - `player_t:get_public_addr(include_port)`
 
 ---
 
@@ -1598,8 +1485,7 @@ title: Player
  | string | The private IP address and port in the format "IP:Port" or just "IP". |
 
 - Methods:
-
-`player_t:get_private_addr(include_port)`
+  - `player_t:get_private_addr(include_port)`
 
 ---
 
@@ -1618,8 +1504,7 @@ title: Player
  | boolean | Returns false if the destination player is not local or if the destination player is the same as the source. |
 
 - Methods:
-
-`player_t:outfit_copy(dest)`
+  - `player_t:outfit_copy(dest)`
 
 ---
 
@@ -1638,8 +1523,7 @@ title: Player
  | boolean | Returns false if unable to gather the outfit information for saving. |
 
 - Methods:
-
-`player_t:outfit_save(filename)`
+  - `player_t:outfit_save(filename)`
 
 ---
 
@@ -1658,8 +1542,7 @@ title: Player
  | boolean | Returns false if the player is not local or the file does not exist. |
 
 - Methods:
-
-`player_t:outfit_load(filepath)`
+  - `player_t:outfit_load(filepath)`
 
 ---
 
@@ -1672,8 +1555,7 @@ title: Player
  | integer | The connection ID associated with the player. |
 
 - Methods:
-
-`player_t:get_cxn_id()`
+  - `player_t:get_cxn_id()`
 
 ---
 
@@ -1686,8 +1568,7 @@ title: Player
  | integer | The endpoint ID associated with the player. |
 
 - Methods:
-
-`player_t:get_endpoint_id()`
+  - `player_t:get_endpoint_id()`
 
 ---
 
@@ -1700,8 +1581,7 @@ title: Player
  | integer | The active index of the player. |
 
 - Methods:
-
-`player_t:get_active_id()`
+  - `player_t:get_active_id()`
 
 ---
 
@@ -1714,8 +1594,7 @@ title: Player
  | integer | The index of the player on the remote machine. |
 
 - Methods:
-
-`player_t:get_peer_player_index()`
+  - `player_t:get_peer_player_index()`
 
 ---
 
@@ -1728,8 +1607,7 @@ title: Player
  | integer | The network synced time when the player was added. |
 
 - Methods:
-
-`player_t:get_time_added()`
+  - `player_t:get_time_added()`
 
 ---
 
@@ -1742,8 +1620,7 @@ title: Player
  | integer | The player's team ID. |
 
 - Methods:
-
-`player_t:get_team()`
+  - `player_t:get_team()`
 
 ---
 
@@ -1756,8 +1633,7 @@ title: Player
  | integer | The voice channel ID or -1 if no channel is assigned. |
 
 - Methods:
-
-`player_t:get_voice_channel()`
+  - `player_t:get_voice_channel()`
 
 ---
 
@@ -1770,8 +1646,7 @@ title: Player
  | integer | The total size of network array data. |
 
 - Methods:
-
-`player_t:get_sizeof_net_array()`
+  - `player_t:get_sizeof_net_array()`
 
 ---
 
@@ -1784,8 +1659,7 @@ title: Player
  | boolean | Returns true if the player is leaving the session, false otherwise. |
 
 - Methods:
-
-`player_t:is_leaving()`
+  - `player_t:is_leaving()`
 
 ---
 
@@ -1798,8 +1672,7 @@ title: Player
  | boolean | Returns true if the player is OTR, otherwise returns false. |
 
 - Methods:
-
-`player_t:is_player_otr()`
+  - `player_t:is_player_otr()`
 
 ---
 
@@ -1812,8 +1685,7 @@ title: Player
  | boolean | Returns true if the player has a bounty mark, otherwise returns false. |
 
 - Methods:
-
-`player_t:has_bounty_mark()`
+  - `player_t:has_bounty_mark()`
 
 ---
 
@@ -1826,8 +1698,7 @@ title: Player
  | integer | Returns the bounty value on the player. |
 
 - Methods:
-
-`player_t:get_bounty_value()`
+  - `player_t:get_bounty_value()`
 
 ---
 
@@ -1840,8 +1711,7 @@ title: Player
  | integer | Returns the current respawn state of the player. |
 
 - Methods:
-
-`player_t:get_respawn_state()`
+  - `player_t:get_respawn_state()`
 
 ---
 
@@ -1854,8 +1724,7 @@ title: Player
  | boolean | Returns true if the player is connected, otherwise returns false. |
 
 - Methods:
-
-`player_t:is_player_connected()`
+  - `player_t:is_player_connected()`
 
 ---
 
@@ -1868,8 +1737,7 @@ title: Player
  | boolean | Returns true if the player is in the same interior, otherwise returns false. |
 
 - Methods:
-
-`player_t:is_player_in_my_interior()`
+  - `player_t:is_player_in_my_interior()`
 
 ---
 
@@ -1882,8 +1750,7 @@ title: Player
  | boolean | Returns true if the player is typing a chat message, otherwise returns false. |
 
 - Methods:
-
-`player_t:is_player_typing()`
+  - `player_t:is_player_typing()`
 
 ---
 
@@ -1896,8 +1763,7 @@ title: Player
  | boolean | Returns true if the player is in pause state, otherwise returns false. |
 
 - Methods:
-
-`player_t:is_player_in_pause()`
+  - `player_t:is_player_in_pause()`
 
 ---
 
@@ -1910,8 +1776,7 @@ title: Player
  | boolean | Returns true if the player is in passive state, otherwise returns false. |
 
 - Methods:
-
-`player_t:is_player_in_passive()`
+  - `player_t:is_player_in_passive()`
 
 ---
 
@@ -1924,8 +1789,7 @@ title: Player
  | boolean | Returns true if the player is in a cutscene, otherwise returns false. |
 
 - Methods:
-
-`player_t:is_player_in_cutscene()`
+  - `player_t:is_player_in_cutscene()`
 
 ---
 
@@ -1938,8 +1802,7 @@ title: Player
  | boolean | Returns true if the player is in the process of interior transferring, otherwise returns false. |
 
 - Methods:
-
-`player_t:is_player_in_interior_transfering()`
+  - `player_t:is_player_in_interior_transfering()`
 
 ---
 
@@ -1952,8 +1815,7 @@ title: Player
  | boolean | Returns true if the player is using a VPN, otherwise returns false. |
 
 - Methods:
-
-`player_t:has_vpn()`
+  - `player_t:has_vpn()`
 
 ---
 
@@ -1972,8 +1834,7 @@ title: Player
  | player_t|nil | Player menu object, or nil if no player could be found. |
 
 - Methods:
-
-`players.get_from_entity(handle_or_ptr)`
+  - `players.get_from_entity(handle_or_ptr)`
 
 ---
 
@@ -1992,8 +1853,7 @@ title: Player
  | player_t|nil | Player menu object, or nil if no player could be found. |
 
 - Methods:
-
-`players.get(index_or_name)`
+  - `players.get(index_or_name)`
 
 ---
 
@@ -2013,8 +1873,7 @@ title: Player
  | player_t|nil | Random player in the session meeting the criteria, or nil if no player could be found. |
 
 - Methods:
-
-`players.get_random(ignore_me, ignore_friends)`
+  - `players.get_random(ignore_me, ignore_friends)`
 
 ---
 
@@ -2022,8 +1881,7 @@ title: Player
 `@return table[player_t] - A table of player objects.`
 
 - Methods:
-
-`players.get_all(sort, reverse_order)`
+  - `players.get_all(sort, reverse_order)`
 
 ---
 
@@ -2036,8 +1894,7 @@ title: Player
  | player_t|nil | Player menu object for local player or nil or failed to extract. |
 
 - Methods:
-
-`players.me()`
+  - `players.me()`
 
 ---
 
@@ -2050,8 +1907,7 @@ title: Player
  | number | Local player index. |
 
 - Methods:
-
-`players.id()`
+  - `players.id()`
 
 ---
 
@@ -2059,8 +1915,7 @@ title: Player
 `@return player_t | nil: The player object that is the host for the script 'freemode', or 'nil' if no host is found.`
 
 - Methods:
-
-`players.get_script_host(...)`
+  - `players.get_script_host(...)`
 
 ---
 
@@ -2068,8 +1923,7 @@ title: Player
 `Retrieves the session host player object.`
 
 - Methods:
-
-`players.get_host()`
+  - `players.get_host()`
 
 ---
 
@@ -2077,8 +1931,7 @@ title: Player
 `Retrieves the next session host player object.`
 
 - Methods:
-
-`players.get_next_host()`
+  - `players.get_next_host()`
 
 ---
 
@@ -2086,8 +1939,7 @@ title: Player
 `@return table[player_t] A table of player_t objects representing players in the hosting queue.`
 
 - Methods:
-
-`players.get_hosts_queue()`
+  - `players.get_hosts_queue()`
 
 ---
 
@@ -2095,8 +1947,7 @@ title: Player
 `@return player_t|nil Player menu object, or nil if no player could be found.`
 
 - Methods:
-
-`player(index_or_name)`
+  - `player(index_or_name)`
 
 ---
 

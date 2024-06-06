@@ -7,8 +7,7 @@ title: Utils
 `@return string The text currently in the clipboard.`
 
 - Methods:
-
-`utils.get_clipboard()`
+  - `utils.get_clipboard()`
 
 ---
 
@@ -16,8 +15,7 @@ title: Utils
 `@return boolean True if the text was successfully set to the clipboard, otherwise false.`
 
 - Methods:
-
-`utils.set_clipboard(message)`
+  - `utils.set_clipboard(message)`
 
 ---
 
@@ -25,8 +23,7 @@ title: Utils
 `@return boolean, number, number True if the position was retrieved successfully along with the x and y coordinates of the mouse cursor. Returns False, 0.0, 0.0 if unsuccessful.`
 
 - Methods:
-
-`utils.get_mouse_pos()`
+  - `utils.get_mouse_pos()`
 
 ---
 
@@ -34,8 +31,7 @@ title: Utils
 `@return boolean True if the cursor was successfully moved, otherwise false.`
 
 - Methods:
-
-`utils.set_mouse_pos(x, y)`
+  - `utils.set_mouse_pos(x, y)`
 
 ---
 
@@ -43,8 +39,7 @@ title: Utils
 `@return number, number, number The pitch, yaw, and roll angles calculated from the forward vector.`
 
 - Methods:
-
-`utils.vector_angles(forward)`
+  - `utils.vector_angles(forward)`
 
 ---
 
@@ -52,8 +47,7 @@ title: Utils
 `@return boolean, number, number True and the x, y screen coordinates if the conversion is successful. Returns False, 0.0, 0.0 if unsuccessful.`
 
 - Methods:
-
-`utils.world_to_screen(world)`
+  - `utils.world_to_screen(world)`
 
 ---
 
@@ -61,8 +55,7 @@ title: Utils
 `@return boolean True if the key is pressed, false if not.`
 
 - Methods:
-
-`utils.get_key_state(key)`
+  - `utils.get_key_state(key)`
 
 ---
 
@@ -70,8 +63,7 @@ title: Utils
 `@return string The name of the key including any modifiers.`
 
 - Methods:
-
-`utils.get_key_name(key)`
+  - `utils.get_key_name(key)`
 
 ---
 
@@ -79,8 +71,7 @@ title: Utils
 `@return boolean True if the script was successfully stopped, false if the script was not loaded or could not be stopped.`
 
 - Methods:
-
-`utils.stop_script()`
+  - `utils.stop_script()`
 
 ---
 
@@ -88,8 +79,7 @@ title: Utils
 `@return boolean True if the script was successfully reloaded, otherwise false.`
 
 - Methods:
-
-`utils.reload_script()`
+  - `utils.reload_script()`
 
 ---
 
@@ -97,8 +87,7 @@ title: Utils
 `@return integer The current FPS value.`
 
 - Methods:
-
-`utils.get_fps()`
+  - `utils.get_fps()`
 
 ---
 
@@ -106,8 +95,7 @@ title: Utils
 `@return number The time duration of one frame in seconds.`
 
 - Methods:
-
-`utils.get_frame_rate()`
+  - `utils.get_frame_rate()`
 
 ---
 
@@ -115,8 +103,7 @@ title: Utils
 `@return integer, integer, integer The formatted date as year, month, and day, based on the specified format.`
 
 - Methods:
-
-`utils.get_current_date(format)`
+  - `utils.get_current_date(format)`
 
 ---
 
@@ -124,8 +111,7 @@ title: Utils
 `@return integer, integer, integer The formatted time as hour, minute, and second, based on the specified format.`
 
 - Methods:
-
-`utils.get_current_time(format)`
+  - `utils.get_current_time(format)`
 
 ---
 
@@ -133,8 +119,7 @@ title: Utils
 `@return integer The number of milliseconds elapsed since the Unix epoch.`
 
 - Methods:
-
-`utils.get_current_time_millis()`
+  - `utils.get_current_time_millis()`
 
 ---
 
@@ -142,8 +127,7 @@ title: Utils
 `@return integer The number of seconds elapsed since the Unix epoch.`
 
 - Methods:
-
-`utils.get_current_unix_time_seconds()`
+  - `utils.get_current_unix_time_seconds()`
 
 ---
 
@@ -151,8 +135,7 @@ title: Utils
 `@param lua_function function The Lua function to be executed asynchronously.`
 
 - Methods:
-
-`utils.execute_in_os_thread(lua_function)`
+  - `utils.execute_in_os_thread(lua_function)`
 
 ---
 
@@ -160,8 +143,7 @@ title: Utils
 `function is passed as an argument to this callback. If the loading fails, 'nil' is passed instead.`
 
 - Methods:
-
-`utils.require_async(file, on_load)`
+  - `utils.require_async(file, on_load)`
 
 ---
 
@@ -169,8 +151,7 @@ title: Utils
 `@return table A Lua table containing the data read from the file.`
 
 - Methods:
-
-`utils.read_colons_and_tabs_file(filePath, separator)`
+  - `utils.read_colons_and_tabs_file(filePath, separator)`
 
 ---
 
@@ -178,8 +159,7 @@ title: Utils
 `@return boolean True if the data was successfully written to the file, false otherwise.`
 
 - Methods:
-
-`utils.write_colons_file(filePath, data, separator)`
+  - `utils.write_colons_file(filePath, data, separator)`
 
 ---
 
@@ -187,8 +167,7 @@ title: Utils
 `This function should be called within a coroutine managed by the fiber system.`
 
 - Methods:
-
-`utils.yield()`
+  - `utils.yield()`
 
 ---
 
@@ -202,8 +181,7 @@ title: Utils
 
 
 - Methods:
-
-`utils.sleep(ms)`
+  - `utils.sleep(ms)`
 
 ---
 
@@ -222,8 +200,7 @@ title: Utils
  | boolean | Returns true if the function was successfully registered to run, false otherwise. |
 
 - Methods:
-
-`utils.exec_fiber(func)`
+  - `utils.exec_fiber(func)`
 
 ---
 
@@ -242,8 +219,7 @@ title: Utils
  | boolean | Returns true if the function was successfully registered to loop, false otherwise. |
 
 - Methods:
-
-`utils.loop_fiber(func)`
+  - `utils.loop_fiber(func)`
 
 ---
 
@@ -251,8 +227,7 @@ title: Utils
 `@param z number The z coordinate to teleport the player to.`
 
 - Methods:
-
-`utils.teleport_self(coords)`
+  - `utils.teleport_self(coords)`
 
 ---
 
@@ -260,8 +235,7 @@ title: Utils
 `@param z number The z coordinate to teleport the entity to.`
 
 - Methods:
-
-`utils.teleport_entity(ent, coords)`
+  - `utils.teleport_entity(ent, coords)`
 
 ---
 
@@ -269,8 +243,7 @@ title: Utils
 `@return boolean Returns true if the model change process is initiated successfully.`
 
 - Methods:
-
-`utils.change_self_model(model)`
+  - `utils.change_self_model(model)`
 
 ---
 
@@ -278,8 +251,7 @@ title: Utils
 `@return int The amount of RP needed to reach the specified level.`
 
 - Methods:
-
-`utils.get_rp_required_for_rank(level)`
+  - `utils.get_rp_required_for_rank(level)`
 
 ---
 
@@ -287,8 +259,7 @@ title: Utils
 `@return unsigned The bitflag representing the players in the session.`
 
 - Methods:
-
-`utils.get_session_players_bitflag(ignoreLocalPlayer)`
+  - `utils.get_session_players_bitflag(ignoreLocalPlayer)`
 
 ---
 
@@ -296,8 +267,7 @@ title: Utils
 `@return number The ground Z coordinate at the specified location or 0.0 if the function fails.`
 
 - Methods:
-
-`utils.get_ground_z(x, y, z_hint)`
+  - `utils.get_ground_z(x, y, z_hint)`
 
 ---
 
@@ -305,8 +275,7 @@ title: Utils
 `@return string A string that corresponds to the hash if found in the internal lists; otherwise, returns an empty string.`
 
 - Methods:
-
-`utils.reverse_joaat(hash)`
+  - `utils.reverse_joaat(hash)`
 
 ---
 

@@ -18,8 +18,7 @@ title: Pickups
  | boolean | True if the pickup type may cause a spawn block and trigger anti-cheat systems, false otherwise. |
 
 - Methods:
-
-`pickups.is_money_detected_hash(pickupType)`
+  - `pickups.is_money_detected_hash(pickupType)`
 
 ---
 
@@ -38,8 +37,7 @@ title: Pickups
  | pickup_group_t|nil | The pickup group if found; nil otherwise. |
 
 - Methods:
-
-`pickups.find_group_by_hash(hashHash)`
+  - `pickups.find_group_by_hash(hashHash)`
 
 ---
 
@@ -58,8 +56,7 @@ title: Pickups
  | pickup_group_t|nil | The pickup group if found; nil otherwise. |
 
 - Methods:
-
-`pickups.find_group_by_model(modelHash)`
+  - `pickups.find_group_by_model(modelHash)`
 
 ---
 
@@ -78,8 +75,7 @@ title: Pickups
  | pickup_type_t|nil | The pickup type if found; nil otherwise. |
 
 - Methods:
-
-`pickups.find_pickup_by_hash(pickupHash)`
+  - `pickups.find_pickup_by_hash(pickupHash)`
 
 ---
 
@@ -98,8 +94,7 @@ title: Pickups
  | pickup_type_t|nil | The pickup type if found; nil otherwise. |
 
 - Methods:
-
-`pickups.find_pickup_by_model(modelHash)`
+  - `pickups.find_pickup_by_model(modelHash)`
 
 ---
 
@@ -107,8 +102,7 @@ title: Pickups
 `@return number The handle of the spawned pickup.`
 
 - Methods:
-
-`pickups.spawn(pickup, pos, amount)`
+  - `pickups.spawn(pickup, pos, amount)`
 
 ---
 
@@ -116,8 +110,7 @@ title: Pickups
 `@overload fun(pickup: PICKUP_TYPE, modelHash: Hash, player: number|player_t, amount: integer): number`
 
 - Methods:
-
-`pickups.spawn_for_player(pickup, modelHash, player, amount)`
+  - `pickups.spawn_for_player(pickup, modelHash, player, amount)`
 
 ---
 
@@ -125,8 +118,7 @@ title: Pickups
 `@return table A Lua table containing the spawned pickups.`
 
 - Methods:
-
-`pickups.spawn_group(group, pos, amount, despawnTime)`
+  - `pickups.spawn_group(group, pos, amount, despawnTime)`
 
 ---
 
@@ -134,8 +126,7 @@ title: Pickups
 `@return number The handle of the spawned pickup.`
 
 - Methods:
-
-`pickups.spawn_health(player, despawnTime)`
+  - `pickups.spawn_health(player, despawnTime)`
 
 ---
 
@@ -143,8 +134,7 @@ title: Pickups
 `@return number The handle of the spawned pickup.`
 
 - Methods:
-
-`pickups.spawn_armor(player, despawnTime)`
+  - `pickups.spawn_armor(player, despawnTime)`
 
 ---
 
@@ -152,8 +142,7 @@ title: Pickups
 `@return table A Lua table containing the spawned pickups.`
 
 - Methods:
-
-`pickups.spawn_weapons(player, despawnTime)`
+  - `pickups.spawn_weapons(player, despawnTime)`
 
 ---
 
@@ -161,8 +150,7 @@ title: Pickups
 `@return table A Lua table containing the spawned pickups.`
 
 - Methods:
-
-`pickups.spawn_ammo(player, despawnTime)`
+  - `pickups.spawn_ammo(player, despawnTime)`
 
 ---
 
@@ -170,8 +158,7 @@ title: Pickups
 `@return number The handle of the spawned pickup.`
 
 - Methods:
-
-`pickups.spawn_ex(hPickup, hModel, pos, amount, flags, despawnTime, forceModel)`
+  - `pickups.spawn_ex(hPickup, hModel, pos, amount, flags, despawnTime, forceModel)`
 
 ---
 

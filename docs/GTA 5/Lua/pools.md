@@ -7,8 +7,7 @@ title: Pools
 `@return table A table of vehicle handles.`
 
 - Methods:
-
-`pools.get_all_vehicles()`
+  - `pools.get_all_vehicles()`
 
 ---
 
@@ -16,8 +15,7 @@ title: Pools
 `@return table A table of pedestrian handles.`
 
 - Methods:
-
-`pools.get_all_peds()`
+  - `pools.get_all_peds()`
 
 ---
 
@@ -25,8 +23,7 @@ title: Pools
 `@return table A table of object handles.`
 
 - Methods:
-
-`pools.get_all_objects()`
+  - `pools.get_all_objects()`
 
 ---
 
@@ -34,8 +31,7 @@ title: Pools
 `@return table A table of all entity handles.`
 
 - Methods:
-
-`pools.get_all_ents()`
+  - `pools.get_all_ents()`
 
 ---
 
@@ -43,8 +39,7 @@ title: Pools
 `@return table A table of pickup handles.`
 
 - Methods:
-
-`pools.get_all_pickups()`
+  - `pools.get_all_pickups()`
 
 ---
 
@@ -52,8 +47,7 @@ title: Pools
 `@return table A table of blip handles.`
 
 - Methods:
-
-`pools.get_all_blips()`
+  - `pools.get_all_blips()`
 
 ---
 

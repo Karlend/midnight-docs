@@ -7,8 +7,7 @@ title: Stats
 `@return boolean True if the stat exists, false otherwise.`
 
 - Methods:
-
-`stats.exists(stat)`
+  - `stats.exists(stat)`
 
 ---
 
@@ -16,8 +15,7 @@ title: Stats
 `@return integer The integer code of the stat type, or -1 if the stat does not exist.`
 
 - Methods:
-
-`stats.get_stat_type(stat)`
+  - `stats.get_stat_type(stat)`
 
 ---
 
@@ -25,8 +23,7 @@ title: Stats
 `@return string The name of the stat type, or nil if the stat does not exist.`
 
 - Methods:
-
-`stats.get_stat_type_name(stat)`
+  - `stats.get_stat_type_name(stat)`
 
 ---
 
@@ -34,8 +31,7 @@ title: Stats
 `@return boolean True if the stat was successfully set, false otherwise.`
 
 - Methods:
-
-`stats.set_bool(stat, value)`
+  - `stats.set_bool(stat, value)`
 
 ---
 
@@ -43,8 +39,7 @@ title: Stats
 `@return boolean True if the stat was successfully set, false otherwise.`
 
 - Methods:
-
-`stats.set_u8(stat, value)`
+  - `stats.set_u8(stat, value)`
 
 ---
 
@@ -52,8 +47,7 @@ title: Stats
 `@return boolean True if the stat was successfully set, false otherwise.`
 
 - Methods:
-
-`stats.set_u16(stat, value)`
+  - `stats.set_u16(stat, value)`
 
 ---
 
@@ -61,8 +55,7 @@ title: Stats
 `@return boolean True if the stat was successfully set, false otherwise.`
 
 - Methods:
-
-`stats.set_u32(stat, value)`
+  - `stats.set_u32(stat, value)`
 
 ---
 
@@ -70,8 +63,7 @@ title: Stats
 `@return boolean True if the stat was successfully set, false otherwise.`
 
 - Methods:
-
-`stats.set_u64(stat, value)`
+  - `stats.set_u64(stat, value)`
 
 ---
 
@@ -79,8 +71,7 @@ title: Stats
 `@return boolean True if the stat was successfully set, false otherwise.`
 
 - Methods:
-
-`stats.set_float(stat, value)`
+  - `stats.set_float(stat, value)`
 
 ---
 
@@ -88,8 +79,7 @@ title: Stats
 `@return boolean True if the stat was successfully set, false otherwise.`
 
 - Methods:
-
-`stats.set_string(stat, value)`
+  - `stats.set_string(stat, value)`
 
 ---
 
@@ -97,8 +87,7 @@ title: Stats
 `@return boolean The boolean value of the specified stat, or nil if the stat does not exist or has a different type.`
 
 - Methods:
-
-`stats.get_bool(stat_hash)`
+  - `stats.get_bool(stat_hash)`
 
 ---
 
@@ -106,8 +95,7 @@ title: Stats
 `@return integer The unsigned 8-bit integer value of the specified stat, or 0 if the stat does not exist or has a different type.`
 
 - Methods:
-
-`stats.get_u8(stat_hash)`
+  - `stats.get_u8(stat_hash)`
 
 ---
 
@@ -115,8 +103,7 @@ title: Stats
 `@return integer The unsigned 16-bit integer value of the specified stat, or 0 if the stat does not exist or has a different type.`
 
 - Methods:
-
-`stats.get_u16(stat_hash)`
+  - `stats.get_u16(stat_hash)`
 
 ---
 
@@ -124,8 +111,7 @@ title: Stats
 `@return integer The unsigned 32-bit integer value of the specified stat, or 0 if the stat does not exist or has a different type.`
 
 - Methods:
-
-`stats.get_u32(stat_hash)`
+  - `stats.get_u32(stat_hash)`
 
 ---
 
@@ -133,8 +119,7 @@ title: Stats
 `@return integer The unsigned 64-bit integer value of the specified stat, or 0 if the stat does not exist or has a different type.`
 
 - Methods:
-
-`stats.get_u64(stat_hash)`
+  - `stats.get_u64(stat_hash)`
 
 ---
 
@@ -142,8 +127,7 @@ title: Stats
 `@return float The floating-point value of the specified stat, or 0.0 if the stat does not exist or has a different type.`
 
 - Methods:
-
-`stats.get_float(stat_hash)`
+  - `stats.get_float(stat_hash)`
 
 ---
 
@@ -151,8 +135,7 @@ title: Stats
 `@return string The string value of the specified stat, or nil if the stat does not exist or has a different type.`
 
 - Methods:
-
-`stats.get_string(stat_hash)`
+  - `stats.get_string(stat_hash)`
 
 ---
 
@@ -160,8 +143,7 @@ title: Stats
 `@return boolean True if the masked value is valid, false otherwise.`
 
 - Methods:
-
-`stats.is_masked_valid(stat_hash, offset, mask)`
+  - `stats.is_masked_valid(stat_hash, offset, mask)`
 
 ---
 
@@ -169,8 +151,7 @@ title: Stats
 `@return integer The masked integer value of the specified stat, or 0 if the stat does not exist.`
 
 - Methods:
-
-`stats.get_masked_int(stat_hash, offset, mask)`
+  - `stats.get_masked_int(stat_hash, offset, mask)`
 
 ---
 
@@ -178,8 +159,7 @@ title: Stats
 `@return boolean True if the operation was successful, false otherwise.`
 
 - Methods:
-
-`stats.set_masked_int(stat_hash, stat_value, offset, mask)`
+  - `stats.set_masked_int(stat_hash, stat_value, offset, mask)`
 
 ---
 
@@ -187,8 +167,7 @@ title: Stats
 `--- local packedMask = stats.get_packed_mask(statEnum)`
 
 - Methods:
-
-`stats.get_packed_mask(statEnum)`
+  - `stats.get_packed_mask(statEnum)`
 
 ---
 
@@ -196,8 +175,7 @@ title: Stats
 `@return integer The packed integer value for the specified index and character slot.`
 
 - Methods:
-
-`stats.get_packed_stat_int(index, characterSlot)`
+  - `stats.get_packed_stat_int(index, characterSlot)`
 
 ---
 
@@ -205,8 +183,7 @@ title: Stats
 `@return boolean The packed boolean value for the specified index and character slot.`
 
 - Methods:
-
-`stats.get_packed_stat_bool(index, characterSlot)`
+  - `stats.get_packed_stat_bool(index, characterSlot)`
 
 ---
 
@@ -214,8 +191,7 @@ title: Stats
 `@param characterSlot integer The character slot associated with the packed stat.`
 
 - Methods:
-
-`stats.set_packed_stat_int(index, value, characterSlot)`
+  - `stats.set_packed_stat_int(index, value, characterSlot)`
 
 ---
 
@@ -223,8 +199,7 @@ title: Stats
 `@param characterSlot integer The character slot associated with the packed stat.`
 
 - Methods:
-
-`stats.set_packed_stat_bool(index, value, characterSlot)`
+  - `stats.set_packed_stat_bool(index, value, characterSlot)`
 
 ---
 
@@ -232,8 +207,7 @@ title: Stats
 `@param characterSlot integer The character slot associated with the stat.`
 
 - Methods:
-
-`stats.set_packed_stat_bool(index, value, characterSlot)`
+  - `stats.set_packed_stat_bool(index, value, characterSlot)`
 
 ---
 
@@ -241,8 +215,7 @@ title: Stats
 `@return hash The hash key for the packed integer stat.`
 
 - Methods:
-
-`stats.set_packed_int_stat_key(index, spStat, charStat, character)`
+  - `stats.set_packed_int_stat_key(index, spStat, charStat, character)`
 
 ---
 
@@ -250,8 +223,7 @@ title: Stats
 `@return boolean True if the date was successfully set, false otherwise.`
 
 - Methods:
-
-`stats.set_date(stat_hash, year, month, day, hour, minute, second, millisecond)`
+  - `stats.set_date(stat_hash, year, month, day, hour, minute, second, millisecond)`
 
 ---
 
@@ -259,8 +231,7 @@ title: Stats
 `end`
 
 - Methods:
-
-`stats.get_date(stat_hash, lua)`
+  - `stats.get_date(stat_hash, lua)`
 
 ---
 
@@ -268,8 +239,7 @@ title: Stats
 `@return integer The character index.`
 
 - Methods:
-
-`stats.get_character_index()`
+  - `stats.get_character_index()`
 
 ---
 

@@ -7,8 +7,7 @@ title: World
 `Deletes any entity (object, pedestrian, transport) in the world.`
 
 - Methods:
-
-`entity.delete(handle, on_deleted, on_failed)`
+  - `entity.delete(handle, on_deleted, on_failed)`
 
 ---
 
@@ -16,8 +15,7 @@ title: World
 `Checks if the user has control over the specified entity.`
 
 - Methods:
-
-`entity.has_control(handle)`
+  - `entity.has_control(handle)`
 
 ---
 
@@ -25,8 +23,7 @@ title: World
 `Requests control of the specified entity asynchronously.`
 
 - Methods:
-
-`entity.request_control(handle, on_obtain, tag)`
+  - `entity.request_control(handle, on_obtain, tag)`
 
 ---
 
@@ -34,8 +31,7 @@ title: World
 `@overload fun(name: string)`
 
 - Methods:
-
-`pedestrian.spawn(...)`
+  - `pedestrian.spawn(...)`
 
 ---
 
@@ -43,8 +39,7 @@ title: World
 `Creates a random pedestrian in the game world in front of a specified player.`
 
 - Methods:
-
-`pedestrian.spawn_random(nInFrontOf, bConsciousness)`
+  - `pedestrian.spawn_random(nInFrontOf, bConsciousness)`
 
 ---
 
@@ -52,8 +47,7 @@ title: World
 `Allows the player to possess and control the specified pedestrian.`
 
 - Methods:
-
-`pedestrian.possess(handle)`
+  - `pedestrian.possess(handle)`
 
 ---
 
@@ -61,8 +55,7 @@ title: World
 `Retrieves a random non-player pedestrian from the environment.`
 
 - Methods:
-
-`pedestrian.get_random(ignore_vehicles)`
+  - `pedestrian.get_random(ignore_vehicles)`
 
 ---
 
@@ -70,8 +63,7 @@ title: World
 `Transforms the specified pedestrian into a marine bodyguard.`
 
 - Methods:
-
-`pedestrian.make_guard(handle)`
+  - `pedestrian.make_guard(handle)`
 
 ---
 
@@ -79,8 +71,7 @@ title: World
 `Sends an assassin after a specified pedestrian or player with parameters for improved combat performance.`
 
 - Methods:
-
-`pedestrian.send_assassin(handle_or_ply, model, weapon, vehicle)`
+  - `pedestrian.send_assassin(handle_or_ply, model, weapon, vehicle)`
 
 ---
 
@@ -88,8 +79,7 @@ title: World
 `Repairs the specified pedestrian.`
 
 - Methods:
-
-`pedestrian.repair(handle)`
+  - `pedestrian.repair(handle)`
 
 ---
 
@@ -97,8 +87,7 @@ title: World
 `@overload fun(name: string)`
 
 - Methods:
-
-`vehicle.spawn(...)`
+  - `vehicle.spawn(...)`
 
 ---
 
@@ -106,8 +95,7 @@ title: World
 `@overload fun(name: string)`
 
 - Methods:
-
-`vehicle.spawn_preset(...)`
+  - `vehicle.spawn_preset(...)`
 
 ---
 
@@ -115,8 +103,7 @@ title: World
 `Retrieves a list of names for cloud-synced vehicle presets.`
 
 - Methods:
-
-`vehicle.get_presets()`
+  - `vehicle.get_presets()`
 
 ---
 
@@ -124,8 +111,7 @@ title: World
 `Repairs and cleans the specified vehicle.`
 
 - Methods:
-
-`vehicle.repair(handle)`
+  - `vehicle.repair(handle)`
 
 ---
 
@@ -133,8 +119,7 @@ title: World
 `Cleans the specified vehicle.`
 
 - Methods:
-
-`vehicle.clean(handle)`
+  - `vehicle.clean(handle)`
 
 ---
 
@@ -142,8 +127,7 @@ title: World
 `Ignites the specified vehicle.`
 
 - Methods:
-
-`vehicle.ignite(handle)`
+  - `vehicle.ignite(handle)`
 
 ---
 
@@ -151,8 +135,7 @@ title: World
 `Extinguishes fire on the specified vehicle.`
 
 - Methods:
-
-`vehicle.extinguish(handle)`
+  - `vehicle.extinguish(handle)`
 
 ---
 
@@ -160,8 +143,7 @@ title: World
 `Starts the engine of the specified vehicle.`
 
 - Methods:
-
-`vehicle.start_engine(handle)`
+  - `vehicle.start_engine(handle)`
 
 ---
 
@@ -169,8 +151,7 @@ title: World
 `Stops the engine of the specified vehicle.`
 
 - Methods:
-
-`vehicle.stop_engine(handle)`
+  - `vehicle.stop_engine(handle)`
 
 ---
 
@@ -178,8 +159,7 @@ title: World
 `Upgrades a vehicle to a specified upgrade type.`
 
 - Methods:
-
-`vehicle.upgrade(handle, type)`
+  - `vehicle.upgrade(handle, type)`
 
 ---
 
@@ -187,8 +167,7 @@ title: World
 `Teleports a vehicle to a specified location.`
 
 - Methods:
-
-`vehicle.teleport(handle, pos, tries)`
+  - `vehicle.teleport(handle, pos, tries)`
 
 ---
 
@@ -196,8 +175,7 @@ title: World
 `Boosts a vehicle in a specified direction with a specified power.`
 
 - Methods:
-
-`vehicle.boost(handle, power, dir)`
+  - `vehicle.boost(handle, power, dir)`
 
 ---
 
@@ -205,8 +183,7 @@ title: World
 `@overload fun(name: string)`
 
 - Methods:
-
-`object.spawn(...)`
+  - `object.spawn(...)`
 
 ---
 

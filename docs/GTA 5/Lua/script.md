@@ -12,8 +12,7 @@ title: Script
  | boolean | Returns true if script globals are available. |
 
 - Methods:
-
-`script.ready()`
+  - `script.ready()`
 
 ---
 
@@ -26,8 +25,7 @@ title: Script
  | boolean | Returns true if the script is loaded. |
 
 - Methods:
-
-`script.is_loaded(hash_or_name)`
+  - `script.is_loaded(hash_or_name)`
 
 ---
 
@@ -40,8 +38,7 @@ title: Script
  | boolean | Returns true if the script is running. |
 
 - Methods:
-
-`script.is_running(hash_or_name)`
+  - `script.is_running(hash_or_name)`
 
 ---
 
@@ -49,8 +46,7 @@ title: Script
 `Requests loading a script by hash or name.`
 
 - Methods:
-
-`script.request(hash_or_name)`
+  - `script.request(hash_or_name)`
 
 ---
 
@@ -71,8 +67,7 @@ title: Script
  | integer | Returns the thread ID of the started script. |
 
 - Methods:
-
-`script.start(hash_or_name, stack_size, ...)`
+  - `script.start(hash_or_name, stack_size, ...)`
 
 ---
 
@@ -85,8 +80,7 @@ title: Script
  | boolean | Returns true if the spoof was successful. |
 
 - Methods:
-
-`script.spoof(hash_or_name, callback)`
+  - `script.spoof(hash_or_name, callback)`
 
 ---
 
@@ -94,8 +88,7 @@ title: Script
 `Forces migration to local player a script by hash or name, with an optional callback for completion.`
 
 - Methods:
-
-`script.force_host(hash_or_name, on_migration_finish)`
+  - `script.force_host(hash_or_name, on_migration_finish)`
 
 ---
 
@@ -103,8 +96,7 @@ title: Script
 `}`
 
 - Methods:
-
-`script.get_yscs()`
+  - `script.get_yscs()`
 
 ---
 
@@ -112,8 +104,7 @@ title: Script
 `@usage script.start_mission(1163912414)`
 
 - Methods:
-
-`script.start_mission(name_or_hash)`
+  - `script.start_mission(name_or_hash)`
 
 ---
 
@@ -121,8 +112,7 @@ title: Script
 `@usage local hash = script.get_tse(ScriptEventId.ISLAND) -- Will return '373376135' (1.68)`
 
 - Methods:
-
-`script.get_tse(index)`
+  - `script.get_tse(index)`
 
 ---
 
@@ -130,8 +120,7 @@ title: Script
 `@return number The magic number for the specified player. Returns 0 if the player object is nil.`
 
 - Methods:
-
-`script.get_script_magic(player)`
+  - `script.get_script_magic(player)`
 
 ---
 
@@ -139,17 +128,7 @@ title: Script
 `end`
 
 - Methods:
-
-`script.trigger_script_event(player, hash, args)`
-
----
-
-## ScrVar:at
-`@return ScrVar A new ScrVar instance representing the variable at the calculated position.`
-
-- Methods:
-
-`ScrVar:at(index)`
+  - `script.trigger_script_event(player, hash, args)`
 
 ---
 
@@ -157,8 +136,15 @@ title: Script
 `@return ScrVar A new ScrVar instance representing the variable at the calculated position.`
 
 - Methods:
+  - `ScrVar:at(index)`
 
-`ScrVar:at(index, size)`
+---
+
+## ScrVar:at
+`@return ScrVar A new ScrVar instance representing the variable at the calculated position.`
+
+- Methods:
+  - `ScrVar:at(index, size)`
 
 ---
 
@@ -166,8 +152,7 @@ title: Script
 `@return base number The base address as a number.`
 
 - Methods:
-
-`ScrVar:get_base()`
+  - `ScrVar:get_base()`
 
 ---
 
@@ -175,8 +160,7 @@ title: Script
 `@return index number The index of the script variable.`
 
 - Methods:
-
-`ScrVar:get_index()`
+  - `ScrVar:get_index()`
 
 ---
 
@@ -184,8 +168,7 @@ title: Script
 `@return result boolean Returns true if the object is a ScrLocal class, false otherwise.`
 
 - Methods:
-
-`ScrVar:is_local()`
+  - `ScrVar:is_local()`
 
 ---
 
@@ -193,8 +176,7 @@ title: Script
 `@return result boolean Returns true if the object is a ScrGlobal class, false otherwise.`
 
 - Methods:
-
-`ScrVar:is_global()`
+  - `ScrVar:is_global()`
 
 ---
 
@@ -202,8 +184,7 @@ title: Script
 `@return ScrGlobal A ScrGlobal instance representing the global variable at the given index.`
 
 - Methods:
-
-`script.get_global(index)`
+  - `script.get_global(index)`
 
 ---
 
@@ -211,8 +192,7 @@ title: Script
 `@return ScrLocal A ScrLocal instance representing the local variable at the given index in the specified script context.`
 
 - Methods:
-
-`script.get_local(string_or_hash, index)`
+  - `script.get_local(string_or_hash, index)`
 
 ---
 

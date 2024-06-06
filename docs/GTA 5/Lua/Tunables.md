@@ -12,8 +12,7 @@ title: Tunables
  | boolean | Returns true if tunables are available; otherwise, returns false. |
 
 - Methods:
-
-`tunables.ready()`
+  - `tunables.ready()`
 
 ---
 
@@ -33,8 +32,7 @@ title: Tunables
  | integer | Returns the integer value of the tunable if found; otherwise, returns the default value or 0 if no default is provided. |
 
 - Methods:
-
-`tunables.get_int(request, default)`
+  - `tunables.get_int(request, default)`
 
 ---
 
@@ -54,8 +52,7 @@ title: Tunables
  | number | Returns the float value of the tunable if found; otherwise, returns the default value or 0.0 if no default is provided. |
 
 - Methods:
-
-`tunables.get_float(request, default)`
+  - `tunables.get_float(request, default)`
 
 ---
 
@@ -75,8 +72,7 @@ title: Tunables
  | boolean | Returns the boolean value of the tunable if found (true if non-zero); otherwise, returns the default value or false if no default is provided. |
 
 - Methods:
-
-`tunables.get_bool(request, default)`
+  - `tunables.get_bool(request, default)`
 
 ---
 
@@ -96,8 +92,7 @@ title: Tunables
  | boolean | Returns true if the value was successfully set; otherwise, returns false. |
 
 - Methods:
-
-`tunables.set_int(request, value)`
+  - `tunables.set_int(request, value)`
 
 ---
 
@@ -117,8 +112,7 @@ title: Tunables
  | boolean | Returns true if the value was successfully set; otherwise, returns false. |
 
 - Methods:
-
-`tunables.set_float(request, value)`
+  - `tunables.set_float(request, value)`
 
 ---
 
@@ -138,8 +132,7 @@ title: Tunables
  | boolean | Returns true if the value was successfully set; otherwise, returns false. |
 
 - Methods:
-
-`tunables.set_bool(request, value)`
+  - `tunables.set_bool(request, value)`
 
 ---
 
@@ -152,8 +145,7 @@ title: Tunables
  | table | Returns a table where each key is a hash and the value is the corresponding offset. |
 
 - Methods:
-
-`tunables.get_all()`
+  - `tunables.get_all()`
 
 ---
 
@@ -172,8 +164,7 @@ title: Tunables
  | ScrVar|nil | Returns a ScrVar object representing the tunable if found; otherwise, returns nil. |
 
 - Methods:
-
-`tunable(request)`
+  - `tunable(request)`
 
 ---
 

@@ -18,8 +18,7 @@ title: UDP
  | boolean | True if the socket was successfully opened, false otherwise. |
 
 - Methods:
-
-`UDPSocket:open(port)`
+  - `UDPSocket:open(port)`
 
 ---
 
@@ -32,8 +31,7 @@ title: UDP
  | boolean | True if the socket was successfully closed, false otherwise. |
 
 - Methods:
-
-`UDPSocket:close()`
+  - `UDPSocket:close()`
 
 ---
 
@@ -46,8 +44,7 @@ title: UDP
  | boolean | True if the socket is open, false otherwise. |
 
 - Methods:
-
-`UDPSocket:is_opened()`
+  - `UDPSocket:is_opened()`
 
 ---
 
@@ -60,8 +57,7 @@ title: UDP
  | number | Port number of the socket. |
 
 - Methods:
-
-`UDPSocket:get_port()`
+  - `UDPSocket:get_port()`
 
 ---
 
@@ -74,8 +70,7 @@ title: UDP
  | string | IP address of the socket. |
 
 - Methods:
-
-`UDPSocket:get_ip()`
+  - `UDPSocket:get_ip()`
 
 ---
 
@@ -88,8 +83,7 @@ title: UDP
  | string | Address of the socket in the format "ip:port". |
 
 - Methods:
-
-`UDPSocket:get_addr()`
+  - `UDPSocket:get_addr()`
 
 ---
 
@@ -109,8 +103,7 @@ title: UDP
  | boolean | True if the data was sent successfully, false otherwise. |
 
 - Methods:
-
-`UDPSocket:send(address, data)`
+  - `UDPSocket:send(address, data)`
 
 ---
 
@@ -123,8 +116,7 @@ title: UDP
  | table | Data received, returned as an array of bytes. |
 
 - Methods:
-
-`UDPSocket:recv()`
+  - `UDPSocket:recv()`
 
 ---
 
@@ -137,8 +129,7 @@ title: UDP
  | boolean | True if there is incoming data, false otherwise. |
 
 - Methods:
-
-`UDPSocket:has_incoming()`
+  - `UDPSocket:has_incoming()`
 
 ---
 
@@ -151,8 +142,7 @@ title: UDP
  | number | Size of the available data in bytes. |
 
 - Methods:
-
-`UDPSocket:get_incoming_size()`
+  - `UDPSocket:get_incoming_size()`
 
 ---
 
@@ -160,8 +150,7 @@ title: UDP
 `Creates a new UDP socket. This function can be called with or without specifying a port number.`
 
 - Methods:
-
-`udp_client(port)`
+  - `udp_client(port)`
 
 ---
 

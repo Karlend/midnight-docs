@@ -7,8 +7,7 @@ title: Menu
 `Checks if the UI menu is currently opened.`
 
 - Methods:
-
-`ui.is_opened()`
+  - `ui.is_opened()`
 
 ---
 
@@ -30,8 +29,7 @@ title: Menu
  | boolean | Returns true if the popup was successfully created. |
 
 - Methods:
-
-`ui.popup(title, body, icon, type)`
+  - `ui.popup(title, body, icon, type)`
 
 ---
 
@@ -44,8 +42,7 @@ title: Menu
  | number | The alpha transparency value. |
 
 - Methods:
-
-`ui.get_alpha()`
+  - `ui.get_alpha()`
 
 ---
 
@@ -58,8 +55,7 @@ title: Menu
  | number, | number The width and height of the UI layout. |
 
 - Methods:
-
-`ui.get_size()`
+  - `ui.get_size()`
 
 ---
 
@@ -72,8 +68,7 @@ title: Menu
  | number, | number The x (left) and y (top) position of the UI layout. |
 
 - Methods:
-
-`ui.get_position()`
+  - `ui.get_position()`
 
 ---
 
@@ -86,8 +81,7 @@ title: Menu
  | number, | number The x and y coordinates of the mouse. |
 
 - Methods:
-
-`ui.get_mouse_position()`
+  - `ui.get_mouse_position()`
 
 ---
 
@@ -100,8 +94,7 @@ title: Menu
  | number | The scale factor of the UI. |
 
 - Methods:
-
-`ui.get_scale()`
+  - `ui.get_scale()`
 
 ---
 
@@ -121,8 +114,7 @@ title: Menu
  | MenuPage | The new page object or nil if the creation fails. |
 
 - Methods:
-
-`ui.new_page(name, icon)`
+  - `ui.new_page(name, icon)`
 
 ---
 
@@ -141,8 +133,7 @@ title: Menu
  | MenuPage | The new page object or nil if the creation fails. |
 
 - Methods:
-
-`ui.new_page(name)`
+  - `ui.new_page(name)`
 
 ---
 
@@ -150,8 +141,7 @@ title: Menu
 `@return table[MenuWidget] A table containing all MenuWidgets.`
 
 - Methods:
-
-`ui.get_all_widgets()`
+  - `ui.get_all_widgets()`
 
 ---
 
@@ -159,8 +149,7 @@ title: Menu
 `@return MenuWidget|nil The widget handle if found, or nil if no widget matches the given UUID.`
 
 - Methods:
-
-`ui.get_widget(uuid)`
+  - `ui.get_widget(uuid)`
 
 ---
 
@@ -179,8 +168,7 @@ title: Menu
  | MenuSubPage | The new subpage object or nil if the creation fails. |
 
 - Methods:
-
-`MenuPage:new_subpage(name)`
+  - `MenuPage:new_subpage(name)`
 
 ---
 
@@ -200,8 +188,7 @@ title: Menu
  | MenuGroup | Returns a MenuGroup object if the group is successfully created. Returns nil if the creation fails. |
 
 - Methods:
-
-`MenuPage:new_group(name, pos)`
+  - `MenuPage:new_group(name, pos)`
 
 ---
 
@@ -221,8 +208,7 @@ title: Menu
  | MenuGroup | Returns a MenuGroup object if creation was successful, nil otherwise. |
 
 - Methods:
-
-`MenuSubPage:new_group(name, pos)`
+  - `MenuSubPage:new_group(name, pos)`
 
 ---
 
@@ -235,8 +221,7 @@ title: Menu
  | boolean | Returns true if the group is collapsed. |
 
 - Methods:
-
-`MenuGroup:is_collapsed()`
+  - `MenuGroup:is_collapsed()`
 
 ---
 
@@ -249,8 +234,7 @@ title: Menu
  | boolean | Returns true if the group can be collapsed. |
 
 - Methods:
-
-`MenuGroup:is_collapsible()`
+  - `MenuGroup:is_collapsible()`
 
 ---
 
@@ -263,8 +247,7 @@ title: Menu
  | boolean | Returns true if the group is visible. |
 
 - Methods:
-
-`MenuGroup:is_visible()`
+  - `MenuGroup:is_visible()`
 
 ---
 
@@ -278,8 +261,7 @@ title: Menu
 
 
 - Methods:
-
-`MenuGroup:set_collapsed(state)`
+  - `MenuGroup:set_collapsed(state)`
 
 ---
 
@@ -293,8 +275,7 @@ title: Menu
 
 
 - Methods:
-
-`MenuGroup:set_collapsible(state)`
+  - `MenuGroup:set_collapsible(state)`
 
 ---
 
@@ -308,8 +289,7 @@ title: Menu
 
 
 - Methods:
-
-`MenuGroup:set_visible(state)`
+  - `MenuGroup:set_visible(state)`
 
 ---
 
@@ -329,8 +309,7 @@ title: Menu
  | MenuWidget | Returns a checkbox widget if creation was successful. |
 
 - Methods:
-
-`MenuGroup:new_checkbox(name, init)`
+  - `MenuGroup:new_checkbox(name, init)`
 
 ---
 
@@ -353,8 +332,7 @@ title: Menu
  | MenuWidget | Returns a slider widget if creation was successful. |
 
 - Methods:
-
-`MenuGroup:new_slider(name, min, max, init, scale)`
+  - `MenuGroup:new_slider(name, min, max, init, scale)`
 
 ---
 
@@ -374,8 +352,7 @@ title: Menu
  | MenuWidget | Returns a combo box widget if creation was successful. |
 
 - Methods:
-
-`MenuGroup:new_combo(name, ...)`
+  - `MenuGroup:new_combo(name, ...)`
 
 ---
 
@@ -394,8 +371,7 @@ title: Menu
  | MenuWidget | Returns a text widget if creation was successful. |
 
 - Methods:
-
-`MenuGroup:new_text(text)`
+  - `MenuGroup:new_text(text)`
 
 ---
 
@@ -414,8 +390,7 @@ title: Menu
  | MenuWidget | Returns a text widget if creation was successful. |
 
 - Methods:
-
-`MenuGroup:new_text(callback)`
+  - `MenuGroup:new_text(callback)`
 
 ---
 
@@ -435,8 +410,7 @@ title: Menu
  | MenuWidget | Returns a button widget if creation was successful, nil if failed. |
 
 - Methods:
-
-`MenuGroup:new_button(name, callback)`
+  - `MenuGroup:new_button(name, callback)`
 
 ---
 
@@ -456,8 +430,7 @@ title: Menu
  | MenuList | Returns the new list as a MenuList object, which can be further configured. |
 
 - Methods:
-
-`MenuGroup:new_table_list(name, ref_table)`
+  - `MenuGroup:new_table_list(name, ref_table)`
 
 ---
 
@@ -476,8 +449,7 @@ title: Menu
  | MenuList | Returns the new dynamic list as a MenuList object, which can be further configured. |
 
 - Methods:
-
-`MenuGroup:new_list(name)`
+  - `MenuGroup:new_list(name)`
 
 ---
 
@@ -498,8 +470,7 @@ title: Menu
  | MenuWidget | Returns an input field widget if creation was successful. |
 
 - Methods:
-
-`MenuGroup:new_input(name, hint, init)`
+  - `MenuGroup:new_input(name, hint, init)`
 
 ---
 
@@ -512,8 +483,7 @@ title: Menu
  | MenuWidget | Returns a separator widget if creation was successful. |
 
 - Methods:
-
-`MenuGroup:new_separator()`
+  - `MenuGroup:new_separator()`
 
 ---
 
@@ -533,8 +503,7 @@ title: Menu
  | MenuWidget | Returns a hotkey widget if creation was successful. |
 
 - Methods:
-
-`MenuGroup:new_hotkey(name, default_key)`
+  - `MenuGroup:new_hotkey(name, default_key)`
 
 ---
 
@@ -554,8 +523,7 @@ title: Menu
  | MenuWidget | Returns a hasher widget if creation was successful. |
 
 - Methods:
-
-`MenuGroup:new_hasher(name, hint)`
+  - `MenuGroup:new_hasher(name, hint)`
 
 ---
 
@@ -574,8 +542,7 @@ title: Menu
  | MenuGroup | Returns the group object itself. |
 
 - Methods:
-
-`MenuGroup:set_visibility_callback(callback)`
+  - `MenuGroup:set_visibility_callback(callback)`
 
 ---
 
@@ -583,8 +550,7 @@ title: Menu
 `Retrieves the minimum drawing position of the specified groupbox region.`
 
 - Methods:
-
-`MenuGroup:get_min(rect)`
+  - `MenuGroup:get_min(rect)`
 
 ---
 
@@ -592,8 +558,7 @@ title: Menu
 `Retrieves the maximum drawing position of the specified groupbox region.`
 
 - Methods:
-
-`MenuGroup:get_max(rect)`
+  - `MenuGroup:get_max(rect)`
 
 ---
 
@@ -601,8 +566,7 @@ title: Menu
 `Retrieves the position of the arrow in the groupbox.`
 
 - Methods:
-
-`MenuGroup:get_arrow_pos()`
+  - `MenuGroup:get_arrow_pos()`
 
 ---
 
@@ -615,8 +579,7 @@ title: Menu
  | any | Returns the current value of the widget. |
 
 - Methods:
-
-`MenuWidget:get()`
+  - `MenuWidget:get()`
 
 ---
 
@@ -635,8 +598,7 @@ title: Menu
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
-
-`MenuWidget:set(value)`
+  - `MenuWidget:set(value)`
 
 ---
 
@@ -649,8 +611,7 @@ title: Menu
  | MenuGroup | Returns the parent group of the widget. |
 
 - Methods:
-
-`MenuWidget:get_parent()`
+  - `MenuWidget:get_parent()`
 
 ---
 
@@ -663,8 +624,7 @@ title: Menu
  | string | Returns the type name of the widget. |
 
 - Methods:
-
-`MenuWidget:get_type()`
+  - `MenuWidget:get_type()`
 
 ---
 
@@ -677,8 +637,7 @@ title: Menu
  | boolean | Returns true if the widget is enabled, false otherwise. |
 
 - Methods:
-
-`MenuWidget:is_enabled()`
+  - `MenuWidget:is_enabled()`
 
 ---
 
@@ -697,8 +656,7 @@ title: Menu
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
-
-`MenuWidget:set_enabled(value)`
+  - `MenuWidget:set_enabled(value)`
 
 ---
 
@@ -711,8 +669,7 @@ title: Menu
  | boolean | Returns true if the widget is visible, false otherwise. |
 
 - Methods:
-
-`MenuWidget:is_visible()`
+  - `MenuWidget:is_visible()`
 
 ---
 
@@ -731,8 +688,7 @@ title: Menu
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
-
-`MenuWidget:set_visible(value)`
+  - `MenuWidget:set_visible(value)`
 
 ---
 
@@ -751,8 +707,7 @@ title: Menu
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
-
-`MenuWidget:set_color_picker(color)`
+  - `MenuWidget:set_color_picker(color)`
 
 ---
 
@@ -771,8 +726,7 @@ title: Menu
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
-
-`MenuWidget:set_hint(text)`
+  - `MenuWidget:set_hint(text)`
 
 ---
 
@@ -791,8 +745,7 @@ title: Menu
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
-
-`MenuWidget:set_visibility_callback(callback)`
+  - `MenuWidget:set_visibility_callback(callback)`
 
 ---
 
@@ -811,8 +764,7 @@ title: Menu
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
-
-`MenuWidget:set_enabled_callback(callback)`
+  - `MenuWidget:set_enabled_callback(callback)`
 
 ---
 
@@ -831,8 +783,7 @@ title: Menu
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
-
-`MenuWidget:set_label_callback(callback)`
+  - `MenuWidget:set_label_callback(callback)`
 
 ---
 
@@ -851,8 +802,7 @@ title: Menu
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
-
-`MenuWidget:set_hovered_callback(callback)`
+  - `MenuWidget:set_hovered_callback(callback)`
 
 ---
 
@@ -871,8 +821,7 @@ title: Menu
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
-
-`MenuWidget:set_data_callback(callback)`
+  - `MenuWidget:set_data_callback(callback)`
 
 ---
 
@@ -891,8 +840,7 @@ title: Menu
  | MenuWidget | Returns the widget itself for method chaining. |
 
 - Methods:
-
-`MenuWidget:set_on_changed_callback(callback)`
+  - `MenuWidget:set_on_changed_callback(callback)`
 
 ---
 
@@ -900,8 +848,7 @@ title: Menu
 `Example result: 609258681`
 
 - Methods:
-
-`MenuWidget:get_uuid()`
+  - `MenuWidget:get_uuid()`
 
 ---
 
@@ -909,8 +856,7 @@ title: Menu
 `Example result: 'Godmode'`
 
 - Methods:
-
-`MenuWidget:get_label()`
+  - `MenuWidget:get_label()`
 
 ---
 
@@ -918,8 +864,7 @@ title: Menu
 `Example result: 'Self > MAIN > Modifiers > Godmode'`
 
 - Methods:
-
-`MenuWidget:get_deep_label()`
+  - `MenuWidget:get_deep_label()`
 
 ---
 
@@ -927,8 +872,7 @@ title: Menu
 `Retrieves the minimum drawing position of the widget.`
 
 - Methods:
-
-`MenuWidget:get_min()`
+  - `MenuWidget:get_min()`
 
 ---
 
@@ -936,8 +880,7 @@ title: Menu
 `Retrieves the maximum drawing position of the widget.`
 
 - Methods:
-
-`MenuWidget:get_max()`
+  - `MenuWidget:get_max()`
 
 ---
 
@@ -956,8 +899,7 @@ title: Menu
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
-
-`MenuList:set_getter_callback(callback)`
+  - `MenuList:set_getter_callback(callback)`
 
 ---
 
@@ -976,8 +918,7 @@ title: Menu
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
-
-`MenuList:set_counter_callback(callback)`
+  - `MenuList:set_counter_callback(callback)`
 
 ---
 
@@ -996,8 +937,7 @@ title: Menu
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
-
-`MenuList:set_click_callback(callback)`
+  - `MenuList:set_click_callback(callback)`
 
 ---
 
@@ -1016,8 +956,7 @@ title: Menu
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
-
-`MenuList:set_selected_callback(callback)`
+  - `MenuList:set_selected_callback(callback)`
 
 ---
 
@@ -1036,8 +975,7 @@ title: Menu
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
-
-`MenuList:set_hovered_callback(callback)`
+  - `MenuList:set_hovered_callback(callback)`
 
 ---
 
@@ -1052,8 +990,7 @@ title: Menu
 
 
 - Methods:
-
-`MenuList:set_sizes(width, height)`
+  - `MenuList:set_sizes(width, height)`
 
 ---
 
@@ -1072,8 +1009,7 @@ title: Menu
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
-
-`MenuList:set_use_search_bar(use)`
+  - `MenuList:set_use_search_bar(use)`
 
 ---
 
@@ -1092,8 +1028,7 @@ title: Menu
  | MenuList | Returns the list itself for method chaining. |
 
 - Methods:
-
-`MenuList:set_search_bar_text(text)`
+  - `MenuList:set_search_bar_text(text)`
 
 ---
 
@@ -1112,8 +1047,7 @@ title: Menu
  | boolean | Returns true if the item is selected, false otherwise. |
 
 - Methods:
-
-`MenuList:is_item_selected(item)`
+  - `MenuList:is_item_selected(item)`
 
 ---
 
@@ -1126,8 +1060,7 @@ title: Menu
  | table | Returns a table containing the indices of all selected items. |
 
 - Methods:
-
-`MenuList:get_selected_items()`
+  - `MenuList:get_selected_items()`
 
 ---
 
@@ -1140,8 +1073,7 @@ title: Menu
  | table | Returns a table with the texts of the selected items. Each entry in the table corresponds to the text of one selected item. |
 
 - Methods:
-
-`MenuList:get_selected_items_lines()`
+  - `MenuList:get_selected_items_lines()`
 
 ---
 
@@ -1160,8 +1092,7 @@ title: Menu
  | string | Returns the text of the specified item. If the item is not found, returns an empty string. |
 
 - Methods:
-
-`MenuList:get_item_text(item)`
+  - `MenuList:get_item_text(item)`
 
 ---
 

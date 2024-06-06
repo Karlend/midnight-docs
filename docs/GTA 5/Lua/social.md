@@ -7,8 +7,7 @@ title: Social
 `- `result`: The session token.`
 
 - Methods:
-
-`social.is_player_online(rockstar_id_or_name, on_response)`
+  - `social.is_player_online(rockstar_id_or_name, on_response)`
 
 ---
 
@@ -16,8 +15,7 @@ title: Social
 `@return boolean Returns true if the social system is ready, enabling further interaction with 'account' and 'geoloc' modules.`
 
 - Methods:
-
-`social.is_ready()`
+  - `social.is_ready()`
 
 ---
 
@@ -25,8 +23,7 @@ title: Social
 `@return integer The region code if available, otherwise 0.`
 
 - Methods:
-
-`geoloc.get_region_code()`
+  - `geoloc.get_region_code()`
 
 ---
 
@@ -34,8 +31,7 @@ title: Social
 `@return number The longitude if available, otherwise 0.0.`
 
 - Methods:
-
-`geoloc.get_longitude()`
+  - `geoloc.get_longitude()`
 
 ---
 
@@ -43,8 +39,7 @@ title: Social
 `@return number The latitude if available, otherwise 0.0.`
 
 - Methods:
-
-`geoloc.get_latitude()`
+  - `geoloc.get_latitude()`
 
 ---
 
@@ -52,8 +47,7 @@ title: Social
 `@return boolean Returns true if secure relays are being used, false otherwise.`
 
 - Methods:
-
-`geoloc.get_is_secure()`
+  - `geoloc.get_is_secure()`
 
 ---
 
@@ -61,8 +55,7 @@ title: Social
 `@return string The country code if available, otherwise an empty string.`
 
 - Methods:
-
-`geoloc.get_country_code()`
+  - `geoloc.get_country_code()`
 
 ---
 
@@ -70,8 +63,7 @@ title: Social
 `@return integer The age if available, otherwise 0.`
 
 - Methods:
-
-`account.get_age()`
+  - `account.get_age()`
 
 ---
 
@@ -79,8 +71,7 @@ title: Social
 `@return string The URL to the avatar image if available, otherwise an empty string.`
 
 - Methods:
-
-`account.get_avatar_url()`
+  - `account.get_avatar_url()`
 
 ---
 
@@ -88,8 +79,7 @@ title: Social
 `@return string The country code if available, otherwise an empty string.`
 
 - Methods:
-
-`account.get_country_code()`
+  - `account.get_country_code()`
 
 ---
 
@@ -97,8 +87,7 @@ title: Social
 `@return string The DOB if available, otherwise an empty string.`
 
 - Methods:
-
-`account.get_dob()`
+  - `account.get_dob()`
 
 ---
 
@@ -106,8 +95,7 @@ title: Social
 `@return boolean Returns true if the DOB is approximate, false otherwise.`
 
 - Methods:
-
-`account.get_is_approx_dob()`
+  - `account.get_is_approx_dob()`
 
 ---
 
@@ -115,8 +103,7 @@ title: Social
 `@return string The language code if available, otherwise an empty string.`
 
 - Methods:
-
-`account.get_language_code()`
+  - `account.get_language_code()`
 
 ---
 
@@ -124,8 +111,7 @@ title: Social
 `@return string The phone number if available, otherwise an empty string.`
 
 - Methods:
-
-`account.get_phone()`
+  - `account.get_phone()`
 
 ---
 
@@ -133,8 +119,7 @@ title: Social
 `@return integer The Rockstar ID if available, otherwise 0.`
 
 - Methods:
-
-`account.get_rockstar_id()`
+  - `account.get_rockstar_id()`
 
 ---
 
@@ -142,8 +127,7 @@ title: Social
 `@return string The ZIP code if available, otherwise an empty string.`
 
 - Methods:
-
-`account.get_zip_code()`
+  - `account.get_zip_code()`
 
 ---
 
@@ -151,8 +135,7 @@ title: Social
 `@return string The nickname if available, otherwise an empty string.`
 
 - Methods:
-
-`account.get_nickname()`
+  - `account.get_nickname()`
 
 ---
 

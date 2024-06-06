@@ -7,8 +7,7 @@ title: String
 `@return Returns the Joaat hash as an unsigned integer. Returns 0 if the input string is null or empty.`
 
 - Methods:
-
-`string.joaat(str)`
+  - `string.joaat(str)`
 
 ---
 
@@ -16,8 +15,7 @@ title: String
 `@return Returns the signed Joaat hash as an integer. Returns 0 if the input string is null or empty.`
 
 - Methods:
-
-`string.sjoaat(str)`
+  - `string.sjoaat(str)`
 
 ---
 
@@ -25,8 +23,7 @@ title: String
 `print("Smart Joaat Hash:", smart_hash)  -- Output will be the number 6703 (hex 0x1A3F converted to decimal)`
 
 - Methods:
-
-`string.smart_joaat(str)`
+  - `string.smart_joaat(str)`
 
 ---
 
@@ -34,8 +31,7 @@ title: String
 `processed (e.g., only whitespace).`
 
 - Methods:
-
-`string.smart_sjoaat(str)`
+  - `string.smart_sjoaat(str)`
 
 ---
 
@@ -43,8 +39,7 @@ title: String
 `print(trimmed)  -- Output: "Hello world!"`
 
 - Methods:
-
-`string.trim(str)`
+  - `string.trim(str)`
 
 ---
 
@@ -52,8 +47,7 @@ title: String
 `-- Part 4: four`
 
 - Methods:
-
-`string.split(str, delim)`
+  - `string.split(str, delim)`
 
 ---
 
@@ -61,8 +55,7 @@ title: String
 `print(capitalized)  -- Output: "Hello World, Welcome To Lua Scripting!"`
 
 - Methods:
-
-`string.capitalize(str)`
+  - `string.capitalize(str)`
 
 ---
 
@@ -70,8 +63,7 @@ title: String
 `print(contains_lua)  -- Output: false (case-sensitive)`
 
 - Methods:
-
-`string.contains(str, substr)`
+  - `string.contains(str, substr)`
 
 ---
 
@@ -79,8 +71,7 @@ title: String
 `print(is_log)  -- Output: false`
 
 - Methods:
-
-`string.startswith(str, prefix)`
+  - `string.startswith(str, prefix)`
 
 ---
 
@@ -88,8 +79,7 @@ title: String
 `print(is_docx)  -- Output: false`
 
 - Methods:
-
-`string.endswith(str, suffix)`
+  - `string.endswith(str, suffix)`
 
 ---
 
@@ -97,8 +87,7 @@ title: String
 `print(updated_text)  -- Output: "Hello world, Hi Lua"`
 
 - Methods:
-
-`string.replace(str, from, to)`
+  - `string.replace(str, from, to)`
 
 ---
 
@@ -106,8 +95,7 @@ title: String
 `print("Levenshtein Distance: ", distance)  -- Output: "Levenshtein Distance: 3"`
 
 - Methods:
-
-`string.levenshtein_distance(s1, s2)`
+  - `string.levenshtein_distance(s1, s2)`
 
 ---
 
@@ -115,8 +103,7 @@ title: String
 `print("Generated ID: ", random_id)  -- Output: "Generated ID: 3Df9jn2Rk1"`
 
 - Methods:
-
-`string.generate_random_string(length)`
+  - `string.generate_random_string(length)`
 
 ---
 
@@ -124,8 +111,7 @@ title: String
 `print("Base64 Encoded: ", encoded)  -- Output: "Base64 Encoded: SGVsbG8gV29ybGQh"`
 
 - Methods:
-
-`string.base64_encode(in)`
+  - `string.base64_encode(in)`
 
 ---
 
@@ -133,8 +119,7 @@ title: String
 `print("Decoded String: ", decoded)  -- Output: "Decoded String: Hello World!"`
 
 - Methods:
-
-`string.base64_decode(in)`
+  - `string.base64_decode(in)`
 
 ---
 
@@ -142,8 +127,7 @@ title: String
 `@return Returns true if the string is a valid Base64 encoded string, false otherwise.`
 
 - Methods:
-
-`string.base64_validate(data)`
+  - `string.base64_validate(data)`
 
 ---
 
@@ -151,8 +135,7 @@ title: String
 `print(soundex_code)  -- Output: "R163"`
 
 - Methods:
-
-`string.soundex(s)`
+  - `string.soundex(s)`
 
 ---
 
@@ -160,8 +143,7 @@ title: String
 `print(shuffled)  -- Output might be "bcdaef"`
 
 - Methods:
-
-`string.randomize_string(str)`
+  - `string.randomize_string(str)`
 
 ---
 
@@ -169,8 +151,7 @@ title: String
 `print(normalized_text)  -- Output: "helloworld123"`
 
 - Methods:
-
-`string.normalize_text(text)`
+  - `string.normalize_text(text)`
 
 ---
 
@@ -178,8 +159,7 @@ title: String
 `print("Arg" .. i .. ":", arg)  -- Outputs: "Arg1: arg1", "Arg2: arg2", "Arg3: arg3"`
 
 - Methods:
-
-`string.extract_command_and_arguments(input)`
+  - `string.extract_command_and_arguments(input)`
 
 ---
 
@@ -187,8 +167,7 @@ title: String
 `print(censored)  -- Output: "hello ****, this is an ******* sentence"`
 
 - Methods:
-
-`string.censor_words(text, bannedWords)`
+  - `string.censor_words(text, bannedWords)`
 
 ---
 
@@ -196,8 +175,7 @@ title: String
 `print("Suggestion" .. i .. ":", cmd)  -- Outputs: "Suggestion1: start", "Suggestion2: status"`
 
 - Methods:
-
-`string.auto_complete_command(partial, commands)`
+  - `string.auto_complete_command(partial, commands)`
 
 ---
 
@@ -205,8 +183,7 @@ title: String
 `print(utf16_string) -- Display the UTF-16 encoded string`
 
 - Methods:
-
-`string.utf8_to_utf16(utf8)`
+  - `string.utf8_to_utf16(utf8)`
 
 ---
 
@@ -214,8 +191,7 @@ title: String
 `print(utf8_string) -- Display the UTF-8 encoded string`
 
 - Methods:
-
-`string.utf16_to_utf8(utf16)`
+  - `string.utf16_to_utf8(utf16)`
 
 ---
 
@@ -223,8 +199,7 @@ title: String
 `print(utf32_string)  -- Display the UTF-32 encoded string`
 
 - Methods:
-
-`string.utf8_to_utf32(utf8)`
+  - `string.utf8_to_utf32(utf8)`
 
 ---
 
@@ -232,8 +207,7 @@ title: String
 `print(utf8_string)  -- Display the UTF-8 encoded string`
 
 - Methods:
-
-`string.utf32_to_utf8(utf32)`
+  - `string.utf32_to_utf8(utf32)`
 
 ---
 
@@ -241,8 +215,7 @@ title: String
 `print(utf8_string)  -- Output in UTF-8 format`
 
 - Methods:
-
-`string.locale_to_utf8(local_string)`
+  - `string.locale_to_utf8(local_string)`
 
 ---
 
@@ -250,8 +223,7 @@ title: String
 `print(local_string)  -- Output in system's local encoding`
 
 - Methods:
-
-`string.utf8_to_locale(utf8)`
+  - `string.utf8_to_locale(utf8)`
 
 ---
 
@@ -259,8 +231,7 @@ title: String
 `print("Formatted Number:", formatted_number)  -- Output will depend on the system's locale`
 
 - Methods:
-
-`string.format_number_locale(number)`
+  - `string.format_number_locale(number)`
 
 ---
 
@@ -268,8 +239,7 @@ title: String
 `print("Formatted Date and Time:", formatted_datetime)  -- Output will depend on the system's locale`
 
 - Methods:
-
-`string.format_datetime_locale(time)`
+  - `string.format_datetime_locale(time)`
 
 ---
 
@@ -277,8 +247,7 @@ title: String
 `print("Uppercased String:", uppercased)  -- Output: "HELLO WORLD!" or other locale-specific form`
 
 - Methods:
-
-`string.to_upper_locale(input)`
+  - `string.to_upper_locale(input)`
 
 ---
 
@@ -286,8 +255,7 @@ title: String
 `print("Lowercased String:", lowercased)  -- Output: "hello world!" or other locale-specific form`
 
 - Methods:
-
-`string.to_lower_locale(input)`
+  - `string.to_lower_locale(input)`
 
 ---
 
@@ -295,8 +263,7 @@ title: String
 `print(combined)  -- Output: 😃❤`
 
 - Methods:
-
-`string.uchar(codepoint)`
+  - `string.uchar(codepoint)`
 
 ---
 
@@ -304,8 +271,7 @@ title: String
 `print(encrypted)  -- Output: "Khoor, Zruog!"`
 
 - Methods:
-
-`string.caesar_encrypt(str, shift)`
+  - `string.caesar_encrypt(str, shift)`
 
 ---
 
@@ -313,8 +279,7 @@ title: String
 `print(decrypted)  -- Output: "Hello, World!"`
 
 - Methods:
-
-`string.caesar_decrypt(str, shift)`
+  - `string.caesar_decrypt(str, shift)`
 
 ---
 

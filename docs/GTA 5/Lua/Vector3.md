@@ -7,8 +7,7 @@ title: Vector3
 `If the vector has zero length, an error is thrown.`
 
 - Methods:
-
-`Vector3:normalize()`
+  - `Vector3:normalize()`
 
 ---
 
@@ -16,8 +15,7 @@ title: Vector3
 `@return number The dot product of the two vectors.`
 
 - Methods:
-
-`Vector3:dot(other)`
+  - `Vector3:dot(other)`
 
 ---
 
@@ -25,8 +23,7 @@ title: Vector3
 `@return Vector3 A new vector that is the cross product of the two vectors.`
 
 - Methods:
-
-`Vector3:cross(other)`
+  - `Vector3:cross(other)`
 
 ---
 
@@ -34,8 +31,7 @@ title: Vector3
 `@return Vector3 A new vector where each component is the negation of the corresponding component of this vector.`
 
 - Methods:
-
-`Vector3:get_negated()`
+  - `Vector3:get_negated()`
 
 ---
 
@@ -43,8 +39,7 @@ title: Vector3
 `@return Vector3 A new vector that is the normalized version of this vector.`
 
 - Methods:
-
-`Vector3:get_normalized()`
+  - `Vector3:get_normalized()`
 
 ---
 
@@ -52,8 +47,7 @@ title: Vector3
 `@return boolean Returns true if the vectors are approximately equal within the given tolerance, otherwise false.`
 
 - Methods:
-
-`Vector3:is_equal_tol(other, tolerance)`
+  - `Vector3:is_equal_tol(other, tolerance)`
 
 ---
 
@@ -61,8 +55,7 @@ title: Vector3
 `@return boolean Returns true if all components of the vector are zero, otherwise false.`
 
 - Methods:
-
-`Vector3:is_zero()`
+  - `Vector3:is_zero()`
 
 ---
 
@@ -70,8 +63,7 @@ title: Vector3
 `@return number The length of the vector.`
 
 - Methods:
-
-`Vector3:length()`
+  - `Vector3:length()`
 
 ---
 
@@ -79,8 +71,7 @@ title: Vector3
 `@return number The 2D length of the vector.`
 
 - Methods:
-
-`Vector3:length_2d()`
+  - `Vector3:length_2d()`
 
 ---
 
@@ -88,8 +79,7 @@ title: Vector3
 `@return number The squared 2D length of the vector.`
 
 - Methods:
-
-`Vector3:length_2d_sqr()`
+  - `Vector3:length_2d_sqr()`
 
 ---
 
@@ -97,8 +87,7 @@ title: Vector3
 `@return number The squared length of the vector.`
 
 - Methods:
-
-`Vector3:length_sqr()`
+  - `Vector3:length_sqr()`
 
 ---
 
@@ -106,8 +95,7 @@ title: Vector3
 `@param scalar number The scalar to multiply with.`
 
 - Methods:
-
-`Vector3:mul(scalar)`
+  - `Vector3:mul(scalar)`
 
 ---
 
@@ -115,8 +103,7 @@ title: Vector3
 `Negates each component of the vector.`
 
 - Methods:
-
-`Vector3:negate()`
+  - `Vector3:negate()`
 
 ---
 
@@ -124,8 +111,7 @@ title: Vector3
 `@param max number The maximum value (inclusive) - defaults to 1.0.`
 
 - Methods:
-
-`Vector3:random(min, max)`
+  - `Vector3:random(min, max)`
 
 ---
 
@@ -133,8 +119,7 @@ title: Vector3
 `@param vector Vector3 The vector from which to copy the components.`
 
 - Methods:
-
-`Vector3:set(vector)`
+  - `Vector3:set(vector)`
 
 ---
 
@@ -142,8 +127,7 @@ title: Vector3
 `@param z_val number The new z value.`
 
 - Methods:
-
-`Vector3:set_unpacked(x_val, y_val, z_val)`
+  - `Vector3:set_unpacked(x_val, y_val, z_val)`
 
 ---
 
@@ -151,8 +135,7 @@ title: Vector3
 `@param vector Vector3 The vector to subtract.`
 
 - Methods:
-
-`Vector3:sub(vector)`
+  - `Vector3:sub(vector)`
 
 ---
 
@@ -160,8 +143,7 @@ title: Vector3
 `@return number, number, number The x, y, and z components of the vector.`
 
 - Methods:
-
-`Vector3:unpack()`
+  - `Vector3:unpack()`
 
 ---
 
@@ -169,8 +151,7 @@ title: Vector3
 `@return boolean Returns true if the vector is within the bounding box, otherwise false.`
 
 - Methods:
-
-`Vector3:within_aabox(boxStart, boxEnd)`
+  - `Vector3:within_aabox(boxStart, boxEnd)`
 
 ---
 
@@ -178,8 +159,7 @@ title: Vector3
 `Sets all components of the vector to zero.`
 
 - Methods:
-
-`Vector3:zero()`
+  - `Vector3:zero()`
 
 ---
 
@@ -187,8 +167,7 @@ title: Vector3
 `@return number The distance between the two vectors.`
 
 - Methods:
-
-`Vector3:distance(other)`
+  - `Vector3:distance(other)`
 
 ---
 
@@ -196,8 +175,7 @@ title: Vector3
 `@return number The squared distance to the other vector.`
 
 - Methods:
-
-`Vector3:dist_to_sqr(other)`
+  - `Vector3:dist_to_sqr(other)`
 
 ---
 

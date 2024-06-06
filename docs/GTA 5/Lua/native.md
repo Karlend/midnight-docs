@@ -7,8 +7,7 @@ title: Native
 `-- This example calls PLAYER.GET_PLAYER_PED, which returns the ped handle for the given player ID.`
 
 - Methods:
-
-`native.invoke(return_type, id, ...)`
+  - `native.invoke(return_type, id, ...)`
 
 ---
 
@@ -16,8 +15,7 @@ title: Native
 `@return boolean True if native functions can be called via the invoker, false otherwise.`
 
 - Methods:
-
-`native.is_invoker_ready()`
+  - `native.is_invoker_ready()`
 
 ---
 
@@ -25,8 +23,7 @@ title: Native
 `print(name) -- Output: GET_PLAYER_PED`
 
 - Methods:
-
-`native.get_native_name(hash)`
+  - `native.get_native_name(hash)`
 
 ---
 
@@ -34,8 +31,7 @@ title: Native
 `print(fullName) -- Output: PLAYER::GET_PLAYER_PED`
 
 - Methods:
-
-`native.get_native_name_full(hash)`
+  - `native.get_native_name_full(hash)`
 
 ---
 
@@ -43,8 +39,7 @@ title: Native
 `print(namespace) -- Output: PLAYER`
 
 - Methods:
-
-`native.get_native_namespace(hash)`
+  - `native.get_native_namespace(hash)`
 
 ---
 

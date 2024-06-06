@@ -12,8 +12,7 @@ title: Entity
  | number | The handle of the entity. |
 
 - Methods:
-
-`fwEntity:get_id()`
+  - `fwEntity:get_id()`
 
 ---
 
@@ -26,8 +25,7 @@ title: Entity
  | boolean | Returns true if the entity is considered valid, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_valid()`
+  - `fwEntity:is_valid()`
 
 ---
 
@@ -40,8 +38,7 @@ title: Entity
  | number | The network handle (ObjectId) of the entity. |
 
 - Methods:
-
-`fwEntity:get_netid()`
+  - `fwEntity:get_netid()`
 
 ---
 
@@ -54,8 +51,7 @@ title: Entity
  | userdata | A pointer to the rage::fwEntity object. |
 
 - Methods:
-
-`fwEntity:get_entity_ptr()`
+  - `fwEntity:get_entity_ptr()`
 
 ---
 
@@ -68,8 +64,7 @@ title: Entity
  | userdata | A pointer to the rage::netObject. |
 
 - Methods:
-
-`fwEntity:get_netobj_ptr()`
+  - `fwEntity:get_netobj_ptr()`
 
 ---
 
@@ -82,8 +77,7 @@ title: Entity
  | integer | The handle of the interior in which the entity is located. |
 
 - Methods:
-
-`fwEntity:get_interior()`
+  - `fwEntity:get_interior()`
 
 ---
 
@@ -96,8 +90,7 @@ title: Entity
  | boolean | Returns true if the entity is on the screen, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_on_screen()`
+  - `fwEntity:is_on_screen()`
 
 ---
 
@@ -110,8 +103,7 @@ title: Entity
  | number, | number, number The x, y, and z coordinates of the entity in the game world. |
 
 - Methods:
-
-`fwEntity:get_coords()`
+  - `fwEntity:get_coords()`
 
 ---
 
@@ -124,8 +116,7 @@ title: Entity
  | number, | number The x and y coordinates of the entity on the screen. |
 
 - Methods:
-
-`fwEntity:get_screen()`
+  - `fwEntity:get_screen()`
 
 ---
 
@@ -138,8 +129,7 @@ title: Entity
  | number, | number, number The pitch, yaw, and roll angles of the entity. |
 
 - Methods:
-
-`fwEntity:get_angles()`
+  - `fwEntity:get_angles()`
 
 ---
 
@@ -152,8 +142,7 @@ title: Entity
  | number, | number, number The minimum x, y, and z coordinates of the entity's bounding box. |
 
 - Methods:
-
-`fwEntity:get_mins()`
+  - `fwEntity:get_mins()`
 
 ---
 
@@ -166,8 +155,7 @@ title: Entity
  | number, | number, number The maximum x, y, and z coordinates of the entity's bounding box. |
 
 - Methods:
-
-`fwEntity:get_maxs()`
+  - `fwEntity:get_maxs()`
 
 ---
 
@@ -180,8 +168,7 @@ title: Entity
  | number, | number, number The x, y, and z components of the forward vector. |
 
 - Methods:
-
-`fwEntity:get_forward()`
+  - `fwEntity:get_forward()`
 
 ---
 
@@ -194,8 +181,7 @@ title: Entity
  | number, | number, number The x, y, and z components of the right vector. |
 
 - Methods:
-
-`fwEntity:get_right()`
+  - `fwEntity:get_right()`
 
 ---
 
@@ -208,8 +194,7 @@ title: Entity
  | number, | number, number The x, y, and z components of the up vector. |
 
 - Methods:
-
-`fwEntity:get_up()`
+  - `fwEntity:get_up()`
 
 ---
 
@@ -222,8 +207,7 @@ title: Entity
  | number | The heading of the entity, representing the direction it is facing. |
 
 - Methods:
-
-`fwEntity:get_heading()`
+  - `fwEntity:get_heading()`
 
 ---
 
@@ -236,8 +220,7 @@ title: Entity
  | number | The distance from the local player to the entity. |
 
 - Methods:
-
-`fwEntity:get_distance()`
+  - `fwEntity:get_distance()`
 
 ---
 
@@ -250,8 +233,7 @@ title: Entity
  | integer | The current health of the entity. |
 
 - Methods:
-
-`fwEntity:get_health()`
+  - `fwEntity:get_health()`
 
 ---
 
@@ -264,8 +246,7 @@ title: Entity
  | integer | The maximum health of the entity. |
 
 - Methods:
-
-`fwEntity:get_health_max()`
+  - `fwEntity:get_health_max()`
 
 ---
 
@@ -278,8 +259,7 @@ title: Entity
  | boolean | Returns true if the entity is alive, false if dead or the health is zero or below. |
 
 - Methods:
-
-`fwEntity:is_alive()`
+  - `fwEntity:is_alive()`
 
 ---
 
@@ -292,8 +272,7 @@ title: Entity
  | boolean | Returns true if the entity's health is zero or below, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_dead()`
+  - `fwEntity:is_dead()`
 
 ---
 
@@ -306,8 +285,7 @@ title: Entity
  | boolean | Returns true if the entity is broken, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_broken()`
+  - `fwEntity:is_broken()`
 
 ---
 
@@ -320,8 +298,7 @@ title: Entity
  | boolean | Returns true if the entity is a player, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_player()`
+  - `fwEntity:is_player()`
 
 ---
 
@@ -334,8 +311,7 @@ title: Entity
  | boolean | Returns true if the entity is an object, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_object()`
+  - `fwEntity:is_object()`
 
 ---
 
@@ -348,8 +324,7 @@ title: Entity
  | boolean | Returns true if the entity is a pedestrian, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_pedestrian()`
+  - `fwEntity:is_pedestrian()`
 
 ---
 
@@ -362,8 +337,7 @@ title: Entity
  | boolean | Returns true if the entity is a vehicle, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_vehicle()`
+  - `fwEntity:is_vehicle()`
 
 ---
 
@@ -376,8 +350,7 @@ title: Entity
  | boolean | Returns true if the entity is a building, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_building()`
+  - `fwEntity:is_building()`
 
 ---
 
@@ -390,8 +363,7 @@ title: Entity
  | boolean | Returns true if the entity is an interior, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_interior()`
+  - `fwEntity:is_interior()`
 
 ---
 
@@ -404,8 +376,7 @@ title: Entity
  | boolean | Returns true if the entity is physical, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_physical()`
+  - `fwEntity:is_physical()`
 
 ---
 
@@ -418,8 +389,7 @@ title: Entity
  | boolean | Returns true if the entity is pickup, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_pickup()`
+  - `fwEntity:is_pickup()`
 
 ---
 
@@ -432,8 +402,7 @@ title: Entity
  | boolean | Returns true if the entity is door, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_door()`
+  - `fwEntity:is_door()`
 
 ---
 
@@ -446,8 +415,7 @@ title: Entity
  | boolean | Returns true if the entity is weapon, false otherwise. |
 
 - Methods:
-
-`fwEntity:is_weapon()`
+  - `fwEntity:is_weapon()`
 
 ---
 
@@ -460,8 +428,7 @@ title: Entity
  | integer | The model hash of the entity. |
 
 - Methods:
-
-`fwEntity:get_model()`
+  - `fwEntity:get_model()`
 
 ---
 
@@ -474,8 +441,7 @@ title: Entity
  | ScriptEntityType | The script type of the entity. |
 
 - Methods:
-
-`fwEntity:get_entity_script_type()`
+  - `fwEntity:get_entity_script_type()`
 
 ---
 
@@ -494,8 +460,7 @@ title: Entity
  | boolean | Returns true if the flag is set, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_basic_flag(flag)`
+  - `fwEntity:get_basic_flag(flag)`
 
 ---
 
@@ -509,8 +474,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_basic_flag(flag)`
+  - `fwEntity:set_basic_flag(flag)`
 
 ---
 
@@ -529,8 +493,7 @@ title: Entity
  | boolean | Returns true if the flag is set, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_flag(flag)`
+  - `fwEntity:get_flag(flag)`
 
 ---
 
@@ -545,8 +508,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_flag(flag, value)`
+  - `fwEntity:set_flag(flag, value)`
 
 ---
 
@@ -565,8 +527,7 @@ title: Entity
  | boolean | Returns true if the flag is set, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_physical_flag(flag)`
+  - `fwEntity:get_physical_flag(flag)`
 
 ---
 
@@ -581,8 +542,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_physical_flag(flag, value)`
+  - `fwEntity:set_physical_flag(flag, value)`
 
 ---
 
@@ -601,8 +561,7 @@ title: Entity
  | ObjectFlags | Returns true if the flag is set, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_object_flag(flag)`
+  - `fwEntity:get_object_flag(flag)`
 
 ---
 
@@ -617,8 +576,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_object_flag(flag, value)`
+  - `fwEntity:set_object_flag(flag, value)`
 
 ---
 
@@ -631,8 +589,7 @@ title: Entity
  | EntityStatus | The current status of the entity. |
 
 - Methods:
-
-`fwEntity:get_status()`
+  - `fwEntity:get_status()`
 
 ---
 
@@ -645,8 +602,7 @@ title: Entity
  | boolean | Returns true if the entity is frozen by an interior, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_frozen_by_interior()`
+  - `fwEntity:get_frozen_by_interior()`
 
 ---
 
@@ -659,8 +615,7 @@ title: Entity
  | boolean | Returns true if the entity is frozen, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_frozen()`
+  - `fwEntity:get_frozen()`
 
 ---
 
@@ -673,8 +628,7 @@ title: Entity
  | boolean | Returns true if checked, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_checked_for_dead()`
+  - `fwEntity:get_checked_for_dead()`
 
 ---
 
@@ -687,8 +641,7 @@ title: Entity
  | boolean | Returns true if the entity is a golf ball, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_is_golf_ball()`
+  - `fwEntity:get_is_golf_ball()`
 
 ---
 
@@ -701,8 +654,7 @@ title: Entity
  | boolean | Returns true if the entity requires forced pre-physics animation update, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_force_pre_physics_anim_update()`
+  - `fwEntity:get_force_pre_physics_anim_update()`
 
 ---
 
@@ -715,8 +667,7 @@ title: Entity
  | boolean | Returns true if the entity is breakable glass, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_is_breakable_glass()`
+  - `fwEntity:get_is_breakable_glass()`
 
 ---
 
@@ -729,8 +680,7 @@ title: Entity
  | boolean | Returns true if the entity is out of map, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_is_out_of_map()`
+  - `fwEntity:get_is_out_of_map()`
 
 ---
 
@@ -743,8 +693,7 @@ title: Entity
  | boolean | Returns true if the physics bounds are overridden, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_override_physics_bounds()`
+  - `fwEntity:get_override_physics_bounds()`
 
 ---
 
@@ -757,8 +706,7 @@ title: Entity
  | boolean | Returns true if the entity has moved since the last pre-render, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_has_moved_since_last_pre_render()`
+  - `fwEntity:get_has_moved_since_last_pre_render()`
 
 ---
 
@@ -771,8 +719,7 @@ title: Entity
  | boolean | Returns true if the entity uses an extended bounding box, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_use_extended_bounding_box()`
+  - `fwEntity:get_use_extended_bounding_box()`
 
 ---
 
@@ -785,8 +732,7 @@ title: Entity
  | boolean | Returns true if the entity is straddling a portal, false otherwise. |
 
 - Methods:
-
-`fwEntity:get_is_straddling_portal()`
+  - `fwEntity:get_is_straddling_portal()`
 
 ---
 
@@ -799,8 +745,7 @@ title: Entity
  | PopType | The current population type of the entity. |
 
 - Methods:
-
-`fwEntity:get_pop_type()`
+  - `fwEntity:get_pop_type()`
 
 ---
 
@@ -813,8 +758,7 @@ title: Entity
  | PopType | The previous population type of the entity. |
 
 - Methods:
-
-`fwEntity:get_pop_type_prev()`
+  - `fwEntity:get_pop_type_prev()`
 
 ---
 
@@ -828,8 +772,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_status(status)`
+  - `fwEntity:set_status(status)`
 
 ---
 
@@ -843,8 +786,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_frozen_by_interior(frozen)`
+  - `fwEntity:set_frozen_by_interior(frozen)`
 
 ---
 
@@ -858,8 +800,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_frozen(frozen)`
+  - `fwEntity:set_frozen(frozen)`
 
 ---
 
@@ -873,8 +814,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_checked_for_dead(checked)`
+  - `fwEntity:set_checked_for_dead(checked)`
 
 ---
 
@@ -888,8 +828,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_is_golf_ball(isGolfBall)`
+  - `fwEntity:set_is_golf_ball(isGolfBall)`
 
 ---
 
@@ -903,8 +842,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_force_pre_physics_anim_update(force)`
+  - `fwEntity:set_force_pre_physics_anim_update(force)`
 
 ---
 
@@ -918,8 +856,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_is_breakable_glass(isBreakable)`
+  - `fwEntity:set_is_breakable_glass(isBreakable)`
 
 ---
 
@@ -933,8 +870,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_is_out_of_map(isOutOfMap)`
+  - `fwEntity:set_is_out_of_map(isOutOfMap)`
 
 ---
 
@@ -948,8 +884,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_override_physics_bounds(override)`
+  - `fwEntity:set_override_physics_bounds(override)`
 
 ---
 
@@ -963,8 +898,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_has_moved_since_last_pre_render(hasMoved)`
+  - `fwEntity:set_has_moved_since_last_pre_render(hasMoved)`
 
 ---
 
@@ -978,8 +912,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_use_extended_bounding_box(useExtended)`
+  - `fwEntity:set_use_extended_bounding_box(useExtended)`
 
 ---
 
@@ -993,8 +926,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_is_straddling_portal(isStraddling)`
+  - `fwEntity:set_is_straddling_portal(isStraddling)`
 
 ---
 
@@ -1008,8 +940,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_pop_type(popType)`
+  - `fwEntity:set_pop_type(popType)`
 
 ---
 
@@ -1023,8 +954,7 @@ title: Entity
 
 
 - Methods:
-
-`fwEntity:set_pop_type_prev(popTypePrev)`
+  - `fwEntity:set_pop_type_prev(popTypePrev)`
 
 ---
 
@@ -1043,8 +973,7 @@ title: Entity
  | fwEntity | Engine entiny object. |
 
 - Methods:
-
-`ent(handle)`
+  - `ent(handle)`
 
 ---
 

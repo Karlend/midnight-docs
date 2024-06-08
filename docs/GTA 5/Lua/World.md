@@ -3,8 +3,31 @@ slug: /gta/lua/World
 title: World
 ---
 
+## enum VehicleUpgradeMethod
+```lua
+VehicleUpgradeMethod = {
+    STOCK = 0,
+    BASE = 1,
+    POWER = 2,
+    MAX = 3,
+    RANDOM = 4,
+}
+```
+
+## enum VehicleUpgradeMethod
+```lua
+VehicleBoostDir = {
+    FORWARD = 0,
+    RIGHT = 1,
+    BACK = 2,
+    LEFT = 3,
+    UP = 4,
+    DOWN = 5
+}
+```
+
 ## entity.delete
-`This function takes an integer handle of the entity and two optional callback functions.`
+`Deletes any entity (object, pedestrian, transport) in the world.`
 
 - Parameters:
 

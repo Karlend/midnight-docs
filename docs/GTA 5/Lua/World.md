@@ -81,19 +81,13 @@ VehicleBoostDir = {
 ## pedestrian.spawn
 `Spawns a pedestrian at specified coordinates or near the local player if no position is provided.`
 
-<!-- TODO: format me -->
-
 - Methods:
   - `pedestrian.spawn(...)`
 
 ---
 
 ## pedestrian.spawn_random
-`Creates a random pedestrian in the game world in front of a specified player.`
-
-<!-- This function spawns a random pedestrian using a random model available in the game.
--- The pedestrian is spawned 5 meters in front of the specified player and can be made networkable
--- for visibility in multiplayer mode. -->
+`This function spawns a random pedestrian using a random model available in the game. The pedestrian is spawned 5 meters in front of the specified player and can be made networkable for visibility in multiplayer mode.`
 
 - Parameters:
 
@@ -114,8 +108,7 @@ VehicleBoostDir = {
 ---
 
 ## pedestrian.possess
-`Allows the player to possess and control the specified pedestrian.`
-<!-- -- This function makes the player take control of the pedestrian identified by the given handle. -->
+`This function makes the player take control of the pedestrian identified by the given handle.`
 
 - Parameters:
 
@@ -135,8 +128,7 @@ VehicleBoostDir = {
 ---
 
 ## pedestrian.get_random
-`Retrieves a random non-player pedestrian from the environment.`
-<!-- This function selects a random pedestrian, with an option to ignore those in or near vehicles. -->
+`This function selects a random pedestrian, with an option to ignore those in or near vehicles.`
 
 - Parameters:
 
@@ -157,7 +149,7 @@ VehicleBoostDir = {
 
 ## pedestrian.make_guard
 `Transforms the specified pedestrian into a marine bodyguard.`
-<!-- Enhances the pedestrian's abilities for improved combat performance. -->
+`Enhances the pedestrian's abilities for improved combat performance.`
 
 - Parameters:
 
@@ -180,8 +172,6 @@ VehicleBoostDir = {
 `Sends an assassin after a specified pedestrian or player with parameters for improved combat performance.`
 `Note: All parameters except the target are optional. Defaults apply where not specified.`
 
-<!-- The assassin will attempt to kill the target. -->
-
 - Overloads:
   1. `pedestrian.send_assassin(handle, model?, weapon?, vehicle?)`
   2. `pedestrian.send_assassin(ply, model?, weapon?, vehicle?)`
@@ -191,9 +181,9 @@ VehicleBoostDir = {
  | Name | Type | Description |
  | ---  | ---  | ---         |
  | handle |number | player_t The target pedestrian or player identifier.|
- | model? | integer | The hash of the assassin's model. | <!-- string.joaat('s_m_y_swat_01') -->
- | weapon? | integer | The hash of the assassin's weapon. | <!-- string.joaat('WEAPON_ASSAULTRIFLE') -->
- | vehicle? | integer | The hash of the vehicle for the assassin. If specified, determines the assassin's approach: driving if in the driver's seat, waiting if in the passenger's seat. | <!-- 0 -->
+ | model? | integer | The hash of the assassin's model. Default: `s_m_y_swat_01` |
+ | weapon? | integer | The hash of the assassin's weapon. Default: `WEAPON_ASSAULTRIFLE` |
+ | vehicle? | integer | The hash of the vehicle for the assassin. If specified, determines the assassin's approach: driving if in the driver's seat, waiting if in the passenger's seat. Default: `0` |
 
 - Return:
 
@@ -208,8 +198,8 @@ VehicleBoostDir = {
 
 ## pedestrian.repair
 `Repairs the specified pedestrian.`
-<!-- This function must be called within a fiber context; otherwise, it will cease operation and return false.
-The function restores the pedestrian to a healthy state, resurrecting them if dead and healing injuries. -->
+`This function must be called within a fiber context; otherwise, it will cease operation and return false.`
+`The function restores the pedestrian to a healthy state, resurrecting them if dead and healing injuries.`
 
 - Parameters:
 
@@ -231,7 +221,7 @@ The function restores the pedestrian to a healthy state, resurrecting them if de
 ## vehicle.spawn
 `@overload fun(name: string)`
 
-<!-- TODO: format me -->
+TODO: format me
 
 - Methods:
   - `vehicle.spawn(...)`
@@ -241,7 +231,7 @@ The function restores the pedestrian to a healthy state, resurrecting them if de
 ## vehicle.spawn_preset
 `@overload fun(name: string)`
 
-<!-- TODO: format me -->
+TODO: format me
 
 - Methods:
   - `vehicle.spawn_preset(...)`
@@ -347,8 +337,7 @@ The function restores the pedestrian to a healthy state, resurrecting them if de
 ---
 
 ## vehicle.upgrade
-`Upgrades a vehicle to a specified upgrade type.`
-<!-- This function upgrades a vehicle based on the specified upgrade type. If no type is specified, it defaults to the maximum upgrade level. -->
+`This function upgrades a vehicle based on the specified upgrade type. If no type is specified, it defaults to the maximum upgrade level.`
 
 - Parameters:
 
@@ -364,7 +353,6 @@ The function restores the pedestrian to a healthy state, resurrecting them if de
 
 ## vehicle.teleport
 `Teleports a vehicle to a specified location.`
- <!-- This function attempts to teleport a vehicle to the given coordinates. If multiple attempts are specified, the function should be called within a fiber context to handle retries properly. -->
 
 - Parameters:
 
@@ -381,16 +369,14 @@ The function restores the pedestrian to a healthy state, resurrecting them if de
 
 ## vehicle.boost
 `Boosts a vehicle in a specified direction with a specified power.`
-<!-- This function applies a force to the vehicle to accelerate it in a chosen direction.
-If no direction is specified, the boost is applied forward by default. -->
 
 - Parameters:
 
  | Name | Type | Description |
  | ---  | ---  | ---         |
  | handle | integer | The handle of the vehicle to boost. |
- | power? | number | The magnitude of the boost force to apply. | <!-- 1000.0 -->
- | dir? | VehBoostDir | The direction in which to apply the boost. | <!-- VehBoostDir.FORWARD -->
+ | power? | number | The magnitude of the boost force to apply. Default: `1000.0` |
+ | dir? | VehBoostDir | The direction in which to apply the boost. Default: `VehBoostDir.FORWARD` |
 
 - Methods:
   - `vehicle.boost(handle, power, dir)`
@@ -400,7 +386,7 @@ If no direction is specified, the boost is applied forward by default. -->
 ## object.spawn
 `Spawns an object at specified coordinates or at the default location near the local player if no position is provided.`
 
-<!-- TODO: format me -->
+TODO: format me
 
 - Methods:
   - `object.spawn(...)`

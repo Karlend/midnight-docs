@@ -81,6 +81,8 @@ VehicleBoostDir = {
 ## pedestrian.spawn
 `Spawns a pedestrian at specified coordinates or near the local player if no position is provided.`
 
+TODO: Format me
+
 - Methods:
   - `pedestrian.spawn(...)`
 
@@ -344,7 +346,7 @@ TODO: format me
  | Name | Type | Description |
  | ---  | ---  | ---         |
  | handle | integer | The handle of the vehicle to upgrade. |
- | type? | VehicleUpgradeMethod | The type of upgrade to apply. | <!-- VehicleUpgradeMethod.MAX -->
+ | type? | VehicleUpgradeMethod | The type of upgrade to apply. Default: `VehicleUpgradeMethod.MAX` |
 
 - Methods:
   - `vehicle.upgrade(handle, type)`

@@ -296,3 +296,13 @@ title: FileSystem
 ## fs.get_log_dir
 `Returns the directory path for product logs.`
 
+- Return:
+
+ | Type   | Description                        |
+ | ------ | ---------------------------------- |
+ | string | The path to the product log directory. |
+
+- Methods:
+  - `fs.get_log_dir()`
+
+---

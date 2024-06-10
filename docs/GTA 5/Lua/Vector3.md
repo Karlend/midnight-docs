@@ -12,7 +12,19 @@ title: Vector3
 ---
 
 ## Vector3:dot
-`@return number The dot product of the two vectors.`
+`Calculates the dot product of this vector with another vector.`
+
+- Parameters:
+
+ | Name | Type | Description |
+ | ---  | ---  | ---         |
+ | other | Vector3 | The other vector to calculate the dot product with. | 
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | number | The dot product of the two vectors.|
 
 - Methods:
   - `Vector3:dot(other)`
@@ -20,7 +32,19 @@ title: Vector3
 ---
 
 ## Vector3:cross
-`@return Vector3 A new vector that is the cross product of the two vectors.`
+`Calculates the cross product of this vector with another vector.`
+
+- Parameters:
+
+ | Name | Type | Description |
+ | ---  | ---  | ---         |
+ | other | Vector3 | The other vector to calculate the cross product with. | 
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | Vector3 | A new vector that is the cross product of the two vectors. |
 
 - Methods:
   - `Vector3:cross(other)`
@@ -28,7 +52,13 @@ title: Vector3
 ---
 
 ## Vector3:get_negated
-`@return Vector3 A new vector where each component is the negation of the corresponding component of this vector.`
+`Returns a new vector that is the negation of this vector.`
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | Vector3 | A new vector where each component is the negation of the corresponding component of this vector. |
 
 - Methods:
   - `Vector3:get_negated()`
@@ -36,7 +66,13 @@ title: Vector3
 ---
 
 ## Vector3:get_normalized
-`@return Vector3 A new vector that is the normalized version of this vector.`
+`Returns a normalized copy of this vector.`
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | Vector3 | A new vector that is the normalized version of this vector.|
 
 - Methods:
   - `Vector3:get_normalized()`

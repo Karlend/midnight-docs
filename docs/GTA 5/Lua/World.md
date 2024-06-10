@@ -81,8 +81,6 @@ VehicleBoostDir = {
 ## pedestrian.spawn
 `Spawns a pedestrian at specified coordinates or near the local player if no position is provided.`
 
-TODO: Format me
-
 - Methods:
   - `pedestrian.spawn(...)`
 
@@ -387,8 +385,6 @@ TODO: format me
 
 ## object.spawn
 `Spawns an object at specified coordinates or at the default location near the local player if no position is provided.`
-
-TODO: format me
 
 - Methods:
   - `object.spawn(...)`

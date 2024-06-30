@@ -80,7 +80,21 @@ title: Vector3
 ---
 
 ## Vector3:is_equal_tol
-`@return boolean Returns true if the vectors are approximately equal within the given tolerance, otherwise false.`
+`Checks if this vector is approximately equal to another vector, within a specified tolerance.`
+
+
+- Parameters:
+
+ | Name | Type | Description |
+ | ---  | ---  | ---         |
+| other | Vector3 | The vector to compare with. |
+| tolerance | number | The tolerance within which the vectors are considered equal. |
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | boolean | Returns true if the vectors are approximately equal within the given tolerance, otherwise false. |
 
 - Methods:
   - `Vector3:is_equal_tol(other, tolerance)`
@@ -88,7 +102,13 @@ title: Vector3
 ---
 
 ## Vector3:is_zero
-`@return boolean Returns true if all components of the vector are zero, otherwise false.`
+`Determines if the vector is a zero vector.`
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | boolean | Returns true if all components of the vector are zero, otherwise false. |
 
 - Methods:
   - `Vector3:is_zero()`
@@ -96,7 +116,13 @@ title: Vector3
 ---
 
 ## Vector3:length
-`@return number The length of the vector.`
+`Calculates the length (magnitude) of the vector.`
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+| number | The length of the vector. |
 
 - Methods:
   - `Vector3:length()`
@@ -104,7 +130,13 @@ title: Vector3
 ---
 
 ## Vector3:length_2d
-`@return number The 2D length of the vector.`
+`Calculates the 2D length (magnitude) of the vector ignoring the z component.`
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | number | The 2D length of the vector. |
 
 - Methods:
   - `Vector3:length_2d()`
@@ -112,7 +144,14 @@ title: Vector3
 ---
 
 ## Vector3:length_2d_sqr
-`@return number The squared 2D length of the vector.`
+`Calculates the squared 2D length of the vector, ignoring the z component.`
+`Useful for comparisons where the exact length is not necessary.`
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | number | The squared 2D length of the vector. |
 
 - Methods:
   - `Vector3:length_2d_sqr()`
@@ -120,7 +159,14 @@ title: Vector3
 ---
 
 ## Vector3:length_sqr
-`@return number The squared length of the vector.`
+`Calculates the squared length of the vector.`
+`Useful for comparisons where the exact length is not necessary.`
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | number | The squared length of the vector.|
 
 - Methods:
   - `Vector3:length_sqr()`
@@ -128,7 +174,13 @@ title: Vector3
 ---
 
 ## Vector3:mul
-`@param scalar number The scalar to multiply with.`
+`Multiplies each component of the vector by a scalar.`
+
+- Parameters:
+
+ | Name | Type | Description |
+ | ---  | ---  | ---         |
+| scalar | number | The scalar to multiply with. |
 
 - Methods:
   - `Vector3:mul(scalar)`
@@ -144,7 +196,14 @@ title: Vector3
 ---
 
 ## Vector3:random
-`@param max number The maximum value (inclusive) - defaults to 1.0.`
+`Assigns random values to each component of the vector within the specified range.`
+
+- Parameters:
+
+ | Name | Type | Description |
+ | ---  | ---  | ---         |
+| min | number | The minimum value (inclusive) - defaults to -1.0. |
+| max | number | The maximum value (inclusive) - defaults to 1.0. |
 
 - Methods:
   - `Vector3:random(min, max)`
@@ -152,7 +211,13 @@ title: Vector3
 ---
 
 ## Vector3:set
-`@param vector Vector3 The vector from which to copy the components.`
+`--- Sets the vector's components to those of another vector.`
+
+- Parameters:
+
+ | Name | Type | Description |
+ | ---  | ---  | ---         |
+| vector | Vector3 | The vector from which to copy the components. |
 
 - Methods:
   - `Vector3:set(vector)`
@@ -160,7 +225,15 @@ title: Vector3
 ---
 
 ## Vector3:set_unpacked
-`@param z_val number The new z value.`
+`Sets the components of the vector to the provided values.`
+
+- Parameters:
+
+ | Name | Type | Description |
+ | ---  | ---  | ---         |
+| x_val | number | The new x value. |
+| y_val | number | The new y value. |
+| z_val | number | The new z value. |
 
 - Methods:
   - `Vector3:set_unpacked(x_val, y_val, z_val)`
@@ -168,7 +241,12 @@ title: Vector3
 ---
 
 ## Vector3:sub
-`@param vector Vector3 The vector to subtract.`
+`Subtracts another vector from this vector.`
+- Parameters:
+
+ | Name | Type | Description |
+ | ---  | ---  | ---         |
+ | vector | Vector3 | The vector to subtract. |
 
 - Methods:
   - `Vector3:sub(vector)`
@@ -176,7 +254,12 @@ title: Vector3
 ---
 
 ## Vector3:unpack
-`@return number, number, number The x, y, and z components of the vector.`
+`Unpacks the vector's components and returns them as individual values.`
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | number, number, number | The x, y, and z components of the vector. |
 
 - Methods:
   - `Vector3:unpack()`
@@ -184,7 +267,20 @@ title: Vector3
 ---
 
 ## Vector3:within_aabox
-`@return boolean Returns true if the vector is within the bounding box, otherwise false.`
+`Checks if the vector is within an axis-aligned bounding box defined by two points.`
+
+- Parameters:
+
+ | Name | Type | Description |
+ | ---  | ---  | ---         |
+ | boxStart | Vector3 | The starting point of the bounding box. |
+ | boxEnd | Vector3 | The ending point of the bounding box. |
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | boolean | Returns true if the vector is within the bounding box, otherwise false. |
 
 - Methods:
   - `Vector3:within_aabox(boxStart, boxEnd)`
@@ -200,7 +296,19 @@ title: Vector3
 ---
 
 ## Vector3:distance
-`@return number The distance between the two vectors.`
+`Calculates the distance to another vector.`
+
+- Parameters:
+
+ | Name | Type | Description |
+ | ---  | ---  | ---         |
+ | other | Vector3 | The other vector. | 
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | number | The squared distance to the other vector. |
 
 - Methods:
   - `Vector3:distance(other)`
@@ -208,7 +316,19 @@ title: Vector3
 ---
 
 ## Vector3:dist_to_sqr
-`@return number The squared distance to the other vector.`
+`Calculates the squared distance to another vector.`
+
+- Parameters:
+
+ | Name | Type | Description |
+ | ---  | ---  | ---         |
+ | other | Vector3 | The other vector. | 
+
+ - Return:
+
+ | Type   | Description |
+ | --- | ---- |
+ | number | The squared distance to the other vector. |
 
 - Methods:
   - `Vector3:dist_to_sqr(other)`

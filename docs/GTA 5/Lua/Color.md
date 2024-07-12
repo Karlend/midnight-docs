@@ -242,6 +242,24 @@ title: Color
 ## Color
 `Creates a new color instance.`
 
+- Overloads:
+  1. `fun(): Color Creates an empty color with default values.`
+  2. `fun(r: number, g: number, b: number): Color Creates a color using RGB values (0-255).`
+  3. `fun(r: number, g: number, b: number, a: number): Color Creates a color using RGBA values (0-255), including alpha.`
+  4. `fun(rgba: number): Color Creates a color from a single uint32 value representing RGBA.`
+  5. `fun(hex: string): Color Creates a color from a hexadecimal string (e.g., "FF0033" or "#FF0033").`
+
+- Parameters:
+
+ | Name  | Type  | Description                                     |
+ | ----- | ----- | ----------------------------------------------- |
+ | r? | number | The red component of the color (0-255). |
+ | g? | number | The green component of the color (0-255). |
+ | b? | number | The blue component of the color (0-255). |
+ | a? | number | The alpha component of the color (0-255). |
+ | rgba? | number | A uint32 number representing the color in RGBA format. |
+ | hex? | string | A string representing the color in hexadecimal format. |
+
 - Return:
 
  | Type         | Description                                           |
